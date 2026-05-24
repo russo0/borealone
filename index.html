@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Name | Tech, Media & Arctic Experiences</title>
+    <title>Company Name | Lapônia Sueca</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -19,107 +19,135 @@
         }
     </script>
 </head>
-<body class="bg-[#0b0f19] text-gray-200 font-sans antialiased">
+<body class="bg-[#0b0f19] text-gray-200 font-sans antialiased min-h-screen flex flex-col justify-between">
 
     <!-- NAV BAR -->
     <nav class="border-b border-gray-800 bg-[#0d1321]/80 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <div class="max-w-5xl mx-auto px-4 h-16 flex items-center justify-between">
             <span class="font-bold text-xl tracking-wider text-white">[ LOGO ]</span>
             
-            <div class="flex items-center space-x-6">
-                <!-- Links de Navegação -->
-                <div class="hidden md:flex space-x-6 text-sm font-medium">
-                    <a href="#experiences" id="nav-exp" class="hover:text-aurora transition">Experiences</a>
-                    <a href="#cyber" id="nav-cyber" class="hover:text-aurora transition">Cybersecurity & IT</a>
-                </div>
-
+            <div class="flex items-center space-x-4">
                 <!-- SELETOR DE IDIOMA -->
-                <div class="flex space-x-2 bg-gray-900 p-1 rounded border border-gray-800 text-xs font-bold">
+                <div class="flex space-x-1 bg-gray-900 p-1 rounded border border-gray-800 text-xs font-bold">
                     <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
                     <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
                     <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
                 </div>
-
-                <a href="#contact" id="nav-contact" class="text-sm bg-aurora/10 text-aurora border border-aurora/30 px-4 py-2 rounded-md hover:bg-aurora hover:text-black transition">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="relative py-24 px-4 text-center max-w-4xl mx-auto">
-        <h1 id="hero-title" class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-none mb-6">
-            Connecting Cutting-Edge Tech to <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Extraordinary Experiences</span>
+    <header class="relative pt-16 pb-8 px-4 text-center max-w-3xl mx-auto">
+        <h1 id="hero-title" class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Soluções Digitais & <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Experiências Exclusivas</span>
         </h1>
-        <p id="hero-desc" class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-            Digital content production, senior cybersecurity consulting, and exclusive tourism in the Swedish Arctic.
+        <p id="hero-desc" class="text-base md:text-lg text-gray-400 max-w-xl mx-auto">
+            Produção de conteúdo digital, consultoria sênior em TI e turismo especializado na Lapônia Sueca.
         </p>
     </header>
 
-    <!-- SECTION: EXPERIENCES & MEDIA -->
-    <section id="experiences" class="max-w-6xl mx-auto px-4 py-16 border-t border-gray-900">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
+    <!-- MENU HORIZONTAL (TABS) -->
+    <div class="max-w-xl mx-auto px-4 mb-12 w-full">
+        <div class="flex bg-[#0d1321] p-1 rounded-lg border border-gray-800 shadow-lg">
+            <button onclick="switchTab('tourism')" id="tab-tourism" class="flex-1 py-3 text-sm font-medium rounded-md transition-all duration-200 bg-gray-800 text-white shadow">
+                <span id="tab-label-tourism">Mídia & Turismo</span>
+            </button>
+            <button onclick="switchTab('tech')" id="tab-tech" class="flex-1 py-3 text-sm font-medium rounded-md transition-all duration-200 text-gray-400 hover:text-white">
+                <span id="tab-label-tech">Cibersegurança & TI</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- CONTEÚDO DAS ABAS -->
+    <main class="max-w-5xl mx-auto px-4 w-full flex-grow mb-12">
+        
+        <!-- ABA 1: TOURISM & MEDIA -->
+        <div id="content-tourism" class="grid md:grid-cols-2 gap-8 items-center transition-opacity duration-300">
             <div>
-                <span id="exp-badge" class="text-aurora text-xs font-bold tracking-widest uppercase">Media & Tourism</span>
-                <h2 id="exp-title" class="text-3xl font-bold text-white mt-2 mb-6">Photography, Aurora Tours & Accommodation</h2>
-                <p id="exp-p1" class="text-gray-400 mb-4">
-                    We offer professional digital content production, including specialized real estate and drone photography captured in the stunning Swedish Lapland.
+                <span id="exp-badge" class="text-aurora text-xs font-bold tracking-widest uppercase bg-aurora/10 px-2 py-1 rounded">Media & Tourism</span>
+                <h2 id="exp-title" class="text-2xl md:text-3xl font-bold text-white mt-4 mb-4">Fotografia, Tours da Aurora & Hospedagem</h2>
+                <p id="exp-p1" class="text-gray-400 mb-4 text-sm md:text-base">
+                    Oferecemos serviços de fotografia profissional (incluindo fotografia imobiliária e aérea com drone) e produção de conteúdo digital na Lapônia Sueca.
                 </p>
-                <p id="exp-p2" class="text-gray-400 mb-6">
-                    Experience the North with us: we organize exclusive guided Northern Lights tours and provide cozy local short-term lodging (Airbnb) perfectly integrated with the Arctic wilderness.
+                <p id="exp-p2" class="text-gray-400 mb-6 text-sm md:text-base">
+                    Vivencie o Norte: organizamos caçadas exclusivas à Aurora Boreal com guia e oferecemos acomodação local por temporada (Airbnb) perfeitamente integrada à natureza selvagem.
                 </p>
-                <div class="flex flex-wrap gap-3 text-xs text-gray-300">
-                    <span id="tag-aurora" class="bg-gray-800 px-3 py-1 rounded">Northern Lights</span>
-                    <span id="tag-stay" class="bg-gray-800 px-3 py-1 rounded">Arctic Lodging</span>
-                    <span id="tag-drone" class="bg-gray-800 px-3 py-1 rounded">Drone & Real Estate</span>
+                <div class="flex flex-wrap gap-2 text-xs text-gray-300">
+                    <span id="tag-aurora" class="bg-gray-800 px-3 py-1 rounded border border-gray-750">Aurora Boreal</span>
+                    <span id="tag-stay" class="bg-gray-800 px-3 py-1 rounded border border-gray-750">Acomodação Ártica</span>
+                    <span id="tag-drone" class="bg-gray-800 px-3 py-1 rounded border border-gray-750">Drone & Real Estate</span>
                 </div>
             </div>
-            <div class="bg-gray-800 h-80 rounded-xl flex items-center justify-between overflow-hidden border border-gray-700 shadow-xl">
-                <span class="m-auto text-sm text-gray-500">[ Image / Portfolio Placeholder ]</span>
+            <div class="bg-gray-900/50 h-72 md:h-80 rounded-xl flex items-center justify-center border border-gray-800 shadow-inner relative overflow-hidden">
+                <span class="text-sm text-gray-600 font-medium">[ Espaço para foto da Aurora ou Airbnb ]</span>
             </div>
         </div>
-    </section>
 
-    <!-- SECTION: CYBERSECURITY -->
-    <section id="cyber" class="bg-[#0d1321] border-t border-b border-gray-900 py-16">
-        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1 bg-gray-900 h-80 rounded-xl flex items-center justify-between overflow-hidden border border-gray-800 shadow-xl">
-                <span class="m-auto text-sm text-gray-600">[ Secure Terminal / Infrastructure Placeholder ]</span>
+        <!-- ABA 2: CYBERSECURITY & IT (Oculta por padrão) -->
+        <div id="content-tech" class="hidden grid md:grid-cols-2 gap-8 items-center transition-opacity duration-300">
+            <div class="order-2 md:order-1 bg-gray-900/50 h-72 md:h-80 rounded-xl flex items-center justify-center border border-gray-800 shadow-inner relative overflow-hidden">
+                <span class="text-sm text-gray-600 font-medium">[ Interface de Segurança / Terminal ]</span>
             </div>
             <div class="order-1 md:order-2">
-                <span id="cyber-badge" class="text-blue-400 text-xs font-bold tracking-widest uppercase">Consulting & Infrastructure</span>
-                <h2 id="cyber-title" class="text-3xl font-bold text-white mt-2 mb-6">Cybersecurity & IT Consulting</h2>
-                <p id="cyber-p1" class="text-gray-400 mb-4">
-                    With over 25 years of experience in the information security market, we deliver robust consulting for data protection, cyber resilience, and critical IT infrastructure transitions.
+                <span id="cyber-badge" class="text-blue-400 text-xs font-bold tracking-widest uppercase bg-blue-500/10 px-2 py-1 rounded">Consulting & Infrastructure</span>
+                <h2 id="cyber-title" class="text-2xl md:text-3xl font-bold text-white mt-4 mb-4">Consultoria de Cibersegurança & TI</h2>
+                <p id="cyber-p1" class="text-gray-400 mb-4 text-sm md:text-base">
+                    Com mais de 25 anos de experiência no mercado de segurança da informação, oferecemos consultoria robusta para proteção de dados, resiliência cibernética e transições complexas de infraestrutura de TI.
                 </p>
-                <p id="cyber-p2" class="text-gray-400 mb-6">
-                    We also provide strategic B2B support and technical expertise for regional tourism operators requiring dependable, secure, and modern digital setups.
+                <p id="cyber-p2" class="text-gray-400 mb-6 text-sm md:text-base">
+                    Também prestamos suporte técnico especializado e consultoria operacional (B2B) para outras operadoras de turismo da região que necessitam de infraestrutura digital confiável e segura.
                 </p>
-                <div class="flex flex-wrap gap-3 text-xs text-gray-300">
-                    <span id="tag-audit" class="bg-gray-900 px-3 py-1 rounded">Security Audits</span>
-                    <span id="tag-it" class="bg-gray-900 px-3 py-1 rounded">IT Architecture</span>
-                    <span id="tag-b2b" class="bg-gray-900 px-3 py-1 rounded">Local B2B Support</span>
+                <div class="flex flex-wrap gap-2 text-xs text-gray-300">
+                    <span id="tag-audit" class="bg-gray-900 px-3 py-1 rounded border border-gray-800">Auditoria de Segurança</span>
+                    <span id="tag-it" class="bg-gray-900 px-3 py-1 rounded border border-gray-800">Arquitetura de TI</span>
+                    <span id="tag-b2b" class="bg-gray-900 px-3 py-1 rounded border border-gray-800">Suporte B2B Local</span>
                 </div>
             </div>
         </div>
-    </section>
+
+    </main>
 
     <!-- CONTACT & FOOTER -->
-    <footer id="contact" class="max-w-4xl mx-auto px-4 py-20 text-center">
-        <h2 id="footer-title" class="text-2xl font-bold text-white mb-4">Ready to Collaborate?</h2>
-        <p id="footer-desc" class="text-gray-400 mb-8 max-w-md mx-auto">Whether you are booking a tour, renting the property, or hiring strategic security consulting, get in touch.</p>
-        <a href="mailto:your-email@company.se" id="footer-btn" class="inline-block bg-white text-black font-semibold px-6 py-3 rounded-md hover:bg-gray-200 transition">
-            Send an Email
-        </a>
-        <p id="footer-rights" class="text-xs text-gray-600 mt-16">© 2026 [Company Name]. Registered in Sweden. All rights reserved.</p>
+    <footer class="border-t border-gray-900 bg-[#070a12] w-full py-12 text-center px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 id="footer-title" class="text-xl font-bold text-white mb-2">Pronto para colaborar?</h2>
+            <p id="footer-desc" class="text-gray-400 text-sm mb-6 max-w-sm mx-auto">Seja para agendar um tour, alugar a propriedade ou contratar uma consultoria crítica de segurança, entre em contato.</p>
+            <a href="mailto:your-email@company.se" id="footer-btn" class="inline-block bg-white text-black font-semibold text-sm px-5 py-2.5 rounded-md hover:bg-gray-200 transition shadow">
+                Enviar um E-mail
+            </a>
+            <p id="footer-rights" class="text-xs text-gray-600 mt-12">© 2026 [Nome da Empresa]. Registrada na Suécia. Todos os direitos reservados.</p>
+        </div>
     </footer>
 
-    <!-- SCRIPT DE TRADUÇÃO (i18n) -->
+    <!-- LOGICA DE IDIOMAS E ABAS -->
     <script>
+        // Sistema de Abas
+        function switchTab(tab) {
+            const btnTourism = document.getElementById('tab-tourism');
+            const btnTech = document.getElementById('tab-tech');
+            const contentTourism = document.getElementById('content-tourism');
+            const contentTech = document.getElementById('content-tech');
+
+            if (tab === 'tourism') {
+                btnTourism.className = "flex-1 py-3 text-sm font-medium rounded-md transition-all duration-200 bg-gray-800 text-white shadow";
+                btnTech.className = "flex-1 py-3 text-sm font-medium rounded-md transition-all duration-200 text-gray-400 hover:text-white";
+                contentTourism.classList.remove('hidden');
+                contentTech.classList.add('hidden');
+            } else {
+                btnTech.className = "flex-1 py-3 text-sm font-medium rounded-md transition-all duration-200 bg-gray-800 text-white shadow";
+                btnTourism.className = "flex-1 py-3 text-sm font-medium rounded-md transition-all duration-200 text-gray-400 hover:text-white";
+                contentTech.classList.remove('hidden');
+                contentTourism.classList.add('hidden');
+            }
+        }
+
+        // Dicionário de Traduções (Com "Lapônia Sueca")
         const translations = {
             en: {
-                navExp: "Experiences", navCyber: "Cybersecurity & IT", navContact: "Contact",
-                heroTitle: 'Connecting Cutting-Edge Tech to <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Extraordinary Experiences</span>',
-                heroDesc: "Digital content production, senior cybersecurity consulting, and exclusive tourism in the Swedish Arctic.",
+                tabTourism: "Media & Tourism", tabTech: "Cybersecurity & IT",
+                heroTitle: 'Digital Solutions & <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Exclusive Experiences</span>',
+                heroDesc: "Digital content production, senior IT consulting, and specialized tourism in the Swedish Lapland.",
                 expBadge: "Media & Tourism", expTitle: "Photography, Aurora Tours & Accommodation",
                 expP1: "We offer professional digital content production, including specialized real estate and drone photography captured in the stunning Swedish Lapland.",
                 expP2: "Experience the North with us: we organize exclusive guided Northern Lights tours and provide cozy local short-term lodging (Airbnb) perfectly integrated with the Arctic wilderness.",
@@ -132,11 +160,11 @@
                 footerBtn: "Send an Email", footerRights: "© 2026 [Company Name]. Registered in Sweden. All rights reserved."
             },
             sv: {
-                navExp: "Upplevelser", navCyber: "Cybersäkerhet & IT", navContact: "Kontakt",
-                heroTitle: 'Koppla Ledande Teknologi till <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Extraordinära Upplevelser</span>',
-                heroDesc: "Digital medieproduktion, senior cybersäkerhetsrådgivning och exklusiv turism i den svenska arktiska regionen.",
+                tabTourism: "Media & Turism", tabTech: "Cybersäkerhet & IT",
+                heroTitle: 'Digitala Lösningar & <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Exklusiva Upplevelser</span>',
+                heroDesc: "Digital medieproduktion, senior IT-konsultation och specialiserad turism i Svenska Lappland.",
                 expBadge: "Media & Turism", expTitle: "Fotografering, Norrskensturer & Boende",
-                expP1: "Vi erbjuder professionell digital innehållsproduktion, inklusive specialiserad fastighets- och drönarfotografering i det vackra svenska Lappland.",
+                expP1: "Vi erbjuder professionell digital innehållsproduktion, inklusive specialiserad fastighets- och drönarfotografering i det vackra Svenska Lappland.",
                 expP2: "Upplev norr: vi arrangerar exklusiva guidade norrskensturer och erbjuder unikt korttidsboende (Airbnb) perfekt integrerat med den vilda arktiska naturen.",
                 tagAurora: "Norrsken", tagStay: "Arktiskt Boende", tagDrone: "Drönare & Fastighet",
                 cyberBadge: "Rådgivning & Infrastruktur", cyberTitle: "Cybersäkerhet & IT-konsultation",
@@ -147,9 +175,9 @@
                 footerBtn: "Skicka ett mejl", footerRights: "© 2026 [Företagsnamn]. Registrerat i Sverige. Med ensamrätt."
             },
             pt: {
-                navExp: "Experiências", navCyber: "Cibersegurança & TI", navContact: "Contato",
-                heroTitle: 'Conectando Tecnologia de Ponta a <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Experiências Extraordinárias</span>',
-                heroDesc: "Produção de conteúdo digital, consultoria sênior em cibersegurança e turismo exclusivo na região ártica da Suécia.",
+                tabTourism: "Mídia & Turismo", tabTech: "Cibersegurança & TI",
+                heroTitle: 'Soluções Digitais & <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Experiências Exclusivas</span>',
+                heroDesc: "Produção de conteúdo digital, consultoria sênior em TI e turismo especializado na Lapônia Sueca.",
                 expBadge: "Mídia & Turismo", expTitle: "Fotografia, Tours da Aurora & Hospedagem",
                 expP1: "Oferecemos serviços de fotografia profissional (incluindo fotografia imobiliária e aérea com drone) e produção de conteúdo digital na Lapônia Sueca.",
                 expP2: "Vivencie o Norte: organizamos caçadas exclusivas à Aurora Boreal com guia e oferecemos acomodação local por temporada (Airbnb) perfeitamente integrada à natureza selvagem.",
@@ -164,10 +192,8 @@
         };
 
         function setLanguage(lang) {
-            // Atualiza os textos mapeados
-            document.getElementById('nav-exp').textContent = translations[lang].navExp;
-            document.getElementById('nav-cyber').textContent = translations[lang].navCyber;
-            document.getElementById('nav-contact').textContent = translations[lang].navContact;
+            document.getElementById('tab-label-tourism').textContent = translations[lang].tabTourism;
+            document.getElementById('tab-label-tech').textContent = translations[lang].tabTech;
             document.getElementById('hero-title').innerHTML = translations[lang].heroTitle;
             document.getElementById('hero-desc').textContent = translations[lang].heroDesc;
             document.getElementById('exp-badge').textContent = translations[lang].expBadge;
@@ -189,23 +215,17 @@
             document.getElementById('footer-btn').textContent = translations[lang].footerBtn;
             document.getElementById('footer-rights').textContent = translations[lang].footerRights;
 
-            // Atualiza o estilo visual dos botões de idioma
             ['en', 'sv', 'pt'].forEach(l => {
                 const btn = document.getElementById(`btn-${l}`);
                 if (l === lang) {
-                    btn.classList.add('bg-gray-800', 'text-white');
-                    btn.classList.remove('text-gray-400');
+                    btn.className = "px-2 py-1 rounded transition text-white bg-gray-800";
                 } else {
-                    btn.classList.remove('bg-gray-800', 'text-white');
-                    btn.classList.add('text-gray-400');
+                    btn.className = "px-2 py-1 rounded transition text-gray-400 hover:text-white";
                 }
             });
-
-            // Salva a preferência do usuário
             localStorage.setItem('preferred-lang', lang);
         }
 
-        // Detecta o idioma padrão ao carregar a página
         window.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('preferred-lang');
             if (savedLang && translations[savedLang]) {
@@ -215,7 +235,7 @@
                 if (translations[browserLang]) {
                     setLanguage(browserLang);
                 } else {
-                    setLanguage('en'); // Padrão se não for nenhum dos 3
+                    setLanguage('en');
                 }
             }
         });
