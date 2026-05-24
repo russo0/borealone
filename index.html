@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome da Sua Empresa | Tech, Media & Arctic Experiences</title>
+    <!-- Tailwind CSS para um design rápido e moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arctic: '#0d1b2a',
+                        aurora: '#00f5d4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#0b0f19] text-gray-200 font-sans antialiased">
+
+    <!-- NAV BAR -->
+    <nav class="border-b border-gray-800 bg-[#0d1321]/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <span class="font-bold text-xl tracking-wider text-white">[ LOGO DA EMPRESA ]</span>
+            <div class="space-x-6 text-sm font-medium">
+                <a href="#experiences" class="hover:text-aurora transition">Experiências & Mídia</a>
+                <a href="#cyber" class="hover:text-aurora transition">Cibersegurança & TI</a>
+                <a href="#contact" class="bg-aurora/10 text-aurora border border-aurora/30 px-4 py-2 rounded-md hover:bg-aurora hover:text-black transition">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative py-24 px-4 text-center max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-none mb-6">
+            Conectando Tecnologia de Ponta a <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Experiências Extraordinárias</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+            Produção digital, consultoria sênior em cibersegurança e turismo exclusivo na região ártica da Suécia.
+        </p>
+    </header>
+
+    <!-- SECTION: EXPERIENCES & MEDIA -->
+    <section id="experiences" class="max-w-6xl mx-auto px-4 py-16 border-t border-gray-900">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-aurora text-xs font-bold tracking-widest uppercase">Media & Tourism</span>
+                <h2 class="text-3xl font-bold text-white mt-2 mb-6">Fotografia, Tours da Aurora e Hospedagem</h2>
+                <p class="text-gray-400 mb-4">
+                    Oferecemos serviços de fotografia profissional (incluindo fotografia imobiliária e aérea) e produção de conteúdo digital na Lapônia Sueca. 
+                </p>
+                <p class="text-gray-400 mb-6">
+                    Vivencie o norte: organizamos guiadas exclusivas para observação de Auroras Boreais e oferecemos acomodação local por temporada (Airbnb) perfeitamente integrada à natureza selvagem.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-800 px-3 py-1 rounded text-xs text-gray-300">Caçada à Aurora</span>
+                    <span class="bg-gray-800 px-3 py-1 rounded text-xs text-gray-300">Acomodação Ártica</span>
+                    <span class="bg-gray-800 px-3 py-1 rounded text-xs text-gray-300">Drone & Real Estate</span>
+                </div>
+            </div>
+            <!-- Espaço para uma foto autoral sua incrível de Aurora ou Paisagem -->
+            <div class="bg-gray-800 h-80 rounded-xl flex items-center justify-between overflow-hidden border border-gray-700 shadow-xl">
+                <span class="m-auto text-sm text-gray-500">[ Espaço para sua foto/drone aqui ]</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CYBERSECURITY -->
+    <section id="cyber" class="bg-[#0d1321] border-t border-b border-gray-900 py-16">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 bg-gray-900 h-80 rounded-xl flex items-center justify-between overflow-hidden border border-gray-800 shadow-xl">
+                <span class="m-auto text-sm text-gray-600">[ Gráfico de rede ou Terminal minimalista ]</span>
+            </div>
+            <div class="order-1 md:order-2">
+                <span class="text-blue-400 text-xs font-bold tracking-widest uppercase">Consulting & Infrastructure</span>
+                <h2 class="text-3xl font-bold text-white mt-2 mb-6">Consultoria de Cibersegurança & IT</h2>
+                <p class="text-gray-400 mb-4">
+                    Com mais de 25 anos de experiência no mercado de segurança da informação, oferecemos consultoria robusta para proteção de dados, resiliência cibernética e transições de infraestrutura de TI.
+                </p>
+                <p class="text-gray-400 mb-6">
+                    Também prestamos suporte técnico especializado e consultoria operacional para outras operadoras de turismo da região que necessitam de infraestrutura digital confiável.
+                </p>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-gray-900 px-3 py-1 rounded text-xs text-gray-300">Auditoria de Segurança</span>
+                    <span class="bg-gray-900 px-3 py-1 rounded text-xs text-gray-300">Consultoria IT</span>
+                    <span class="bg-gray-900 px-3 py-1 rounded text-xs text-gray-300">Suporte B2B Local</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER -->
+    <footer id="contact" class="max-w-4xl mx-auto px-4 py-20 text-center">
+        <h2 class="text-2xl font-bold text-white mb-4">Pronto para colaborar?</h2>
+        <p class="text-gray-400 mb-8 max-w-md mx-auto">Seja para agendar um tour, alugar a propriedade ou contratar uma consultoria crítica de segurança, entre em contato.</p>
+        <a href="mailto:seu-email@empresa.se" class="inline-block bg-white text-black font-semibold px-6 py-3 rounded-md hover:bg-gray-200 transition">
+            Enviar um E-mail
+        </a>
+        <p class="text-xs text-gray-600 mt-16">© 2026 [Nome da Empresa]. Registrada na Suécia. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
