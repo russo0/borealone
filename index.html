@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boreal One | Arctic Experiences & Lodging</title>
+    <title>Boreal One | Lapônia Sueca</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,7 +29,7 @@
             <div class="flex items-center space-x-4 md:space-x-6">
                 <!-- Link para o Subdomínio de Cyber -->
                 <a href="https://cyber.borealone.com" id="nav-cyber-link" class="hidden sm:inline-block text-xs bg-gray-950 hover:bg-gray-900 text-gray-400 hover:text-white border border-gray-800 px-3 py-1.5 rounded transition">
-                    Cybersecurity & IT
+                    Cybersecurity & IT Consultation →
                 </a>
 
                 <!-- SELETOR DE IDIOMA -->
@@ -45,36 +45,49 @@
     <!-- HERO SECTION -->
     <header class="relative pt-20 pb-12 px-4 text-center max-w-3xl mx-auto">
         <h1 id="hero-title" class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
-            Lapônia Sueca: <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Experiências Extraordinárias</span>
+            Lapônia Sueca: <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Mídia & Experiências Árticas</span>
         </h1>
         <p id="hero-desc" class="text-base md:text-xl text-gray-400 max-w-xl mx-auto">
-            Guiadas exclusivas para observação da Aurora Boreal e hospedagem premium perfeitamente integrada à natureza ártica.
+            Produção de conteúdo digital, fotografia profissional, expedições à Aurora Boreal e hospedagem premium na região ártica.
         </p>
     </header>
 
-    <!-- MAIN CONTENT: TOURISM & ACCOMMODATION -->
+    <!-- MAIN CONTENT: TOURISM & MEDIA -->
     <main class="max-w-5xl mx-auto px-4 w-full flex-grow mb-16">
         <div class="grid md:grid-cols-2 gap-12 items-center">
+            
+            <!-- TEXT COLUMN -->
             <div>
-                <span id="exp-badge" class="text-aurora text-xs font-bold tracking-widest uppercase bg-aurora/10 px-2 py-1 rounded">Exclusive Travel</span>
-                <h2 id="exp-title" class="text-2xl md:text-4xl font-bold text-white mt-4 mb-6">Tours da Aurora & Hospedagem</h2>
-                <p id="exp-p1" class="text-gray-400 mb-4 text-sm md:text-base leading-relaxed">
-                    Vivencie o verdadeiro Norte. Organizamos expedições personalizadas e caçadas guiadas à Aurora Boreal na região da Lapônia Sueca, unindo conhecimento local à paixão pela fotografia ártica.
-                </p>
-                <p id="exp-p2" class="text-gray-400 mb-8 text-sm md:text-base leading-relaxed">
-                    Oferecemos também uma charmosa acomodação por temporada (Airbnb), o refúgio perfeito para relaxar após um dia de exploração sob o céu estrelado e as luzes do norte.
-                </p>
+                <span id="main-badge" class="text-aurora text-xs font-bold tracking-widest uppercase bg-aurora/10 px-2 py-1 rounded">Media & Experiences</span>
+                
+                <!-- Bloco 1: Midia e Fotografia -->
+                <div class="mt-6 mb-8">
+                    <h3 id="media-subtitle" class="text-xl font-bold text-white mb-2">📸 Produção Digital & Fotografia</h3>
+                    <p id="media-p" class="text-gray-400 text-sm md:text-base leading-relaxed">
+                        Oferecemos serviços especializados de fotografia imobiliária (real estate), captação de imagens aéreas com drone e criação de conteúdo digital de alta qualidade para empresas e operadoras de turismo locais.
+                    </p>
+                </div>
+
+                <!-- Bloco 2: Turismo e Airbnb -->
+                <div class="mb-8">
+                    <h3 id="tourism-subtitle" class="text-xl font-bold text-white mb-2">🌌 Tours da Aurora & Hospedagem</h3>
+                    <p id="tourism-p" class="text-gray-400 text-sm md:text-base leading-relaxed">
+                        Vivencie o verdadeiro Norte. Organizamos expedições exclusivas e caçadas guiadas para observação da Aurora Boreal. Além disso, oferecemos uma charmosa acomodação por temporada (Airbnb) perfeitamente integrada à natureza selvagem.
+                    </p>
+                </div>
+
                 <div class="flex flex-wrap gap-2 text-xs text-gray-300">
+                    <span id="tag-realestate" class="bg-gray-900 px-3 py-1.5 rounded border border-gray-800">Real Estate Photography</span>
+                    <span id="tag-drone" class="bg-gray-900 px-3 py-1.5 rounded border border-gray-800">Drone & Digital Content</span>
                     <span id="tag-aurora" class="bg-gray-900 px-3 py-1.5 rounded border border-gray-800">Northern Lights Tours</span>
-                    <span id="tag-stay" class="bg-gray-900 px-3 py-1.5 rounded border border-gray-800">Arctic Lodging (Airbnb)</span>
-                    <span id="tag-nature" class="bg-gray-900 px-3 py-1.5 rounded border border-gray-800">Local Nature Experiences</span>
+                    <span id="tag-stay" class="bg-gray-900 px-3 py-1.5 rounded border border-gray-800">Arctic Lodging</span>
                 </div>
             </div>
             
-            <!-- Imagem de Capa do Airbnb/Aurora -->
-            <div class="h-80 md:h-[400px] rounded-2xl overflow-hidden border border-gray-800 shadow-2xl relative group">
+            <!-- IMAGE COLUMN -->
+            <div class="h-80 md:h-[440px] rounded-2xl overflow-hidden border border-gray-800 shadow-2xl relative group">
                 <img src="images/airbnb_cover.jpg" alt="Lapônia Sueca Airbnb & Aurora" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none"></div>
             </div>
         </div>
     </main>
@@ -82,8 +95,8 @@
     <!-- CONTACT & FOOTER -->
     <footer class="border-t border-gray-900 bg-[#070a12] w-full py-12 text-center px-4">
         <div class="max-w-3xl mx-auto">
-            <h2 id="footer-title" class="text-xl font-bold text-white mb-2">Pronto para vivenciar o Ártico?</h2>
-            <p id="footer-desc" class="text-gray-400 text-sm mb-6 max-w-sm mx-auto">Entre em contato para consultar a disponibilidade do Airbnb ou agendar uma expedição guiada.</p>
+            <h2 id="footer-title" class="text-xl font-bold text-white mb-2">Pronto para colaborar ou explorar?</h2>
+            <p id="footer-desc" class="text-gray-400 text-sm mb-6 max-w-sm mx-auto">Entre em contato para contratar serviços de fotografia, reservar o Airbnb ou agendar um tour exclusivo.</p>
             <a href="mailto:info@borealone.com" id="footer-btn" class="inline-block bg-white text-black font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg">
                 Enviar um E-mail
             </a>
@@ -96,35 +109,44 @@
         const translations = {
             en: {
                 cyberLink: "Cybersecurity & IT Consultation →",
-                heroTitle: 'Swedish Lapland: <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Extraordinary Experiences</span>',
-                heroDesc: "Exclusive guided Northern Lights expeditions and premium lodging perfectly integrated with the Arctic wilderness.",
-                expBadge: "Exclusive Travel", expTitle: "Aurora Tours & Lodging",
-                expP1: "Experience the true North. We organize tailored expeditions and guided Northern Lights hunts in the Swedish Lapland region, blending local expertise with a passion for Arctic photography.",
-                expP2: "We also offer a cozy short-term accommodation (Airbnb), the perfect refuge to unwind after a day of exploration under the starry sky and the dancing auroras.",
-                tagAurora: "Northern Lights Tours", tagStay: "Arctic Lodging (Airbnb)", tagNature: "Local Nature Experiences",
-                footerTitle: "Ready to Experience the Arctic?", footerDesc: "Get in touch to check Airbnb availability or to book a guided aurora expedition.",
+                heroTitle: 'Swedish Lapland: <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Media & Arctic Experiences</span>',
+                heroDesc: "Digital content production, professional photography, guided Northern Lights expeditions, and premium lodging in the Arctic region.",
+                mainBadge: "Media & Experiences",
+                mediaSubtitle: "📸 Digital Production & Photography",
+                mediaP: "We offer specialized real estate photography, high-resolution aerial drone imaging, and premium digital content creation tailored for businesses and regional tourism operators.",
+                tourismSubtitle: "🌌 Aurora Tours & Lodging",
+                tourismP: "Experience the true North. We organize tailored expeditions and guided Northern Lights hunts, alongside a cozy short-term accommodation (Airbnb) perfectly integrated with the wild Arctic nature.",
+                tagRealestate: "Real Estate Photography", tagDrone: "Drone & Digital Content", tagAurora: "Northern Lights Tours", tagStay: "Arctic Lodging",
+                footerTitle: "Ready to Collaborate or Explore?",
+                footerDesc: "Get in touch to hire photography services, check Airbnb availability, or book a guided aurora expedition.",
                 footerBtn: "Send an Email", footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
             },
             sv: {
                 cyberLink: "Cybersäkerhet & IT-konsultation →",
-                heroTitle: 'Svenska Lappland: <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Extraordinära Upplevelser</span>',
-                heroDesc: "Exklusiva guidade norrskensturer och förstklassigt boende perfekt integrerat med den arktiska vildmarken.",
-                expBadge: "Exklusivt Resande", expTitle: "Norrskensturer & Boende",
-                expP1: "Upplev det sanna norr. Vi arrangerar skräddarsydda expeditioner och guidade norrskensjakter i Svenska Lappland, där vi kombinerar lokal expertis med en passion för arktisk fotografering.",
-                expP2: "Vi erbjuder även ett unikt korttidsboende (Airbnb), den perfekta tillflyktsorten för att koppla av efter en dag av utforskande under stjärnhimlen och det dansande norrskenet.",
-                tagAurora: "Norrskensturer", tagStay: "Arktiskt Boende (Airbnb)", tagNature: "Lokala Naturupplevelser",
-                footerTitle: "Redo att uppleva Arktis?", footerDesc: "Hör av dig för att kontrollera tillgänglighet för vårt boende eller för att boka en guidad norrskenstur.",
+                heroTitle: 'Svenska Lappland: <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Media & Arktiska Upplevelser</span>',
+                heroDesc: "Digital medieproduktion, professionell fotografering, guidade norrskensturer och förstklassigt boende i den arktiska regionen.",
+                mainBadge: "Media & Upplevelser",
+                mediaSubtitle: "📸 Digital Produktion & Fotografering",
+                mediaP: "Vi erbjuder specialiserad fastighetsfotografering, högupplösta flygbilder med drönare och förstklassig digital innehållsskapande anpassat för företag och lokala turismaktörer.",
+                tourismSubtitle: "🌌 Norrskensturer & Boende",
+                tourismP: "Upplev det sanna norr. Vi arrangerar skräddarsydda expeditioner och guidade norrskensjakter, samt ett unikt korttidsboende (Airbnb) perfekt integrerat med den vilda arktiska naturen.",
+                tagRealestate: "Fastighetsfotografering", tagDrone: "Drönare & Digitalt Innehåll", tagAurora: "Norrskensturer", tagStay: "Arktiskt Boende",
+                footerTitle: "Redo att samarbeta eller utforska?",
+                footerDesc: "Hör av dig för att anlita fototjänster, kontrollera tillgänglighet för boende eller boka en guidad norrskenstur.",
                 footerBtn: "Skicka ett mejl", footerRights: "© 2026 Boreal One AB. Registrerat i Sverige. Med ensamrätt."
             },
             pt: {
                 cyberLink: "Consultoria de Cibersegurança & TI →",
-                heroTitle: 'Lapônia Sueca: <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Experiências Extraordinárias</span>',
-                heroDesc: "Guiadas exclusivas para observação da Aurora Boreal e hospedagem premium perfeitamente integrada à natureza ártica.",
-                expBadge: "Viagem Exclusiva", expTitle: "Tours da Aurora & Hospedagem",
-                expP1: "Vivencie o verdadeiro Norte. Organizamos expedições personalizadas e caçadas guiadas à Aurora Boreal na região da Lapônia Sueca, unindo conhecimento local à paixão pela fotografia ártica.",
-                expP2: "Oferecemos também uma charmosa acomodação por temporada (Airbnb), o refúgio perfeito para relaxar após um dia de exploração sob o céu estrelado e as luzes do norte.",
-                tagAurora: "Tours de Aurora Boreal", tagStay: "Acomodação Ártica (Airbnb)", tagNature: "Experiências Locais na Natureza",
-                footerTitle: "Pronto para vivenciar o Ártico?", footerDesc: "Entre em contato para consultar a disponibilidade do Airbnb ou agendar uma expedição guiada.",
+                heroTitle: 'Lapônia Sueca: <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Mídia & Experiências Árticas</span>',
+                heroDesc: "Produção de conteúdo digital, fotografia profissional, expedições à Aurora Boreal e hospedagem premium na região ártica.",
+                mainBadge: "Mídia & Experiências",
+                mediaSubtitle: "📸 Produção Digital & Fotografia",
+                mediaP: "Oferecemos serviços especializados de fotografia imobiliária (real estate), captação de imagens aéreas com drone e criação de conteúdo digital de alta qualidade para empresas e operadoras de turismo locais.",
+                tourismSubtitle: "🌌 Tours da Aurora & Hospedagem",
+                tourismP: "Vivencie o verdadeiro Norte. Organizamos expedições exclusivas e caçadas guiadas para observação da Aurora Boreal. Além disso, oferecemos uma charmosa acomodação por temporada (Airbnb) perfeitamente integrada à natureza selvagem.",
+                tagRealestate: "Fotografia Imobiliária", tagDrone: "Drone & Conteúdo Digital", tagAurora: "Tours de Aurora Boreal", tagStay: "Acomodação Ártica",
+                footerTitle: "Pronto para colaborar ou explorar?",
+                footerDesc: "Entre em contato para contratar serviços de fotografia, reservar o Airbnb ou agendar um tour exclusivo.",
                 footerBtn: "Enviar um E-mail", footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
             }
         };
@@ -133,13 +155,15 @@
             document.getElementById('nav-cyber-link').textContent = translations[lang].cyberLink;
             document.getElementById('hero-title').innerHTML = translations[lang].heroTitle;
             document.getElementById('hero-desc').textContent = translations[lang].heroDesc;
-            document.getElementById('exp-badge').textContent = translations[lang].expBadge;
-            document.getElementById('exp-title').textContent = translations[lang].expTitle;
-            document.getElementById('exp-p1').textContent = translations[lang].expP1;
-            document.getElementById('exp-p2').textContent = translations[lang].expP2;
+            document.getElementById('main-badge').textContent = translations[lang].mainBadge;
+            document.getElementById('media-subtitle').textContent = translations[lang].mediaSubtitle;
+            document.getElementById('media-p').textContent = translations[lang].mediaP;
+            document.getElementById('tourism-subtitle').textContent = translations[lang].tourismSubtitle;
+            document.getElementById('tourism-p').textContent = translations[lang].tourismP;
+            document.getElementById('tag-realestate').textContent = translations[lang].tagRealestate;
+            document.getElementById('tag-drone').textContent = translations[lang].tagDrone;
             document.getElementById('tag-aurora').textContent = translations[lang].tagAurora;
             document.getElementById('tag-stay').textContent = translations[lang].tagStay;
-            document.getElementById('tag-nature').textContent = translations[lang].tagNature;
             document.getElementById('footer-title').textContent = translations[lang].footerTitle;
             document.getElementById('footer-desc').textContent = translations[lang].footerDesc;
             document.getElementById('footer-btn').textContent = translations[lang].footerBtn;
