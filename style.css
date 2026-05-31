@@ -1,0 +1,55 @@
+/* Reseta as margens padrão do navegador */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white; /* Deixa os textos brancos por padrão */
+    background-color: #050b14; /* Fundo escuro de segurança caso o vídeo demore a carregar */
+}
+
+/* Estilo do Vídeo de Fundo */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2; /* Joga o vídeo bem para trás */
+    object-fit: cover; /* Garante que ele cubra a tela sem esticar */
+}
+
+/* Filtro escuro para dar contraste e leitura ao texto */
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45); /* Camada preta com 45% de transparência */
+    z-index: -1; /* Fica na frente do vídeo, mas atrás do texto */
+}
+
+/* Container para organizar e centralizar o conteúdo do seu site */
+.conteudo-site {
+    position: relative;
+    z-index: 1;
+    padding: 40px;
+    text-align: center;
+    top: 35%; /* Empurra o conteúdo para o meio da tela */
+}
+
+/* Estilo elegante para o título */
+.conteudo-site h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+/* Estilo para o subtítulo */
+.conteudo-site p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
