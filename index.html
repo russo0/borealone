@@ -28,30 +28,33 @@
     
     <div class="fixed inset-0 bg-black/40 z-[-1] pointer-events-none"></div>
 
-    <nav class="bg-transparent sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between">
+    <!-- NAV BAR INDEX (Garantindo alinhamento com o Script) -->
+    <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
             
-            <div class="flex items-center space-x-3">
-                <img src="boreal_one_logo_noname.jpg" alt="Boreal One AB Logo" class="w-8 h-8 rounded-full object-cover border border-white/20 shadow-md">
-                <span class="font-bold text-xl tracking-wider text-white">BOREAL ONE AB</span>
+            <!-- Logo -->
+            <a href="https://borealone.com" class="flex items-center space-x-3 group order-1">
+                <img src="logo-icon.png" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
+                <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
+            </a>
+            
+            <!-- Idiomas -->
+            <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold order-2 sm:order-3">
+                <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
+                <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
+                <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
             </div>
-            
-            <div class="flex items-center space-x-3 md:space-x-4">
-                <div class="hidden sm:flex items-center space-x-2 text-xs">
-                    <a href="https://media.borealone.com" id="nav-media-link" class="bg-slate-950/40 hover:bg-slate-900/60 text-gray-300 hover:text-white border border-white/10 px-3 py-1.5 rounded transition backdrop-blur-sm">
-                        Media & Photography →
-                    </a>
-                    <a href="https://cyber.borealone.com" id="nav-cyber-link" class="bg-slate-950/40 hover:bg-slate-900/60 text-gray-300 hover:text-white border border-white/10 px-3 py-1.5 rounded transition backdrop-blur-sm">
-                        Cybersecurity & IT →
-                    </a>
-                </div>
 
-                <div class="flex space-x-1 bg-slate-950/40 p-1 rounded border border-white/10 text-xs font-bold backdrop-blur-sm">
-                    <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-white/20">EN</button>
-                    <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-300 hover:text-white">SV</button>
-                    <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-300 hover:text-white">PT</button>
-                </div>
+            <!-- Links Mobile/Desktop -->
+            <div class="w-full sm:w-auto flex items-center justify-between sm:justify-start space-x-4 text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
+                <a href="https://borealone.com" id="nav-main-link" class="text-gray-400 hover:text-white py-1 transition uppercase tracking-wider sm:normal-case">
+                    ← Voltar ao Início
+                </a>
+                <a href="https://cyber.borealone.com" id="nav-cyber-link" class="bg-gray-950 hover:bg-gray-900 text-aurora px-3 py-1.5 rounded border border-gray-800/80 transition uppercase tracking-wider sm:normal-case font-bold">
+                    Cybersecurity & IT →
+                </a>
             </div>
+
         </div>
     </nav>
 
