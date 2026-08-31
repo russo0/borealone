@@ -4,261 +4,252 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Yellow Aurora House – Arrival Guide</title>
-    <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-[#0b0f19] text-gray-200 font-sans antialiased min-h-screen flex flex-col">
 
-    <!-- HEADER -->
-    <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
-            
-            <a href="https://borealone.com" class="flex items-center space-x-3 group order-1">
-                <img src="../logo-icon.png" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
-                <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE AB</span>
+<!-- HEADER -->
+<nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
+
+        <!-- LOGO -->
+        <a href="https://borealone.com" class="flex items-center space-x-3 group order-1">
+            <img src="logo-icon.png" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
+            <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">
+                BOREAL ONE AB
+            </span>
+        </a>
+
+        <!-- LANGUAGE SELECTOR -->
+        <div class="flex space-x-2 bg-gray-950 p-1 rounded border border-gray-800 order-2 sm:order-3">
+            <button onclick="setLanguage('en')" id="btn-en" class="p-1 rounded transition flex items-center justify-center">
+                <img src="flags/uk.svg" class="w-7 h-7 rounded-full">
+            </button>
+            <button onclick="setLanguage('sv')" id="btn-sv" class="p-1 rounded transition flex items-center justify-center">
+                <img src="flags/sweden.svg" class="w-7 h-7 rounded-full">
+            </button>
+            <button onclick="setLanguage('pt')" id="btn-pt" class="p-1 rounded transition flex items-center justify-center">
+                <img src="flags/brazil.svg" class="w-7 h-7 rounded-full">
+            </button>
+            <button onclick="setLanguage('es')" id="btn-es" class="p-1 rounded transition flex items-center justify-center">
+                <img src="flags/spain.svg" class="w-7 h-7 rounded-full">
+            </button>
+        </div>
+
+        <!-- NAV LINKS -->
+        <div class="w-full sm:w-auto flex items-center justify-between sm:justify-start space-x-4 text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
+            <a href="https://cyber.borealone.com" id="nav-cyber-link" class="text-gray-400 hover:text-white py-1 transition uppercase tracking-wider sm:normal-case">
+                Cybersecurity & IT →
             </a>
-
-            <!-- LANGUAGE SELECTOR WITH FLAGS -->
-           <div class="flex space-x-2 bg-gray-950 p-1 rounded border border-gray-800 order-2 sm:order-3">
-
-                <button onclick="setLanguage('en')" id="btn-en"
-                    class="p-1 rounded transition flex items-center justify-center">
-                    <img src="flags/uk.svg" class="w-7 h-7 rounded-full">
-                </button>
-            
-                <button onclick="setLanguage('sv')" id="btn-sv"
-                    class="p-1 rounded transition flex items-center justify-center">
-                    <img src="flags/sweden.svg" class="w-7 h-7 rounded-full">
-                </button>
-            
-                <button onclick="setLanguage('pt')" id="btn-pt"
-                    class="p-1 rounded transition flex items-center justify-center">
-                    <img src="flags/brazil.svg" class="w-7 h-7 rounded-full">
-                </button>
-            
-                <button onclick="setLanguage('es')" id="btn-es"
-                    class="p-1 rounded transition flex items-center justify-center">
-                    <img src="flags/spain.svg" class="w-7 h-7 rounded-full">
-                </button>
-            
-            </div>
-            
-
-            <div class="w-full sm:w-auto flex items-center justify-between sm:justify-start space-x-4 text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
-                <a href="https://cyber.borealone.com" id="nav-cyber-link" class="text-gray-400 hover:text-white py-1 transition uppercase tracking-wider sm:normal-case">
-                    Cybersecurity & IT
-                </a>
-                <a href="https://media.borealone.com" id="nav-media-link" class="text-aurora hover:text-white py-1 transition uppercase tracking-wider sm:normal-case font-bold">
-                    Media & Photography →
-                </a>
-            </div>
-
+            <a href="https://media.borealone.com" id="nav-media-link" class="text-aurora hover:text-white py-1 transition uppercase tracking-wider sm:normal-case font-bold">
+                Media & Photography →
+            </a>
         </div>
-    </nav>
 
-    <!-- PAGE CONTENT -->
-    <main class="max-w-3xl mx-auto px-4 py-12">
+    </div>
+</nav>
 
-        <h1 id="arrival-title" class="text-3xl md:text-5xl font-extrabold text-white mb-8 text-center"></h1>
-        <p id="arrival-intro" class="text-gray-300 text-center mb-12"></p>
+<!-- PAGE CONTENT -->
+<main class="max-w-3xl mx-auto px-4 py-12">
 
-        <!-- BEFORE ARRIVE -->
-        <section class="mb-12">
-            <h2 id="before-title" class="text-xl font-bold text-white mb-2"></h2>
-            <p id="before-text" class="text-gray-300"></p>
-        </section>
+    <h1 id="arrival-title" class="text-3xl md:text-5xl font-extrabold text-white mb-8 text-center"></h1>
+    <p id="arrival-intro" class="text-gray-300 text-center mb-12"></p>
 
-        <!-- UNLOCK DOOR -->
-        <section class="mb-12">
-            <h2 id="unlock-title" class="text-xl font-bold text-white mb-4"></h2>
+    <!-- BEFORE ARRIVE -->
+    <section class="mb-12">
+        <h2 id="before-title" class="text-xl font-bold text-white mb-2"></h2>
+        <p id="before-text" class="text-gray-300"></p>
+    </section>
 
-            <p id="step1-text" class="text-gray-300 mb-4"></p>
-            <img src="keypad.jpg" class="rounded-lg border border-white/10 shadow mb-2">
-            <p class="text-gray-400 text-sm">The keypad is outside, beside the front door.</p>
+    <!-- UNLOCK DOOR -->
+    <section class="mb-12">
+        <h2 id="unlock-title" class="text-xl font-bold text-white mb-4"></h2>
 
-            <p id="step2-text" class="text-gray-300 mb-4"></p>
-            <p id="step3-text" class="text-gray-300 mb-4"></p>
-        </section>
+        <p id="step1-text" class="text-gray-300 mb-4"></p>
+        <img src="keypad.jpg" class="rounded-lg border border-white/10 shadow mb-2">
+        <p class="text-gray-400 text-sm">The keypad is outside, beside the front door.</p>
 
-        <!-- LOCK WHEN LEAVING -->
-        <section class="mb-12">
-            <h2 id="lock-title" class="text-xl font-bold text-white mb-2"></h2>
-            <p id="lock-text" class="text-gray-300"></p>
-        </section>
+        <p id="step2-text" class="text-gray-300 mb-4"></p>
+        <p id="step3-text" class="text-gray-300 mb-4"></p>
+    </section>
 
-        <!-- INSIDE LOCK -->
-        <section class="mb-12">
-            <h2 id="inside-title" class="text-xl font-bold text-white mb-2"></h2>
-            <img src="lock-knob.jpg" class="rounded-lg border border-white/10 shadow mb-2">
-            <p id="inside-text" class="text-gray-300"></p>
-            <p class="text-gray-400 text-sm">Press the centre of the round knob — not the handle.</p>
-        </section>
+    <!-- LOCK WHEN LEAVING -->
+    <section class="mb-12">
+        <h2 id="lock-title" class="text-xl font-bold text-white mb-2"></h2>
+        <p id="lock-text" class="text-gray-300"></p>
+    </section>
 
-        <!-- GARAGE SECTION -->
-        <section class="mb-12">
-            <h2 id="garage-title" class="text-xl font-bold text-white mb-2"></h2>
-            <p id="garage-text" class="text-gray-300"></p>
-        </section>
+    <!-- INSIDE LOCK -->
+    <section class="mb-12">
+        <h2 id="inside-title" class="text-xl font-bold text-white mb-2"></h2>
+        <img src="lock-knob.jpg" class="rounded-lg border border-white/10 shadow mb-2">
+        <p id="inside-text" class="text-gray-300"></p>
+        <p class="text-gray-400 text-sm">Press the centre of the round knob — not the handle.</p>
+    </section>
 
-        <!-- HELP -->
-        <section class="mb-12">
-            <h2 id="help-title" class="text-xl font-bold text-white mb-2"></h2>
-            <p id="help-text" class="text-gray-300"></p>
-        </section>
+    <!-- GARAGE -->
+    <section class="mb-12">
+        <h2 id="garage-title" class="text-xl font-bold text-white mb-2"></h2>
+        <p id="garage-text" class="text-gray-300"></p>
+    </section>
 
-        <p class="mt-10 text-center">
-            <a href="Yellow_Aurora_House_Arrival_Guide.pdf" download id="download-btn"
-               class="inline-block bg-white text-black font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg"></a>
-        </p>
+    <!-- HELP -->
+    <section class="mb-12">
+        <h2 id="help-title" class="text-xl font-bold text-white mb-2"></h2>
+        <p id="help-text" class="text-gray-300"></p>
+    </section>
 
-    </main>
+    <!-- DOWNLOAD PDF -->
+    <p class="mt-10 text-center">
+        <a href="Yellow_Aurora_House_Arrival_Guide.pdf" download id="download-btn"
+           class="inline-block bg-white text-black font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg"></a>
+    </p>
 
-    <!-- FOOTER -->
-    <footer class="w-full py-16 text-center px-4">
-        <div class="max-w-3xl mx-auto">
-            <h2 id="footer-title" class="text-xl font-bold text-white mb-2 drop-shadow"></h2>
-            <p id="footer-desc" class="text-gray-200 text-sm mb-6 max-w-sm mx-auto drop-shadow"></p>
-            <a href="mailto:info@borealone.com" id="footer-btn" class="inline-block bg-white text-black font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg"></a>
-            <p id="footer-rights" class="text-xs text-gray-400/50 mt-12"></p>
-        </div>
-    </footer>
+</main>
 
-    <!-- TRANSLATIONS -->
-    <script>
+<!-- FOOTER -->
+<footer class="w-full py-16 text-center px-4">
+    <div class="max-w-3xl mx-auto">
+        <h2 id="footer-title" class="text-xl font-bold text-white mb-2 drop-shadow"></h2>
+        <p id="footer-desc" class="text-gray-200 text-sm mb-6 max-w-sm mx-auto drop-shadow"></p>
 
-        /* FOOTER + NAV TRANSLATIONS */
-        const translations = {
-            en: {
-                mediaLink: "Media & Photography →",
-                cyberLink: "Cybersecurity & IT →",
-                footerTitle: "Ready to Experience the Arctic?",
-                footerDesc: "Get in touch to check Airbnb availability or to book a guided aurora expedition.",
-                footerBtn: "Send an Email",
-                footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
-            },
-            pt: {
-                mediaLink: "Mídia & Fotografia →",
-                cyberLink: "Cibersegurança & TI →",
-                footerTitle: "Pronto para vivenciar o Ártico?",
-                footerDesc: "Entre em contato para consultar a disponibilidade do Airbnb ou agendar uma expedição guiada.",
-                footerBtn: "Enviar um E-mail",
-                footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
-            },
-            sv: {
-                mediaLink: "Media & Fotografering →",
-                cyberLink: "Cybersäkerhet & IT →",
-                footerTitle: "Redo att uppleva Arktis?",
-                footerDesc: "Hör av dig för att kontrollera tillgänglighet eller boka en guidad norrskenstur.",
-                footerBtn: "Skicka ett mejl",
-                footerRights: "© 2026 Boreal One AB. Registrerat i Sverige. Med ensamrätt."
-            },
-            es: {
-                mediaLink: "Medios & Fotografía →",
-                cyberLink: "Ciberseguridad & TI →",
-                footerTitle: "¿Listo para vivir el Ártico?",
-                footerDesc: "Contáctanos para consultar disponibilidad o reservar una expedición guiada.",
-                footerBtn: "Enviar un correo",
-                footerRights: "© 2026 Boreal One AB. Registrada en Suecia. Todos los derechos reservados."
-            }
-        };
+        <a href="mailto:info@borealone.com" id="footer-btn"
+           class="inline-block bg-white text-black font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg"></a>
 
-        /* ARRIVAL PAGE TRANSLATIONS */
-        const translationsArrival = {
-            en: {
-                arrivalTitle: "Arrival & Door Guide",
-                arrivalIntro: "A quick guide for a smooth self‑check‑in.",
-                beforeTitle: "Before you arrive",
-                beforeText: "Your personal six-digit door code will be sent shortly before check-in. Please keep it private and do not share it with anyone outside your group.",
-                unlockTitle: "How to unlock the front door",
-                step1Text: "1. Find the keypad. It is mounted on the wall to the right of the main entrance door.",
-                step2Text: "2. Enter your six-digit code. The lock will unlock automatically after the correct code is entered — there is no separate “enter” button. If you make a mistake, use the arrow button to delete and start again.",
-                step3Text: "3. Wait a moment for the lock to turn. Once you hear it unlock, press the door handle down and open the door.",
-                lockTitle: "How to lock the door when leaving",
-                lockText: "Close the door fully first. Then press the back arrow ◀ on the outside keypad. Wait until you hear the lock turn before leaving. Always check that the door is properly closed and locked when you go out.",
-                insideTitle: "Locking or unlocking from inside",
-                insideText: "Press the centre of the large round lock knob above the door handle. The lock will turn automatically. This works for both locking and unlocking.",
-                garageTitle: "Covered garage access",
-                garageText: "The covered garage can be opened using the remote control hanging inside the house, between the entrance door and the window. If you need to use the garage, simply take the remote and press the main button to open or close the door. Please return the remote to the same hook after use.",
-                helpTitle: "Need assistance?",
-                helpText: "Contact us through your reservation platform or preferred messaging channel.",
-                downloadBtn: "Download PDF"
-            },
+        <p id="footer-rights" class="text-xs text-gray-400/50 mt-12"></p>
+    </div>
+</footer>
 
-            pt: {
-                arrivalTitle: "Guia de Chegada & Porta",
-                arrivalIntro: "Um guia rápido para um check‑in tranquilo.",
-                beforeTitle: "Antes de chegar",
-                beforeText: "Seu código pessoal de seis dígitos será enviado pouco antes do check‑in. Mantenha-o em sigilo e não compartilhe com ninguém fora do seu grupo.",
-                unlockTitle: "Como destrancar a porta da frente",
-                step1Text: "1. Encontre o teclado. Ele fica instalado na parede à direita da porta de entrada principal.",
-                step2Text: "2. Digite seu código de seis dígitos. A fechadura destranca automaticamente após o código correto ser inserido — não existe botão “enter”. Se cometer um erro, use a seta para apagar e começar novamente.",
-                step3Text: "3. Aguarde um momento até a fechadura girar. Quando ouvir o destranque, pressione a maçaneta para baixo e abra a porta.",
-                lockTitle: "Como trancar a porta ao sair",
-                lockText: "Feche a porta completamente primeiro. Depois pressione a seta ◀ no teclado externo. Aguarde até ouvir a fechadura girar antes de sair. Sempre verifique se a porta está bem fechada e trancada ao sair.",
-                insideTitle: "Trancar ou destrancar por dentro",
-                insideText: "Pressione o centro do grande botão redondo acima da maçaneta. A fechadura irá girar automaticamente. Isso funciona tanto para trancar quanto para destrancar.",
-                garageTitle: "Acesso à garagem coberta",
-                garageText: "A garagem coberta pode ser aberta usando o controle remoto que fica pendurado dentro da casa, entre a porta de entrada e a janela. Se precisar usar a garagem, basta pegar o controle e pressionar o botão principal para abrir ou fechar a porta. Por favor, devolva o controle ao mesmo gancho após o uso.",
-                helpTitle: "Precisa de assistência?",
-                helpText: "Entre em contato pelo sistema de reserva ou pelo seu canal de mensagem preferido.",
-                downloadBtn: "Baixar PDF"
-            },
+<!-- TRANSLATIONS SCRIPT -->
+<script>
 
-            sv: {
-                arrivalTitle: "Ankomst- och Dörrguide",
-                arrivalIntro: "En snabb guide för en smidig själv‑incheckning.",
-                beforeTitle: "Innan du anländer",
-                beforeText: "Din personliga sexsiffriga kod skickas strax före incheckning. Håll den privat och dela den inte med någon utanför din grupp.",
-                unlockTitle: "Hur man låser upp ytterdörren",
-                step1Text: "1. Hitta knappsatsen. Den sitter på väggen till höger om huvudentrédörren.",
-                step2Text: "2. Ange din sexsiffriga kod. Låset öppnas automatiskt när rätt kod har matats in — det finns ingen separat “enter”-knapp. Om du gör fel, använd pilknappen för att radera och börja om.",
-                step3Text: "3. Vänta ett ögonblick tills låset vrider sig. När du hör att det öppnas, tryck ned handtaget och öppna dörren.",
-                lockTitle: "Hur man låser dörren när man lämnar",
-                lockText: "Stäng dörren helt först. Tryck sedan på pilen ◀ på knappsatsen utanför. Vänta tills du hör låset vrida sig innan du går. Kontrollera alltid att dörren är ordentligt stängd och låst när du går ut.",
-                insideTitle: "Låsa eller låsa upp från insidan",
-                insideText: "Tryck på mitten av den stora runda låsknoppen ovanför handtaget. Låset vrider sig automatiskt. Detta fungerar både för att låsa och låsa upp.",
-                garageTitle: "Tillgång till det täckta garaget",
-                garageText: "Det täckta garaget kan öppnas med fjärrkontrollen som hänger inne i huset, mellan ytterdörren och fönstret. Om du behöver använda garaget, ta fjärrkontrollen och tryck på huvudknappen för att öppna eller stänga dörren. Vänligen häng tillbaka fjärrkontrollen på samma krok efter användning.",
-                helpTitle: "Behöver du assistans?",
-                helpText: "Kontakta oss via ditt bokningssystem eller din föredragna meddelandekanal.",
-                downloadBtn: "Ladda ner PDF"
-            },
+const translations = {
+    en: {
+        mediaLink: "Media & Photography →",
+        cyberLink: "Cybersecurity & IT →",
+        footerTitle: "Ready to Experience the Arctic?",
+        footerDesc: "Get in touch to check Airbnb availability or to book a guided aurora expedition.",
+        footerBtn: "Send an Email",
+        footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
+    },
+    pt: {
+        mediaLink: "Mídia & Fotografia →",
+        cyberLink: "Cibersegurança & TI →",
+        footerTitle: "Pronto para vivenciar o Ártico?",
+        footerDesc: "Entre em contato para consultar a disponibilidade do Airbnb ou agendar uma expedição guiada.",
+        footerBtn: "Enviar um E-mail",
+        footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
+    },
+    sv: {
+        mediaLink: "Media & Fotografering →",
+        cyberLink: "Cybersäkerhet & IT →",
+        footerTitle: "Redo att uppleva Arktis?",
+        footerDesc: "Hör av dig för att kontrollera tillgänglighet eller boka en guidad norrskenstur.",
+        footerBtn: "Skicka ett mejl",
+        footerRights: "© 2026 Boreal One AB. Registrerat i Sverige. Med ensamrätt."
+    },
+    es: {
+        mediaLink: "Medios & Fotografía →",
+        cyberLink: "Ciberseguridad & TI →",
+        footerTitle: "¿Listo para vivir el Ártico?",
+        footerDesc: "Contáctanos para consultar disponibilidad o reservar una expedición guiada.",
+        footerBtn: "Enviar un correo",
+        footerRights: "© 2026 Boreal One AB. Registrada en Suecia. Todos los derechos reservados."
+    }
+};
 
-            es: {
-                arrivalTitle: "Guía de Llegada y Puerta",
-                arrivalIntro: "Una guía rápida para un check‑in sin complicaciones.",
-                beforeTitle: "Antes de llegar",
-                beforeText: "Tu código personal de seis dígitos será enviado poco antes del check‑in. Manténlo privado y no lo compartas con nadie fuera de tu grupo.",
-                unlockTitle: "Cómo abrir la puerta principal",
-                step1Text: "1. Encuentra el teclado. Está montado en la pared a la derecha de la puerta de entrada principal.",
-                step2Text: "2. Introduce tu código de seis dígitos. La cerradura se abrirá automáticamente después de introducir el código correcto — no hay un botón “enter”. Si te equivocas, usa la flecha para borrar y empezar de nuevo.",
-                step3Text: "3. Espera un momento hasta que la cerradura gire. Cuando escuches que se desbloquea, presiona la manija hacia abajo y abre la puerta.",
-                lockTitle: "Cómo cerrar la puerta al salir",
-                lockText: "Cierra la puerta completamente primero. Luego presiona la flecha ◀ en el teclado exterior. Espera hasta escuchar que la cerradura gira antes de salir. Comprueba siempre que la puerta esté bien cerrada y bloqueada al salir.",
-                insideTitle: "Cerrar o abrir desde dentro",
-                insideText: "Presiona el centro del gran botón redondo sobre la manija. La cerradura girará automáticamente. Esto funciona tanto para cerrar como para abrir.",
-                garageTitle: "Acceso al garaje cubierto",
-                garageText: "El garaje cubierto puede abrirse con el control remoto que cuelga dentro de la casa, entre la puerta de entrada y la ventana. Si necesitas usar el garaje, toma el control y presiona el botón principal para abrir o cerrar la puerta. Por favor, devuelve el control al mismo gancho después de usarlo.",
-                helpTitle: "¿Necesitas asistencia?",
-                helpText: "Contáctanos a través de tu plataforma de reserva o tu canal de mensajería preferido.",
-                downloadBtn: "Descargar PDF"
-            }
-        };
-/* APPLY LANGUAGE TO PAGE */
+const translationsArrival = {
+    en: {
+        arrivalTitle: "Arrival & Door Guide",
+        arrivalIntro: "A quick guide for a smooth self‑check‑in.",
+        beforeTitle: "Before you arrive",
+        beforeText: "Your personal six-digit door code will be sent shortly before check-in. Please keep it private and do not share it with anyone outside your group.",
+        unlockTitle: "How to unlock the front door",
+        step1Text: "1. Find the keypad. It is mounted on the wall to the right of the main entrance door.",
+        step2Text: "2. Enter your six-digit code. The lock will unlock automatically after the correct code is entered — there is no separate “enter” button. If you make a mistake, use the arrow button to delete and start again.",
+        step3Text: "3. Wait a moment for the lock to turn. Once you hear it unlock, press the door handle down and open the door.",
+        lockTitle: "How to lock the door when leaving",
+        lockText: "Close the door fully first. Then press the back arrow ◀ on the outside keypad. Wait until you hear the lock turn before leaving.",
+        insideTitle: "Locking or unlocking from inside",
+        insideText: "Press the centre of the large round lock knob above the door handle. The lock will turn automatically.",
+        garageTitle: "Covered garage access",
+        garageText: "The covered garage can be opened using the remote control hanging inside the house, between the entrance door and the window.",
+        helpTitle: "Need assistance?",
+        helpText: "Contact us through your reservation platform or preferred messaging channel.",
+        downloadBtn: "Download PDF"
+    },
+
+    pt: {
+        arrivalTitle: "Guia de Chegada & Porta",
+        arrivalIntro: "Um guia rápido para um check‑in tranquilo.",
+        beforeTitle: "Antes de chegar",
+        beforeText: "Seu código pessoal de seis dígitos será enviado pouco antes do check‑in. Mantenha-o em sigilo e não compartilhe com ninguém fora do seu grupo.",
+        unlockTitle: "Como destrancar a porta da frente",
+        step1Text: "1. Encontre o teclado. Ele fica instalado na parede à direita da porta de entrada principal.",
+        step2Text: "2. Digite seu código de seis dígitos. A fechadura destranca automaticamente após o código correto ser inserido — não existe botão “enter”.",
+        step3Text: "3. Aguarde um momento até a fechadura girar. Quando ouvir o destranque, pressione a maçaneta para baixo e abra a porta.",
+        lockTitle: "Como trancar a porta ao sair",
+        lockText: "Feche a porta completamente primeiro. Depois pressione a seta ◀ no teclado externo.",
+        insideTitle: "Trancar ou destrancar por dentro",
+        insideText: "Pressione o centro do grande botão redondo acima da maçaneta. A fechadura irá girar automaticamente.",
+        garageTitle: "Acesso à garagem coberta",
+        garageText: "A garagem coberta pode ser aberta usando o controle remoto que fica pendurado dentro da casa.",
+        helpTitle: "Precisa de assistência?",
+        helpText: "Entre em contato pelo sistema de reserva ou pelo seu canal de mensagem preferido.",
+        downloadBtn: "Baixar PDF"
+    },
+
+    sv: {
+        arrivalTitle: "Ankomst- och Dörrguide",
+        arrivalIntro: "En snabb guide för en smidig själv‑incheckning.",
+        beforeTitle: "Innan du anländer",
+        beforeText: "Din personliga sexsiffriga kod skickas strax före incheckning.",
+        unlockTitle: "Hur man låser upp ytterdörren",
+        step1Text: "1. Hitta knappsatsen. Den sitter på väggen till höger om huvudentrédörren.",
+        step2Text: "2. Ange din sexsiffriga kod. Låset öppnas automatiskt när rätt kod har matats in.",
+        step3Text: "3. Vänta ett ögonblick tills låset vrider sig.",
+        lockTitle: "Hur man låser dörren när man lämnar",
+        lockText: "Stäng dörren helt först. Tryck sedan på pilen ◀ på knappsatsen utanför.",
+        insideTitle: "Låsa eller låsa upp från insidan",
+        insideText: "Tryck på mitten av den stora runda låsknoppen ovanför handtaget.",
+        garageTitle: "Tillgång till det täckta garaget",
+        garageText: "Det täckta garaget kan öppnas med fjärrkontrollen som hänger inne i huset.",
+        helpTitle: "Behöver du assistans?",
+        helpText: "Kontakta oss via ditt bokningssystem eller din föredragna meddelandekanal.",
+        downloadBtn: "Ladda ner PDF"
+    },
+
+    es: {
+        arrivalTitle: "Guía de Llegada y Puerta",
+        arrivalIntro: "Una guía rápida para un check‑in sin complicaciones.",
+        beforeTitle: "Antes de llegar",
+        beforeText: "Tu código personal de seis dígitos será enviado poco antes del check‑in.",
+        unlockTitle: "Cómo abrir la puerta principal",
+        step1Text: "1. Encuentra el teclado. Está montado en la pared a la derecha de la puerta de entrada principal.",
+        step2Text: "2. Introduce tu código de seis dígitos. La cerradura se abrirá automáticamente después de introducir el código correcto.",
+        step3Text: "3. Espera un momento hasta que la cerradura gire.",
+        lockTitle: "Cómo cerrar la puerta al salir",
+        lockText: "Cierra la puerta completamente primero. Luego presiona la flecha ◀ en el teclado exterior.",
+        insideTitle: "Cerrar o abrir desde dentro",
+        insideText: "Presiona el centro del gran botón redondo sobre la manija.",
+        garageTitle: "Acceso al garaje cubierto",
+        garageText: "El garaje cubierto puede abrirse con el control remoto que cuelga dentro de la casa.",
+        helpTitle: "¿Necesitas asistencia?",
+        helpText: "Contáctanos a través de tu plataforma de reserva o tu canal de mensajería preferido.",
+        downloadBtn: "Descargar PDF"
+    }
+};
+
+/* APPLY LANGUAGE */
 function setLanguage(lang) {
-
-    // Save preference
     localStorage.setItem("arrivalLang", lang);
-
-    // Highlight active button
     highlightButton(lang);
 
-    // Select correct translation set
     const t = translationsArrival[lang];
     const f = translations[lang];
 
-    // ARRIVAL PAGE TEXTS
     document.getElementById("arrival-title").textContent = t.arrivalTitle;
     document.getElementById("arrival-intro").textContent = t.arrivalIntro;
 
@@ -284,7 +275,6 @@ function setLanguage(lang) {
 
     document.getElementById("download-btn").textContent = t.downloadBtn;
 
-    // FOOTER + NAV
     document.getElementById("nav-media-link").textContent = f.mediaLink;
     document.getElementById("nav-cyber-link").textContent = f.cyberLink;
 
@@ -294,24 +284,14 @@ function setLanguage(lang) {
     document.getElementById("footer-rights").textContent = f.footerRights;
 }
 
-/* LOAD SAVED LANGUAGE ON PAGE LOAD */
+/* LOAD SAVED LANGUAGE */
 document.addEventListener("DOMContentLoaded", () => {
     const saved = localStorage.getItem("arrivalLang") || "en";
     setLanguage(saved);
 });
 
-        /* HIGHLIGHT ACTIVE LANGUAGE BUTTON */
-        function highlightButton(lang) {
-            const buttons = ["en", "sv", "pt", "es"];
-            buttons.forEach(code => {
-                const btn = document.getElementById(`btn-${code}`);
-                if (code === lang) {
-                    btn.classList.add("bg-gray-800", "text-white");
-                    btn.classList.remove("text-gray-400");
-                } else {
-                    btn.classList.remove("bg-gray-800", "text-white");
-                    btn.classList.add("text-gray-400");
-                }
-            });
-        }
-
+/* HIGHLIGHT ACTIVE BUTTON */
+function highlightButton(lang) {
+    const buttons = ["en", "sv", "pt", "es"];
+    buttons.forEach(code => {
+        const btn = document.getElementById(`btn-${code
