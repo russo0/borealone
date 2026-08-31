@@ -127,104 +127,144 @@
     </footer>
 
     <!-- TRANSLATIONS -->
-    <script>
-        const translationsArrival = {
-            en: {
-                arrivalTitle: "Arrival Guide",
-                arrivalIntro: "A quick guide for a smooth self check‑in.",
-                beforeTitle: "Before you arrive",
-                beforeText: "Your personal six‑digit door code will be sent shortly before check‑in.",
-                unlockTitle: "How to unlock the front door",
-                step1Text: "1. Find the keypad beside the main entrance.",
-                step2Text: "2. Enter your six‑digit code. The lock unlocks automatically — no “enter” button.",
-                step3Text: "3. Wait for the lock to turn, then press the handle down and open.",
-                lockTitle: "How to lock the door when leaving",
-                lockText: "Close the door fully. Then press the back arrow &#x25C0;
- on the keypad.",
-                insideTitle: "Locking or unlocking from inside",
-                insideText: "Press the centre of the round knob above the handle.",
-                helpTitle: "Need assistance?",
-                helpText: "Contact us through your reservation platform or preferred messaging channel."
-                downloadBtn: "Download PDF"
-            },
-            pt: {
-                arrivalTitle: "Guia de Chegada",
-                arrivalIntro: "Um guia rápido para um check‑in tranquilo.",
-                beforeTitle: "Antes de chegar",
-                beforeText: "Seu código pessoal de seis dígitos será enviado pouco antes do check‑in.",
-                unlockTitle: "Como destrancar a porta da frente",
-                step1Text: "1. Encontre o teclado ao lado da entrada.",
-                step2Text: "2. Digite seu código. A fechadura destranca automaticamente — não existe botão “enter”.",
-                step3Text: "3. Aguarde a fechadura girar, pressione a maçaneta para baixo e abra.",
-                lockTitle: "Como trancar ao sair",
-                lockText: "Feche a porta completamente. Depois pressione a seta para trás &#x25C0;
- no teclado.",
-                insideTitle: "Trancar ou destrancar por dentro",
-                insideText: "Pressione o centro do botão redondo acima da maçaneta.",
-                helpTitle: "Precisa de assistência?",
-                helpText: "Entre em contato pelo sistema de reserva ou pelo seu canal de mensagem preferido."
-                downloadBtn: "Baixar PDF"
-            },
-            sv: {
-                arrivalTitle: "Ankomstguide",
-                arrivalIntro: "En snabb guide för en smidig själv‑incheckning.",
-                beforeTitle: "Innan du anländer",
-                beforeText: "Din personliga kod skickas strax före incheckning.",
-                unlockTitle: "Hur man låser upp ytterdörren",
-                step1Text: "1. Hitta knappsatsen bredvid entrén.",
-                step2Text: "2. Ange din kod. Låset öppnas automatiskt — ingen “enter”-knapp.",
-                step3Text: "3. Vänta tills låset vrider sig, tryck ned handtaget och öppna.",
-                lockTitle: "Hur man låser när man lämnar",
-                lockText: "Stäng dörren helt. Tryck sedan på bakåt‑pilen &#x25C0;
- på knappsatsen.",
-                insideTitle: "Låsa eller låsa upp från insidan",
-                insideText: "Tryck på mitten av den runda knoppen ovanför handtaget.",
-                helpTitle: "Behöver du assistans?",
-                helpText: "Kontakta oss via ditt bokningssystem eller din föredragna meddelandekanal."
-                downloadBtn: "Ladda ner PDF"
-            }
-            es: {
-                arrivalTitle: "Guía de Llegada",
-                arrivalIntro: "Una guía rápida para un check‑in sin complicaciones.",
-                beforeTitle: "Antes de llegar",
-                beforeText: "Tu código personal de seis dígitos será enviado poco antes del check‑in.",
-                unlockTitle: "Cómo abrir la puerta principal",
-                step1Text: "1. Encuentra el teclado junto a la entrada.",
-                step2Text: "2. Introduce tu código. La cerradura se abrirá automáticamente — no hay botón “enter”.",
-                step3Text: "3. Espera a que la cerradura gire, luego presiona la manija hacia abajo y abre.",
-                lockTitle: "Cómo cerrar la puerta al salir",
-                lockText: "Cierra la puerta completamente. Luego presiona la flecha hacia atrás &#x25C0;
- en el teclado.",
-                insideTitle: "Cerrar o abrir desde dentro",
-                insideText: "Presiona el centro del botón redondo sobre la manija.",
-                helpTitle: "¿Necesitas asistencia?",
-                helpText: "Contáctanos a través de tu plataforma de reserva o tu canal de mensajería preferido."
-                downloadBtn: "Descargar PDF"
-            }
-
-        };
-
-        function setLanguage(lang) {
-            const t = translationsArrival[lang];
-            if (!t) return;
-
-            document.getElementById("arrival-title").textContent = t.arrivalTitle;
-            document.getElementById("arrival-intro").textContent = t.arrivalIntro;
-            document.getElementById("before-title").textContent = t.beforeTitle;
-            document.getElementById("before-text").textContent = t.beforeText;
-            document.getElementById("unlock-title").textContent = t.unlockTitle;
-            document.getElementById("step1-text").textContent = t.step1Text;
-            document.getElementById("step2-text").textContent = t.step2Text;
-            document.getElementById("step3-text").textContent = t.step3Text;
-            document.getElementById("lock-title").textContent = t.lockTitle;
-            document.getElementById("lock-text").textContent = t.lockText;
-            document.getElementById("inside-title").textContent = t.insideTitle;
-            document.getElementById("inside-text").textContent = t.insideText;
-            document.getElementById("help-title").textContent = t.helpTitle;
-            document.getElementById("help-text").textContent = t.helpText;
-            document.getElementById("download-btn").textContent = t.downloadBtn;
+   <script>
+    const translations = {
+        en: {
+            mediaLink: "Media & Photography →",
+            cyberLink: "Cybersecurity & IT →",
+            footerTitle: "Ready to Experience the Arctic?",
+            footerDesc: "Get in touch to check Airbnb availability or to book a guided aurora expedition.",
+            footerBtn: "Send an Email",
+            footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
+        },
+        pt: {
+            mediaLink: "Mídia & Fotografia →",
+            cyberLink: "Cibersegurança & TI →",
+            footerTitle: "Pronto para vivenciar o Ártico?",
+            footerDesc: "Entre em contato para consultar a disponibilidade do Airbnb ou agendar uma expedição guiada.",
+            footerBtn: "Enviar um E-mail",
+            footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
+        },
+        sv: {
+            mediaLink: "Media & Fotografering →",
+            cyberLink: "Cybersäkerhet & IT →",
+            footerTitle: "Redo att uppleva Arktis?",
+            footerDesc: "Hör av dig för att kontrollera tillgänglighet eller boka en guidad norrskenstur.",
+            footerBtn: "Skicka ett mejl",
+            footerRights: "© 2026 Boreal One AB. Registrerat i Sverige. Med ensamrätt."
+        },
+        es: {
+            mediaLink: "Medios & Fotografía →",
+            cyberLink: "Ciberseguridad & TI →",
+            footerTitle: "¿Listo para vivir el Ártico?",
+            footerDesc: "Contáctanos para consultar disponibilidad o reservar una expedición guiada.",
+            footerBtn: "Enviar un correo",
+            footerRights: "© 2026 Boreal One AB. Registrada en Suecia. Todos los derechos reservados."
         }
-    </script>
+    };
+
+    const translationsArrival = {
+        en: {
+            arrivalTitle: "Arrival Guide",
+            arrivalIntro: "A quick guide for a smooth self check‑in.",
+            beforeTitle: "Before you arrive",
+            beforeText: "Your personal six‑digit door code will be sent shortly before check‑in.",
+            unlockTitle: "How to unlock the front door",
+            step1Text: "1. Find the keypad beside the main entrance.",
+            step2Text: "2. Enter your six‑digit code. The lock unlocks automatically — no “enter” button.",
+            step3Text: "3. Wait for the lock to turn, then press the handle down and open.",
+            lockTitle: "How to lock the door when leaving",
+            lockText: "Close the door fully. Then press the back arrow ◀ on the keypad.",
+            insideTitle: "Locking or unlocking from inside",
+            insideText: "Press the centre of the round knob above the handle.",
+            helpTitle: "Need assistance?",
+            helpText: "Contact us through your reservation platform or preferred messaging channel.",
+            downloadBtn: "Download PDF"
+        },
+        pt: {
+            arrivalTitle: "Guia de Chegada",
+            arrivalIntro: "Um guia rápido para um check‑in tranquilo.",
+            beforeTitle: "Antes de chegar",
+            beforeText: "Seu código pessoal de seis dígitos será enviado pouco antes do check‑in.",
+            unlockTitle: "Como destrancar a porta da frente",
+            step1Text: "1. Encontre o teclado ao lado da entrada.",
+            step2Text: "2. Digite seu código. A fechadura destranca automaticamente — não existe botão “enter”.",
+            step3Text: "3. Aguarde a fechadura girar, pressione a maçaneta para baixo e abra.",
+            lockTitle: "Como trancar ao sair",
+            lockText: "Feche a porta completamente. Depois pressione a seta ◀ no teclado.",
+            insideTitle: "Trancar ou destrancar por dentro",
+            insideText: "Pressione o centro do botão redondo acima da maçaneta.",
+            helpTitle: "Precisa de assistência?",
+            helpText: "Entre em contato pelo sistema de reserva ou pelo seu canal de mensagem preferido.",
+            downloadBtn: "Baixar PDF"
+        },
+        sv: {
+            arrivalTitle: "Ankomstguide",
+            arrivalIntro: "En snabb guide för en smidig själv‑incheckning.",
+            beforeTitle: "Innan du anländer",
+            beforeText: "Din personliga kod skickas strax före incheckning.",
+            unlockTitle: "Hur man låser upp ytterdörren",
+            step1Text: "1. Hitta knappsatsen bredvid entrén.",
+            step2Text: "2. Ange din kod. Låset öppnas automatiskt — ingen “enter”-knapp.",
+            step3Text: "3. Vänta tills låset vrider sig, tryck ned handtaget och öppna.",
+            lockTitle: "Hur man låser när man lämnar",
+            lockText: "Stäng dörren helt. Tryck sedan på pilen ◀ på knappsatsen.",
+            insideTitle: "Låsa eller låsa upp från insidan",
+            insideText: "Tryck på mitten av den runda knoppen ovanför handtaget.",
+            helpTitle: "Behöver du assistans?",
+            helpText: "Kontakta oss via ditt bokningssystem eller din föredragna meddelandekanal.",
+            downloadBtn: "Ladda ner PDF"
+        },
+        es: {
+            arrivalTitle: "Guía de Llegada",
+            arrivalIntro: "Una guía rápida para un check‑in sin complicaciones.",
+            beforeTitle: "Antes de llegar",
+            beforeText: "Tu código personal de seis dígitos será enviado poco antes del check‑in.",
+            unlockTitle: "Cómo abrir la puerta principal",
+            step1Text: "1. Encuentra el teclado junto a la entrada.",
+            step2Text: "2. Introduce tu código. La cerradura se abrirá automáticamente — no hay botón “enter”.",
+            step3Text: "3. Espera a que la cerradura gire, luego presiona la manija hacia abajo y abre.",
+            lockTitle: "Cómo cerrar la puerta al salir",
+            lockText: "Cierra la puerta completamente. Luego presiona la flecha ◀ en el teclado.",
+            insideTitle: "Cerrar o abrir desde dentro",
+            insideText: "Presiona el centro del botón redondo sobre la manija.",
+            helpTitle: "¿Necesitas asistencia?",
+            helpText: "Contáctanos a través de tu plataforma de reserva o tu canal de mensajería preferido.",
+            downloadBtn: "Descargar PDF"
+        }
+    };
+
+    function setLanguage(lang) {
+        // NAV
+        document.getElementById("nav-media-link").textContent = translations[lang].mediaLink;
+        document.getElementById("nav-cyber-link").textContent = translations[lang].cyberLink;
+
+        // FOOTER
+        document.getElementById("footer-title").textContent = translations[lang].footerTitle;
+        document.getElementById("footer-desc").textContent = translations[lang].footerDesc;
+        document.getElementById("footer-btn").textContent = translations[lang].footerBtn;
+        document.getElementById("footer-rights").textContent = translations[lang].footerRights;
+
+        // ARRIVAL PAGE
+        const t = translationsArrival[lang];
+        document.getElementById("arrival-title").textContent = t.arrivalTitle;
+        document.getElementById("arrival-intro").textContent = t.arrivalIntro;
+        document.getElementById("before-title").textContent = t.beforeTitle;
+        document.getElementById("before-text").textContent = t.beforeText;
+        document.getElementById("unlock-title").textContent = t.unlockTitle;
+        document.getElementById("step1-text").textContent = t.step1Text;
+        document.getElementById("step2-text").textContent = t.step2Text;
+        document.getElementById("step3-text").textContent = t.step3Text;
+        document.getElementById("lock-title").textContent = t.lockTitle;
+        document.getElementById("lock-text").textContent = t.lockText;
+        document.getElementById("inside-title").textContent = t.insideTitle;
+        document.getElementById("inside-text").textContent = t.insideText;
+        document.getElementById("help-title").textContent = t.helpTitle;
+        document.getElementById("help-text").textContent = t.helpText;
+        document.getElementById("download-btn").textContent = t.downloadBtn;
+    }
+</script>
+
 
 </body>
 </html>
