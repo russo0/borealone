@@ -1,197 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The Yellow Aurora House – Arrival Guide</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
-      margin: 0;
-      padding: 0;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: #000;
-      color: #fff;
-      padding: 25px;
-      text-align: center;
-    }
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    }
-    figure {
-      margin: 20px 0;
-      text-align: center;
-    }
-    figcaption {
-      font-size: 14px;
-      color: #555;
-      margin-top: 8px;
-    }
-    .download {
-      margin-top: 40px;
-      text-align: center;
-    }
-    .download a {
-      background: #000;
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 16px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Yellow Aurora House – Arrival Guide</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="../favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
-<header>
-  <h1 id="title">The Yellow Aurora House – Arrival & Door Guide</h1>
-</header>
+<body class="bg-[#0b0f19] text-gray-200 font-sans antialiased min-h-screen flex flex-col justify-between relative overflow-x-hidden">
 
-<div class="container">
+    <!-- Aurora background -->
+    <video autoplay loop muted playsinline class="fixed top-0 left-0 w-full h-full object-cover z-[-2] pointer-events-none">
+        <source src="../images/aurora.mp4" type="video/mp4">
+    </video>
+    <div class="fixed inset-0 bg-black/40 z-[-1] pointer-events-none"></div>
 
-  <!-- ENGLISH -->
-  <div id="lang-en">
-    <p>A quick guide for a smooth self check‑in.</p>
+    <!-- NAVBAR (copiado do seu site) -->
+    <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
+            
+            <a href="https://borealone.com" class="flex items-center space-x-3 group order-1">
+                <img src="../logo-icon.png" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
+                <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE AB</span>
+            </a>
 
-    <h2>Before you arrive</h2>
-    <p>Your personal six‑digit door code will be sent shortly before check‑in. Please keep it private and do not share it with anyone outside your group.</p>
+            <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold order-2 sm:order-3">
+                <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
+                <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
+                <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
+            </div>
 
-    <h2>How to unlock the front door</h2>
+            <div class="w-full sm:w-auto flex items-center justify-between sm:justify-start space-x-4 text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
+                <a href="https://cyber.borealone.com" id="nav-cyber-link" class="text-gray-400 hover:text-white py-1 transition uppercase tracking-wider sm:normal-case">
+                    Cybersecurity & IT
+                </a>
+                <a href="https://media.borealone.com" id="nav-media-link" class="text-aurora hover:text-white py-1 transition uppercase tracking-wider sm:normal-case font-bold">
+                    Media & Photography →
+                </a>
+            </div>
 
-    <h3>1. Find the keypad</h3>
-    <p>It is mounted on the wall to the right of the main entrance door.</p>
+        </div>
+    </nav>
 
-    <figure>
-      <img src="keypad.jpg" style="max-width:100%; border-radius:8px;">
-      <figcaption>The keypad is outside, beside the front door.</figcaption>
-    </figure>
+    <!-- PAGE CONTENT -->
+    <main class="max-w-3xl mx-auto px-4 py-16">
 
-    <h3>2. Enter your six‑digit code</h3>
-    <p>Type the six digits on the keypad. The lock will unlock automatically — no “enter” button.</p>
-    <p>If you make a mistake, use the arrow button to delete and start again.</p>
+        <h1 id="arrival-title" class="text-3xl md:text-5xl font-extrabold text-white mb-8 text-center">
+            Arrival Guide
+        </h1>
 
-    <h3>3. Open the door</h3>
-    <p>Wait for the lock to turn, then press the handle down and open.</p>
+        <p id="arrival-intro" class="text-gray-300 text-center mb-12">
+            A quick guide for a smooth self check‑in.
+        </p>
 
-    <h2>How to lock the door when leaving</h2>
-    <p>Close the door fully. Then press the back arrow &#11013; on the keypad. Wait for the lock to turn.</p>
+        <section class="space-y-8">
 
-    <h2>Locking or unlocking from inside</h2>
-    <p>Press the centre of the round knob above the handle. The lock turns automatically.</p>
+            <div>
+                <h2 id="before-title" class="text-xl font-bold text-white mb-2">Before you arrive</h2>
+                <p id="before-text" class="text-gray-300">
+                    Your personal six‑digit door code will be sent shortly before check‑in.
+                </p>
+            </div>
 
-    <figure>
-      <img src="lock-knob.jpg" style="max-width:100%; border-radius:8px;">
-      <figcaption>Press the centre of the round knob — not the handle.</figcaption>
-    </figure>
+            <div>
+                <h2 id="unlock-title" class="text-xl font-bold text-white mb-4">How to unlock the front door</h2>
 
-    <h2>Need help?</h2>
-    <p>If the keypad does not work, message us through Booking.com.</p>
-  </div>
+                <p id="step1-text" class="text-gray-300 mb-4">
+                    1. Find the keypad beside the main entrance.
+                </p>
 
-  <!-- PORTUGUÊS -->
-  <div id="lang-pt" style="display:none;">
-    <p>Um guia rápido para um check‑in tranquilo.</p>
+                <p id="step2-text" class="text-gray-300 mb-4">
+                    2. Enter your six‑digit code. The lock unlocks automatically — no “enter” button.
+                </p>
 
-    <h2>Antes de chegar</h2>
-    <p>Seu código pessoal de seis dígitos será enviado pouco antes do check‑in. Mantenha-o privado.</p>
+                <p id="step3-text" class="text-gray-300 mb-4">
+                    3. Wait for the lock to turn, then press the handle down and open.
+                </p>
+            </div>
 
-    <h2>Como destrancar a porta da frente</h2>
+            <div>
+                <h2 id="lock-title" class="text-xl font-bold text-white mb-2">How to lock the door when leaving</h2>
+                <p id="lock-text" class="text-gray-300">
+                    Close the door fully. Then press the back arrow &#11013; on the keypad.
+                </p>
+            </div>
 
-    <h3>1. Encontre o teclado</h3>
-    <p>Ele fica na parede à direita da porta de entrada.</p>
+            <div>
+                <h2 id="inside-title" class="text-xl font-bold text-white mb-2">Locking or unlocking from inside</h2>
+                <p id="inside-text" class="text-gray-300">
+                    Press the centre of the round knob above the handle.
+                </p>
+            </div>
 
-    <figure>
-      <img src="keypad.jpg" style="max-width:100%; border-radius:8px;">
-      <figcaption>O teclado fica do lado de fora, ao lado da porta.</figcaption>
-    </figure>
+            <div>
+                <h2 id="help-title" class="text-xl font-bold text-white mb-2">Need help?</h2>
+                <p id="help-text" class="text-gray-300">
+                    If the keypad does not work, message us through Booking.com.
+                </p>
+            </div>
 
-    <h3>2. Digite seu código</h3>
-    <p>Digite os seis números. A fechadura destranca automaticamente — não existe botão “enter”.</p>
-    <p>Se errar, use a seta para apagar.</p>
+            <p class="mt-10 text-center">
+                <a href="Yellow_Aurora_House_Arrival_Guide.pdf" download id="download-btn"
+                   class="inline-block bg-white text-black font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg">
+                    Download PDF
+                </a>
+            </p>
 
-    <h3>3. Abra a porta</h3>
-    <p>Aguarde a fechadura girar, pressione a maçaneta para baixo e abra.</p>
+        </section>
 
-    <h2>Como trancar ao sair</h2>
-    <p>Feche a porta completamente. Depois pressione a seta para trás &#11013;. Aguarde ouvir a fechadura.</p>
+    </main>
 
-    <h2>Trancar ou destrancar por dentro</h2>
-    <p>Pressione o centro do botão redondo acima da maçaneta.</p>
+    <!-- FOOTER (copiado do seu site) -->
+    <footer class="w-full py-16 text-center px-4 z-10 bg-transparent">
+        <div class="max-w-3xl mx-auto">
+            <h2 id="footer-title" class="text-xl font-bold text-white mb-2 drop-shadow">Pronto para vivenciar o Ártico?</h2>
+            <p id="footer-desc" class="text-gray-200 text-sm mb-6 max-w-sm mx-auto drop-shadow">Entre em contato para consultar a disponibilidade do Airbnb ou agendar uma expedição guiada.</p>
+            <a href="mailto:info@borealone.com" id="footer-btn" class="inline-block bg-white text-black font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg">
+                Enviar um E-mail
+            </a>
+            <p id="footer-rights" class="text-xs text-gray-400/50 mt-12">© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
-    <figure>
-      <img src="lock-knob.jpg" style="max-width:100%; border-radius:8px;">
-      <figcaption>Pressione o centro do botão — não a maçaneta.</figcaption>
-    </figure>
+    <!-- TRANSLATIONS -->
+    <script>
+        const translationsArrival = {
+            en: {
+                arrivalTitle: "Arrival Guide",
+                arrivalIntro: "A quick guide for a smooth self check‑in.",
+                beforeTitle: "Before you arrive",
+                beforeText: "Your personal six‑digit door code will be sent shortly before check‑in.",
+                unlockTitle: "How to unlock the front door",
+                step1Text: "1. Find the keypad beside the main entrance.",
+                step2Text: "2. Enter your six‑digit code. The lock unlocks automatically — no “enter” button.",
+                step3Text: "3. Wait for the lock to turn, then press the handle down and open.",
+                lockTitle: "How to lock the door when leaving",
+                lockText: "Close the door fully. Then press the back arrow ⬅ on the keypad.",
+                insideTitle: "Locking or unlocking from inside",
+                insideText: "Press the centre of the round knob above the handle.",
+                helpTitle: "Need help?",
+                helpText: "If the keypad does not work, message us through Booking.com.",
+                downloadBtn: "Download PDF"
+            },
+            pt: {
+                arrivalTitle: "Guia de Chegada",
+                arrivalIntro: "Um guia rápido para um check‑in tranquilo.",
+                beforeTitle: "Antes de chegar",
+                beforeText: "Seu código pessoal de seis dígitos será enviado pouco antes do check‑in.",
+                unlockTitle: "Como destrancar a porta da frente",
+                step1Text: "1. Encontre o teclado ao lado da entrada.",
+                step2Text: "2. Digite seu código. A fechadura destranca automaticamente — não existe botão “enter”.",
+                step3Text: "3. Aguarde a fechadura girar, pressione a maçaneta para baixo e abra.",
+                lockTitle: "Como trancar ao sair",
+                lockText: "Feche a porta completamente. Depois pressione a seta para trás ⬅ no teclado.",
+                insideTitle: "Trancar ou destrancar por dentro",
+                insideText: "Pressione o centro do botão redondo acima da maçaneta.",
+                helpTitle: "Precisa de ajuda?",
+                helpText: "Se o teclado não funcionar, envie mensagem pelo Booking.com.",
+                downloadBtn: "Baixar PDF"
+            },
+            sv: {
+                arrivalTitle: "Ankomstguide",
+                arrivalIntro: "En snabb guide för en smidig själv‑incheckning.",
+                beforeTitle: "Innan du anländer",
+                beforeText: "Din personliga kod skickas strax före incheckning.",
+                unlockTitle: "Hur man låser upp ytterdörren",
+                step1Text: "1. Hitta knappsatsen bredvid entrén.",
+                step2Text: "2. Ange din kod. Låset öppnas automatiskt — ingen “enter”-knapp.",
+                step3Text: "3. Vänta tills låset vrider sig, tryck ned handtaget och öppna.",
+                lockTitle: "Hur man låser när man lämnar",
+                lockText: "Stäng dörren helt. Tryck sedan på bakåt‑pilen ⬅ på knappsatsen.",
+                insideTitle: "Låsa eller låsa upp från insidan",
+                insideText: "Tryck på mitten av den runda knoppen ovanför handtaget.",
+                helpTitle: "Behöver du hjälp?",
+                helpText: "Om knappsatsen inte fungerar, kontakta oss via Booking.com.",
+                downloadBtn: "Ladda ner PDF"
+            }
+        };
 
-    <h2>Precisa de ajuda?</h2>
-    <p>Se o teclado não funcionar, envie mensagem pelo Booking.com.</p>
-  </div>
+        function setLanguage(lang) {
+            // aplica traduções da página arrival
+            const t = translationsArrival[lang];
+            if (!t) return;
 
-  <!-- SVENSKA -->
-  <div id="lang-se" style="display:none;">
-    <p>En snabb guide för en smidig själv‑incheckning.</p>
-
-    <h2>Innan du anländer</h2>
-    <p>Din personliga kod skickas strax före incheckning. Dela den inte.</p>
-
-    <h2>Hur man låser upp ytterdörren</h2>
-
-    <h3>1. Hitta knappsatsen</h3>
-    <p>Den sitter på väggen till höger om entrédörren.</p>
-
-    <figure>
-      <img src="keypad.jpg" style="max-width:100%; border-radius:8px;">
-      <figcaption>Knappsatsen sitter utomhus, bredvid dörren.</figcaption>
-    </figure>
-
-    <h3>2. Ange din kod</h3>
-    <p>Tryck in de sex siffrorna. Låset öppnas automatiskt.</p>
-    <p>Om du gör fel, använd pilknappen.</p>
-
-    <h3>3. Öppna dörren</h3>
-    <p>Vänta tills låset vrider sig, tryck ned handtaget och öppna.</p>
-
-    <h2>Hur man låser när man lämnar</h2>
-    <p>Stäng dörren helt. Tryck sedan på bakåt‑pilen &#11013;. Vänta tills låset vrider sig.</p>
-
-    <h2>Låsa eller låsa upp från insidan</h2>
-    <p>Tryck på mitten av den runda knoppen ovanför handtaget.</p>
-
-    <figure>
-      <img src="lock-knob.jpg" style="max-width:100%; border-radius:8px;">
-      <figcaption>Tryck på mitten av knoppen — inte handtaget.</figcaption>
-    </figure>
-
-    <h2>Behöver du hjälp?</h2>
-    <p>Om knappsatsen inte fungerar, kontakta oss via Booking.com.</p>
-  </div>
-
-  <div class="download">
-    <a href="Yellow_Aurora_House_Arrival_Guide.pdf" download>Download PDF</a>
-  </div>
-
-</div>
-
-<script>
-  const userLang = navigator.language || navigator.userLanguage;
-
-  if (userLang.startsWith('pt')) {
-    document.getElementById('lang-en').style.display = 'none';
-    document.getElementById('lang-pt').style.display = 'block';
-  } else if (userLang.startsWith('sv') || userLang.startsWith('se')) {
-    document.getElementById('lang-en').style.display = 'none';
-    document.getElementById('lang-se').style.display = 'block';
-  }
-</script>
+            document.getElementById("arrival-title").textContent = t.arrivalTitle;
+            document.getElementById("arrival-intro").textContent = t.arrivalIntro;
+            document.getElementById("before-title").textContent = t.beforeTitle;
+            document.getElementById("before-text").textContent = t.beforeText;
+            document.getElementById("unlock-title").textContent = t.unlockTitle;
+            document.getElementById("step1-text").textContent = t.step1Text;
+            document.getElementById("step2-text").textContent = t.step2Text;
+            document.getElementById("step3-text").textContent = t.step3Text;
+            document.getElementById("lock-title").textContent = t.lockTitle;
+            document.getElementById("lock-text").textContent = t.lockText;
+            document.getElementById("inside-title").textContent = t.insideTitle;
+            document.getElementById("inside-text").textContent = t.insideText;
+            document.getElementById("help-title").textContent = t.helpTitle;
+            document.getElementById("help-text").textContent = t.helpText;
+            document.getElementById("download-btn").textContent = t.downloadBtn;
+        }
+    </script>
 
 </body>
 </html>
