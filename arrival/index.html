@@ -294,4 +294,20 @@ document.addEventListener("DOMContentLoaded", () => {
 function highlightButton(lang) {
     const buttons = ["en", "sv", "pt", "es"];
     buttons.forEach(code => {
-        const btn = document.getElementById(`btn-${code
+        const btn = document.getElementById(`btn-${code}`);
+        if (!btn) return;
+        if (code === lang) {
+            btn.classList.add("bg-gray-800", "text-white");
+            btn.classList.remove("text-gray-400");
+        } else {
+            btn.classList.remove("bg-gray-800", "text-white");
+            btn.classList.add("text-gray-400");
+        }
+    });
+}
+
+</script>
+
+</body>
+</html>
+
