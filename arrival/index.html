@@ -8,15 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#0b0f19] text-gray-200 font-sans antialiased min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+<body class="bg-[#0b0f19] text-gray-200 font-sans antialiased min-h-screen flex flex-col">
 
-    <!-- Aurora background -->
-    <video autoplay loop muted playsinline class="fixed top-0 left-0 w-full h-full object-cover z-[-2] pointer-events-none">
-        <source src="../images/aurora.mp4" type="video/mp4">
-    </video>
-    <div class="fixed inset-0 bg-black/40 z-[-1] pointer-events-none"></div>
-
-    <!-- NAVBAR (copiado do seu site) -->
+    <!-- HEADER (copiado do seu site) -->
     <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
             
@@ -44,7 +38,7 @@
     </nav>
 
     <!-- PAGE CONTENT -->
-    <main class="max-w-3xl mx-auto px-4 py-16">
+    <main class="max-w-3xl mx-auto px-4 py-12">
 
         <h1 id="arrival-title" class="text-3xl md:text-5xl font-extrabold text-white mb-8 text-center">
             Arrival Guide
@@ -54,65 +48,72 @@
             A quick guide for a smooth self check‑in.
         </p>
 
-        <section class="space-y-8">
+        <!-- BEFORE ARRIVE -->
+        <section class="mb-12">
+            <h2 id="before-title" class="text-xl font-bold text-white mb-2">Before you arrive</h2>
+            <p id="before-text" class="text-gray-300">
+                Your personal six‑digit door code will be sent shortly before check‑in.
+            </p>
+        </section>
 
-            <div>
-                <h2 id="before-title" class="text-xl font-bold text-white mb-2">Before you arrive</h2>
-                <p id="before-text" class="text-gray-300">
-                    Your personal six‑digit door code will be sent shortly before check‑in.
-                </p>
-            </div>
+        <!-- UNLOCK DOOR -->
+        <section class="mb-12">
+            <h2 id="unlock-title" class="text-xl font-bold text-white mb-4">How to unlock the front door</h2>
 
-            <div>
-                <h2 id="unlock-title" class="text-xl font-bold text-white mb-4">How to unlock the front door</h2>
-
-                <p id="step1-text" class="text-gray-300 mb-4">
+            <div class="mb-6">
+                <p id="step1-text" class="text-gray-300 mb-2">
                     1. Find the keypad beside the main entrance.
                 </p>
-
-                <p id="step2-text" class="text-gray-300 mb-4">
-                    2. Enter your six‑digit code. The lock unlocks automatically — no “enter” button.
-                </p>
-
-                <p id="step3-text" class="text-gray-300 mb-4">
-                    3. Wait for the lock to turn, then press the handle down and open.
-                </p>
+                <img src="keypad.jpg" class="rounded-lg border border-white/10 shadow mb-2">
+                <p class="text-gray-400 text-sm">The keypad is outside, beside the front door.</p>
             </div>
 
-            <div>
-                <h2 id="lock-title" class="text-xl font-bold text-white mb-2">How to lock the door when leaving</h2>
-                <p id="lock-text" class="text-gray-300">
-                    Close the door fully. Then press the back arrow &#11013; on the keypad.
-                </p>
-            </div>
-
-            <div>
-                <h2 id="inside-title" class="text-xl font-bold text-white mb-2">Locking or unlocking from inside</h2>
-                <p id="inside-text" class="text-gray-300">
-                    Press the centre of the round knob above the handle.
-                </p>
-            </div>
-
-            <div>
-                <h2 id="help-title" class="text-xl font-bold text-white mb-2">Need help?</h2>
-                <p id="help-text" class="text-gray-300">
-                    If the keypad does not work, message us through Booking.com.
-                </p>
-            </div>
-
-            <p class="mt-10 text-center">
-                <a href="Yellow_Aurora_House_Arrival_Guide.pdf" download id="download-btn"
-                   class="inline-block bg-white text-black font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg">
-                    Download PDF
-                </a>
+            <p id="step2-text" class="text-gray-300 mb-4">
+                2. Enter your six‑digit code. The lock unlocks automatically — no “enter” button.
             </p>
 
+            <p id="step3-text" class="text-gray-300 mb-4">
+                3. Wait for the lock to turn, then press the handle down and open.
+            </p>
         </section>
+
+        <!-- LOCK WHEN LEAVING -->
+        <section class="mb-12">
+            <h2 id="lock-title" class="text-xl font-bold text-white mb-2">How to lock the door when leaving</h2>
+            <p id="lock-text" class="text-gray-300">
+                Close the door fully. Then press the back arrow &#11013; on the keypad.
+            </p>
+        </section>
+
+        <!-- INSIDE LOCK -->
+        <section class="mb-12">
+            <h2 id="inside-title" class="text-xl font-bold text-white mb-2">Locking or unlocking from inside</h2>
+            <img src="lock-knob.jpg" class="rounded-lg border border-white/10 shadow mb-2">
+            <p id="inside-text" class="text-gray-300">
+                Press the centre of the round knob above the handle.
+            </p>
+            <p class="text-gray-400 text-sm">Press the centre of the round knob — not the handle.</p>
+        </section>
+
+        <!-- HELP -->
+        <section class="mb-12">
+            <h2 id="help-title" class="text-xl font-bold text-white mb-2">Need help?</h2>
+            <p id="help-text" class="text-gray-300">
+                If the keypad does not work, message us through Booking.com.
+            </p>
+        </section>
+
+        <p class="mt-10 text-center">
+            <a href="Yellow_Aurora_House_Arrival_Guide.pdf" download id="download-btn"
+               class="inline-block bg-white text-black font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg">
+                Download PDF
+            </a>
+        </p>
 
     </main>
 
-    <!-- FOOTER (copiado do seu site) -->
-    <footer class="w-full py-16 text-center px-4 z-10 bg-transparent">
+    <!-- FOOTER (igual ao seu site) -->
+    <footer class="w-full py-16 text-center px-4">
         <div class="max-w-3xl mx-auto">
             <h2 id="footer-title" class="text-xl font-bold text-white mb-2 drop-shadow">Pronto para vivenciar o Ártico?</h2>
             <p id="footer-desc" class="text-gray-200 text-sm mb-6 max-w-sm mx-auto drop-shadow">Entre em contato para consultar a disponibilidade do Airbnb ou agendar uma expedição guiada.</p>
@@ -180,7 +181,6 @@
         };
 
         function setLanguage(lang) {
-            // aplica traduções da página arrival
             const t = translationsArrival[lang];
             if (!t) return;
 
