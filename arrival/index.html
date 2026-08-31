@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -75,6 +75,11 @@
             <p id="inside-text" class="text-gray-300"></p>
             <p class="text-gray-400 text-sm">Press the centre of the round knob — not the handle.</p>
         </section>
+        <!-- Garage Remote -->
+        <section class="mb-12">
+            <h2 id="garage-title" class="text-xl font-bold text-white mb-2"></h2>
+             <p id="garage-text" class="text-gray-300"></p>
+        </section>
 
         <!-- HELP -->
         <section class="mb-12">
@@ -150,6 +155,8 @@
                 lockText: "Close the door fully first. Then press the back arrow ◀ on the outside keypad. Wait until you hear the lock turn before leaving. Always check that the door is properly closed and locked when you go out.",
                 insideTitle: "Locking or unlocking from inside",
                 insideText: "Press the centre of the large round lock knob above the door handle. The lock will turn automatically. This works for both locking and unlocking.",
+                garageTitle: "Covered garage access",
+                garageText: "The covered garage can be opened using the remote control hanging inside the house, between the entrance door and the window. If you need to use the garage, simply take the remote and press the main button to open or close the door. Please return the remote to the same hook after use.",
                 helpTitle: "Need assistance?",
                 helpText: "Contact us through your reservation platform or preferred messaging channel.",
                 downloadBtn: "Download PDF"
@@ -167,6 +174,8 @@
                 lockText: "Feche a porta completamente primeiro. Depois pressione a seta ◀ no teclado externo. Aguarde até ouvir a fechadura girar antes de sair. Sempre verifique se a porta está bem fechada e trancada ao sair.",
                 insideTitle: "Trancar ou destrancar por dentro",
                 insideText: "Pressione o centro do grande botão redondo acima da maçaneta. A fechadura irá girar automaticamente. Isso funciona tanto para trancar quanto para destrancar.",
+                garageTitle: "Acesso à garagem coberta",
+                garageText: "A garagem coberta pode ser aberta usando o controle remoto que fica pendurado dentro da casa, entre a porta de entrada e a janela. Se precisar usar a garagem, basta pegar o controle e pressionar o botão principal para abrir ou fechar a porta. Por favor, devolva o controle ao mesmo gancho após o uso.",
                 helpTitle: "Precisa de assistência?",
                 helpText: "Entre em contato pelo sistema de reserva ou pelo seu canal de mensagem preferido.",
                 downloadBtn: "Baixar PDF"
@@ -184,8 +193,11 @@
                 lockText: "Stäng dörren helt först. Tryck sedan på pilen ◀ på knappsatsen utanför. Vänta tills du hör låset vrida sig innan du går. Kontrollera alltid att dörren är ordentligt stängd och låst när du går ut.",
                 insideTitle: "Låsa eller låsa upp från insidan",
                 insideText: "Tryck på mitten av den stora runda låsknoppen ovanför handtaget. Låset vrider sig automatiskt. Detta fungerar både för att låsa och låsa upp.",
+                garageTitle: "Tillgång till det täckta garaget",
+                garageText: "Det täckta garaget kan öppnas med fjärrkontrollen som hänger inne i huset, mellan ytterdörren och fönstret. Om du behöver använda garaget, ta fjärrkontrollen och tryck på huvudknappen för att öppna eller stänga dörren. Vänligen häng tillbaka fjärrkontrollen på samma krok efter användning.",
                 helpTitle: "Behöver du assistans?",
                 helpText: "Kontakta oss via ditt bokningssystem eller din föredragna meddelandekanal.",
+                
                 downloadBtn: "Ladda ner PDF"
             },
             es: {
@@ -201,6 +213,8 @@
                 lockText: "Cierra la puerta completamente primero. Luego presiona la flecha ◀ en el teclado exterior. Espera hasta escuchar que la cerradura gira antes de salir. Comprueba siempre que la puerta esté bien cerrada y bloqueada al salir.",
                 insideTitle: "Cerrar o abrir desde dentro",
                 insideText: "Presiona el centro del gran botón redondo sobre la manija. La cerradura girará automáticamente. Esto funciona tanto para cerrar como para abrir.",
+                garageTitle: "Acceso al garaje cubierto",
+                garageText: "El garaje cubierto puede abrirse con el control remoto que cuelga dentro de la casa, entre la puerta de entrada y la ventana. Si necesitas usar el garaje, toma el control y presiona el botón principal para abrir o cerrar la puerta. Por favor, devuelve el control al mismo gancho después de usarlo.",
                 helpTitle: "¿Necesitas asistencia?",
                 helpText: "Contáctanos a través de tu plataforma de reserva o tu canal de mensajería preferido.",
                 downloadBtn: "Descargar PDF"
@@ -235,6 +249,9 @@
             document.getElementById("help-title").textContent = t.helpTitle;
             document.getElementById("help-text").textContent = t.helpText;
             document.getElementById("download-btn").textContent = t.downloadBtn;
+            document.getElementById("garage-title").textContent = t.garageTitle;
+            document.getElementById("garage-text").textContent = t.garageText;
+
         }
 
         // Default language
