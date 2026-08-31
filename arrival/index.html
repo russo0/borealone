@@ -245,6 +245,60 @@
                 downloadBtn: "Descargar PDF"
             }
         };
+/* APPLY LANGUAGE TO PAGE */
+function setLanguage(lang) {
+
+    // Save preference
+    localStorage.setItem("arrivalLang", lang);
+
+    // Highlight active button
+    highlightButton(lang);
+
+    // Select correct translation set
+    const t = translationsArrival[lang];
+    const f = translations[lang];
+
+    // ARRIVAL PAGE TEXTS
+    document.getElementById("arrival-title").textContent = t.arrivalTitle;
+    document.getElementById("arrival-intro").textContent = t.arrivalIntro;
+
+    document.getElementById("before-title").textContent = t.beforeTitle;
+    document.getElementById("before-text").textContent = t.beforeText;
+
+    document.getElementById("unlock-title").textContent = t.unlockTitle;
+    document.getElementById("step1-text").textContent = t.step1Text;
+    document.getElementById("step2-text").textContent = t.step2Text;
+    document.getElementById("step3-text").textContent = t.step3Text;
+
+    document.getElementById("lock-title").textContent = t.lockTitle;
+    document.getElementById("lock-text").textContent = t.lockText;
+
+    document.getElementById("inside-title").textContent = t.insideTitle;
+    document.getElementById("inside-text").textContent = t.insideText;
+
+    document.getElementById("garage-title").textContent = t.garageTitle;
+    document.getElementById("garage-text").textContent = t.garageText;
+
+    document.getElementById("help-title").textContent = t.helpTitle;
+    document.getElementById("help-text").textContent = t.helpText;
+
+    document.getElementById("download-btn").textContent = t.downloadBtn;
+
+    // FOOTER + NAV
+    document.getElementById("nav-media-link").textContent = f.mediaLink;
+    document.getElementById("nav-cyber-link").textContent = f.cyberLink;
+
+    document.getElementById("footer-title").textContent = f.footerTitle;
+    document.getElementById("footer-desc").textContent = f.footerDesc;
+    document.getElementById("footer-btn").textContent = f.footerBtn;
+    document.getElementById("footer-rights").textContent = f.footerRights;
+}
+
+/* LOAD SAVED LANGUAGE ON PAGE LOAD */
+document.addEventListener("DOMContentLoaded", () => {
+    const saved = localStorage.getItem("arrivalLang") || "en";
+    setLanguage(saved);
+});
 
         /* HIGHLIGHT ACTIVE LANGUAGE BUTTON */
         function highlightButton(lang) {
