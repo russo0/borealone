@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,11 +19,12 @@
                 <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE AB</span>
             </a>
 
+            <!-- LANGUAGE SELECTOR WITH FLAGS -->
             <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold order-2 sm:order-3">
-                <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
-                <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
-                <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
-                <button onclick="setLanguage('es')" id="btn-es" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">ES</button>
+                <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition">🇬🇧</button>
+                <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition">🇸🇪</button>
+                <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition">🇧🇷</button>
+                <button onclick="setLanguage('es')" id="btn-es" class="px-2 py-1 rounded transition">🇪🇸</button>
             </div>
 
             <div class="w-full sm:w-auto flex items-center justify-between sm:justify-start space-x-4 text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
@@ -75,10 +76,11 @@
             <p id="inside-text" class="text-gray-300"></p>
             <p class="text-gray-400 text-sm">Press the centre of the round knob — not the handle.</p>
         </section>
-        <!-- Garage Remote -->
+
+        <!-- GARAGE SECTION -->
         <section class="mb-12">
             <h2 id="garage-title" class="text-xl font-bold text-white mb-2"></h2>
-             <p id="garage-text" class="text-gray-300"></p>
+            <p id="garage-text" class="text-gray-300"></p>
         </section>
 
         <!-- HELP -->
@@ -106,6 +108,8 @@
 
     <!-- TRANSLATIONS -->
     <script>
+
+        /* FOOTER + NAV TRANSLATIONS */
         const translations = {
             en: {
                 mediaLink: "Media & Photography →",
@@ -141,10 +145,11 @@
             }
         };
 
+        /* ARRIVAL PAGE TRANSLATIONS */
         const translationsArrival = {
             en: {
                 arrivalTitle: "Arrival & Door Guide",
-                arrivalIntro: "A quick guide for a smooth self check‑in.",
+                arrivalIntro: "A quick guide for a smooth self‑check‑in.",
                 beforeTitle: "Before you arrive",
                 beforeText: "Your personal six-digit door code will be sent shortly before check-in. Please keep it private and do not share it with anyone outside your group.",
                 unlockTitle: "How to unlock the front door",
@@ -161,6 +166,7 @@
                 helpText: "Contact us through your reservation platform or preferred messaging channel.",
                 downloadBtn: "Download PDF"
             },
+
             pt: {
                 arrivalTitle: "Guia de Chegada & Porta",
                 arrivalIntro: "Um guia rápido para um check‑in tranquilo.",
@@ -180,6 +186,7 @@
                 helpText: "Entre em contato pelo sistema de reserva ou pelo seu canal de mensagem preferido.",
                 downloadBtn: "Baixar PDF"
             },
+
             sv: {
                 arrivalTitle: "Ankomst- och Dörrguide",
                 arrivalIntro: "En snabb guide för en smidig själv‑incheckning.",
@@ -197,9 +204,9 @@
                 garageText: "Det täckta garaget kan öppnas med fjärrkontrollen som hänger inne i huset, mellan ytterdörren och fönstret. Om du behöver använda garaget, ta fjärrkontrollen och tryck på huvudknappen för att öppna eller stänga dörren. Vänligen häng tillbaka fjärrkontrollen på samma krok efter användning.",
                 helpTitle: "Behöver du assistans?",
                 helpText: "Kontakta oss via ditt bokningssystem eller din föredragna meddelandekanal.",
-                
                 downloadBtn: "Ladda ner PDF"
             },
+
             es: {
                 arrivalTitle: "Guía de Llegada y Puerta",
                 arrivalIntro: "Una guía rápida para un check‑in sin complicaciones.",
@@ -221,42 +228,18 @@
             }
         };
 
-        function setLanguage(lang) {
-            // NAV
-            document.getElementById("nav-media-link").textContent = translations[lang].mediaLink;
-            document.getElementById("nav-cyber-link").textContent = translations[lang].cyberLink;
-
-            // FOOTER
-            document.getElementById("footer-title").textContent = translations[lang].footerTitle;
-            document.getElementById("footer-desc").textContent = translations[lang].footerDesc;
-            document.getElementById("footer-btn").textContent = translations[lang].footerBtn;
-            document.getElementById("footer-rights").textContent = translations[lang].footerRights;
-
-            // ARRIVAL PAGE
-            const t = translationsArrival[lang];
-            document.getElementById("arrival-title").textContent = t.arrivalTitle;
-            document.getElementById("arrival-intro").textContent = t.arrivalIntro;
-            document.getElementById("before-title").textContent = t.beforeTitle;
-            document.getElementById("before-text").textContent = t.beforeText;
-            document.getElementById("unlock-title").textContent = t.unlockTitle;
-            document.getElementById("step1-text").textContent = t.step1Text;
-            document.getElementById("step2-text").textContent = t.step2Text;
-            document.getElementById("step3-text").textContent = t.step3Text;
-            document.getElementById("lock-title").textContent = t.lockTitle;
-            document.getElementById("lock-text").textContent = t.lockText;
-            document.getElementById("inside-title").textContent = t.insideTitle;
-            document.getElementById("inside-text").textContent = t.insideText;
-            document.getElementById("help-title").textContent = t.helpTitle;
-            document.getElementById("help-text").textContent = t.helpText;
-            document.getElementById("download-btn").textContent = t.downloadBtn;
-            document.getElementById("garage-title").textContent = t.garageTitle;
-            document.getElementById("garage-text").textContent = t.garageText;
-
+        /* HIGHLIGHT ACTIVE LANGUAGE BUTTON */
+        function highlightButton(lang) {
+            const buttons = ["en", "sv", "pt", "es"];
+            buttons.forEach(code => {
+                const btn = document.getElementById(`btn-${code}`);
+                if (code === lang) {
+                    btn.classList.add("bg-gray-800", "text-white");
+                    btn.classList.remove("text-gray-400");
+                } else {
+                    btn.classList.remove("bg-gray-800", "text-white");
+                    btn.classList.add("text-gray-400");
+                }
+            });
         }
 
-        // Default language
-        setLanguage('en');
-    </script>
-
-</body>
-</html>
