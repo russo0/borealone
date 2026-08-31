@@ -27,19 +27,6 @@
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
-    .lang-select {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .lang-select button {
-      margin: 0 10px;
-      padding: 8px 16px;
-      border: none;
-      background: #000;
-      color: #fff;
-      border-radius: 6px;
-      cursor: pointer;
-    }
     figure {
       margin: 20px 0;
       text-align: center;
@@ -66,19 +53,13 @@
 <body>
 
 <header>
-  <h1>The Yellow Aurora House – Arrival & Door Guide</h1>
+  <h1 id="title">The Yellow Aurora House – Arrival & Door Guide</h1>
 </header>
 
 <div class="container">
 
-  <div class="lang-select">
-    <button onclick="setLang('en')">English</button>
-    <button onclick="setLang('pt')">Português</button>
-    <button onclick="setLang('se')">Svenska</button>
-  </div>
-
   <!-- ENGLISH -->
-  <div class="lang en">
+  <div id="lang-en">
     <p>A quick guide for a smooth self check‑in.</p>
 
     <h2>Before you arrive</h2>
@@ -90,111 +71,108 @@
     <p>It is mounted on the wall to the right of the main entrance door.</p>
 
     <figure>
-      <img src="keypad.jpg" alt="Keypad beside the front door" style="max-width:100%; border-radius:8px;">
+      <img src="keypad.jpg" style="max-width:100%; border-radius:8px;">
       <figcaption>The keypad is outside, beside the front door.</figcaption>
     </figure>
 
     <h3>2. Enter your six‑digit code</h3>
-    <p>Type the six digits on the keypad. The lock will unlock automatically after the correct code is entered — there is no separate “enter” button to press.</p>
+    <p>Type the six digits on the keypad. The lock will unlock automatically — no “enter” button.</p>
     <p>If you make a mistake, use the arrow button to delete and start again.</p>
 
     <h3>3. Open the door</h3>
-    <p>Wait a moment for the lock to turn, then press the door handle down and open the door.</p>
+    <p>Wait for the lock to turn, then press the handle down and open.</p>
 
     <h2>How to lock the door when leaving</h2>
-    <p>Close the door fully first. Then press the back arrow ◀ on the outside keypad. Wait until you hear the lock turn before leaving.</p>
-    <p>Please always check that the door is properly closed and locked when you go out.</p>
+    <p>Close the door fully. Then press the back arrow &#11013; on the keypad. Wait for the lock to turn.</p>
 
     <h2>Locking or unlocking from inside</h2>
-    <p>Press the centre of the large round lock knob above the door handle. The lock will turn automatically. This works for both locking and unlocking.</p>
+    <p>Press the centre of the round knob above the handle. The lock turns automatically.</p>
 
     <figure>
-      <img src="lock-knob.jpg" alt="Round lock knob" style="max-width:100%; border-radius:8px;">
+      <img src="lock-knob.jpg" style="max-width:100%; border-radius:8px;">
       <figcaption>Press the centre of the round knob — not the handle.</figcaption>
     </figure>
 
     <h2>Need help?</h2>
-    <p>If the keypad does not work, please send us a message through Booking.com. We will help as soon as possible.</p>
+    <p>If the keypad does not work, message us through Booking.com.</p>
   </div>
 
   <!-- PORTUGUÊS -->
-  <div class="lang pt" style="display:none;">
+  <div id="lang-pt" style="display:none;">
     <p>Um guia rápido para um check‑in tranquilo.</p>
 
     <h2>Antes de chegar</h2>
-    <p>Seu código pessoal de seis dígitos será enviado pouco antes do check‑in. Mantenha-o privado e não compartilhe com ninguém fora do seu grupo.</p>
+    <p>Seu código pessoal de seis dígitos será enviado pouco antes do check‑in. Mantenha-o privado.</p>
 
     <h2>Como destrancar a porta da frente</h2>
 
     <h3>1. Encontre o teclado</h3>
-    <p>Ele fica montado na parede à direita da porta de entrada.</p>
+    <p>Ele fica na parede à direita da porta de entrada.</p>
 
     <figure>
-      <img src="keypad.jpg" alt="Teclado ao lado da porta" style="max-width:100%; border-radius:8px;">
+      <img src="keypad.jpg" style="max-width:100%; border-radius:8px;">
       <figcaption>O teclado fica do lado de fora, ao lado da porta.</figcaption>
     </figure>
 
-    <h3>2. Digite seu código de seis dígitos</h3>
-    <p>Digite os seis números no teclado. A fechadura destranca automaticamente — não existe botão “enter”.</p>
-    <p>Se errar, use o botão de seta para apagar e tentar novamente.</p>
+    <h3>2. Digite seu código</h3>
+    <p>Digite os seis números. A fechadura destranca automaticamente — não existe botão “enter”.</p>
+    <p>Se errar, use a seta para apagar.</p>
 
     <h3>3. Abra a porta</h3>
-    <p>Aguarde um momento até a fechadura girar, depois pressione a maçaneta para baixo e abra.</p>
+    <p>Aguarde a fechadura girar, pressione a maçaneta para baixo e abra.</p>
 
     <h2>Como trancar ao sair</h2>
-    <p>Feche a porta completamente. Depois pressione a seta para trás ◀ no teclado externo. Aguarde ouvir a fechadura girar.</p>
-    <p>Sempre verifique se a porta está realmente trancada ao sair.</p>
+    <p>Feche a porta completamente. Depois pressione a seta para trás &#11013;. Aguarde ouvir a fechadura.</p>
 
     <h2>Trancar ou destrancar por dentro</h2>
-    <p>Pressione o centro do grande botão redondo acima da maçaneta. A fechadura gira automaticamente.</p>
+    <p>Pressione o centro do botão redondo acima da maçaneta.</p>
 
     <figure>
-      <img src="lock-knob.jpg" alt="Botão redondo da fechadura" style="max-width:100%; border-radius:8px;">
+      <img src="lock-knob.jpg" style="max-width:100%; border-radius:8px;">
       <figcaption>Pressione o centro do botão — não a maçaneta.</figcaption>
     </figure>
 
     <h2>Precisa de ajuda?</h2>
-    <p>Se o teclado não funcionar, envie uma mensagem pelo Booking.com. Vamos ajudar o mais rápido possível.</p>
+    <p>Se o teclado não funcionar, envie mensagem pelo Booking.com.</p>
   </div>
 
   <!-- SVENSKA -->
-  <div class="lang se" style="display:none;">
+  <div id="lang-se" style="display:none;">
     <p>En snabb guide för en smidig själv‑incheckning.</p>
 
     <h2>Innan du anländer</h2>
-    <p>Din personliga sexsiffriga kod skickas strax före incheckning. Dela den inte med någon utanför din grupp.</p>
+    <p>Din personliga kod skickas strax före incheckning. Dela den inte.</p>
 
     <h2>Hur man låser upp ytterdörren</h2>
 
     <h3>1. Hitta knappsatsen</h3>
-    <p>Den sitter på väggen till höger om huvudentrén.</p>
+    <p>Den sitter på väggen till höger om entrédörren.</p>
 
     <figure>
-      <img src="keypad.jpg" alt="Knappsats vid dörren" style="max-width:100%; border-radius:8px;">
+      <img src="keypad.jpg" style="max-width:100%; border-radius:8px;">
       <figcaption>Knappsatsen sitter utomhus, bredvid dörren.</figcaption>
     </figure>
 
-    <h3>2. Ange din sexsiffriga kod</h3>
-    <p>Tryck in de sex siffrorna. Låset öppnas automatiskt — ingen “enter”-knapp behövs.</p>
-    <p>Om du gör fel, använd pilknappen för att radera och börja om.</p>
+    <h3>2. Ange din kod</h3>
+    <p>Tryck in de sex siffrorna. Låset öppnas automatiskt.</p>
+    <p>Om du gör fel, använd pilknappen.</p>
 
     <h3>3. Öppna dörren</h3>
-    <p>Vänta tills låset vrider sig, tryck sedan ned handtaget och öppna.</p>
+    <p>Vänta tills låset vrider sig, tryck ned handtaget och öppna.</p>
 
     <h2>Hur man låser när man lämnar</h2>
-    <p>Stäng dörren helt. Tryck sedan på bakåt‑pilen ◀ på knappsatsen. Vänta tills du hör låset vrida sig.</p>
-    <p>Kontrollera alltid att dörren är ordentligt låst.</p>
+    <p>Stäng dörren helt. Tryck sedan på bakåt‑pilen &#11013;. Vänta tills låset vrider sig.</p>
 
     <h2>Låsa eller låsa upp från insidan</h2>
-    <p>Tryck på mitten av den stora runda knoppen ovanför handtaget. Låset vrider sig automatiskt.</p>
+    <p>Tryck på mitten av den runda knoppen ovanför handtaget.</p>
 
     <figure>
-      <img src="lock-knob.jpg" alt="Rund låsknopp" style="max-width:100%; border-radius:8px;">
+      <img src="lock-knob.jpg" style="max-width:100%; border-radius:8px;">
       <figcaption>Tryck på mitten av knoppen — inte handtaget.</figcaption>
     </figure>
 
     <h2>Behöver du hjälp?</h2>
-    <p>Om knappsatsen inte fungerar, skicka ett meddelande via Booking.com. Vi hjälper så snart som möjligt.</p>
+    <p>Om knappsatsen inte fungerar, kontakta oss via Booking.com.</p>
   </div>
 
   <div class="download">
@@ -204,10 +182,15 @@
 </div>
 
 <script>
-function setLang(lang) {
-  document.querySelectorAll('.lang').forEach(el => el.style.display = 'none');
-  document.querySelector('.' + lang).style.display = 'block';
-}
+  const userLang = navigator.language || navigator.userLanguage;
+
+  if (userLang.startsWith('pt')) {
+    document.getElementById('lang-en').style.display = 'none';
+    document.getElementById('lang-pt').style.display = 'block';
+  } else if (userLang.startsWith('sv') || userLang.startsWith('se')) {
+    document.getElementById('lang-en').style.display = 'none';
+    document.getElementById('lang-se').style.display = 'block';
+  }
 </script>
 
 </body>
