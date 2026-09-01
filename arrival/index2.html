@@ -13,7 +13,7 @@
     <!-- HEADER PREMIUM -->
     <header class="bg-slate-900/70 backdrop-blur-xl border border-slate-700/60 rounded-2xl px-6 py-4 flex items-center justify-between shadow-xl">
       <div class="flex items-center">
-        <img src="../departure/logo.png" alt="Yellow Aurora House Logo"
+        <img src="logo.png" alt="Yellow Aurora House Logo"
              class="w-12 h-12 rounded-full border border-slate-700 shadow-md mr-4">
 
         <div>
@@ -50,7 +50,7 @@
           <div class="px-4 py-3">
             <h2 id="photo1Title" class="text-sm font-semibold text-slate-100">Finding the house</h2>
             <p id="photo1Text" class="text-xs text-slate-300 mt-1">
-              Follow the main road E10 until you reach the yellow house with the black roof. The area is quiet and easy to find, even in winter.
+              Follow the main road <strong>E10</strong> until Gyljen, 200m after the speed trap. The area is quiet and easy to find, even in winter.
             </p>
           </div>
         </section>
@@ -61,18 +61,19 @@
           <div class="px-4 py-3">
             <h2 id="photo2Title" class="text-sm font-semibold text-slate-100">Parking & Garage</h2>
             <p id="photo2Text" class="text-xs text-slate-300 mt-1">
-              You may park directly in front of the house. The garage can be used during your stay, just like described in your arrival instructions.
+              You may park directly in front of the house. The covered garage can be used during your stay, just like described in your arrival instructions.
             </p>
           </div>
         </section>
 
         <!-- CARD 3 – KEYPAD -->
         <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
-          <img src="keypad.jpg" class="w-full h-56 object-cover">
+          <img src="Keypad.jpg" class="w-full h-56 object-cover">
           <div class="px-4 py-3">
             <h2 id="photo3Title" class="text-sm font-semibold text-slate-100">Entrance keypad</h2>
             <p id="photo3Text" class="text-xs text-slate-300 mt-1">
-              Enter your code on the keypad. After typing the digits, press the back arrow ◀ to confirm. The lock will turn automatically.
+              Enter your six‑digit code. The lock will unlock automatically after the correct code is entered — there is no “enter” button.<br>
+              If you make a mistake, use the arrow button ◀ to delete and start again.
             </p>
           </div>
         </section>
@@ -83,7 +84,7 @@
           <div class="px-4 py-3">
             <h2 id="unlockTitle" class="text-sm font-semibold text-slate-100">How to unlock the door</h2>
             <p id="unlockText" class="text-xs text-slate-300 mt-1">
-              Press the centre of the round lock knob above the handle. The lock will turn automatically. This works for both locking and unlocking.
+              Press the centre of the large round lock knob above the door handle. The lock will turn automatically. This works for both locking and unlocking.
             </p>
           </div>
         </section>
@@ -94,7 +95,7 @@
             <span>🕒</span><span>Check-in time</span>
           </h2>
           <p id="checkinText" class="text-xs text-slate-300 mt-1">
-            Check-in is available from 15:00. If you need an earlier arrival, please contact us.
+            Check-in is available from 16:00. If you need an earlier arrival, please contact us.
           </p>
         </section>
 
@@ -105,6 +106,16 @@
           </h2>
           <p id="houseText" class="text-xs text-slate-300 mt-1">
             Heating, internet, and lighting are automatic. The house will be warm when you arrive.
+          </p>
+        </section>
+
+        <!-- LOCKING WHEN LEAVING -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="lockLeavingTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>🔒</span><span>How to lock the door when leaving</span>
+          </h2>
+          <p id="lockLeavingText" class="text-xs text-slate-300 mt-1">
+            Close the door fully first. Then press the back arrow ◀ on the outside keypad. Wait until you hear the lock turn before leaving.
           </p>
         </section>
 
@@ -136,15 +147,17 @@
         photo1Title: "Finding the house",
         photo1Text: "Follow the main road E10 until you reach the yellow house with the black roof. The area is quiet and easy to find, even in winter.",
         photo2Title: "Parking & Garage",
-        photo2Text: "You may park directly in front of the house. The garage can be used during your stay, just like described in your arrival instructions.",
+        photo2Text: "You may park directly in front of the house. The covered garage can be used during your stay, just like described in your arrival instructions.",
         photo3Title: "Entrance keypad",
-        photo3Text: "Enter your code on the keypad. After typing the digits, the lock will turn automatically.",
+        photo3Text: "Enter your six‑digit code. The lock will unlock automatically after the correct code is entered — there is no “enter” button. If you make a mistake, use the arrow button ◀ to delete and start again.",
         unlockTitle: "How to unlock the door",
-        unlockText: "Press the centre of the round lock knob above the handle. The lock will turn automatically. This works for both locking and unlocking.",
+        unlockText: "Press the centre of the large round lock knob above the door handle. The lock will turn automatically. This works for both locking and unlocking.",
         checkinTitle: "Check-in time",
-        checkinText: "Check-in is available from 15:00. If you need an earlier arrival, please contact us.",
+        checkinText: "Check-in is available from 16:00. If you need an earlier arrival, please contact us.",
         houseTitle: "Inside the house",
         houseText: "Heating, internet, and lighting are automatic. The house will be warm when you arrive.",
+        lockLeavingTitle: "How to lock the door when leaving",
+        lockLeavingText: "Close the door fully first. Then press the back arrow ◀ on the outside keypad. Wait until you hear the lock turn before leaving.",
         contactTitle: "Need help?",
         contactText: "If anything is unclear or you need assistance, feel free to message us through Booking.com or your preferred channel.",
         footerText: "Welcome to Yellow Aurora House. We hope you enjoy your stay."
@@ -155,17 +168,19 @@
         subtitle: "Tudo o que você precisa para uma chegada tranquila.",
         intro: "Bem-vindo! Aqui está tudo o que você precisa para chegar confortavelmente à Yellow Aurora House.",
         photo1Title: "Encontrando a casa",
-        photo1Text: "Siga a estrada principal (E10) até chegar à casa amarela com o telhado preto. A área é tranquila e fácil de encontrar, mesmo no inverno.",
+        photo1Text: "Siga a estrada principal E10 até chegar à casa amarela com o telhado preto. A área é tranquila e fácil de encontrar, mesmo no inverno.",
         photo2Title: "Estacionamento & Garagem",
-        photo2Text: "Você pode estacionar diretamente em frente à casa. A garagem pode ser usada durante sua estadia, como descrito nas instruções de chegada.",
+        photo2Text: "Você pode estacionar diretamente em frente à casa. A garagem coberta pode ser usada durante sua estadia, como descrito nas instruções de chegada.",
         photo3Title: "Teclado de entrada",
-        photo3Text: "Digite seu código no teclado. Após inserir os números, pressione a seta ◀ para confirmar. A fechadura irá girar automaticamente.",
+        photo3Text: "Digite seu código de seis dígitos. A fechadura destranca automaticamente após o código correto — não existe botão “enter”. Se cometer um erro, use a seta ◀ para apagar e começar novamente.",
         unlockTitle: "Como destrancar a porta",
         unlockText: "Pressione o centro do botão redondo acima da maçaneta. A fechadura irá girar automaticamente. Isso funciona para trancar e destrancar.",
         checkinTitle: "Horário de check-in",
-        checkinText: "O check-in está disponível a partir das 15:00. Se precisar chegar mais cedo, entre em contato.",
+        checkinText: "O check-in está disponível a partir das 16:00. Se precisar chegar mais cedo, entre em contato.",
         houseTitle: "Dentro da casa",
         houseText: "Aquecimento, internet e iluminação são automáticos. A casa estará aquecida quando você chegar.",
+        lockLeavingTitle: "Como trancar a porta ao sair",
+        lockLeavingText: "Feche a porta completamente. Depois pressione a seta ◀ no teclado externo. Aguarde até ouvir a fechadura girar antes de sair.",
         contactTitle: "Precisa de ajuda?",
         contactText: "Se algo não estiver claro ou você precisar de assistência, envie uma mensagem pelo Booking.com ou pelo seu canal preferido.",
         footerText: "Bem-vindo à Yellow Aurora House. Esperamos que você aproveite sua estadia."
@@ -176,17 +191,19 @@
         subtitle: "Allt du behöver för en smidig ankomst.",
         intro: "Välkommen! Här är allt du behöver för att anlända bekvämt till Yellow Aurora House.",
         photo1Title: "Hitta huset",
-        photo1Text: "Följ huvudvägen tills du når det gula huset med svart tak. Området är lugnt och lätt att hitta, även på vintern.",
+        photo1Text: "Följ huvudvägen E10 tills du når det gula huset med svart tak. Området är lugnt och lätt att hitta, även på vintern.",
         photo2Title: "Parkering & Garage",
-        photo2Text: "Du kan parkera direkt framför huset. Garaget kan användas under din vistelse, precis som beskrivet i ankomstinstruktionerna.",
+        photo2Text: "Du kan parkera direkt framför huset. Det täckta garaget kan användas under din vistelse, precis som beskrivet i ankomstinstruktionerna.",
         photo3Title: "Entrétangentbord",
-        photo3Text: "Ange din kod på tangentbordet. Efter att du skrivit siffrorna, tryck på pilen ◀ för att bekräfta. Låset vrider sig automatiskt.",
+        photo3Text: "Ange din sexsiffriga kod. Låset låser upp automatiskt när rätt kod skrivs — det finns ingen “enter”-knapp. Om du gör fel, använd pilen ◀ för att radera och börja om.",
         unlockTitle: "Hur man låser upp dörren",
         unlockText: "Tryck på mitten av den runda knoppen ovanför handtaget. Låset vrider sig automatiskt. Detta fungerar både för att låsa och låsa upp.",
         checkinTitle: "Incheckningstid",
-        checkinText: "Incheckning är tillgänglig från 15:00. Kontakta oss om du behöver komma tidigare.",
+        checkinText: "Incheckning är tillgänglig från 16:00. Kontakta oss om du behöver komma tidigare.",
         houseTitle: "Inne i huset",
-        houseText: "Uppvärmning, (E10) internet och belysning är automatiska. Huset kommer att vara varmt när du anländer.",
+        houseText: "Uppvärmning, internet och belysning är automatiska. Huset kommer att vara varmt när du anländer.",
+        lockLeavingTitle: "Hur man låser dörren när man går",
+        lockLeavingText: "Stäng dörren helt först. Tryck sedan på pilen ◀ på knappsatsen utanför. Vänta tills du hör låset vrida sig innan du går.",
         contactTitle: "Behöver du hjälp?",
         contactText: "Om något är oklart eller om du behöver hjälp, skicka ett meddelande via Booking.com eller din vanliga kontaktkanal.",
         footerText: "Välkommen till Yellow Aurora House. Vi hoppas att du trivs."
@@ -197,17 +214,19 @@
         subtitle: "Todo lo que necesitas para una llegada tranquila.",
         intro: "¡Bienvenido! Aquí tienes todo lo necesario para llegar cómodamente a Yellow Aurora House.",
         photo1Title: "Encontrando la casa",
-        photo1Text: "Sigue la carretera principal (E10) hasta llegar a la casa amarilla con techo negro. La zona es tranquila y fácil de encontrar, incluso en invierno.",
+        photo1Text: "Sigue la carretera principal E10 hasta llegar a la casa amarilla con techo negro. La zona es tranquila y fácil de encontrar, incluso en invierno.",
         photo2Title: "Estacionamiento & Garaje",
-        photo2Text: "Puedes estacionar directamente frente a la casa. El garaje puede usarse durante tu estancia, tal como se describe en las instrucciones de llegada.",
+        photo2Text: "Puedes estacionar directamente frente a la casa. El garaje cubierto puede usarse durante tu estancia, tal como se describe en las instrucciones de llegada.",
         photo3Title: "Teclado de entrada",
-        photo3Text: "Introduce tu código en el teclado. Después de escribir los números, presiona la flecha ◀ para confirmar. La cerradura girará automáticamente.",
+        photo3Text: "Introduce tu código de seis dígitos. La cerradura se abrirá automáticamente cuando el código correcto se ingrese — no hay botón “enter”. Si cometes un error, usa la flecha ◀ para borrar y empezar de nuevo.",
         unlockTitle: "Cómo abrir la puerta",
         unlockText: "Presiona el centro del botón redondo sobre la manija. La cerradura girará automáticamente. Esto funciona tanto para cerrar como para abrir.",
         checkinTitle: "Hora de check-in",
-        checkinText: "El check-in está disponible desde las 15:00. Si necesitas llegar antes, contáctanos.",
+        checkinText: "El check-in está disponible desde las 16:00. Si necesitas llegar antes, contáctanos.",
         houseTitle: "Dentro de la casa",
         houseText: "La calefacción, internet y luces son automáticos. La casa estará cálida cuando llegues.",
+        lockLeavingTitle: "Cómo cerrar la puerta al salir",
+        lockLeavingText: "Cierra la puerta completamente. Luego presiona la flecha ◀ en el teclado exterior. Espera hasta escuchar que la cerradura gira antes de irte.",
         contactTitle: "¿Necesitas ayuda?",
         contactText: "Si algo no está claro o necesitas asistencia, envíanos un mensaje por Booking.com o tu canal habitual.",
         footerText: "Bienvenido a Yellow Aurora House. Esperamos que disfrutes tu estancia."
