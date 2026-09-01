@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout – Yellow Aurora House</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center">
+  <div class="max-w-3xl w-full mx-4 my-10">
+    <!-- GLASS HEADER -->
+    <header class="bg-slate-900/70 backdrop-blur-xl border border-slate-700/60 rounded-2xl px-6 py-4 flex items-center justify-between shadow-xl">
+      <div>
+        <h1 id="title" class="text-xl font-semibold tracking-tight">Checkout – Yellow Aurora House</h1>
+        <p id="subtitle" class="text-xs text-slate-400 mt-1">
+          Clear instructions to make your departure smooth and easy.
+        </p>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="btn-en" class="px-2 py-1 rounded-lg text-xs bg-slate-800 text-white border border-slate-600">EN</button>
+        <button id="btn-pt" class="px-2 py-1 rounded-lg text-xs text-slate-400 border border-slate-700">PT</button>
+        <button id="btn-sv" class="px-2 py-1 rounded-lg text-xs text-slate-400 border border-slate-700">SV</button>
+        <button id="btn-es" class="px-2 py-1 rounded-lg text-xs text-slate-400 border border-slate-700">ES</button>
+      </div>
+    </header>
+
+    <!-- MAIN CARD -->
+    <main class="mt-6 bg-slate-900/70 backdrop-blur-xl border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
+      <div class="px-6 pt-6 pb-4 border-b border-slate-800/70">
+        <p id="intro" class="text-sm text-slate-200">
+          Hello! We hope you enjoyed your stay at Yellow Aurora House. Here is a clear checkout guide to help you leave with peace of mind.
+        </p>
+      </div>
+
+      <div class="px-6 py-4 grid gap-4">
+        <!-- CHECKOUT TIME -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="checkoutTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>🕒</span><span>Checkout time</span>
+          </h2>
+          <p id="checkoutText" class="text-xs text-slate-300 mt-1">
+            Checkout is by 11:00 AM. If you need a different time, please contact us in advance – we’ll do our best depending on cleaning schedules.
+          </p>
+        </section>
+
+        <!-- CHECKLIST -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="checklistTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>🧹</span><span>Before you leave – quick checklist</span>
+          </h2>
+          <ul id="checklistItems" class="mt-2 text-xs text-slate-300 space-y-1">
+            <li>• Turn off all lights.</li>
+            <li>• Close all windows.</li>
+            <li>• Place used towels in the bathroom.</li>
+            <li>• Leave beds unmade – our cleaning team will take care of them.</li>
+            <li>• Check you haven’t forgotten chargers, clothes or personal items.</li>
+            <li>• Dispose of trash in the kitchen bin.</li>
+          </ul>
+        </section>
+
+        <!-- LOCKING THE HOUSE -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="lockTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>🚪</span><span>How to lock the house when leaving</span>
+          </h2>
+          <p id="lockIntro" class="text-xs text-slate-300 mt-1">
+            After completing your checkout checklist and stepping outside, please follow these steps to lock the door:
+          </p>
+          <ol id="lockSteps" class="mt-2 text-xs text-slate-300 space-y-1">
+            <li>1. Make sure the door is fully closed.</li>
+            <li>2. Press the back arrow ◀ on the outside keypad.</li>
+            <li>3. Wait a moment until you hear the lock turn.</li>
+            <li>4. Gently pull the handle to confirm the door is locked.</li>
+          </ol>
+        </section>
+
+        <!-- KEYS & DEVICES -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="keysTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>🔑</span><span>Keys and access devices</span>
+          </h2>
+          <p id="keysText" class="text-xs text-slate-300 mt-1">
+            If you used any of the following items, please return them before leaving:
+          </p>
+          <ul id="keysItems" class="mt-2 text-xs text-slate-300 space-y-1">
+            <li>• Garage remote – hang it back on the hook between the entrance door and the window.</li>
+            <li>• Any physical keys (if provided) – leave them on the kitchen counter.</li>
+          </ul>
+        </section>
+
+        <!-- GARAGE -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="garageTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>🚗</span><span>If you used the garage</span>
+          </h2>
+          <ul id="garageItems" class="mt-2 text-xs text-slate-300 space-y-1">
+            <li>• Make sure the garage door is fully closed.</li>
+            <li>• Return the remote to its hook.</li>
+            <li>• Check that no personal items are left inside.</li>
+          </ul>
+        </section>
+
+        <!-- INTERNET -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="internetTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>🛜</span><span>Internet and devices</span>
+          </h2>
+          <p id="internetText" class="text-xs text-slate-300 mt-1">
+            There is no need to unplug or turn off any devices – the system resets automatically.
+          </p>
+        </section>
+
+        <!-- REVIEW & CONTACT -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="reviewTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>📸</span><span>Before you go</span>
+          </h2>
+          <p id="reviewText" class="text-xs text-slate-300 mt-1">
+            If you enjoyed your stay, a quick review helps us a lot and improves the experience for future guests.
+          </p>
+          <p id="contactText" class="text-xs text-slate-300 mt-2">
+            If anything is unclear or you need assistance during checkout, please send us a message through Booking.com or your usual contact channel.
+          </p>
+        </section>
+      </div>
+
+      <footer class="px-6 py-4 border-t border-slate-800/70 text-xs text-slate-500 flex justify-between items-center">
+        <span id="footerText">Thank you for staying at Yellow Aurora House. Safe travels and we hope to welcome you again.</span>
+        <span class="text-[10px] text-slate-600">Boreal One AB</span>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const translationsCheckout = {
+      en: {
+        title: "Checkout – Yellow Aurora House",
+        subtitle: "Clear instructions to make your departure smooth and easy.",
+        intro: "Hello! We hope you enjoyed your stay at Yellow Aurora House. Here is a clear checkout guide to help you leave with peace of mind.",
+        checkoutTitle: "Checkout time",
+        checkoutText: "Checkout is by 11:00 AM. If you need a different time, please contact us in advance – we’ll do our best depending on cleaning schedules.",
+        checklistTitle: "Before you leave – quick checklist",
+        checklistItems: [
+          "Turn off all lights.",
+          "Close all windows.",
+          "Place used towels in the bathroom.",
+          "Leave beds unmade – our cleaning team will take care of them.",
+          "Check you haven’t forgotten chargers, clothes or personal items.",
+          "Dispose of trash in the kitchen bin."
+        ],
+        lockTitle: "How to lock the house when leaving",
+        lockIntro: "After completing your checkout checklist and stepping outside, please follow these steps to lock the door:",
+        lockSteps: [
+          "Make sure the door is fully closed.",
+          "Press the back arrow ◀ on the outside keypad.",
+          "Wait a moment until you hear the lock turn.",
+          "Gently pull the handle to confirm the door is locked."
+        ],
+        keysTitle: "Keys and access devices",
+        keysText: "If you used any of the following items, please return them before leaving:",
+        keysItems: [
+          "Garage remote – hang it back on the hook between the entrance door and the window.",
+          "Any physical keys (if provided) – leave them on the kitchen counter."
+        ],
+        garageTitle: "If you used the garage",
+        garageItems: [
+          "Make sure the garage door is fully closed.",
+          "Return the remote to its hook.",
+          "Check that no personal items are left inside."
+        ],
+        internetTitle: "Internet and devices",
+        internetText: "There is no need to unplug or turn off any devices – the system resets automatically.",
+        reviewTitle: "Before you go",
+        reviewText: "If you enjoyed your stay, a quick review helps us a lot and improves the experience for future guests.",
+        contactText: "If anything is unclear or you need assistance during checkout, please send us a message through Booking.com or your usual contact channel.",
+        footerText: "Thank you for staying at Yellow Aurora House. Safe travels and we hope to welcome you again."
+      },
+      pt: {
+        title: "Checkout – Yellow Aurora House",
+        subtitle: "Instruções claras para uma saída tranquila e sem preocupações.",
+        intro: "Olá! Esperamos que você tenha aproveitado sua estadia na Yellow Aurora House. Aqui está um guia de checkout claro para você sair com tranquilidade.",
+        checkoutTitle: "Horário de checkout",
+        checkoutText: "O checkout é até 11:00 da manhã. Se precisar de um horário diferente, por favor nos avise com antecedência – faremos o possível, dependendo da agenda da equipe de limpeza.",
+        checklistTitle: "Antes de sair – checklist rápido",
+        checklistItems: [
+          "Apague todas as luzes.",
+          "Feche todas as janelas.",
+          "Deixe as toalhas usadas no banheiro.",
+          "Não precisa arrumar as camas – nossa equipe cuida disso.",
+          "Verifique se não esqueceu carregadores, roupas ou itens pessoais.",
+          "Jogue o lixo na lixeira da cozinha."
+        ],
+        lockTitle: "Como trancar a casa ao sair",
+        lockIntro: "Depois de concluir o checklist de checkout e sair da casa, siga estes passos para trancar a porta:",
+        lockSteps: [
+          "Certifique-se de que a porta está totalmente fechada.",
+          "Pressione a seta de voltar ◀ no teclado externo.",
+          "Aguarde alguns segundos até ouvir a fechadura girar.",
+          "Puxe levemente a maçaneta para confirmar que a porta está trancada."
+        ],
+        keysTitle: "Chaves e dispositivos de acesso",
+        keysText: "Se você utilizou algum dos itens abaixo, por favor devolva antes de sair:",
+        keysItems: [
+          "Controle remoto da garagem – pendure novamente no gancho entre a porta de entrada e a janela.",
+          "Quaisquer chaves físicas (se fornecidas) – deixe sobre a bancada da cozinha."
+        ],
+        garageTitle: "Se você usou a garagem",
+        garageItems: [
+          "Verifique se a porta da garagem está totalmente fechada.",
+          "Devolva o controle remoto ao gancho.",
+          "Confira se nenhum item pessoal ficou dentro da garagem."
+        ],
+        internetTitle: "Internet e dispositivos",
+        internetText: "Não é necessário desligar ou desconectar nenhum dispositivo – o sistema reinicia automaticamente.",
+        reviewTitle: "Antes de partir",
+        reviewText: "Se você gostou da estadia, uma avaliação rápida nos ajuda muito e melhora a experiência de futuros hóspedes.",
+        contactText: "Se tiver qualquer dúvida ou precisar de ajuda durante o checkout, envie uma mensagem pelo Booking.com ou pelo seu canal de contato habitual.",
+        footerText: "Obrigado por escolher a Yellow Aurora House. Tenha uma excelente viagem e esperamos receber você novamente."
+      },
+      sv: {
+        title: "Utcheckning – Yellow Aurora House",
+        subtitle: "Tydliga instruktioner för en smidig avresa.",
+        intro: "Hej! Vi hoppas att du har haft en fin vistelse på Yellow Aurora House. Här är en tydlig guide för utcheckning så att du kan resa vidare i lugn och ro.",
+        checkoutTitle: "Tid för utcheckning",
+        checkoutText: "Utcheckning är senast klockan 11:00. Om du behöver en annan tid, kontakta oss i förväg – vi gör vårt bästa beroende på städningens schema.",
+        checklistTitle: "Innan du går – snabb checklista",
+        checklistItems: [
+          "Släck alla lampor.",
+          "Stäng alla fönster.",
+          "Lägg använda handdukar i badrummet.",
+          "Du behöver inte bädda sängarna – vårt städteam tar hand om det.",
+          "Kontrollera att du inte har glömt laddare, kläder eller personliga saker.",
+          "Släng sopor i kökets soptunna."
+        ],
+        lockTitle: "Hur du låser huset när du går",
+        lockIntro: "När du har gjort klart din checklista och gått ut, följ dessa steg för att låsa dörren:",
+        lockSteps: [
+          "Se till att dörren är helt stängd.",
+          "Tryck på pilen ◀ på knappsatsen utanför.",
+          "Vänta några sekunder tills du hör låset vrida sig.",
+          "Dra försiktigt i handtaget för att kontrollera att dörren är låst."
+        ],
+        keysTitle: "Nycklar och åtkomst",
+        keysText: "Om du har använt något av följande, vänligen lämna tillbaka innan du går:",
+        keysItems: [
+          "Garagekontroll – häng tillbaka den på kroken mellan ytterdörren och fönstret.",
+          "Eventuella fysiska nycklar (om du fått sådana) – lämna dem på köksbänken."
+        ],
+        garageTitle: "Om du har använt garaget",
+        garageItems: [
+          "Kontrollera att garagedörren är helt stängd.",
+          "Lägg tillbaka fjärrkontrollen på kroken.",
+          "Se till att inga personliga saker finns kvar i garaget."
+        ],
+        internetTitle: "Internet och enheter",
+        internetText: "Du behöver inte stänga av eller koppla ur några enheter – systemet återställs automatiskt.",
+        reviewTitle: "Innan du åker",
+        reviewText: "Om du har trivts hos oss betyder en snabb recension mycket och hjälper framtida gäster.",
+        contactText: "Om något är oklart eller om du behöver hjälp vid utcheckning, skicka ett meddelande via Booking.com eller din vanliga kontaktkanal.",
+        footerText: "Tack för att du bodde på Yellow Aurora House. Trevlig resa och varmt välkommen tillbaka."
+      },
+      es: {
+        title: "Checkout – Yellow Aurora House",
+        subtitle: "Instrucciones claras para una salida cómoda y sin estrés.",
+        intro: "Hola, esperamos que hayas disfrutado tu estancia en Yellow Aurora House. Aquí tienes una guía de checkout clara para que puedas marcharte con tranquilidad.",
+        checkoutTitle: "Hora de checkout",
+        checkoutText: "El checkout es hasta las 11:00 de la mañana. Si necesitas otro horario, por favor contáctanos con antelación – haremos lo posible según el horario del equipo de limpieza.",
+        checklistTitle: "Antes de salir – lista rápida",
+        checklistItems: [
+          "Apaga todas las luces.",
+          "Cierra todas las ventanas.",
+          "Deja las toallas usadas en el baño.",
+          "No es necesario hacer las camas – nuestro equipo se encarga.",
+          "Comprueba que no has olvidado cargadores, ropa u objetos personales.",
+          "Tira la basura en el cubo de la cocina."
+        ],
+        lockTitle: "Cómo cerrar la casa al salir",
+        lockIntro: "Después de completar la lista de checkout y salir de la casa, sigue estos pasos para cerrar la puerta:",
+        lockSteps: [
+          "Asegúrate de que la puerta esté completamente cerrada.",
+          "Pulsa la flecha ◀ en el teclado exterior.",
+          "Espera unos segundos hasta escuchar que la cerradura gira.",
+          "Tira suavemente de la manija para confirmar que la puerta está cerrada."
+        ],
+        keysTitle: "Llaves y dispositivos de acceso",
+        keysText: "Si has utilizado alguno de los siguientes elementos, por favor devuélvelos antes de irte:",
+        keysItems: [
+          "Mando del garaje – cuélgalo de nuevo en el gancho entre la puerta de entrada y la ventana.",
+          "Cualquier llave física (si se te ha entregado) – déjala sobre la encimera de la cocina."
+        ],
+        garageTitle: "Si has utilizado el garaje",
+        garageItems: [
+          "Comprueba que la puerta del garaje esté completamente cerrada.",
+          "Devuelve el mando al gancho.",
+          "Asegúrate de no dejar objetos personales dentro del garaje."
+        ],
+        internetTitle: "Internet y dispositivos",
+        internetText: "No es necesario apagar ni desconectar ningún dispositivo – el sistema se reinicia automáticamente.",
+        reviewTitle: "Antes de marcharte",
+        reviewText: "Si disfrutaste tu estancia, una reseña rápida nos ayuda mucho y mejora la experiencia de futuros huéspedes.",
+        contactText: "Si algo no está claro o necesitas ayuda durante el checkout, envíanos un mensaje a través de Booking.com o por tu canal habitual.",
+        footerText: "Gracias por alojarte en Yellow Aurora House. Que tengas un buen viaje y esperamos recibirte de nuevo."
+      }
+    };
+
+    function applyLanguage(lang) {
+      const t = translationsCheckout[lang] || translationsCheckout.en;
+
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("subtitle").textContent = t.subtitle;
+      document.getElementById("intro").textContent = t.intro;
+
+      document.getElementById("checkoutTitle").textContent = t.checkoutTitle;
+      document.getElementById("checkoutText").textContent = t.checkoutText;
+
+      document.getElementById("checklistTitle").textContent = t.checklistTitle;
+      const checklistEl = document.getElementById("checklistItems");
+      checklistEl.innerHTML = "";
+      t.checklistItems.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = "• " + item;
+        checklistEl.appendChild(li);
+      });
+
+      document.getElementById("lockTitle").textContent = t.lockTitle;
+      document.getElementById("lockIntro").textContent = t.lockIntro;
+      const lockEl = document.getElementById("lockSteps");
+      lockEl.innerHTML = "";
+      t.lockSteps.forEach((step, idx) => {
+        const li = document.createElement("li");
+        li.textContent = (idx + 1) + ". " + step;
+        lockEl.appendChild(li);
+      });
+
+      document.getElementById("keysTitle").textContent = t.keysTitle;
+      document.getElementById("keysText").textContent = t.keysText;
+      const keysEl = document.getElementById("keysItems");
+      keysEl.innerHTML = "";
+      t.keysItems.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = "• " + item;
+        keysEl.appendChild(li);
+      });
+
+      document.getElementById("garageTitle").textContent = t.garageTitle;
+      const garageEl = document.getElementById("garageItems");
+      garageEl.innerHTML = "";
+      t.garageItems.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = "• " + item;
+        garageEl.appendChild(li);
+      });
+
+      document.getElementById("internetTitle").textContent = t.internetTitle;
+      document.getElementById("internetText").textContent = t.internetText;
+
+      document.getElementById("reviewTitle").textContent = t.reviewTitle;
+      document.getElementById("reviewText").textContent = t.reviewText;
+      document.getElementById("contactText").textContent = t.contactText;
+
+      document.getElementById("footerText").textContent = t.footerText;
+
+      highlightButton(lang);
+      localStorage.setItem("checkoutLang", lang);
+    }
+
+    function highlightButton(lang) {
+      const buttons = ["en", "pt", "sv", "es"];
+      buttons.forEach(code => {
+        const btn = document.getElementById(`btn-${code}`);
+        if (!btn) return;
+        if (code === lang) {
+          btn.classList.add("bg-slate-800", "text-white", "border-slate-500");
+          btn.classList.remove("text-slate-400");
+        } else {
+          btn.classList.remove("bg-slate-800", "text-white", "border-slate-500");
+          btn.classList.add("text-slate-400");
+        }
+      });
+    }
+
+    document.getElementById("btn-en").addEventListener("click", () => applyLanguage("en"));
+    document.getElementById("btn-pt").addEventListener("click", () => applyLanguage("pt"));
+    document.getElementById("btn-sv").addEventListener("click", () => applyLanguage("sv"));
+    document.getElementById("btn-es").addEventListener("click", () => applyLanguage("es"));
+
+    const savedLang = localStorage.getItem("checkoutLang") || "en";
+    applyLanguage(savedLang);
+  </script>
+</body>
+</html>
