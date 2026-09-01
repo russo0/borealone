@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Arrival – Yellow Aurora House</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center">
+  <div class="max-w-3xl w-full mx-4 my-10">
+
+    <!-- HEADER PREMIUM -->
+    <header class="bg-slate-900/70 backdrop-blur-xl border border-slate-700/60 rounded-2xl px-6 py-4 flex items-center justify-between shadow-xl">
+      <div class="flex items-center">
+        <img src="logo.png" alt="Yellow Aurora House Logo"
+             class="w-12 h-12 rounded-full border border-slate-700 shadow-md mr-4">
+
+        <div>
+          <h1 id="title" class="text-xl font-semibold tracking-tight">Arrival – Yellow Aurora House</h1>
+          <p id="subtitle" class="text-xs text-slate-400 mt-1">
+            Everything you need for a smooth and easy arrival.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="btn-en" class="px-2 py-1 rounded-lg text-xs bg-slate-800 text-white border border-slate-600">EN</button>
+        <button id="btn-pt" class="px-2 py-1 rounded-lg text-xs text-slate-400 border border-slate-700">PT</button>
+        <button id="btn-sv" class="px-2 py-1 rounded-lg text-xs text-slate-400 border border-slate-700">SV</button>
+        <button id="btn-es" class="px-2 py-1 rounded-lg text-xs text-slate-400 border border-slate-700">ES</button>
+      </div>
+    </header>
+
+    <!-- MAIN CARD -->
+    <main class="mt-6 bg-slate-900/70 backdrop-blur-xl border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
+
+      <!-- INTRO -->
+      <div class="px-6 pt-6 pb-4 border-b border-slate-800/70">
+        <p id="intro" class="text-sm text-slate-200">
+          Welcome! Here is everything you need to arrive comfortably at Yellow Aurora House.
+        </p>
+      </div>
+
+      <div class="px-6 py-4 grid gap-4">
+
+        <!-- PHOTO CARD 1 -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
+          <img src="photo1.jpg" class="w-full h-56 object-cover">
+          <div class="px-4 py-3">
+            <h2 id="photo1Title" class="text-sm font-semibold text-slate-100">Finding the house</h2>
+            <p id="photo1Text" class="text-xs text-slate-300 mt-1">
+              The Yellow Aurora House is located in a quiet area surrounded by nature. Follow the main road until you see the yellow cabin with the blue roof.
+            </p>
+          </div>
+        </section>
+
+        <!-- PHOTO CARD 2 -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
+          <img src="photo2.jpg" class="w-full h-56 object-cover">
+          <div class="px-4 py-3">
+            <h2 id="photo2Title" class="text-sm font-semibold text-slate-100">Parking</h2>
+            <p id="photo2Text" class="text-xs text-slate-300 mt-1">
+              You may park directly in front of the house. The area is private and safe.
+            </p>
+          </div>
+        </section>
+
+        <!-- PHOTO CARD 3 -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
+          <img src="photo3.jpg" class="w-full h-56 object-cover">
+          <div class="px-4 py-3">
+            <h2 id="photo3Title" class="text-sm font-semibold text-slate-100">Entrance</h2>
+            <p id="photo3Text" class="text-xs text-slate-300 mt-1">
+              The entrance door is equipped with a smart lock. Instructions for unlocking are below.
+            </p>
+          </div>
+        </section>
+
+        <!-- UNLOCKING -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="unlockTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>🔓</span><span>How to unlock the door</span>
+          </h2>
+          <p id="unlockText" class="text-xs text-slate-300 mt-1">
+            Press the centre of the large round lock knob above the door handle. The lock will turn automatically. This works for both locking and unlocking.
+          </p>
+        </section>
+
+        <!-- CHECK-IN TIME -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="checkinTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>🕒</span><span>Check-in time</span>
+          </h2>
+          <p id="checkinText" class="text-xs text-slate-300 mt-1">
+            Check-in is available from 15:00. If you need an earlier arrival, please contact us.
+          </p>
+        </section>
+
+        <!-- HOUSE INFO -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="houseTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>🏡</span><span>Inside the house</span>
+          </h2>
+          <p id="houseText" class="text-xs text-slate-300 mt-1">
+            Heating, internet, and lighting are all automatic. The house will be warm when you arrive.
+          </p>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="contactTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>💬</span><span>Need help?</span>
+          </h2>
+          <p id="contactText" class="text-xs text-slate-300 mt-1">
+            If anything is unclear or you need assistance, feel free to message us through Booking.com or your preferred channel.
+          </p>
+        </section>
+
+      </div>
+
+      <footer class="px-6 py-4 border-t border-slate-800/70 text-xs text-slate-500 flex justify-between items-center">
+        <span id="footerText">Welcome to Yellow Aurora House. We hope you enjoy your stay.</span>
+        <span class="text-[10px] text-slate-600">Boreal One AB</span>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const translationsArrival = {
+      en: {
+        title: "Arrival – Yellow Aurora House",
+        subtitle: "Everything you need for a smooth and easy arrival.",
+        intro: "Welcome! Here is everything you need to arrive comfortably at Yellow Aurora House.",
+        photo1Title: "Finding the house",
+        photo1Text: "The Yellow Aurora House is located in a quiet area surrounded by nature. Follow the main road until you see the yellow cabin with the blue roof.",
+        photo2Title: "Parking",
+        photo2Text: "You may park directly in front of the house. The area is private and safe.",
+        photo3Title: "Entrance",
+        photo3Text: "The entrance door is equipped with a smart lock. Instructions for unlocking are below.",
+        unlockTitle: "How to unlock the door",
+        unlockText: "Press the centre of the large round lock knob above the door handle. The lock will turn automatically. This works for both locking and unlocking.",
+        checkinTitle: "Check-in time",
+        checkinText: "Check-in is available from 15:00. If you need an earlier arrival, please contact us.",
+        houseTitle: "Inside the house",
+        houseText: "Heating, internet, and lighting are all automatic. The house will be warm when you arrive.",
+        contactTitle: "Need help?",
+        contactText: "If anything is unclear or you need assistance, feel free to message us through Booking.com or your preferred channel.",
+        footerText: "Welcome to Yellow Aurora House. We hope you enjoy your stay."
+      },
+
+      pt: {
+        title: "Chegada – Yellow Aurora House",
+        subtitle: "Tudo o que você precisa para uma chegada tranquila.",
+        intro: "Bem-vindo! Aqui está tudo o que você precisa para chegar confortavelmente à Yellow Aurora House.",
+        photo1Title: "Encontrando a casa",
+        photo1Text: "A Yellow Aurora House fica em uma área tranquila cercada pela natureza. Siga a estrada principal até ver a cabana amarela com o telhado azul.",
+        photo2Title: "Estacionamento",
+        photo2Text: "Você pode estacionar diretamente em frente à casa. A área é privada e segura.",
+        photo3Title: "Entrada",
+        photo3Text: "A porta de entrada possui uma fechadura inteligente. As instruções estão abaixo.",
+        unlockTitle: "Como destrancar a porta",
+        unlockText: "Pressione o centro do grande botão redondo acima da maçaneta. A fechadura irá girar automaticamente. Isso funciona tanto para trancar quanto para destrancar.",
+        checkinTitle: "Horário de check-in",
+        checkinText: "O check-in está disponível a partir das 15:00. Se precisar chegar mais cedo, entre em contato.",
+        houseTitle: "Dentro da casa",
+        houseText: "Aquecimento, internet e iluminação são automáticos. A casa estará aquecida quando você chegar.",
+        contactTitle: "Precisa de ajuda?",
+        contactText: "Se algo não estiver claro ou você precisar de assistência, envie uma mensagem pelo Booking.com ou pelo seu canal preferido.",
+        footerText: "Bem-vindo à Yellow Aurora House. Esperamos que você aproveite sua estadia."
+      },
+
+      sv: {
+        title: "Ankomst – Yellow Aurora House",
+        subtitle: "Allt du behöver för en smidig ankomst.",
+        intro: "Välkommen! Här är allt du behöver för att anlända bekvämt till Yellow Aurora House.",
+        photo1Title: "Hitta huset",
+        photo1Text: "Yellow Aurora House ligger i ett lugnt område omgivet av natur. Följ huvudvägen tills du ser den gula stugan med blått tak.",
+        photo2Title: "Parkering",
+        photo2Text: "Du kan parkera direkt framför huset. Området är privat och säkert.",
+        photo3Title: "Entré",
+        photo3Text: "Ytterdörren har ett smart lås. Instruktioner finns nedan.",
+        unlockTitle: "Hur man låser upp dörren",
+        unlockText: "Tryck på mitten av den stora runda knoppen ovanför handtaget. Låset vrider sig automatiskt. Detta fungerar både för att låsa och låsa upp.",
+        checkinTitle: "Incheckningstid",
+        checkinText: "Incheckning är tillgänglig från 15:00. Kontakta oss om du behöver komma tidigare.",
+        houseTitle: "Inne i huset",
+        houseText: "Uppvärmning, internet och belysning är automatiska. Huset kommer att vara varmt när du anländer.",
+        contactTitle: "Behöver du hjälp?",
+        contactText: "Om något är oklart eller om du behöver hjälp, skicka ett meddelande via Booking.com eller din vanliga kontaktkanal.",
+        footerText: "Välkommen till Yellow Aurora House. Vi hoppas att du trivs."
+      },
+
+      es: {
+        title: "Llegada – Yellow Aurora House",
+        subtitle: "Todo lo que necesitas para una llegada tranquila.",
+        intro: "¡Bienvenido! Aquí tienes todo lo necesario para llegar cómodamente a Yellow Aurora House.",
+        photo1Title: "Encontrando la casa",
+        photo1Text: "Yellow Aurora House está en una zona tranquila rodeada de naturaleza. Sigue la carretera principal hasta ver la cabaña amarilla con techo azul.",
+        photo2Title: "Estacionamiento",
+        photo2Text: "Puedes estacionar directamente frente a la casa. La zona es privada y segura.",
+        photo3Title: "Entrada",
+        photo3Text: "La puerta de entrada tiene una cerradura inteligente. Las instrucciones están abajo.",
+        unlockTitle: "Cómo abrir la puerta",
+        unlockText: "Presiona el centro del gran botón redondo sobre la manija. La cerradura girará automáticamente. Esto funciona tanto para cerrar como para abrir.",
+        checkinTitle: "Hora de check-in",
+        checkinText: "El check-in está disponible desde las 15:00. Si necesitas llegar antes, contáctanos.",
+        houseTitle: "Dentro de la casa",
+        houseText: "La calefacción, internet y luces son automáticos. La casa estará cálida cuando llegues.",
+        contactTitle: "¿Necesitas ayuda?",
+        contactText: "Si algo no está claro o necesitas asistencia, envíanos un mensaje por Booking.com o tu canal habitual.",
+        footerText: "Bienvenido a Yellow Aurora House. Esperamos que disfrutes tu estancia."
+      }
+    };
+
+    function applyLanguage(lang) {
+      const t = translationsArrival[lang] || translationsArrival.en;
+
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("subtitle").textContent = t.subtitle;
+      document.getElementById("intro").textContent = t.intro;
+
+      document.getElementById("photo1Title").textContent = t.photo1Title;
+      document.getElementById("photo1Text").textContent = t.photo1Text;
+
+      document.getElementById("photo2Title").textContent = t.photo2Title;
+      document.getElementById("photo2Text").textContent = t.photo2Text;
+
+      document.getElementById("photo3Title").textContent = t.photo3Title;
+      document.getElementById("photo3Text").textContent = t.photo3Text;
+
+      document.getElementById("unlockTitle").textContent = t.unlockTitle;
+      document.getElementById("unlockText").textContent = t.unlockText;
+
+      document.getElementById("checkinTitle").textContent = t.checkinTitle;
+      document.getElementById("checkinText").textContent = t.checkinText;
+
+      document.getElementById("houseTitle").textContent = t.houseTitle;
+      document.getElementById("houseText").textContent = t.houseText;
+
+      document.getElementById("contactTitle").textContent = t.contactTitle;
+      document.getElementById("contactText").textContent = t.contactText;
+
+      document.getElementById("footerText").textContent = t.footerText;
+
+      highlightButton(lang);
+      localStorage.setItem("arrivalLang", lang);
+    }
+
+    function highlightButton(lang) {
+      const buttons = ["en", "pt", "sv", "es"];
+      buttons.forEach(code => {
+        const btn = document.getElementById(`btn-${code}`);
+        if (!btn) return;
+        if (code === lang) {
+          btn.classList.add("bg-slate-800", "text-white", "border-slate-500");
+          btn.classList.remove("text-slate-400");
+        } else {
+          btn.classList.remove("bg-slate-800", "text-white", "border-slate-500");
+          btn.classList.add("text-slate-400");
+        }
+      });
+    }
+
+    document.getElementById("btn-en").addEventListener("click", () => applyLanguage("en"));
+    document.getElementById("btn-pt").addEventListener("click", () => applyLanguage("pt"));
+    document.getElementById("btn-sv").addEventListener("click", () => applyLanguage("sv"));
+    document.getElementById("btn-es").addEventListener("click", () => applyLanguage("es"));
+
+    const savedLang = localStorage.getItem("arrivalLang") || "en";
+    applyLanguage(savedLang);
+  </script>
+
+</body>
+</html>
