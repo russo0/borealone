@@ -13,7 +13,7 @@
     <!-- HEADER -->
     <header class="bg-slate-900/70 backdrop-blur-xl border border-slate-700/60 rounded-2xl px-6 py-4 flex items-center justify-between shadow-xl">
       <div class="flex items-center">
-        <img src="logo.png" alt="Yellow Aurora House Logo"
+        <img src="../departurelogo.png" alt="Yellow Aurora House Logo"
              class="w-12 h-12 rounded-full border border-slate-700 shadow-md mr-4">
         <div>
           <h1 id="title" class="text-xl font-semibold tracking-tight">Arrival – Yellow Aurora House</h1>
@@ -24,11 +24,29 @@
       </div>
 
       <div class="flex items-center gap-2">
-        <button id="btn-en" class="px-2 py-1 rounded-lg text-xs bg-slate-800 text-white border border-slate-600">EN</button>
-        <button id="btn-pt" class="px-2 py-1 rounded-lg text-xs text-slate-400 border border-slate-700">PT</button>
-        <button id="btn-sv" class="px-2 py-1 rounded-lg text-xs text-slate-400 border border-slate-700">SV</button>
-        <button id="btn-es" class="px-2 py-1 rounded-lg text-xs text-slate-400 border border-slate-700">ES</button>
+
+        <button onclick="applyLanguage('en')" id="btn-en"
+          class="p-1 rounded transition flex items-center justify-center border border-slate-700 bg-slate-900/40">
+          <img src="flags/uk.svg" class="w-7 h-7 rounded-full">
+        </button>
+      
+        <button onclick="applyLanguage('pt')" id="btn-pt"
+          class="p-1 rounded transition flex items-center justify-center border border-slate-700 bg-slate-900/40">
+          <img src="flags/brazil.svg" class="w-7 h-7 rounded-full">
+        </button>
+      
+        <button onclick="applyLanguage('sv')" id="btn-sv"
+          class="p-1 rounded transition flex items-center justify-center border border-slate-700 bg-slate-900/40">
+          <img src="flags/sweden.svg" class="w-7 h-7 rounded-full">
+        </button>
+      
+        <button onclick="applyLanguage('es')" id="btn-es"
+          class="p-1 rounded transition flex items-center justify-center border border-slate-700 bg-slate-900/40">
+          <img src="flags/spain.svg" class="w-7 h-7 rounded-full">
+        </button>
+      
       </div>
+
     </header>
 
     <!-- MAIN -->
@@ -321,20 +339,21 @@
       localStorage.setItem("arrivalLang", lang);
     }
 
-    function highlightButton(lang) {
-      const buttons = ["en", "pt", "sv", "es"];
-      buttons.forEach(code => {
-        const btn = document.getElementById(`btn-${code}`);
-        if (!btn) return;
-        if (code === lang) {
-          btn.classList.add("bg-slate-800", "text-white", "border-slate-500");
-          btn.classList.remove("text-slate-400");
-        } else {
-          btn.classList.remove("bg-slate-800", "text-white", "border-slate-500");
-          btn.classList.add("text-slate-400");
-        }
-      });
+   function highlightButton(lang) {
+  const buttons = ["en", "pt", "sv", "es"];
+  buttons.forEach(code => {
+    const btn = document.getElementById(`btn-${code}`);
+    if (!btn) return;
+
+    if (code === lang) {
+      btn.classList.add("bg-slate-800", "border-slate-500");
+      btn.classList.remove("bg-slate-900/40");
+    } else {
+      btn.classList.remove("bg-slate-800", "border-slate-500");
+      btn.classList.add("bg-slate-900/40");
     }
+  });
+}
 
     document.getElementById("btn-en").addEventListener("click", () => applyLanguage("en"));
     document.getElementById("btn-pt").addEventListener("click", () => applyLanguage("pt"));
