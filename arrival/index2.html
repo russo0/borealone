@@ -10,12 +10,11 @@
 <body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center">
   <div class="max-w-3xl w-full mx-4 my-10">
 
-    <!-- HEADER PREMIUM -->
+    <!-- HEADER -->
     <header class="bg-slate-900/70 backdrop-blur-xl border border-slate-700/60 rounded-2xl px-6 py-4 flex items-center justify-between shadow-xl">
       <div class="flex items-center">
-        <img src="../departure/logo.png" alt="Yellow Aurora House Logo"
+        <img src="logo.png" alt="Yellow Aurora House Logo"
              class="w-12 h-12 rounded-full border border-slate-700 shadow-md mr-4">
-
         <div>
           <h1 id="title" class="text-xl font-semibold tracking-tight">Arrival – Yellow Aurora House</h1>
           <p id="subtitle" class="text-xs text-slate-400 mt-1">
@@ -32,7 +31,7 @@
       </div>
     </header>
 
-    <!-- MAIN CARD -->
+    <!-- MAIN -->
     <main class="mt-6 bg-slate-900/70 backdrop-blur-xl border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
 
       <!-- INTRO -->
@@ -42,26 +41,22 @@
         </p>
       </div>
 
+      <!-- CHECK-IN TOP -->
+      <section class="px-6 py-4 bg-slate-900/80 border-b border-slate-800">
+        <h2 id="checkinTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+          🕒 Check-in time
+        </h2>
+        <div id="checkinText" class="text-xs text-slate-300 mt-1"></div>
+      </section>
+
       <div class="px-6 py-4 grid gap-4">
-     <!-- CHECK-IN TIME -->
-        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
-          <h2 id="checkinTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
-            <span>🕒</span><span>Check-in time</span>
-          </h2>
-          <p id="checkinText" class="text-xs text-slate-300 mt-1">
-            Check-in is available from <strong>16:00</strong>. If you need an earlier arrival, please contact us.
-          </p>
-        </section>
 
         <!-- CARD 1 – FINDING THE HOUSE -->
         <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
           <img src="foto1.jpg" class="w-full h-56 object-cover">
           <div class="px-4 py-3">
             <h2 id="photo1Title" class="text-sm font-semibold text-slate-100">Finding the house</h2>
-            <p id="photo1Text" class="text-xs text-slate-300 mt-1">
-              Drive on the main road <strong>E10</strong>. Keep following it until you see a <strong>yellow house with a black roof</strong> on your right. 
-              In winter, everything looks white — the yellow color helps you spot the house easily.
-            </p>
+            <div id="photo1Text" class="text-xs text-slate-300 mt-1 space-y-2"></div>
           </div>
         </section>
 
@@ -70,71 +65,48 @@
           <img src="foto2.jpg" class="w-full h-56 object-cover">
           <div class="px-4 py-3">
             <h2 id="photo2Title" class="text-sm font-semibold text-slate-100">Parking & Garage</h2>
-            <p id="photo2Text" class="text-xs text-slate-300 mt-1">
-              You may park directly in front of the house. The covered garage can be used during your stay. 
-              The garage remote is hanging inside the house, between the entrance door and the window.
-            </p>
+            <div id="photo2Text" class="text-xs text-slate-300 mt-1 space-y-2"></div>
           </div>
         </section>
 
-       <!-- CARD 3 – KEYPAD -->
+        <!-- CARD 3 – KEYPAD -->
         <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
           <img src="keypad.jpg" class="w-full h-56 object-cover">
           <div class="px-4 py-3">
             <h2 id="photo3Title" class="text-sm font-semibold text-slate-100">Entrance keypad</h2>
-        
-            <div id="photo3Text" class="text-xs text-slate-300 mt-1 space-y-2">
-              <p><strong>1.</strong> Find the keypad. It is mounted on the wall to the right of the entrance door.</p>
-        
-              <p><strong>2.</strong> Enter your six‑digit code slowly.  
-              The lock will unlock automatically when the correct code is entered — there is no “enter” button.</p>
-        
-              <p><strong>3.</strong> If you type a wrong number:  
-              Press the arrow ◀ to delete the last digit.</p>
-        
-              <p><strong>4.</strong> When the lock unlocks:  
-              You will hear a click. Press the handle down and open the door.</p>
-            </div>
+            <div id="photo3Text" class="text-xs text-slate-300 mt-1 space-y-2"></div>
           </div>
         </section>
-
-
 
         <!-- CARD 4 – LOCK KNOB -->
         <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
           <img src="lock-knob.jpg" class="w-full h-56 object-cover">
           <div class="px-4 py-3">
             <h2 id="unlockTitle" class="text-sm font-semibold text-slate-100">Locking or unlocking from inside</h2>
-            <p id="unlockText" class="text-xs text-slate-300 mt-1">
-              To lock or unlock from inside, simply <strong>press the centre of the round knob</strong> above the door handle. 
-              The lock will turn automatically. No twisting needed — just press.
-            </p>
+            <div id="unlockText" class="text-xs text-slate-300 mt-1 space-y-2"></div>
           </div>
         </section>
 
-      
         <!-- LOCKING WHEN LEAVING -->
-          <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
-            <h2 id="lockLeavingTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
-              <span>🔒</span><span>How to lock the door when leaving</span>
-            </h2>
-          
-            <div id="lockLeavingText" class="text-xs text-slate-300 mt-1 space-y-2">
-              <p><strong>1.</strong> Close the door completely. Push it until it is fully shut.</p>
-          
-              <p><strong>2.</strong> Press the arrow ◀ on the keypad. This tells the lock to close.</p>
-          
-              <p><strong>3.</strong> Wait for the lock to turn. You will hear a click.</p>
-          
-              <p><strong>4.</strong> Pull the handle gently — if it does not move, the door is locked.</p>
-            </div>
-          </section>
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="lockLeavingTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            🔒 How to lock the door when leaving
+          </h2>
+          <div id="lockLeavingText" class="text-xs text-slate-300 mt-1 space-y-2"></div>
+        </section>
 
+        <!-- CONTACT -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="contactTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            💬 Need help?
+          </h2>
+          <div id="contactText" class="text-xs text-slate-300 mt-1"></div>
+        </section>
 
       </div>
 
       <footer class="px-6 py-4 border-t border-slate-800/70 text-xs text-slate-500 flex justify-between items-center">
-        <span id="footerText">Welcome to Yellow Aurora House. We hope you enjoy your stay.</span>
+        <span id="footerText"></span>
         <span class="text-[10px] text-slate-600">Boreal One AB</span>
       </footer>
     </main>
@@ -146,18 +118,40 @@
         title: "Arrival – Yellow Aurora House",
         subtitle: "Everything you need for a smooth and easy arrival.",
         intro: "Welcome! Here is everything you need to arrive comfortably at Yellow Aurora House.",
-        photo1Title: "Finding the house",
-        photo1Text: "Drive on the main road E10. Keep following it until you see a yellow house with a black roof on your right. In winter, everything looks white — the yellow color helps you spot the house easily.",
-        photo2Title: "Parking & Garage",
-        photo2Text: "You may park directly in front of the house. The covered garage can be used during your stay. The garage remote is hanging inside the house, between the entrance door and the window.",
-        photo3Title: "Entrance keypad",
-        photo3Text: "1. Find the keypad. It is mounted on the wall to the right of the entrance door.\n\n2. Enter your six‑digit code slowly. The lock will unlock automatically when the correct code is entered — there is no “enter” button. You do NOT press the arrow to confirm.\n\n3. If you type a wrong number: Press the arrow ◀ to delete the last digit.\n\n4. When the lock unlocks: You will hear a click. Press the handle down and open the door.",
-        unlockTitle: "Locking or unlocking from inside",
-        unlockText: "Press the centre of the round knob above the door handle. The lock will turn automatically. This works for both locking and unlocking.",
         checkinTitle: "Check-in time",
-        checkinText: "Check-in is available from 16:00. If you need an earlier arrival, please contact us.",
+        checkinText: "Check-in is available from <strong>16:00</strong>. If you need an earlier arrival, please contact us.",
+        photo1Title: "Finding the house",
+        photo1Text: `
+          <p>Drive on the main road <strong>E10</strong>.</p>
+          <p>Keep following it until you see a yellow house with a black roof on your right.</p>
+          <p>In winter, everything looks white — the yellow color helps you spot the house easily.</p>
+        `,
+        photo2Title: "Parking & Garage",
+        photo2Text: `
+          <p>You may park directly in front of the house.</p>
+          <p>The covered garage can be used during your stay.</p>
+          <p>The garage remote is hanging inside the house, between the entrance door and the window.</p>
+        `,
+        photo3Title: "Entrance keypad",
+        photo3Text: `
+          <p><strong>1.</strong> Find the keypad. It is mounted on the wall to the right of the entrance door.</p>
+          <p><strong>2.</strong> Enter your six‑digit code slowly. The lock will unlock automatically when the correct code is entered — there is no “enter” button. You do NOT press the arrow to confirm.</p>
+          <p><strong>3.</strong> If you type a wrong number: Press the arrow ◀ to delete the last digit.</p>
+          <p><strong>4.</strong> When the lock unlocks: You will hear a click. Press the handle down and open the door.</p>
+        `,
+        unlockTitle: "Locking or unlocking from inside",
+        unlockText: `
+          <p>Press the centre of the round knob above the door handle.</p>
+          <p>The lock will turn automatically.</p>
+          <p>This works for both locking and unlocking.</p>
+        `,
         lockLeavingTitle: "How to lock the door when leaving",
-        lockLeavingText: "1. Close the door completely.\n2. Press the arrow ◀ on the keypad.\n3. Wait for the lock to turn.\n4. Pull the handle gently — if it does not move, the door is locked.",
+        lockLeavingText: `
+          <p><strong>1.</strong> Close the door completely. Push it until it is fully shut.</p>
+          <p><strong>2.</strong> Press the arrow ◀ on the keypad. This tells the lock to close.</p>
+          <p><strong>3.</strong> Wait for the lock to turn. You will hear a click.</p>
+          <p><strong>4.</strong> Pull the handle gently — if it does not move, the door is locked.</p>
+        `,
         contactTitle: "Need help?",
         contactText: "If anything is unclear or you need assistance, feel free to message us through Booking.com or your preferred channel.",
         footerText: "Welcome to Yellow Aurora House. We hope you enjoy your stay."
@@ -167,18 +161,40 @@
         title: "Chegada – Yellow Aurora House",
         subtitle: "Tudo o que você precisa para uma chegada tranquila.",
         intro: "Bem-vindo! Aqui está tudo o que você precisa para chegar confortavelmente à Yellow Aurora House.",
-        photo1Title: "Encontrando a casa",
-        photo1Text: "Dirija pela estrada principal E10. Continue seguindo até ver uma casa amarela com telhado preto à sua direita. No inverno, tudo fica branco — a cor amarela ajuda a identificar a casa.",
-        photo2Title: "Estacionamento & Garagem",
-        photo2Text: "Você pode estacionar diretamente em frente à casa. A garagem coberta pode ser usada durante sua estadia. O controle da garagem está pendurado dentro da casa, entre a porta de entrada e a janela.",
-        photo3Title: "Teclado de entrada",
-        photo3Text: "1. Encontre o teclado. Ele fica montado na parede à direita da porta de entrada.\n\n2. Digite seu código de seis dígitos devagar. A fechadura destranca automaticamente quando o código correto é inserido — não existe botão “enter”. Você NÃO deve apertar a seta para confirmar.\n\n3. Se digitar um número errado: Pressione a seta ◀ para apagar o último dígito.\n\n4. Quando destrancar: Você ouvirá um clique. Pressione a maçaneta para baixo e abra a porta.",
-        unlockTitle: "Trancar ou destrancar por dentro",
-        unlockText: "Pressione o centro do botão redondo acima da maçaneta. A fechadura gira automaticamente. Funciona tanto para trancar quanto destrancar.",
         checkinTitle: "Horário de check-in",
-        checkinText: "O check-in está disponível a partir das 16:00. Se precisar chegar mais cedo, entre em contato.",
+        checkinText: "O check-in está disponível a partir das <strong>16:00</strong>. Se precisar chegar mais cedo, entre em contato.",
+        photo1Title: "Encontrando a casa",
+        photo1Text: `
+          <p>Dirija pela estrada principal <strong>E10</strong>.</p>
+          <p>Continue seguindo até ver uma casa amarela com telhado preto à sua direita.</p>
+          <p>No inverno, tudo fica branco — a cor amarela ajuda a identificar a casa.</p>
+        `,
+        photo2Title: "Estacionamento & Garagem",
+        photo2Text: `
+          <p>Você pode estacionar diretamente em frente à casa.</p>
+          <p>A garagem coberta pode ser usada durante sua estadia.</p>
+          <p>O controle da garagem está pendurado dentro da casa, entre a porta de entrada e a janela.</p>
+        `,
+        photo3Title: "Teclado de entrada",
+        photo3Text: `
+          <p><strong>1.</strong> Encontre o teclado. Ele fica montado na parede à direita da porta de entrada.</p>
+          <p><strong>2.</strong> Digite seu código de seis dígitos devagar. A fechadura destranca automaticamente quando o código correto é inserido — não existe botão “enter”. Você NÃO deve apertar a seta para confirmar.</p>
+          <p><strong>3.</strong> Se digitar um número errado: Pressione a seta ◀ para apagar o último dígito.</p>
+          <p><strong>4.</strong> Quando destrancar: Você ouvirá um clique. Pressione a maçaneta para baixo e abra a porta.</p>
+        `,
+        unlockTitle: "Trancar ou destrancar por dentro",
+        unlockText: `
+          <p>Pressione o centro do botão redondo acima da maçaneta.</p>
+          <p>A fechadura gira automaticamente.</p>
+          <p>Funciona tanto para trancar quanto destrancar.</p>
+        `,
         lockLeavingTitle: "Como trancar a porta ao sair",
-        lockLeavingText: "1. Feche a porta completamente.\n2. Pressione a seta ◀ no teclado.\n3. Aguarde a fechadura girar.\n4. Puxe a maçaneta — se não mexer, está trancada.",
+        lockLeavingText: `
+          <p><strong>1.</strong> Feche a porta completamente.</p>
+          <p><strong>2.</strong> Pressione a seta ◀ no teclado.</p>
+          <p><strong>3.</strong> Aguarde a fechadura girar.</p>
+          <p><strong>4.</strong> Puxe a maçaneta — se não mexer, está trancada.</p>
+        `,
         contactTitle: "Precisa de ajuda?",
         contactText: "Se algo não estiver claro ou você precisar de assistência, envie uma mensagem pelo Booking.com ou pelo seu canal preferido.",
         footerText: "Bem-vindo à Yellow Aurora House. Esperamos que você aproveite sua estadia."
@@ -188,44 +204,89 @@
         title: "Ankomst – Yellow Aurora House",
         subtitle: "Allt du behöver för en smidig ankomst.",
         intro: "Välkommen! Här är allt du behöver för att anlända bekvämt till Yellow Aurora House.",
-        photo1Title: "Hitta huset",
-        photo1Text: "Kör på huvudvägen E10. Fortsätt tills du ser ett gult hus med svart tak på höger sida. På vintern är allt vitt — den gula färgen gör huset lätt att hitta.",
-        photo2Title: "Parkering & Garage",
-        photo2Text: "Du kan parkera direkt framför huset. Det täckta garaget kan användas under din vistelse. Garagekontrollen hänger inne i huset, mellan ytterdörren och fönstret.",
-        photo3Title: "Entrétangentbord",
-        photo3Text: "1. Hitta tangentbordet. Det sitter på väggen till höger om ytterdörren.\n\n2. Ange din sexsiffriga kod långsamt. Låset låser upp automatiskt när rätt kod skrivs — det finns ingen “enter”-knapp. Du ska INTE trycka på pilen för att bekräfta.\n\n3. Om du skriver fel: Tryck på pilen ◀ för att radera.\n\n4. När låset låser upp: Du hör ett klick. Tryck ner handtaget och öppna dörren.",
-        unlockTitle: "Låsa eller låsa upp inifrån",
-        unlockText: "Tryck på mitten av den runda knoppen ovanför handtaget. Låset vrider sig automatiskt. Det fungerar både för att låsa och låsa upp.",
         checkinTitle: "Incheckningstid",
-        checkinText: "Incheckning är tillgänglig från 16:00. Kontakta oss om du behöver komma tidigare.",
+        checkinText: "Incheckning är tillgänglig från <strong>16:00</strong>. Kontakta oss om du behöver komma tidigare.",
+        photo1Title: "Hitta huset",
+        photo1Text: `
+          <p>Kör på huvudvägen <strong>E10</strong>.</p>
+          <p>Fortsätt tills du ser det gula huset med svart tak på höger sida.</p>
+          <p>På vintern är allt vitt — den gula färgen gör huset lätt att hitta.</p>
+        `,
+        photo2Title: "Parkering & Garage",
+        photo2Text: `
+          <p>Du kan parkera direkt framför huset.</p>
+          <p>Det täckta garaget kan användas under din vistelse.</p>
+          <p>Garagekontrollen hänger inne i huset, mellan ytterdörren och fönstret.</p>
+        `,
+        photo3Title: "Entrétangentbord",
+        photo3Text: `
+          <p><strong>1.</strong> Hitta tangentbordet. Det sitter på väggen till höger om ytterdörren.</p>
+          <p><strong>2.</strong> Ange din sexsiffriga kod långsamt. Låset låser upp automatiskt när rätt kod skrivs — det finns ingen “enter”-knapp. Du ska INTE trycka på pilen för att bekräfta.</p>
+          <p><strong>3.</strong> Om du skriver fel: Tryck på pilen ◀ för att radera.</p>
+          <p><strong>4.</strong> När låset låser upp: Du hör ett klick. Tryck ner handtaget och öppna dörren.</p>
+        `,
+        unlockTitle: "Låsa eller låsa upp inifrån",
+        unlockText: `
+          <p>Tryck på mitten av den runda knoppen ovanför handtaget.</p>
+          <p>Låset vrider sig automatiskt.</p>
+          <p>Det fungerar både för att låsa och låsa upp.</p>
+        `,
         lockLeavingTitle: "Hur man låser dörren när man går",
-        lockLeavingText: "1. Stäng dörren helt.\n2. Tryck på pilen ◀ på tangentbordet.\n3. Vänta tills låset vrider sig.\n4. Dra försiktigt i handtaget — om det inte rör sig är dörren låst.",
+        lockLeavingText: `
+          <p><strong>1.</strong> Stäng dörren helt.</p>
+          <p><strong>2.</strong> Tryck på pilen ◀ på tangentbordet.</p>
+          <p><strong>3.</strong> Vänta tills låset vrider sig.</p>
+          <p><strong>4.</strong> Dra försiktigt i handtaget — om det inte rör sig är dörren låst.</p>
+        `,
         contactTitle: "Behöver du hjälp?",
         contactText: "Om något är oklart eller om du behöver hjälp, skicka ett meddelande via Booking.com eller din vanliga kontaktkanal.",
         footerText: "Välkommen till Yellow Aurora House. Vi hoppas att du trivs."
       },
 
-            es: {
+      es: {
         title: "Llegada – Yellow Aurora House",
         subtitle: "Todo lo que necesitas para una llegada tranquila.",
         intro: "¡Bienvenido! Aquí tienes todo lo necesario para llegar cómodamente a Yellow Aurora House.",
-        photo1Title: "Encontrando la casa",
-        photo1Text: "Conduce por la carretera principal E10. Sigue hasta ver una casa amarilla con techo negro a tu derecha. En invierno todo es blanco — el color amarillo ayuda a identificar la casa.",
-        photo2Title: "Estacionamiento & Garaje",
-        photo2Text: "Puedes estacionar directamente frente a la casa. El garaje cubierto puede usarse durante tu estancia. El control del garaje está colgado dentro de la casa, entre la puerta de entrada y la ventana.",
-        photo3Title: "Teclado de entrada",
-        photo3Text: "1. Encuentra el teclado. Está montado en la pared a la derecha de la puerta.\n\n2. Introduce tu código de seis dígitos lentamente. La cerradura se abrirá automáticamente cuando el código correcto se ingrese — no hay botón “enter”. NO debes presionar la flecha para confirmar.\n\n3. Si te equivocas: Presiona la flecha ◀ para borrar.\n\n4. Cuando se abra: Escucharás un clic. Presiona la manija hacia abajo y abre la puerta.",
-        unlockTitle: "Cerrar o abrir desde dentro",
-        unlockText: "Presiona el centro del botón redondo sobre la manija. La cerradura girará automáticamente. Funciona tanto para cerrar como para abrir.",
         checkinTitle: "Hora de check-in",
-        checkinText: "El check-in está disponible desde las 16:00. Si necesitas llegar antes, contáctanos.",
+        checkinText: "El check-in está disponible desde las <strong>16:00</strong>. Si necesitas llegar antes, contáctanos.",
+        photo1Title: "Encontrando la casa",
+        photo1Text: `
+          <p>Conduce por la carretera principal <strong>E10</strong>.</p>
+          <p>Sigue hasta ver una casa amarilla con techo negro a tu derecha.</p>
+          <p>En invierno todo es blanco — el color amarillo ayuda a identificar la casa.</p>
+        `,
+        photo2Title: "Estacionamiento & Garaje",
+        photo2Text: `
+          <p>Puedes estacionar directamente frente a la casa.</p>
+          <p>El garaje cubierto puede usarse durante tu estancia.</p>
+          <p>El control del garaje está colgado dentro de la casa, entre la puerta de entrada y la ventana.</p>
+        `,
+        photo3Title: "Teclado de entrada",
+        photo3Text: `
+          <p><strong>1.</strong> Encuentra el teclado. Está montado en la pared a la derecha de la puerta de entrada.</p>
+          <p><strong>2.</strong> Introduce tu código de seis dígitos lentamente. La cerradura se abrirá automáticamente cuando el código correcto se ingrese — no hay botón “enter”. NO debes presionar la flecha para confirmar.</p>
+          <p><strong>3.</strong> Si te equivocas: Presiona la flecha ◀ para borrar el último dígito.</p>
+          <p><strong>4.</strong> Cuando se abra: Escucharás un clic. Presiona la manija hacia abajo y abre la puerta.</p>
+        `,
+        unlockTitle: "Cerrar o abrir desde dentro",
+        unlockText: `
+          <p>Presiona el centro del botón redondo sobre la manija.</p>
+          <p>La cerradura girará automáticamente.</p>
+          <p>Funciona tanto para cerrar como para abrir.</p>
+        `,
         lockLeavingTitle: "Cómo cerrar la puerta al salir",
-        lockLeavingText: "1. Cierra la puerta completamente.\n2. Pulsa la flecha ◀ en el teclado.\n3. Espera a que la cerradura gire.\n4. Tira suavemente de la manija — si no se mueve, la puerta está cerrada.",
+        lockLeavingText: `
+          <p><strong>1.</strong> Cierra la puerta completamente.</p>
+          <p><strong>2.</strong> Pulsa la flecha ◀ en el teclado.</p>
+          <p><strong>3.</strong> Espera a que la cerradura gire.</p>
+          <p><strong>4.</strong> Tira suavemente de la manija — si no se mueve, la puerta está cerrada.</p>
+        `,
         contactTitle: "¿Necesitas ayuda?",
         contactText: "Si algo no está claro o necesitas asistencia, envíanos un mensaje por Booking.com o tu canal habitual.",
         footerText: "Bienvenido a Yellow Aurora House. Esperamos que disfrutes tu estancia."
       }
     };
+
     function applyLanguage(lang) {
       const t = translationsArrival[lang] || translationsArrival.en;
 
@@ -233,32 +294,33 @@
       document.getElementById("subtitle").textContent = t.subtitle;
       document.getElementById("intro").textContent = t.intro;
 
+      document.getElementById("checkinTitle").textContent = t.checkinTitle;
+      document.getElementById("checkinText").innerHTML = t.checkinText;
+
       document.getElementById("photo1Title").textContent = t.photo1Title;
-      document.getElementById("photo1Text").textContent = t.photo1Text;
+      document.getElementById("photo1Text").innerHTML = t.photo1Text;
 
       document.getElementById("photo2Title").textContent = t.photo2Title;
-      document.getElementById("photo2Text").textContent = t.photo2Text;
+      document.getElementById("photo2Text").innerHTML = t.photo2Text;
 
       document.getElementById("photo3Title").textContent = t.photo3Title;
-      document.getElementById("photo3Text").textContent = t.photo3Text;
+      document.getElementById("photo3Text").innerHTML = t.photo3Text;
 
       document.getElementById("unlockTitle").textContent = t.unlockTitle;
-      document.getElementById("unlockText").textContent = t.unlockText;
-
-      document.getElementById("checkinTitle").textContent = t.checkinTitle;
-      document.getElementById("checkinText").textContent = t.checkinText;
+      document.getElementById("unlockText").innerHTML = t.unlockText;
 
       document.getElementById("lockLeavingTitle").textContent = t.lockLeavingTitle;
-      document.getElementById("lockLeavingText").textContent = t.lockLeavingText;
+      document.getElementById("lockLeavingText").innerHTML = t.lockLeavingText;
 
       document.getElementById("contactTitle").textContent = t.contactTitle;
-      document.getElementById("contactText").textContent = t.contactText;
+      document.getElementById("contactText").innerHTML = t.contactText;
 
       document.getElementById("footerText").textContent = t.footerText;
 
       highlightButton(lang);
       localStorage.setItem("arrivalLang", lang);
     }
+
     function highlightButton(lang) {
       const buttons = ["en", "pt", "sv", "es"];
       buttons.forEach(code => {
