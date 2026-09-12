@@ -406,7 +406,13 @@
 
       document.getElementById("internetTitle").textContent = t.internetTitle;
       document.getElementById("internetText").textContent = t.internetText;
-
+      const internetEl = document.getElementById("internetsteps");
+      internetEl.innerHTML = "";
+      t.internetsteps.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        internetEl.appendChild(li);
+      });
       document.getElementById("reviewTitle").textContent = t.reviewTitle;
       document.getElementById("reviewText").textContent = t.reviewText;
       document.getElementById("contactText").textContent = t.contactText;
