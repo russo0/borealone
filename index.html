@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boreal One AB | Lapônia Sueca</title>
-    <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
-    <link class="apple-touch-icon" href="favicon.png">
+    <meta name="description" content="Stay, private Aurora photography, media, and cybersecurity from Boreal One in Swedish Lapland.">
+    <title>Boreal One AB | Swedish Lapland</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -20,154 +21,161 @@
         }
     </script>
 </head>
-<body class="bg-[#0b0f19] text-gray-200 font-sans antialiased min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+<body class="bg-[#0b0f19] text-gray-200 font-sans antialiased min-h-screen relative overflow-x-hidden">
 
-    <video autoplay loop muted playsinline class="fixed top-0 left-0 w-full h-full object-cover z-[-2] pointer-events-none">
+    <video autoplay loop muted playsinline class="fixed inset-0 w-full h-full object-cover z-[-2] pointer-events-none">
         <source src="images/aurora.mp4" type="video/mp4">
     </video>
-    
-    <div class="fixed inset-0 bg-black/40 z-[-1] pointer-events-none"></div>
+    <div class="fixed inset-0 bg-[#040812]/65 z-[-1] pointer-events-none"></div>
 
-    <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
+    <nav class="border-b border-white/10 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
-            
             <a href="https://borealone.com" class="flex items-center space-x-3 group order-1">
                 <img src="logo-icon.png" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
-                <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE AB</span>
+                <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-300 transition">BOREAL ONE AB</span>
             </a>
-            
-            <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 text-xs font-bold order-2 sm:order-3">
-                <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-gray-800">EN</button>
-                <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">SV</button>
-                <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-400 hover:text-white">PT</button>
+
+            <div class="flex space-x-1 bg-black/30 p-1 rounded border border-white/10 text-xs font-bold order-2 sm:order-3">
+                <button onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-white/15">EN</button>
+                <button onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-300 hover:text-white">SV</button>
+                <button onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-300 hover:text-white">PT</button>
             </div>
 
-            <div class="w-full sm:w-auto flex items-center justify-between sm:justify-start space-x-4 text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
-                <a href="https://cyber.borealone.com" id="nav-cyber-link" class="text-gray-400 hover:text-white py-1 transition uppercase tracking-wider sm:normal-case">
-                    Cybersecurity & IT
-                </a>
-                <a href="https://media.borealone.com" id="nav-media-link" class="text-aurora hover:text-white py-1 transition uppercase tracking-wider sm:normal-case font-bold">
-                    Media & Photography →
-                </a>
+            <div class="w-full sm:w-auto flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-2 text-[10px] sm:text-xs font-semibold order-3 sm:order-2 border-t border-white/10 pt-2 sm:pt-0 sm:border-none">
+                <a href="#explore" id="nav-explore-link" class="text-gray-300 hover:text-white transition uppercase tracking-wider sm:normal-case">Explore Boreal One</a>
+                <a href="https://media.borealone.com/aurora-sessions.html" id="nav-aurora-link" class="text-aurora hover:text-white transition uppercase tracking-wider sm:normal-case">Private Aurora Sessions</a>
+                <a href="https://media.borealone.com" id="nav-media-link" class="text-gray-300 hover:text-white transition uppercase tracking-wider sm:normal-case">Media & Photography</a>
+                <a href="https://cyber.borealone.com" id="nav-cyber-link" class="text-gray-300 hover:text-white transition uppercase tracking-wider sm:normal-case">Cybersecurity & IT</a>
             </div>
-
         </div>
     </nav>
 
-    <header class="relative pt-16 pb-12 px-4 text-center max-w-3xl mx-auto z-10">
-        <h1 id="hero-title" class="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)]">
-            Lapônia Sueca: <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Experiências Extraordinárias</span>
-        </h1>
-        <p id="hero-desc" class="text-base md:text-xl text-gray-200 max-w-xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">
-            Guiadas exclusivas para observação da Aurora Boreal e hospedagem premium perfeitamente integrada à natureza ártica.
-        </p>
+    <header class="relative max-w-5xl mx-auto px-4 pt-16 md:pt-24 pb-12 md:pb-16 text-center z-10">
+        <p id="hero-eyebrow" class="text-aurora text-xs font-bold tracking-[0.2em] uppercase mb-5">Boreal One · Swedish Lapland</p>
+        <h1 id="hero-title" class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-[1.05] mb-6 drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)]">A more personal way to experience <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Swedish Lapland.</span></h1>
+        <p id="hero-desc" class="text-base md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]">Stay under the Arctic sky, plan a private Aurora photography session, or work with our media and technology teams.</p>
+        <div class="mt-9 flex flex-col sm:flex-row justify-center gap-3">
+            <a href="#explore" id="hero-explore-btn" class="inline-flex items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-7 py-3.5 rounded-xl transition shadow-lg">Explore Boreal One</a>
+            <a href="https://media.borealone.com/aurora-sessions.html" id="hero-aurora-btn" class="inline-flex items-center justify-center border border-aurora/50 bg-aurora/10 hover:bg-aurora/20 text-aurora hover:text-white font-bold text-sm px-7 py-3.5 rounded-xl transition">Private Aurora Sessions</a>
+        </div>
+        <p id="hero-note" class="mt-5 text-xs text-gray-300/80">Travel, photography and technology — thoughtfully connected.</p>
     </header>
 
-    <main class="max-w-5xl mx-auto px-4 w-full flex-grow mb-20 z-10">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            
-            <div class="bg-slate-950/45 p-6 md:p-8 rounded-2xl border border-white/10 backdrop-blur-md shadow-2xl">
-                <span id="main-badge" class="text-aurora text-xs font-bold tracking-widest uppercase bg-aurora/10 px-2 py-1 rounded">Exclusive Travel</span>
-                
-                <h2 id="exp-title" class="text-2xl md:text-4xl font-bold text-white mt-4 mb-6">Tours da Aurora & Hospedagem</h2>
-                <p id="exp-p1" class="text-gray-200 mb-4 text-sm md:text-base leading-relaxed">
-                    Vivencie o verdadeiro Norte. Organizamos expedições personalizadas e caçadas guiadas à Aurora Boreal na região da Lapônia Sueca, unindo conhecimento local à paixão pela fotografia ártica.
-                </p>
-                <p id="exp-p2" class="text-gray-200 mb-8 text-sm md:text-base leading-relaxed">
-                    Oferecemos também uma charmosa acomodação por temporada (Airbnb), o refúgio perfeito para relaxar após um dia de exploração sob o céu estrelado e as luzes do norte.
-                </p>
-                
-                <div class="flex flex-wrap gap-2 text-xs text-gray-300">
-                    <span id="tag-aurora" class="bg-slate-950/60 px-3 py-1.5 rounded border border-white/10">Northern Lights Tours</span>
-                    <span id="tag-stay" class="bg-slate-950/60 px-3 py-1.5 rounded border border-white/10">Arctic Lodging (Airbnb)</span>
-                    <span id="tag-nature" class="bg-slate-950/60 px-3 py-1.5 rounded border border-white/10">Local Nature Experiences</span>
+    <main id="explore" class="max-w-6xl mx-auto px-4 pb-20 md:pb-28 w-full z-10 scroll-mt-24">
+        <div class="text-center max-w-2xl mx-auto mb-9 md:mb-12">
+            <p id="explore-eyebrow" class="text-aurora text-xs font-bold tracking-[0.2em] uppercase mb-3">Choose your way in</p>
+            <h2 id="explore-title" class="text-3xl md:text-4xl font-light text-white tracking-tight mb-3">Everything Boreal One, clearly connected.</h2>
+            <p id="explore-desc" class="text-sm md:text-base text-gray-300 leading-relaxed">Start with the experience or service that brings you here. We will take it from there.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+            <article class="relative min-h-80 overflow-hidden rounded-2xl border border-white/10 bg-slate-950/60 shadow-2xl group">
+                <img src="images/airbnb_cover.jpg" alt="Boreal One accommodation in Swedish Lapland" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#060a13] via-[#060a13]/75 to-[#060a13]/20"></div>
+                <div class="relative h-full min-h-80 p-7 md:p-8 flex flex-col items-start">
+                    <p id="stay-kicker" class="text-aurora text-xs font-bold tracking-[0.18em] uppercase">01 · Stay</p>
+                    <h3 id="stay-title" class="mt-4 text-2xl md:text-3xl font-semibold text-white">Stay in Swedish Lapland</h3>
+                    <p id="stay-desc" class="mt-3 max-w-md text-sm md:text-base text-gray-200 leading-relaxed">A warm, independent base for slow mornings, dark skies, and time close to the Arctic landscape.</p>
+                    <a href="mailto:info@borealone.com?subject=Stay%20in%20Swedish%20Lapland" id="stay-btn" class="mt-auto inline-flex items-center justify-center border border-white/25 bg-black/20 hover:bg-white hover:text-gray-950 text-white font-bold text-sm px-5 py-3 rounded-xl transition">Check stay availability</a>
                 </div>
-            </div>
-            
-            <div class="h-80 md:h-[400px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative group z-10">
-                <img src="images/airbnb_cover.jpg" alt="Lapônia Sueca Airbnb & Aurora" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none"></div>
-            </div>
+            </article>
+
+            <article class="min-h-80 rounded-2xl border border-aurora/35 bg-gradient-to-br from-aurora/15 via-[#0b1721]/90 to-[#070b14]/95 shadow-2xl p-7 md:p-8 flex flex-col items-start">
+                <p id="aurora-kicker" class="text-aurora text-xs font-bold tracking-[0.18em] uppercase">02 · Private experience</p>
+                <h3 id="aurora-title" class="mt-4 text-2xl md:text-3xl font-semibold text-white">Private Aurora Sessions</h3>
+                <p id="aurora-desc" class="mt-3 max-w-md text-sm md:text-base text-gray-200 leading-relaxed">A personal photography session beneath the Northern Lights, planned around the conditions and your time in the North.</p>
+                <div class="mt-5 flex flex-wrap gap-2 text-xs text-gray-200">
+                    <span id="aurora-tag-private" class="bg-black/20 border border-white/10 px-3 py-1.5 rounded-full">Private</span>
+                    <span id="aurora-tag-photo" class="bg-black/20 border border-white/10 px-3 py-1.5 rounded-full">Photography</span>
+                    <span id="aurora-tag-lapland" class="bg-black/20 border border-white/10 px-3 py-1.5 rounded-full">Swedish Lapland</span>
+                </div>
+                <a href="https://media.borealone.com/aurora-sessions.html" id="aurora-btn" class="mt-auto inline-flex items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-5 py-3 rounded-xl transition shadow-md">Explore private sessions</a>
+            </article>
+
+            <article class="min-h-72 rounded-2xl border border-white/10 bg-slate-950/55 backdrop-blur-md shadow-xl p-7 md:p-8 flex flex-col items-start hover:border-white/20 transition">
+                <p id="media-kicker" class="text-aurora text-xs font-bold tracking-[0.18em] uppercase">03 · Visual work</p>
+                <h3 id="media-title" class="mt-4 text-2xl md:text-3xl font-semibold text-white">Media & Photography</h3>
+                <p id="media-desc" class="mt-3 max-w-md text-sm md:text-base text-gray-300 leading-relaxed">Fine Art landscapes, property imagery, and visual storytelling from the North.</p>
+                <a href="https://media.borealone.com" id="media-btn" class="mt-auto inline-flex items-center justify-center text-aurora hover:text-white font-bold text-sm transition">Visit Boreal One Media →</a>
+            </article>
+
+            <article class="min-h-72 rounded-2xl border border-blue-400/20 bg-gradient-to-br from-blue-950/40 to-slate-950/70 backdrop-blur-md shadow-xl p-7 md:p-8 flex flex-col items-start hover:border-blue-300/35 transition">
+                <p id="cyber-kicker" class="text-blue-300 text-xs font-bold tracking-[0.18em] uppercase">04 · Digital resilience</p>
+                <h3 id="cyber-title" class="mt-4 text-2xl md:text-3xl font-semibold text-white">Cybersecurity & IT</h3>
+                <p id="cyber-desc" class="mt-3 max-w-md text-sm md:text-base text-gray-300 leading-relaxed">Practical cybersecurity and IT support for organisations that need dependable technology.</p>
+                <a href="https://cyber.borealone.com" id="cyber-btn" class="mt-auto inline-flex items-center justify-center text-blue-200 hover:text-white font-bold text-sm transition">Explore cybersecurity & IT →</a>
+            </article>
         </div>
     </main>
 
-    <footer class="w-full py-16 text-center px-4 z-10 bg-transparent">
-        <div class="max-w-3xl mx-auto">
-            <h2 id="footer-title" class="text-xl font-bold text-white mb-2 drop-shadow">Pronto para vivenciar o Ártico?</h2>
-            <p id="footer-desc" class="text-gray-200 text-sm mb-6 max-w-sm mx-auto drop-shadow">Entre em contato para consultar a disponibilidade do Airbnb ou agendar uma expedição guiada.</p>
-            <a href="mailto:info@borealone.com" id="footer-btn" class="inline-block bg-white text-black font-semibold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg">
-                Enviar um E-mail
-            </a>
-            <p id="footer-rights" class="text-xs text-gray-400/50 mt-12">© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados.</p>
+    <footer class="w-full py-14 text-center px-4 z-10 border-t border-white/10 bg-[#050811]/65 backdrop-blur-sm">
+        <div class="max-w-2xl mx-auto">
+            <h2 id="footer-title" class="text-xl font-bold text-white mb-2">Not sure where to begin?</h2>
+            <p id="footer-desc" class="text-gray-300 text-sm mb-6 max-w-md mx-auto leading-relaxed">Tell us what brings you to Swedish Lapland, or what your project needs. We will point you in the right direction.</p>
+            <a href="mailto:info@borealone.com?subject=Boreal%20One%20Inquiry" id="footer-btn" class="inline-flex items-center justify-center bg-white text-gray-950 font-bold text-sm px-6 py-3 rounded-xl hover:bg-gray-200 transition shadow-lg">Contact Boreal One</a>
+            <p id="footer-rights" class="text-xs text-gray-500 mt-10">© 2026 Boreal One AB. Registered in Sweden. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
         const translations = {
             en: {
-                mediaLink: "Media & Photography →",
-                cyberLink: "Cybersecurity & IT →",
-                heroTitle: 'Swedish Lapland: <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Extraordinary Experiences</span>',
-                heroDesc: "Exclusive guided Northern Lights expeditions and premium lodging perfectly integrated with the Arctic wilderness.",
-                mainBadge: "Exclusive Travel", expTitle: "Aurora Tours & Lodging",
-                expP1: "Experience the true North. We organize tailored expeditions and guided Northern Lights hunts in the Swedish Lapland region, blending local expertise with a passion for Arctic photography.",
-                expP2: "We also offer a cozy short-term accommodation (Airbnb), the perfect refuge to unwind after a day of exploration under the starry sky and the dancing auroras.",
-                tagAurora: "Northern Lights Tours", tagStay: "Arctic Lodging (Airbnb)", tagNature: "Local Nature Experiences",
-                footerTitle: "Ready to Experience the Arctic?", footerDesc: "Get in touch to check Airbnb availability or to book a guided aurora tour.",
-                footerBtn: "Send an Email", footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
+                navExplore: "Explore Boreal One", navAurora: "Private Aurora Sessions", navMedia: "Media & Photography", navCyber: "Cybersecurity & IT",
+                heroEyebrow: "Boreal One · Swedish Lapland", heroTitle: 'A more personal way to experience <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Swedish Lapland.</span>', heroDesc: "Stay under the Arctic sky, plan a private Aurora photography session, or work with our media and technology teams.", heroExploreBtn: "Explore Boreal One", heroAuroraBtn: "Private Aurora Sessions", heroNote: "Travel, photography and technology — thoughtfully connected.",
+                exploreEyebrow: "Choose your way in", exploreTitle: "Everything Boreal One, clearly connected.", exploreDesc: "Start with the experience or service that brings you here. We will take it from there.",
+                stayKicker: "01 · Stay", stayTitle: "Stay in Swedish Lapland", stayDesc: "A warm, independent base for slow mornings, dark skies, and time close to the Arctic landscape.", stayBtn: "Check stay availability",
+                auroraKicker: "02 · Private experience", auroraTitle: "Private Aurora Sessions", auroraDesc: "A personal photography session beneath the Northern Lights, planned around the conditions and your time in the North.", auroraTagPrivate: "Private", auroraTagPhoto: "Photography", auroraTagLapland: "Swedish Lapland", auroraBtn: "Explore private sessions",
+                mediaKicker: "03 · Visual work", mediaTitle: "Media & Photography", mediaDesc: "Fine Art landscapes, property imagery, and visual storytelling from the North.", mediaBtn: "Visit Boreal One Media →",
+                cyberKicker: "04 · Digital resilience", cyberTitle: "Cybersecurity & IT", cyberDesc: "Practical cybersecurity and IT support for organisations that need dependable technology.", cyberBtn: "Explore cybersecurity & IT →",
+                footerTitle: "Not sure where to begin?", footerDesc: "Tell us what brings you to Swedish Lapland, or what your project needs. We will point you in the right direction.", footerBtn: "Contact Boreal One", footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
             },
             sv: {
-                mediaLink: "Media & Fotografering →",
-                cyberLink: "Cybersäkerhet & IT →",
-                heroTitle: 'Svenska Lappland: <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Extraordinära Upplevelser</span>',
-                heroDesc: "Exklusiva guidade norrskensturer och förstklassigt boende perfekt integrerat med den arktiska vildmarken.",
-                mainBadge: "Exklusivt Resande", expTitle: "Norrskensturer & Boende",
-                expP1: "Upplev det sanna norr. Vi arrangerar skräddarsydda expeditioner och guidade norrskensjakter i Svenska Lappland, där vi kombinerar lokal expertis med en passion för arktisk fotografering.",
-                expP2: "Vi erbjuder även ett unikt korttidsboende (Airbnb), den perfekta tillflyktsorten för att koppla av efter en dag av utforskande under stjärnhimlen och det dansande norrskenet.",
-                tagAurora: "Norrskensturer", tagStay: "Arktiskt Boende (Airbnb)", tagNature: "Lokala Naturupplevelser",
-                footerTitle: "Redo att uppleva Arktis?", footerDesc: "Hör av dig för att kontrollera tillgänglighet för vårt boende eller för att boka en guidad norrskenstur.",
-                footerBtn: "Skicka ett mejl", footerRights: "© 2026 Boreal One AB. Registrerat i Sverige. Med ensamrätt."
+                navExplore: "Utforska Boreal One", navAurora: "Privata norrskenssessioner", navMedia: "Media & Fotografering", navCyber: "Cybersäkerhet & IT",
+                heroEyebrow: "Boreal One · Svenska Lappland", heroTitle: 'Ett mer personligt sätt att uppleva <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Svenska Lappland.</span>', heroDesc: "Bo under den arktiska himlen, planera en privat norrskensfotografering eller arbeta med våra team inom media och teknik.", heroExploreBtn: "Utforska Boreal One", heroAuroraBtn: "Privata norrskenssessioner", heroNote: "Resor, fotografi och teknik — omsorgsfullt sammanlänkade.",
+                exploreEyebrow: "Välj din ingång", exploreTitle: "Allt från Boreal One, tydligt sammanlänkat.", exploreDesc: "Börja med upplevelsen eller tjänsten som tar dig hit. Vi hjälper dig vidare därifrån.",
+                stayKicker: "01 · Boende", stayTitle: "Bo i Svenska Lappland", stayDesc: "En varm, självständig bas för långsamma morgnar, mörka himlar och tid nära det arktiska landskapet.", stayBtn: "Kontrollera boendets tillgänglighet",
+                auroraKicker: "02 · Privat upplevelse", auroraTitle: "Privata norrskenssessioner", auroraDesc: "En personlig fotografering under norrskenet, planerad efter förhållandena och din tid i norr.", auroraTagPrivate: "Privat", auroraTagPhoto: "Fotografering", auroraTagLapland: "Svenska Lappland", auroraBtn: "Utforska privata sessioner",
+                mediaKicker: "03 · Visuellt arbete", mediaTitle: "Media & Fotografering", mediaDesc: "Fine Art-landskap, fastighetsbilder och visuellt berättande från norr.", mediaBtn: "Besök Boreal One Media →",
+                cyberKicker: "04 · Digital motståndskraft", cyberTitle: "Cybersäkerhet & IT", cyberDesc: "Praktiskt stöd inom cybersäkerhet och IT för organisationer som behöver pålitlig teknik.", cyberBtn: "Utforska cybersäkerhet & IT →",
+                footerTitle: "Osäker på var du ska börja?", footerDesc: "Berätta vad som tar dig till Svenska Lappland eller vad ditt projekt behöver. Vi visar dig rätt väg.", footerBtn: "Kontakta Boreal One", footerRights: "© 2026 Boreal One AB. Registrerat i Sverige. Med ensamrätt."
             },
             pt: {
-                mediaLink: "Mídia & Fotografia →",
-                cyberLink: "Cibersegurança & TI →",
-                heroTitle: 'Lapônia Sueca: <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Experiências Extraordinárias</span>',
-                heroDesc: "Caçadas exclusivas para observação da Aurora Boreal e hospedagem premium perfeitamente integrada à natureza ártica.",
-                mainBadge: "Viagem Exclusiva", expTitle: "Tours da Aurora & Hospedagem",
-                expP1: "Vivencie o verdadeiro Norte. Organizamos caçadas guiadas à Aurora Boreal na região da Lapônia Sueca, unindo conhecimento local à paixão pela fotografia ártica.",
-                expP2: "Oferecemos também uma charmosa acomodação por temporada (Airbnb), o refúgio perfeito para relaxar após um dia de exploração sob o céu estrelado e as luzes do norte.",
-                tagAurora: "Tours de Aurora Boreal", tagStay: "Acomodação Ártica (Airbnb)", tagNature: "Experiências Locais na Natureza",
-                footerTitle: "Pronto para vivenciar o Ártico?", footerDesc: "Entre em contato para consultar a disponibilidade do Airbnb ou agendar uma caça a aurora guiada.",
-                footerBtn: "Enviar um E-mail", footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
+                navExplore: "Explorar Boreal One", navAurora: "Sessões Privadas de Aurora", navMedia: "Mídia & Fotografia", navCyber: "Cibersegurança & TI",
+                heroEyebrow: "Boreal One · Lapônia Sueca", heroTitle: 'Uma forma mais pessoal de viver a <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Lapônia Sueca.</span>', heroDesc: "Hospede-se sob o céu ártico, planeje uma sessão privada de fotografia da Aurora ou trabalhe com nossas equipes de mídia e tecnologia.", heroExploreBtn: "Explorar Boreal One", heroAuroraBtn: "Sessões Privadas de Aurora", heroNote: "Viagem, fotografia e tecnologia — conectadas com cuidado.",
+                exploreEyebrow: "Escolha por onde começar", exploreTitle: "Tudo da Boreal One, claramente conectado.", exploreDesc: "Comece pela experiência ou serviço que trouxe você até aqui. Nós cuidamos do próximo passo.",
+                stayKicker: "01 · Hospedagem", stayTitle: "Hospede-se na Lapônia Sueca", stayDesc: "Uma base acolhedora e independente para manhãs lentas, céus escuros e tempo perto da paisagem ártica.", stayBtn: "Consultar disponibilidade",
+                auroraKicker: "02 · Experiência privada", auroraTitle: "Sessões Privadas de Aurora", auroraDesc: "Uma sessão de fotografia pessoal sob a Aurora Boreal, planejada conforme as condições e seu tempo no Norte.", auroraTagPrivate: "Privada", auroraTagPhoto: "Fotografia", auroraTagLapland: "Lapônia Sueca", auroraBtn: "Explorar sessões privadas",
+                mediaKicker: "03 · Trabalho visual", mediaTitle: "Mídia & Fotografia", mediaDesc: "Paisagens Fine Art, imagens imobiliárias e narrativas visuais do Norte.", mediaBtn: "Visitar Boreal One Media →",
+                cyberKicker: "04 · Resiliência digital", cyberTitle: "Cibersegurança & TI", cyberDesc: "Suporte prático de cibersegurança e TI para organizações que precisam de tecnologia confiável.", cyberBtn: "Explorar cibersegurança & TI →",
+                footerTitle: "Não sabe por onde começar?", footerDesc: "Conte-nos o que traz você à Lapônia Sueca ou do que seu projeto precisa. Indicaremos o melhor caminho.", footerBtn: "Falar com a Boreal One", footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
             }
         };
 
         function setLanguage(lang) {
-            // Adicionado travas preventivas if() para evitar qualquer travamento de execução
-            if(document.getElementById('nav-media-link')) document.getElementById('nav-media-link').textContent = translations[lang].mediaLink;
-            if(document.getElementById('nav-cyber-link')) document.getElementById('nav-cyber-link').textContent = translations[lang].cyberLink;
-            if(document.getElementById('hero-title')) document.getElementById('hero-title').innerHTML = translations[lang].heroTitle;
-            if(document.getElementById('hero-desc')) document.getElementById('hero-desc').textContent = translations[lang].heroDesc;
-            if(document.getElementById('main-badge')) document.getElementById('main-badge').textContent = translations[lang].mainBadge;
-            if(document.getElementById('exp-title')) document.getElementById('exp-title').textContent = translations[lang].expTitle;
-            if(document.getElementById('exp-p1')) document.getElementById('exp-p1').textContent = translations[lang].expP1;
-            if(document.getElementById('exp-p2')) document.getElementById('exp-p2').textContent = translations[lang].expP2;
-            if(document.getElementById('tag-aurora')) document.getElementById('tag-aurora').textContent = translations[lang].tagAurora;
-            if(document.getElementById('tag-stay')) document.getElementById('tag-stay').textContent = translations[lang].tagStay;
-            if(document.getElementById('tag-nature')) document.getElementById('tag-nature').textContent = translations[lang].tagNature;
-            if(document.getElementById('footer-title')) document.getElementById('footer-title').textContent = translations[lang].footerTitle;
-            if(document.getElementById('footer-desc')) document.getElementById('footer-desc').textContent = translations[lang].footerDesc;
-            if(document.getElementById('footer-btn')) document.getElementById('footer-btn').textContent = translations[lang].footerBtn;
-            if(document.getElementById('footer-rights')) document.getElementById('footer-rights').textContent = translations[lang].footerRights;
+            const content = translations[lang];
+            const textMap = {
+                'nav-explore-link': content.navExplore, 'nav-aurora-link': content.navAurora, 'nav-media-link': content.navMedia, 'nav-cyber-link': content.navCyber,
+                'hero-eyebrow': content.heroEyebrow, 'hero-desc': content.heroDesc, 'hero-explore-btn': content.heroExploreBtn, 'hero-aurora-btn': content.heroAuroraBtn, 'hero-note': content.heroNote,
+                'explore-eyebrow': content.exploreEyebrow, 'explore-title': content.exploreTitle, 'explore-desc': content.exploreDesc,
+                'stay-kicker': content.stayKicker, 'stay-title': content.stayTitle, 'stay-desc': content.stayDesc, 'stay-btn': content.stayBtn,
+                'aurora-kicker': content.auroraKicker, 'aurora-title': content.auroraTitle, 'aurora-desc': content.auroraDesc, 'aurora-tag-private': content.auroraTagPrivate, 'aurora-tag-photo': content.auroraTagPhoto, 'aurora-tag-lapland': content.auroraTagLapland, 'aurora-btn': content.auroraBtn,
+                'media-kicker': content.mediaKicker, 'media-title': content.mediaTitle, 'media-desc': content.mediaDesc, 'media-btn': content.mediaBtn,
+                'cyber-kicker': content.cyberKicker, 'cyber-title': content.cyberTitle, 'cyber-desc': content.cyberDesc, 'cyber-btn': content.cyberBtn,
+                'footer-title': content.footerTitle, 'footer-desc': content.footerDesc, 'footer-btn': content.footerBtn, 'footer-rights': content.footerRights
+            };
+
+            Object.entries(textMap).forEach(([id, value]) => {
+                const element = document.getElementById(id);
+                if (element) element.textContent = value;
+            });
+            document.getElementById('hero-title').innerHTML = content.heroTitle;
 
             ['en', 'sv', 'pt'].forEach(l => {
-                const btn = document.getElementById(`btn-${l}`);
-                if (btn) {
-                    if (l === lang) {
-                        btn.className = "px-2 py-1 rounded transition text-white bg-white/20";
-                    } else {
-                        btn.className = "px-2 py-1 rounded transition text-gray-300 hover:text-white";
-                    }
+                const button = document.getElementById(`btn-${l}`);
+                if (button) {
+                    button.className = l === lang
+                        ? 'px-2 py-1 rounded transition text-white bg-white/15'
+                        : 'px-2 py-1 rounded transition text-gray-300 hover:text-white';
                 }
             });
             localStorage.setItem('preferred-lang', lang);
@@ -175,16 +183,8 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('preferred-lang');
-            if (savedLang && translations[savedLang]) {
-                setLanguage(savedLang);
-            } else {
-                const browserLang = navigator.language.substring(0, 2);
-                if (translations[browserLang]) {
-                    setLanguage(browserLang);
-                } else {
-                    setLanguage('en');
-                }
-            }
+            const browserLang = navigator.language.substring(0, 2);
+            setLanguage(savedLang && translations[savedLang] ? savedLang : (translations[browserLang] ? browserLang : 'en'));
         });
     </script>
 </body>
