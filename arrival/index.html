@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Arrival – The Yellow Aurora House</title>
+  <title>Arrival: The Yellow Aurora House</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -11,23 +11,28 @@
   <div class="max-w-3xl w-full mx-4 my-10">
 
     <!-- HEADER -->
-    <header class="bg-slate-900/70 backdrop-blur-xl border border-slate-700/60 rounded-2xl px-6 py-4 flex items-center justify-between shadow-xl">
-      <div class="flex items-center">
+    <header class="bg-slate-900/70 backdrop-blur-xl border border-slate-700/60 rounded-2xl px-5 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xl">
+      <div class="flex items-center min-w-0">
         <img src="../departure/logo.png" alt="The Yellow Aurora House Logo"
-             class="w-12 h-12 rounded-full border border-slate-700 shadow-md mr-4">
-        <div>
-          <h1 id="title" class="text-xl font-semibold tracking-tight">Arrival – The Yellow Aurora House</h1>
+             class="w-12 h-12 shrink-0 rounded-full border border-slate-700 shadow-md mr-4">
+        <div class="min-w-0">
+          <h1 id="title" class="text-lg sm:text-xl font-semibold tracking-tight">Arrival: The Yellow Aurora House</h1>
           <p id="subtitle" class="text-xs text-slate-400 mt-1">
             Everything you need for a smooth and easy arrival.
           </p>
         </div>
       </div>
 
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2 self-end sm:self-auto">
 
         <button onclick="applyLanguage('en')" id="btn-en"
           class="p-1 rounded transition flex items-center justify-center border border-slate-700 bg-slate-900/40">
           <img src="flags/uk.svg" class="w-7 h-7 rounded-full">
+        </button>
+
+        <button onclick="applyLanguage('de')" id="btn-de"
+          class="p-1 rounded transition flex items-center justify-center border border-slate-700 bg-slate-900/40">
+          <img src="flags/germany.svg" class="w-7 h-7 rounded-full">
         </button>
       
         <button onclick="applyLanguage('pt')" id="btn-pt"
@@ -69,7 +74,7 @@
 
       <div class="px-6 py-4 grid gap-4">
 
-        <!-- CARD 1 – FINDING THE HOUSE -->
+        <!-- CARD 1: FINDING THE HOUSE -->
         <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
           <img src="foto1.jpg" class="w-full h-56 object-cover">
           <div class="px-4 py-3">
@@ -78,7 +83,7 @@
           </div>
         </section>
 
-        <!-- CARD 2 – PARKING & GARAGE -->
+        <!-- CARD 2: PARKING & GARAGE -->
         <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
           <img src="foto2.jpg" class="w-full h-56 object-cover">
           <div class="px-4 py-3">
@@ -87,7 +92,7 @@
           </div>
         </section>
 
-        <!-- CARD 3 – KEYPAD -->
+        <!-- CARD 3: KEYPAD -->
         <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
           <img src="keypad.jpg" class="w-full h-56 object-cover">
           <div class="px-4 py-3">
@@ -96,7 +101,15 @@
           </div>
         </section>
 
-        <!-- CARD 4 – LOCK KNOB -->
+        <!-- WI-FI -->
+        <section class="bg-cyan-950/35 border border-cyan-300/25 rounded-xl px-4 py-3">
+          <h2 id="wifiTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>📶</span><span>Wi-Fi</span>
+          </h2>
+          <div id="wifiText" class="text-xs text-slate-200 mt-1"></div>
+        </section>
+
+        <!-- CARD 4: LOCK KNOB -->
         <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
           <img src="lock-knob.jpg" class="w-full h-56 object-cover">
           <div class="px-4 py-3">
@@ -133,7 +146,7 @@
   <script>
     const translationsArrival = {
       en: {
-        title: "Arrival – The Yellow Aurora House",
+        title: "Arrival: The Yellow Aurora House",
         subtitle: "Everything you need for a smooth and easy arrival.",
         intro: "Welcome! Here is everything you need to arrive comfortably at The Yellow Aurora House.",
         checkinTitle: "Check-in time",
@@ -156,8 +169,8 @@
           <p><strong>1. Find the keypad</strong><br>
           The keypad is mounted on the wall to the right of the entrance door.</p>
         
-          <p><strong>2. Enter your 6-digit code</strong><br>
-          Type the numbers slowly, one by one.</p>
+          <p><strong>2. Use your personal 6-digit code</strong><br>
+          Use only the code sent in your check-in message. Type the numbers slowly, one by one.</p>
         
           <p><strong>⚠️ IMPORTANT: Do NOT press the ◀ arrow after entering your code.</strong><br>
           There is <strong>NO Enter button.</strong></p>
@@ -171,6 +184,8 @@
           <p><strong>❌ Made a mistake?</strong><br>
           Press the <strong>◀ arrow once</strong> to delete the last digit, then enter the correct number.</p>
         `,
+        wifiTitle: "Wi-Fi",
+        wifiText: "Scan the Wi-Fi QR code with your phone camera. It is on the door of the coat cabinet directly opposite the entrance door, the first thing you see when you enter.",
         unlockTitle: "Locking or unlocking from inside",
         unlockText: `
           <p>When you are inside, press the center of the round knob above the door handle.</p>
@@ -189,8 +204,67 @@
         footerText: "Welcome to Yellow Aurora House. We hope you enjoy your stay."
       },
 
+      de: {
+        title: "Ankunft: The Yellow Aurora House",
+        subtitle: "Alles, was Sie für eine entspannte und einfache Ankunft benötigen.",
+        intro: "Willkommen! Hier finden Sie alles, was Sie für eine angenehme Ankunft in der Yellow Aurora House benötigen.",
+        checkinTitle: "Check-in-Zeit",
+        checkinText: "Der Check-in ist ab <strong>16:00 Uhr</strong> möglich. Wenn Sie früher anreisen möchten, kontaktieren Sie uns bitte.",
+        photo1Title: "Das Haus finden",
+        photo1Text: `
+          <p>Fahren Sie auf der Hauptstraße <strong>E10</strong>.</p>
+          <p>Folgen Sie Ihrem GPS bis zum Ziel. Wenn Sie sich nähern, achten Sie auf ein gelbes Haus mit schwarzem Dach. Wenn Sie aus Richtung Luleå kommen, liegt das Haus auf der linken Straßenseite.</p>
+          <p>Im Winter ist alles weiß, deshalb ist das gelbe Haus leicht zu erkennen.</p>
+        `,
+        photo2Title: "Parken & Garage",
+        photo2Text: `
+          <p>Sie können direkt vor dem Haus parken.</p>
+          <p>Die überdachte Garage kann während Ihres Aufenthalts genutzt werden.</p>
+          <p>Die Garagenfernbedienung hängt im Haus zwischen Eingangstür und Fenster.</p>
+          <p><span style="background-color: #fff3cd; color: #856404; padding: 2px 5px; border-radius: 3px; font-weight: bold;">Bei Verlust oder nicht erfolgter Rückgabe der Fernbedienung fällt eine Ersatzgebühr von 1.000,00 SEK an.</span></p>
+        `,
+        photo3Title: "Türtastatur",
+        photo3Text: `
+          <p><strong>1. Finden Sie die Tastatur</strong><br>
+          Die Tastatur befindet sich an der Wand rechts neben der Eingangstür.</p>
+
+          <p><strong>2. Verwenden Sie Ihren persönlichen 6-stelligen Code</strong><br>
+          Verwenden Sie nur den Code aus Ihrer Check-in-Nachricht. Geben Sie die Ziffern langsam, eine nach der anderen, ein.</p>
+
+          <p><strong>⚠️ WICHTIG: Drücken Sie nach der Eingabe nicht den Pfeil ◀.</strong><br>
+          Es gibt <strong>keine Enter-Taste.</strong></p>
+
+          <p><strong>3. Warten Sie</strong><br>
+          Das Schloss wird automatisch entriegelt. Warten Sie, bis Sie hören, dass der Motor stoppt.</p>
+
+          <p><strong>4. Öffnen Sie die Tür</strong><br>
+          Drücken Sie den Türgriff nach unten und öffnen Sie die Tür.</p>
+
+          <p><strong>❌ Falsch eingegeben?</strong><br>
+          Drücken Sie den <strong>Pfeil ◀ einmal</strong>, um die letzte Ziffer zu löschen. Geben Sie danach die richtige Ziffer ein.</p>
+        `,
+        wifiTitle: "WLAN",
+        wifiText: "Scannen Sie den WLAN-QR-Code mit der Kamera Ihres Telefons. Er befindet sich auf der Tür des Garderobenschranks direkt gegenüber der Eingangstür, das Erste, was Sie beim Betreten sehen.",
+        unlockTitle: "Von innen ver- oder entriegeln",
+        unlockText: `
+          <p>Drücken Sie im Haus auf die Mitte des runden Knaufs über dem Türgriff.</p>
+          <p>Das Schloss dreht sich automatisch.</p>
+          <p>Der Knopf funktioniert wie ein Lichtschalter: einmal drücken zum Verriegeln, erneut drücken zum Entriegeln.</p>
+        `,
+        lockLeavingTitle: "So verriegeln Sie die Tür, wenn Sie das Haus verlassen",
+        lockLeavingText: `
+          <p><strong>1.</strong> Schließen Sie die Tür vollständig. Drücken Sie die Tür zu, bis sie ganz geschlossen ist.</p>
+          <p><strong>2.</strong> Drücken Sie den Pfeil ◀ auf der Tastatur, um die Tür zu verriegeln.</p>
+          <p><strong>3.</strong> Sie hören, wie sich das Schloss dreht und einrastet.</p>
+          <p><strong>4.</strong> Ziehen Sie vorsichtig am Türgriff. Wenn sich die Tür nicht öffnet, ist sie verriegelt.</p>
+        `,
+        contactTitle: "Brauchen Sie Hilfe?",
+        contactText: "Wenn etwas unklar ist oder Sie Hilfe benötigen, kontaktieren Sie uns bitte über Ihre Buchungsplattform oder Ihren bevorzugten Nachrichtenkanal.",
+        footerText: "Willkommen in der Yellow Aurora House. Wir wünschen Ihnen einen schönen Aufenthalt."
+      },
+
       pt: {
-        title: "Chegada – The Yellow Aurora House",
+        title: "Chegada: The Yellow Aurora House",
         subtitle: "Tudo o que você precisa para uma chegada tranquila.",
         intro: "Bem-vindo! Aqui está tudo o que você precisa para chegar confortavelmente à The Yellow Aurora House.",
         checkinTitle: "Horário de check-in",
@@ -213,8 +287,8 @@
           <p><strong>1. Encontre o teclado</strong><br>
           O teclado está instalado na parede, à direita da porta de entrada.</p>
         
-          <p><strong>2. Digite seu código de 6 dígitos</strong><br>
-          Digite os números devagar, um por um.</p>
+          <p><strong>2. Use seu código pessoal de 6 dígitos</strong><br>
+          Use apenas o código enviado na sua mensagem de check-in. Digite os números devagar, um por um.</p>
         
           <p><strong>⚠️ IMPORTANTE: NÃO pressione a seta ◀ depois de digitar o código.</strong><br>
           <strong>Não existe botão Enter.</strong></p>
@@ -228,6 +302,8 @@
           <p><strong>❌ Digitou um número errado?</strong><br>
           Pressione a <strong>seta ◀ uma vez</strong> para apagar o último número e, em seguida, digite o número correto.</p>
         `,
+        wifiTitle: "Wi-Fi",
+        wifiText: "Escaneie o QR code do Wi-Fi com a câmera do celular. Ele fica na porta do armário de casacos, exatamente em frente à porta de entrada, sendo a primeira coisa que você vê ao entrar.",
         unlockTitle: "Trancar ou destrancar por dentro",
         unlockText: `
           <p>Pressione o centro do botão redondo acima da maçaneta.</p>
@@ -247,7 +323,7 @@
       },
 
       sv: {
-        title: "Ankomst – The Yellow Aurora House",
+        title: "Ankomst: The Yellow Aurora House",
         subtitle: "Allt du behöver för en smidig ankomst.",
         intro: "Välkommen! Här är allt du behöver för att anlända bekvämt till The Yellow Aurora House.",
         checkinTitle: "Incheckningstid",
@@ -271,8 +347,8 @@
           <p><strong>1. Hitta kodlåset</strong><br>
           Kodlåset sitter på väggen till höger om entrédörren.</p>
         
-          <p><strong>2. Ange din 6-siffriga kod</strong><br>
-          Ange siffrorna långsamt, en i taget.</p>
+          <p><strong>2. Använd din personliga 6-siffriga kod</strong><br>
+          Använd endast koden i ditt incheckningsmeddelande. Ange siffrorna långsamt, en i taget.</p>
         
           <p><strong>⚠️ VIKTIGT: Tryck INTE på ◀-pilen efter att du har angett koden.</strong><br>
           Det finns <strong>ingen Enter-knapp.</strong></p>
@@ -286,6 +362,8 @@
           <p><strong>❌ Blev det fel?</strong><br>
           Tryck på <strong>◀-pilen en gång</strong> för att ta bort den sista siffran och ange sedan rätt nummer.</p>
         `,
+        wifiTitle: "Wi-Fi",
+        wifiText: "Skanna Wi-Fi-koden med kameran på din telefon. Den sitter på dörren till garderobsskåpet direkt mitt emot entrédörren, det första du ser när du kommer in.",
         unlockTitle: "Låsa eller låsa upp inifrån",
         unlockText: `
           <p>Tryck på mitten av den runda knoppen ovanför handtaget.</p>
@@ -305,7 +383,7 @@
       },
 
       es: {
-        title: "Llegada – The Yellow Aurora House",
+        title: "Llegada: The Yellow Aurora House",
         subtitle: "Todo lo que necesitas para una llegada tranquila.",
         intro: "¡Bienvenido! Aquí tienes todo lo necesario para llegar cómodamente a The Yellow Aurora House.",
         checkinTitle: "Hora de check-in",
@@ -328,8 +406,8 @@
           <p><strong>1. Encuentra el teclado</strong><br>
           El teclado está instalado en la pared, a la derecha de la puerta de entrada.</p>
         
-          <p><strong>2. Introduce tu código de 6 dígitos</strong><br>
-          Introduce los números despacio, uno por uno.</p>
+          <p><strong>2. Usa tu código personal de 6 dígitos</strong><br>
+          Usa únicamente el código enviado en tu mensaje de check-in. Introduce los números despacio, uno por uno.</p>
         
           <p><strong>⚠️ IMPORTANTE: NO pulses la flecha ◀ después de introducir el código.</strong><br>
           <strong>NO hay ningún botón Enter.</strong></p>
@@ -343,6 +421,8 @@
           <p><strong>❌ ¿Has introducido un número incorrecto?</strong><br>
           Pulsa la <strong>flecha ◀ una vez</strong> para borrar el último número y, después, introduce el número correcto.</p>
         `,
+        wifiTitle: "Wi-Fi",
+        wifiText: "Escanea el código QR del Wi-Fi con la cámara de tu teléfono. Está en la puerta del armario para abrigos, justo frente a la puerta de entrada, lo primero que verás al entrar.",
         unlockTitle: "Cerrar o abrir desde dentro",
         unlockText: `
           <p>Presiona el centro del botón redondo sobre la manija.</p>
@@ -381,6 +461,9 @@
       document.getElementById("photo3Title").textContent = t.photo3Title;
       document.getElementById("photo3Text").innerHTML = t.photo3Text;
 
+      document.getElementById("wifiTitle").textContent = t.wifiTitle;
+      document.getElementById("wifiText").textContent = t.wifiText;
+
       document.getElementById("unlockTitle").textContent = t.unlockTitle;
       document.getElementById("unlockText").innerHTML = t.unlockText;
 
@@ -392,12 +475,13 @@
 
       document.getElementById("footerText").textContent = t.footerText;
 
+      document.documentElement.lang = lang;
       highlightButton(lang);
       localStorage.setItem("arrivalLang", lang);
     }
 
    function highlightButton(lang) {
-  const buttons = ["en", "pt", "sv", "es"];
+  const buttons = ["en", "de", "pt", "sv", "es"];
   buttons.forEach(code => {
     const btn = document.getElementById(`btn-${code}`);
     if (!btn) return;
@@ -413,6 +497,7 @@
 }
 
     document.getElementById("btn-en").addEventListener("click", () => applyLanguage("en"));
+    document.getElementById("btn-de").addEventListener("click", () => applyLanguage("de"));
     document.getElementById("btn-pt").addEventListener("click", () => applyLanguage("pt"));
     document.getElementById("btn-sv").addEventListener("click", () => applyLanguage("sv"));
     document.getElementById("btn-es").addEventListener("click", () => applyLanguage("es"));

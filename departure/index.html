@@ -2,30 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Checkout – The Yellow Aurora House</title>
+  <title>Checkout: The Yellow Aurora House</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center">
   <div class="max-w-3xl w-full mx-4 my-10">
     <!-- GLASS HEADER -->
-    <header class="bg-slate-900/70 backdrop-blur-xl border border-slate-700/60 rounded-2xl px-6 py-4 flex items-center justify-between shadow-xl">
-  <div class="flex items-center">
+    <header class="bg-slate-900/70 backdrop-blur-xl border border-slate-700/60 rounded-2xl px-5 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xl">
+  <div class="flex items-center min-w-0">
     <img src="logo.png" alt="The Yellow Aurora House Logo"
-         class="w-12 h-12 rounded-full border border-slate-700 shadow-md mr-4">
-    <div>
-      <h1 id="title" class="text-xl font-semibold tracking-tight">Checkout – The Yellow Aurora House</h1>
+         class="w-12 h-12 shrink-0 rounded-full border border-slate-700 shadow-md mr-4">
+    <div class="min-w-0">
+      <h1 id="title" class="text-lg sm:text-xl font-semibold tracking-tight">Checkout: The Yellow Aurora House</h1>
       <p id="subtitle" class="text-xs text-slate-400 mt-1">
         Clear instructions to make your departure smooth and easy.
       </p>
     </div>
   </div>
 
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2 self-end sm:self-auto">
     
           <button onclick="applyLanguage('en')" id="btn-en"
             class="p-1 rounded transition flex items-center justify-center border border-slate-700 bg-slate-900/40">
             <img src="../arrival/flags/uk.svg" class="w-7 h-7 rounded-full">
+          </button>
+
+          <button onclick="applyLanguage('de')" id="btn-de"
+            class="p-1 rounded transition flex items-center justify-center border border-slate-700 bg-slate-900/40">
+            <img src="../arrival/flags/germany.svg" class="w-7 h-7 rounded-full">
           </button>
         
           <button onclick="applyLanguage('pt')" id="btn-pt"
@@ -62,20 +67,20 @@
             <span>🕒</span><span>Checkout time</span>
           </h2>
           <p id="checkoutText" class="text-xs text-slate-300 mt-1">
-            Checkout is by 12:00 PM. If you need a different time, please contact us in advance – we’ll do our best depending on cleaning schedules.
+            Checkout is by 11:00 AM. If you need a different time, please contact us in advance. We will do our best depending on cleaning schedules.
           </p>
         </section>
 
         <!-- CHECKLIST -->
         <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
           <h2 id="checklistTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
-            <span>🧹</span><span>Before you leave – quick checklist</span>
+            <span>🧹</span><span>Before you leave, quick checklist</span>
           </h2>
           <ul id="checklistItems" class="mt-2 text-xs text-slate-300 space-y-1">
             <li>• Turn off all lights.</li>
             <li>• Close all windows.</li>
             <li>• Place used towels in the Laundryroom</li>
-            <li>• Leave beds unmade – our cleaning team will take care of them.</li>
+            <li>• Leave beds unmade, our cleaning team will take care of them.</li>
             <li>• Check you haven’t forgotten chargers, clothes or personal items.</li>
             <li>• Dispose of trash in the kitchen bin.</li>
           </ul>
@@ -90,9 +95,9 @@
             If you used any of the following items, please return them before leaving:
           </p>
           <ul id="keysItems" class="mt-2 text-xs text-slate-300 space-y-1">
-            <li>• Garage remote – hang it back on the hook between the entrance door and the window.</li>
-            <li>• Return the remote to its hook. ⚠️ CRITICAL: Lost or unreturned remotes will incur a replacement fee of 1000,00 SEK ⚠️</li>
-            <li>• Any physical keys (if provided) – leave them on the kitchen counter.</li>
+            <li>• Garage remote: hang it back on the hook between the entrance door and the window.</li>
+            <li>• ⚠️ CRITICAL: Lost or unreturned remotes will incur a replacement fee of 1000,00 SEK ⚠️</li>
+            <li>• Any physical keys, if provided, should be left on the kitchen counter.</li>
           </ul>
         </section>
 
@@ -103,7 +108,6 @@
           </h2>
           <ul id="garageItems" class="mt-2 text-xs text-slate-300 space-y-1">
             <li>• Make sure the garage door is fully closed.</li>
-            <li>• Return the remote to its hook. </li>
             <li>• Return the remote to its hook. ⚠️ CRITICAL: Lost or unreturned remotes will incur a replacement fee of 1000,00 SEK ⚠️</li>            
             <li>• Check that no personal items are left inside.</li>
           </ul>
@@ -162,18 +166,18 @@
   <script>
     const translationsCheckout = {
       en: {
-        title: "Checkout – The Yellow Aurora House",
+        title: "Checkout: The Yellow Aurora House",
         subtitle: "Clear instructions to make your departure smooth and easy.",
         intro: "Hello! We hope you enjoyed your stay at Yellow Aurora House. Here is a clear checkout guide to help you leave with peace of mind.",
         checkoutTitle: "Checkout time",
-        checkoutText: "Checkout is by 11:00 AM. If you need a different time, please contact us in advance – we’ll do our best depending on cleaning schedules.",
-        checklistTitle: "Before you leave – quick checklist",
+        checkoutText: "Checkout is by 11:00 AM. If you need a different time, please contact us in advance. We will do our best depending on cleaning schedules.",
+        checklistTitle: "Before you leave, quick checklist",
         checklistItems: [
           "Turn off all lights.",
           "Close all windows.",
           "Place used towels in the Laundryroom.",
           "Make sure the sauna is switched off after use.",
-          "Leave beds unmade – our cleaning team will take care of them.",
+          "Leave beds unmade, our cleaning team will take care of them.",
           "Check you haven’t forgotten chargers, clothes or personal items.",
           "Dispose of trash in the kitchen bin under the sink."
         ],
@@ -188,9 +192,9 @@
         keysTitle: "Keys and access devices",
         keysText: "If you used any of the following items, please return them before leaving:",
         keysItems: [
-          "Garage remote – hang it back on owl between the entrance door and the window.",
+          "Garage remote: hang it back on the hook between the entrance door and the window.",
           "⚠️ CRITICAL: Lost or unreturned remotes will incur a replacement fee of 1000,00 SEK ⚠️",
-          "Any physical keys (if provided) – leave them on the kitchen counter."
+          "Any physical keys, if provided, should be left on the kitchen counter."
         ],
         garageTitle: "If you used the garage",
         garageItems: [
@@ -209,19 +213,67 @@
         contactText: "If anything is unclear or you need assistance, feel free to contact us through your reservation platform or your preferred messaging channel.",
         footerText: "Thank you for staying at Yellow Aurora House. Safe travels and we hope to welcome you again."
       },
+      de: {
+        title: "Abreise: The Yellow Aurora House",
+        subtitle: "Klare Hinweise für eine reibungslose und einfache Abreise.",
+        intro: "Hallo! Wir hoffen, Sie hatten einen schönen Aufenthalt in der Yellow Aurora House. Hier finden Sie eine klare Check-out-Anleitung für eine entspannte Abreise.",
+        checkoutTitle: "Check-out-Zeit",
+        checkoutText: "Der Check-out ist bis 11:00 Uhr. Wenn Sie eine andere Zeit benötigen, kontaktieren Sie uns bitte im Voraus. Wir tun unser Bestes, abhängig vom Reinigungsplan.",
+        checklistTitle: "Bevor Sie gehen, kurze Checkliste",
+        checklistItems: [
+          "Schalten Sie alle Lichter aus.",
+          "Schließen Sie alle Fenster.",
+          "Legen Sie benutzte Handtücher in die Waschküche.",
+          "Stellen Sie sicher, dass die Sauna nach der Nutzung ausgeschaltet ist.",
+          "Sie müssen die Betten nicht machen, unser Reinigungsteam kümmert sich darum.",
+          "Prüfen Sie, dass Sie keine Ladegeräte, Kleidung oder persönlichen Gegenstände vergessen haben.",
+          "Entsorgen Sie den Müll im Küchenabfalleimer unter der Spüle."
+        ],
+        lockTitle: "So verriegeln Sie das Haus beim Verlassen",
+        lockIntro: "Nachdem Sie die Check-out-Checkliste erledigt haben und draußen sind, folgen Sie diesen Schritten, um die Tür zu verriegeln:",
+        lockSteps: [
+          "Vergewissern Sie sich, dass die Tür vollständig geschlossen ist.",
+          "Drücken Sie den Pfeil ◀ auf der Außentastatur.",
+          "Warten Sie einen Moment, bis Sie hören, wie sich das Schloss dreht.",
+          "Ziehen Sie vorsichtig am Türgriff, um zu prüfen, ob die Tür verriegelt ist."
+        ],
+        keysTitle: "Schlüssel und Zugangsmittel",
+        keysText: "Wenn Sie einen der folgenden Gegenstände benutzt haben, geben Sie ihn bitte vor Ihrer Abreise zurück:",
+        keysItems: [
+          "Garagenfernbedienung: Hängen Sie sie wieder an den Haken zwischen Eingangstür und Fenster.",
+          "⚠️ WICHTIG: Bei Verlust oder nicht erfolgter Rückgabe der Fernbedienung fällt eine Ersatzgebühr von 1000,00 SEK an. ⚠️",
+          "Eventuelle physische Schlüssel legen Sie bitte auf die Küchentheke."
+        ],
+        garageTitle: "Wenn Sie die Garage benutzt haben",
+        garageItems: [
+          "Stellen Sie sicher, dass das Garagentor vollständig geschlossen ist.",
+          "Hängen Sie die Fernbedienung wieder an den Haken.",
+          "⚠️ WICHTIG: Bei Verlust oder nicht erfolgter Rückgabe der Fernbedienung fällt eine Ersatzgebühr von 1000,00 SEK an. ⚠️",
+          "Prüfen Sie, dass keine persönlichen Gegenstände in der Garage zurückbleiben."
+        ],
+        internetTitle: "TV und Streaming",
+        internetText: "Haben Sie sich während Ihres Aufenthalts bei Netflix oder einem anderen Streamingdienst angemeldet?",
+        internetsteps: [
+          "Bitte melden Sie sich vor der Abreise von Ihrem persönlichen Konto ab. 📺😊"
+        ],
+        reviewTitle: "Bevor Sie gehen",
+        reviewText: "Wenn Ihnen Ihr Aufenthalt gefallen hat, hilft uns eine kurze Bewertung sehr und verbessert das Erlebnis für künftige Gäste.",
+        contactText: "Wenn etwas unklar ist oder Sie Hilfe benötigen, kontaktieren Sie uns bitte über Ihre Buchungsplattform oder Ihren bevorzugten Nachrichtenkanal.",
+        footerText: "Vielen Dank für Ihren Aufenthalt in der Yellow Aurora House. Gute Reise, wir würden Sie gerne wieder bei uns begrüßen."
+      },
       pt: {
-        title: "Checkout – The Yellow Aurora House",
+        title: "Checkout: The Yellow Aurora House",
         subtitle: "Instruções claras para uma saída tranquila e sem preocupações.",
         intro: "Olá! Esperamos que você tenha aproveitado sua estadia na Yellow Aurora House. Aqui está um guia de checkout claro para você sair com tranquilidade.",
         checkoutTitle: "Horário de checkout",
-        checkoutText: "O checkout é até 12:00 da manhã. Se precisar de um horário diferente, por favor nos avise com antecedência – faremos o possível, dependendo da agenda da equipe de limpeza.",
-        checklistTitle: "Antes de sair – checklist rápido",
+        checkoutText: "O checkout é até 11:00. Se precisar de um horário diferente, por favor nos avise com antecedência. Faremos o possível, dependendo da agenda da equipe de limpeza.",
+        checklistTitle: "Antes de sair, checklist rápido",
         checklistItems: [
           "Apague todas as luzes.",
           "Feche todas as janelas.",
           "Deixe as toalhas usadas na lavanderia.",
           "Verifique se a sauna esta desligada após o uso.",
-          "Não precisa arrumar as camas – nossa equipe cuida disso.",
+          "Não precisa arrumar as camas, nossa equipe cuida disso.",
           "Verifique se não esqueceu carregadores, roupas ou itens pessoais.",
           "Jogue o lixo na lixeira da cozinha, embaixo da pia."
         ],
@@ -236,9 +288,9 @@
         keysTitle: "Chaves e dispositivos de acesso",
         keysText: "Se você utilizou algum dos itens abaixo, por favor devolva antes de sair:",
         keysItems: [
-          "Controle remoto da garagem – pendure novamente no gancho entre a porta de entrada e a janela.",
+          "Controle remoto da garagem: pendure novamente no gancho entre a porta de entrada e a janela.",
           "⚠️ ATENÇÃO: A perda ou não devolução do controle gerará uma taxa de reposição de 1000,00 SEK ⚠️",
-          "Quaisquer chaves físicas (se fornecidas) – deixe sobre a bancada da cozinha."
+          "Quaisquer chaves físicas, se fornecidas, devem ser deixadas sobre a bancada da cozinha."
         ],
         garageTitle: "Se você usou a garagem",
         garageItems: [
@@ -259,17 +311,17 @@
         footerText: "Obrigado por escolher a Yellow Aurora House. Tenha uma excelente viagem e esperamos receber você novamente."
       },
       sv: {
-        title: "Utcheckning – The Yellow Aurora House",
+        title: "Utcheckning: The Yellow Aurora House",
         subtitle: "Tydliga instruktioner för en smidig avresa.",
         intro: "Hej! Vi hoppas att du har haft en fin vistelse på Yellow Aurora House. Här är en tydlig guide för utcheckning så att du kan resa vidare i lugn och ro.",
         checkoutTitle: "Tid för utcheckning",
-        checkoutText: "Utcheckning är senast klockan 12:00. Om du behöver en annan tid, kontakta oss i förväg – vi gör vårt bästa beroende på städningens schema.",
-        checklistTitle: "Innan du går – snabb checklista",
+        checkoutText: "Utcheckning är senast klockan 11:00. Om du behöver en annan tid, kontakta oss i förväg. Vi gör vårt bästa beroende på städningens schema.",
+        checklistTitle: "Innan du går, snabb checklista",
         checklistItems: [
           "Släck alla lampor.",
           "Stäng alla fönster.",
           "Lägg använda handdukar i tvättstugan.",
-          "Du behöver inte bädda sängarna – vårt städteam tar hand om det.",
+          "Du behöver inte bädda sängarna, vårt städteam tar hand om det.",
           "Kontrollera att du inte har glömt laddare, kläder eller personliga saker.",
           "Släng soporna i köksoptunnan under diskhon."
         ],
@@ -284,9 +336,9 @@
         keysTitle: "Nycklar och åtkomst",
         keysText: "Om du har använt något av följande, vänligen lämna tillbaka innan du går:",
         keysItems: [
-          "Garagekontroll – häng tillbaka den på kroken mellan ytterdörren och fönstret.",
+          "Garagekontroll: häng tillbaka den på kroken mellan ytterdörren och fönstret.",
           "⚠️ OBS: Om den försvinner eller inte återlämnas tillkommer en ersättningsavgift på 1000,00 SEK ⚠️",
-          "Eventuella fysiska nycklar (om du fått sådana) – lämna dem på köksbänken."
+          "Eventuella fysiska nycklar, om du fått sådana, lämnar du på köksbänken."
         ],
         garageTitle: "Om du har använt garaget",
         garageItems: [
@@ -307,17 +359,17 @@
         footerText: "Tack för att du bodde på Yellow Aurora House. Trevlig resa och varmt välkommen tillbaka."
       },
       es: {
-        title: "Checkout – The Yellow Aurora House",
+        title: "Checkout: The Yellow Aurora House",
         subtitle: "Instrucciones claras para una salida cómoda y sin estrés.",
         intro: "Hola, esperamos que hayas disfrutado tu estancia en Yellow Aurora House. Aquí tienes una guía de checkout clara para que puedas marcharte con tranquilidad.",
         checkoutTitle: "Hora de checkout",
-        checkoutText: "El checkout es hasta las 12:00 de la mañana. Si necesitas otro horario, por favor contáctanos con antelación – haremos lo posible según el horario del equipo de limpieza.",
-        checklistTitle: "Antes de salir – lista rápida",
+        checkoutText: "El checkout es hasta las 11:00. Si necesitas otro horario, por favor contáctanos con antelación. Haremos lo posible según el horario del equipo de limpieza.",
+        checklistTitle: "Antes de salir, lista rápida",
         checklistItems: [
           "Apaga todas las luces.",
           "Cierra todas las ventanas.",
           "Deja las toallas usadas en el Lavadero.",
-          "No es necesario hacer las camas – nuestro equipo se encarga.",
+          "No es necesario hacer las camas, nuestro equipo se encarga.",
           "Comprueba que no has olvidado cargadores, ropa u objetos personales.",
           "Tira la basura en el bote de la cocina bajo el fregadero."
         ],
@@ -332,9 +384,9 @@
         keysTitle: "Llaves y dispositivos de acceso",
         keysText: "Si has utilizado alguno de los siguientes elementos, por favor devuélvelos antes de irte:",
         keysItems: [
-          "Mando del garaje – cuélgalo de nuevo en el gancho entre la puerta de entrada y la ventana.",
+          "Mando del garaje: cuélgalo de nuevo en el gancho entre la puerta de entrada y la ventana.",
           "⚠️ ATENCIÓN: En caso de pérdida o no devolución, se cobrará una tarifa de reemplazo de 1000,00 SEK ⚠️",
-          "Cualquier llave física (si se te ha entregado) – déjala sobre la encimera de la cocina."
+          "Cualquier llave física, si se te ha entregado, déjala sobre la encimera de la cocina."
         ],
         garageTitle: "Si has utilizado el garaje",
         garageItems: [
@@ -419,12 +471,13 @@
 
       document.getElementById("footerText").textContent = t.footerText;
 
+      document.documentElement.lang = lang;
       highlightButton(lang);
       localStorage.setItem("checkoutLang", lang);
     }
 
     function highlightButton(lang) {
-  const buttons = ["en", "pt", "sv", "es"];
+  const buttons = ["en", "de", "pt", "sv", "es"];
   buttons.forEach(code => {
     const btn = document.getElementById(`btn-${code}`);
     if (!btn) return;
@@ -441,6 +494,7 @@
 
 
     document.getElementById("btn-en").addEventListener("click", () => applyLanguage("en"));
+    document.getElementById("btn-de").addEventListener("click", () => applyLanguage("de"));
     document.getElementById("btn-pt").addEventListener("click", () => applyLanguage("pt"));
     document.getElementById("btn-sv").addEventListener("click", () => applyLanguage("sv"));
     document.getElementById("btn-es").addEventListener("click", () => applyLanguage("es"));
