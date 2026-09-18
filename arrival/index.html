@@ -92,6 +92,14 @@
           </div>
         </section>
 
+        <!-- PETS -->
+        <section class="bg-amber-950/30 border border-amber-200/20 rounded-xl px-4 py-3">
+          <h2 id="petTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>🐾</span><span>Pets</span>
+          </h2>
+          <div id="petText" class="text-xs text-slate-200 mt-1"></div>
+        </section>
+
         <!-- CARD 3: KEYPAD -->
         <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
           <img src="keypad.jpg" class="w-full h-56 object-cover">
@@ -162,8 +170,11 @@
           <p>You may park directly in front of the house.</p>
           <p>The covered garage can be used during your stay.</p>
           <p>The garage remote is hanging inside the house, between the entrance door and the window. </p>
+          <p><strong>Please park only directly in front of the house or inside the garage. Do not park on the lawn.</strong></p>
           <p><span style="background-color: #fff3cd; color: #856404; padding: 2px 5px; border-radius: 3px; font-weight: bold;">Lost or unreturned remotes will incur a replacement fee of 1.000,00 SEK </span></p>
         `,
+        petTitle: "Pets",
+        petText: "Pets are welcome. Please let us know before arrival if you are bringing a pet. A pet fee of 250 SEK (€25) applies per stay.",
         photo3Title: "Entrance keypad",
         photo3Text: `
           <p><strong>1. Find the keypad</strong><br>
@@ -221,8 +232,11 @@
           <p>Sie können direkt vor dem Haus parken.</p>
           <p>Die überdachte Garage kann während Ihres Aufenthalts genutzt werden.</p>
           <p>Die Garagenfernbedienung hängt im Haus zwischen Eingangstür und Fenster.</p>
+          <p><strong>Parken Sie nur direkt vor dem Haus oder in der Garage. Bitte parken Sie nicht auf dem Rasen.</strong></p>
           <p><span style="background-color: #fff3cd; color: #856404; padding: 2px 5px; border-radius: 3px; font-weight: bold;">Bei Verlust oder nicht erfolgter Rückgabe der Fernbedienung fällt eine Ersatzgebühr von 1.000,00 SEK an.</span></p>
         `,
+        petTitle: "Haustiere",
+        petText: "Haustiere sind willkommen. Bitte teilen Sie uns vor Ihrer Anreise mit, wenn Sie ein Haustier mitbringen. Pro Aufenthalt fällt eine Haustiergebühr von 250 SEK (€25) an.",
         photo3Title: "Türtastatur",
         photo3Text: `
           <p><strong>1. Finden Sie die Tastatur</strong><br>
@@ -280,8 +294,11 @@
           <p>Você pode estacionar diretamente em frente à casa.</p>
           <p>A garagem coberta pode ser usada durante sua estadia.</p>
           <p>O controle da garagem está pendurado dentro da casa, entre a porta de entrada e a janela.</p>
+          <p><strong>Estacione apenas em frente à casa ou dentro da garagem. Não estacione no gramado.</strong></p>
           <p><span style="background-color: #fff3cd; color: #856404; padding: 2px 5px; border-radius: 3px; font-weight: bold;">A perda ou não devolução do controle gerará uma taxa de reposição de 1.000,00 SEK para cobrir os custos de compra e configuração de um novo dispositivo.</span></p>
         `,
+        petTitle: "Animais de estimação",
+        petText: "Animais de estimação são bem-vindos. Avise-nos antes da chegada caso venha com um animal. Uma taxa de 250 SEK (€25) por estadia será aplicada.",
         photo3Title: "Teclado da porta de entrada",
         photo3Text: `
           <p><strong>1. Encontre o teclado</strong><br>
@@ -339,9 +356,12 @@
           <p>Du kan parkera direkt framför huset.</p>
           <p>Det täckta garaget kan användas under din vistelse.</p>
           <p>Garagekontrollen hänger inne i huset, mellan ytterdörren och fönstret.</p>
+          <p><strong>Parkera endast direkt framför huset eller i garaget. Parkera inte på gräsmattan.</strong></p>
           <p><span style="background-color: #fff3cd; color: #856404; padding: 2px 5px; border-radius: 3px; font-weight: bold;">Om den försvinner eller inte återlämnas tillkommer en ersättningsavgift på 1.000,00 SEK </span></p>
 
         `,
+        petTitle: "Husdjur",
+        petText: "Husdjur är välkomna. Meddela oss före ankomst om du tar med ett husdjur. En husdjursavgift på 250 SEK (€25) per vistelse tillkommer.",
         photo3Title: "Kodlås vid entrédörren",
         photo3Text: `
           <p><strong>1. Hitta kodlåset</strong><br>
@@ -399,8 +419,11 @@
           <p>Puedes estacionar directamente frente a la casa.</p>
           <p>El garaje cubierto puede usarse durante tu estancia.</p>
           <p>El control del garaje está colgado dentro de la casa, entre la puerta de entrada y la ventana.</p>
+          <p><strong>Estaciona únicamente frente a la casa o dentro del garaje. No estaciones sobre el césped.</strong></p>
           <p><span style="background-color: #fff3cd; color: #856404; padding: 2px 5px; border-radius: 3px; font-weight: bold;">En caso de pérdida o no devolución, se cobrará una tarifa de reemplazo de 1.000,00 SEK </span></p>
         `,
+        petTitle: "Mascotas",
+        petText: "Las mascotas son bienvenidas. Avísanos antes de tu llegada si traerás una mascota. Se aplica una tarifa de 250 SEK (€25) por estancia.",
         photo3Title: "Teclado de la puerta de entrada",
         photo3Text: `
           <p><strong>1. Encuentra el teclado</strong><br>
@@ -457,6 +480,9 @@
 
       document.getElementById("photo2Title").textContent = t.photo2Title;
       document.getElementById("photo2Text").innerHTML = t.photo2Text;
+
+      document.getElementById("petTitle").textContent = t.petTitle;
+      document.getElementById("petText").textContent = t.petText;
 
       document.getElementById("photo3Title").textContent = t.photo3Title;
       document.getElementById("photo3Text").innerHTML = t.photo3Text;
