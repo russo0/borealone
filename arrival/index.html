@@ -117,6 +117,14 @@
           <div id="wifiText" class="text-xs text-slate-200 mt-1"></div>
         </section>
 
+        <!-- SAUNA -->
+        <section class="bg-orange-100 border border-orange-300 rounded-xl px-4 py-3 shadow-lg shadow-orange-950/20">
+          <h2 class="text-sm font-semibold text-orange-950 flex items-center gap-2">
+            <span aria-hidden="true">🔥</span><span id="saunaTitle">Sauna</span>
+          </h2>
+          <div id="saunaText" class="text-xs text-slate-700 mt-1"></div>
+        </section>
+
         <!-- CARD 4: LOCK KNOB -->
         <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
           <img src="lock-knob.jpg" class="w-full h-56 object-cover">
@@ -197,6 +205,8 @@
         `,
         wifiTitle: "Wi-Fi",
         wifiText: "Scan the Wi-Fi QR code with your phone camera. It is on the door of the coat cabinet directly opposite the entrance door, the first thing you see when you enter.",
+        saunaTitle: "Sauna",
+        saunaText: "Please keep the sauna/laundry room door closed while using the sauna and shower. Steam entering the rest of the house may trigger the smoke alarm.",
         unlockTitle: "Locking or unlocking from inside",
         unlockText: `
           <p>When you are inside, press the center of the round knob above the door handle.</p>
@@ -259,6 +269,8 @@
         `,
         wifiTitle: "WLAN",
         wifiText: "Scannen Sie den WLAN-QR-Code mit der Kamera Ihres Telefons. Er befindet sich auf der Tür des Garderobenschranks direkt gegenüber der Eingangstür, das Erste, was Sie beim Betreten sehen.",
+        saunaTitle: "Sauna",
+        saunaText: "Bitte halten Sie die Tür zum Sauna-/Waschraum geschlossen, während Sie die Sauna oder Dusche benutzen. Dampf, der in den Rest des Hauses gelangt, kann den Rauchmelder auslösen.",
         unlockTitle: "Von innen ver- oder entriegeln",
         unlockText: `
           <p>Drücken Sie im Haus auf die Mitte des runden Knaufs über dem Türgriff.</p>
@@ -321,6 +333,8 @@
         `,
         wifiTitle: "Wi-Fi",
         wifiText: "Escaneie o QR code do Wi-Fi com a câmera do celular. Ele fica na porta do armário de casacos, exatamente em frente à porta de entrada, sendo a primeira coisa que você vê ao entrar.",
+        saunaTitle: "Sauna",
+        saunaText: "Mantenha a porta da sauna/lavanderia fechada enquanto usar a sauna ou o chuveiro. O vapor que entrar no restante da casa pode acionar o alarme de fumaça.",
         unlockTitle: "Trancar ou destrancar por dentro",
         unlockText: `
           <p>Pressione o centro do botão redondo acima da maçaneta.</p>
@@ -384,6 +398,8 @@
         `,
         wifiTitle: "Wi-Fi",
         wifiText: "Skanna Wi-Fi-koden med kameran på din telefon. Den sitter på dörren till garderobsskåpet direkt mitt emot entrédörren, det första du ser när du kommer in.",
+        saunaTitle: "Bastu",
+        saunaText: "Håll dörren till bastu/tvättstuga stängd när du använder bastun eller duschen. Ånga som sprids till resten av huset kan utlösa brandvarnaren.",
         unlockTitle: "Låsa eller låsa upp inifrån",
         unlockText: `
           <p>Tryck på mitten av den runda knoppen ovanför handtaget.</p>
@@ -446,6 +462,8 @@
         `,
         wifiTitle: "Wi-Fi",
         wifiText: "Escanea el código QR del Wi-Fi con la cámara de tu teléfono. Está en la puerta del armario para abrigos, justo frente a la puerta de entrada, lo primero que verás al entrar.",
+        saunaTitle: "Sauna",
+        saunaText: "Mantén cerrada la puerta de la sauna/lavandería mientras uses la sauna o la ducha. El vapor que llegue al resto de la casa puede activar la alarma de humo.",
         unlockTitle: "Cerrar o abrir desde dentro",
         unlockText: `
           <p>Presiona el centro del botón redondo sobre la manija.</p>
@@ -489,6 +507,9 @@
 
       document.getElementById("wifiTitle").textContent = t.wifiTitle;
       document.getElementById("wifiText").textContent = t.wifiText;
+
+      document.getElementById("saunaTitle").textContent = t.saunaTitle;
+      document.getElementById("saunaText").textContent = t.saunaText;
 
       document.getElementById("unlockTitle").textContent = t.unlockTitle;
       document.getElementById("unlockText").innerHTML = t.unlockText;
