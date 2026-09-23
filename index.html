@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Stay, private Aurora photography and chases, and media from Boreal One in Swedish Lapland.">
-    <title>Boreal One AB | Swedish Lapland</title>
+    <meta name="description" content="Boreal One AB is the official home of The Yellow Aurora House in Överkalix, private Aurora experiences, and media from Swedish Lapland.">
+    <title>Boreal One AB | The Yellow Aurora House &amp; Swedish Lapland</title>
+    <link rel="canonical" href="https://borealone.com/">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Boreal One AB">
+    <meta property="og:title" content="Boreal One AB | The Yellow Aurora House &amp; Swedish Lapland">
+    <meta property="og:description" content="The official home of The Yellow Aurora House, private Aurora experiences, and Boreal One Media in Swedish Lapland.">
+    <meta property="og:url" content="https://borealone.com/">
+    <meta property="og:image" content="https://borealone.com/images/airbnb_cover.jpg">
+    <meta property="og:image:alt" content="The Yellow Aurora House under the Northern Lights in winter">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Boreal One AB | The Yellow Aurora House &amp; Swedish Lapland">
+    <meta name="twitter:description" content="The official home of The Yellow Aurora House, private Aurora experiences, and Boreal One Media in Swedish Lapland.">
+    <meta name="twitter:image" content="https://borealone.com/images/airbnb_cover.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -19,6 +31,19 @@
                 }
             }
         }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://borealone.com/#organization",
+        "name": "Boreal One AB",
+        "legalName": "Boreal One AB",
+        "url": "https://borealone.com/",
+        "logo": "https://borealone.com/logo-icon.png",
+        "email": "info@borealone.com",
+        "description": "Boreal One AB operates The Yellow Aurora House in Överkalix and provides private Aurora experiences and visual media from Swedish Lapland."
+    }
     </script>
 </head>
 <body class="bg-[#0b0f19] text-gray-200 font-sans antialiased min-h-screen relative overflow-x-hidden">
@@ -42,6 +67,7 @@
             </div>
 
             <div class="w-full sm:w-auto flex flex-wrap items-center justify-center sm:justify-start gap-x-4 gap-y-2 text-[10px] sm:text-xs font-semibold order-3 sm:order-2 border-t border-white/10 pt-2 sm:pt-0 sm:border-none">
+                <a href="/yellow-aurora-house/" id="nav-stay-link" class="text-gray-300 hover:text-white transition uppercase tracking-wider sm:normal-case">The Yellow Aurora House</a>
                 <a href="#explore" id="nav-explore-link" class="text-gray-300 hover:text-white transition uppercase tracking-wider sm:normal-case">Explore Boreal One</a>
                 <a href="https://media.borealone.com/aurora-sessions.html" id="nav-aurora-link" class="text-aurora hover:text-white transition uppercase tracking-wider sm:normal-case">Private Aurora Experiences</a>
                 <a href="https://media.borealone.com" id="nav-media-link" class="text-gray-300 hover:text-white transition uppercase tracking-wider sm:normal-case">Media & Photography</a>
@@ -75,7 +101,10 @@
                     <p id="stay-kicker" class="text-aurora text-xs font-bold tracking-[0.18em] uppercase">01 · Stay</p>
                     <h3 id="stay-title" class="mt-4 text-2xl md:text-3xl font-semibold text-white">Stay in Swedish Lapland</h3>
                     <p id="stay-desc" class="mt-3 max-w-md text-sm md:text-base text-gray-200 leading-relaxed">A warm, independent base for slow mornings, dark skies, and time close to the Arctic landscape.</p>
-                    <a href="https://www.booking.com/hotel/se/yellow-aurora-dream.html" id="stay-btn" class="mt-auto inline-flex items-center justify-center border border-white/25 bg-black/20 hover:bg-white hover:text-gray-950 text-white font-bold text-sm px-5 py-3 rounded-xl transition">Check stay availability</a>
+                    <div class="mt-auto flex flex-wrap gap-3">
+                        <a href="/yellow-aurora-house/" id="stay-details-btn" class="inline-flex items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-5 py-3 rounded-xl transition shadow-md">Explore The Yellow Aurora House</a>
+                        <a href="https://www.booking.com/hotel/se/yellow-aurora-dream.html" id="stay-btn" class="inline-flex items-center justify-center border border-white/25 bg-black/20 hover:bg-white hover:text-gray-950 text-white font-bold text-sm px-5 py-3 rounded-xl transition">Check availability</a>
+                    </div>
                 </div>
             </article>
 
@@ -112,28 +141,28 @@
     <script>
         const translations = {
             en: {
-                navExplore: "Explore Boreal One", navAurora: "Private Aurora Experiences", navMedia: "Media & Photography",
+                navStay: "The Yellow Aurora House", navExplore: "Explore Boreal One", navAurora: "Private Aurora Experiences", navMedia: "Media & Photography",
                 heroEyebrow: "Boreal One · Swedish Lapland", heroTitle: 'A more personal way to experience <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Swedish Lapland.</span>', heroDesc: "Stay under the Arctic sky, plan private Aurora photography or an Aurora chase, or explore photography and visual stories from the North.", heroExploreBtn: "Explore Boreal One", heroAuroraBtn: "Private Aurora Experiences", heroNote: "Stay, Aurora and photography, thoughtfully connected.",
                 exploreEyebrow: "Choose your way in", exploreTitle: "Everything Boreal One, clearly connected.", exploreDesc: "Start with the experience or service that brings you here. We will take it from there.",
-                stayKicker: "01 · Stay", stayTitle: "Stay in Swedish Lapland", stayDesc: "A warm, independent base for slow mornings, dark skies, and time close to the Arctic landscape.", stayBtn: "Check stay availability",
+                stayKicker: "01 · Stay", stayTitle: "Stay in Swedish Lapland", stayDesc: "A warm, independent base for slow mornings, dark skies, and time close to the Arctic landscape.", stayDetailsBtn: "Explore The Yellow Aurora House", stayBtn: "Check availability",
                 auroraKicker: "02 · Private experience", auroraTitle: "Private Aurora Experiences", auroraDesc: "Private Aurora photography sessions and chases, planned around the conditions and your time in the North.", auroraTagPrivate: "Private", auroraTagPhoto: "Photography & chases", auroraTagLapland: "Swedish Lapland", auroraBtn: "Explore Aurora experiences",
                 mediaKicker: "03 · Visual work", mediaTitle: "Media & Photography", mediaDesc: "Fine Art landscapes, property imagery, and visual storytelling from the North.", mediaBtn: "Visit Boreal One Media →",
                 footerTitle: "Not sure where to begin?", footerDesc: "Tell us what brings you to Swedish Lapland, or what your project needs. We will point you in the right direction.", footerBtn: "Contact Boreal One", footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
             },
             sv: {
-                navExplore: "Utforska Boreal One", navAurora: "Privata norrskensupplevelser", navMedia: "Media & Fotografering",
+                navStay: "The Yellow Aurora House", navExplore: "Utforska Boreal One", navAurora: "Privata norrskensupplevelser", navMedia: "Media & Fotografering",
                 heroEyebrow: "Boreal One · Svenska Lappland", heroTitle: 'Ett mer personligt sätt att uppleva <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Svenska Lappland.</span>', heroDesc: "Bo under den arktiska himlen, planera en privat norrskensfotografering eller en norrskenstur, eller upptäck fotografi och visuellt berättande från norr.", heroExploreBtn: "Utforska Boreal One", heroAuroraBtn: "Privata norrskensupplevelser", heroNote: "Boende, norrsken och fotografi, omsorgsfullt sammanlänkade.",
                 exploreEyebrow: "Välj din ingång", exploreTitle: "Allt från Boreal One, tydligt sammanlänkat.", exploreDesc: "Börja med upplevelsen eller tjänsten som tar dig hit. Vi hjälper dig vidare därifrån.",
-                stayKicker: "01 · Boende", stayTitle: "Bo i Svenska Lappland", stayDesc: "En varm, självständig bas för långsamma morgnar, mörka himlar och tid nära det arktiska landskapet.", stayBtn: "Kontrollera boendets tillgänglighet",
+                stayKicker: "01 · Boende", stayTitle: "Bo i Svenska Lappland", stayDesc: "En varm, självständig bas för långsamma morgnar, mörka himlar och tid nära det arktiska landskapet.", stayDetailsBtn: "Utforska Yellow Aurora House", stayBtn: "Kontrollera tillgänglighet",
                 auroraKicker: "02 · Privat upplevelse", auroraTitle: "Privata norrskensupplevelser", auroraDesc: "Privata norrskensfotograferingar och norrskensturer, planerade efter förhållandena och din tid i norr.", auroraTagPrivate: "Privat", auroraTagPhoto: "Fotografering & norrskensturer", auroraTagLapland: "Svenska Lappland", auroraBtn: "Utforska norrskensupplevelser",
                 mediaKicker: "03 · Visuellt arbete", mediaTitle: "Media & Fotografering", mediaDesc: "Fine Art-landskap, fastighetsbilder och visuellt berättande från norr.", mediaBtn: "Besök Boreal One Media →",
                 footerTitle: "Osäker på var du ska börja?", footerDesc: "Berätta vad som tar dig till Svenska Lappland eller vad ditt projekt behöver. Vi visar dig rätt väg.", footerBtn: "Kontakta Boreal One", footerRights: "© 2026 Boreal One AB. Registrerat i Sverige. Med ensamrätt."
             },
             pt: {
-                navExplore: "Explorar Boreal One", navAurora: "Experiências Privadas de Aurora", navMedia: "Mídia & Fotografia",
+                navStay: "The Yellow Aurora House", navExplore: "Explorar Boreal One", navAurora: "Experiências Privadas de Aurora", navMedia: "Mídia & Fotografia",
                 heroEyebrow: "Boreal One · Lapônia Sueca", heroTitle: 'Uma forma mais pessoal de viver a <span class="text-transparent bg-clip-text bg-gradient-to-r from-aurora to-blue-400">Lapônia Sueca.</span>', heroDesc: "Hospede-se sob o céu ártico, planeje uma sessão privada de fotografia da Aurora ou uma caçada à Aurora, ou descubra fotografia e narrativas visuais do Norte.", heroExploreBtn: "Explorar Boreal One", heroAuroraBtn: "Experiências Privadas de Aurora", heroNote: "Hospedagem, Aurora e fotografia, conectadas com cuidado.",
                 exploreEyebrow: "Escolha por onde começar", exploreTitle: "Tudo da Boreal One, claramente conectado.", exploreDesc: "Comece pela experiência ou serviço que trouxe você até aqui. Nós cuidamos do próximo passo.",
-                stayKicker: "01 · Hospedagem", stayTitle: "Hospede-se na Lapônia Sueca", stayDesc: "Uma base acolhedora e independente para manhãs lentas, céus escuros e tempo perto da paisagem ártica.", stayBtn: "Consultar disponibilidade",
+                stayKicker: "01 · Hospedagem", stayTitle: "Hospede-se na Lapônia Sueca", stayDesc: "Uma base acolhedora e independente para manhãs lentas, céus escuros e tempo perto da paisagem ártica.", stayDetailsBtn: "Conhecer a Yellow Aurora House", stayBtn: "Consultar disponibilidade",
                 auroraKicker: "02 · Experiência privada", auroraTitle: "Experiências Privadas de Aurora", auroraDesc: "Sessões privadas de fotografia e caçadas à Aurora, planejadas conforme as condições e seu tempo no Norte.", auroraTagPrivate: "Privada", auroraTagPhoto: "Fotografia & caçadas", auroraTagLapland: "Lapônia Sueca", auroraBtn: "Explorar experiências de Aurora",
                 mediaKicker: "03 · Trabalho visual", mediaTitle: "Mídia & Fotografia", mediaDesc: "Paisagens Fine Art, imagens imobiliárias e narrativas visuais do Norte.", mediaBtn: "Visitar Boreal One Media →",
                 footerTitle: "Não sabe por onde começar?", footerDesc: "Conte-nos o que traz você à Lapônia Sueca ou do que seu projeto precisa. Indicaremos o melhor caminho.", footerBtn: "Falar com a Boreal One", footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
@@ -143,10 +172,10 @@
         function setLanguage(lang) {
             const content = translations[lang];
             const textMap = {
-                'nav-explore-link': content.navExplore, 'nav-aurora-link': content.navAurora, 'nav-media-link': content.navMedia,
+                'nav-stay-link': content.navStay, 'nav-explore-link': content.navExplore, 'nav-aurora-link': content.navAurora, 'nav-media-link': content.navMedia,
                 'hero-eyebrow': content.heroEyebrow, 'hero-desc': content.heroDesc, 'hero-explore-btn': content.heroExploreBtn, 'hero-aurora-btn': content.heroAuroraBtn, 'hero-note': content.heroNote,
                 'explore-eyebrow': content.exploreEyebrow, 'explore-title': content.exploreTitle, 'explore-desc': content.exploreDesc,
-                'stay-kicker': content.stayKicker, 'stay-title': content.stayTitle, 'stay-desc': content.stayDesc, 'stay-btn': content.stayBtn,
+                'stay-kicker': content.stayKicker, 'stay-title': content.stayTitle, 'stay-desc': content.stayDesc, 'stay-details-btn': content.stayDetailsBtn, 'stay-btn': content.stayBtn,
                 'aurora-kicker': content.auroraKicker, 'aurora-title': content.auroraTitle, 'aurora-desc': content.auroraDesc, 'aurora-tag-private': content.auroraTagPrivate, 'aurora-tag-photo': content.auroraTagPhoto, 'aurora-tag-lapland': content.auroraTagLapland, 'aurora-btn': content.auroraBtn,
                 'media-kicker': content.mediaKicker, 'media-title': content.mediaTitle, 'media-desc': content.mediaDesc, 'media-btn': content.mediaBtn,
                 'footer-title': content.footerTitle, 'footer-desc': content.footerDesc, 'footer-btn': content.footerBtn, 'footer-rights': content.footerRights
