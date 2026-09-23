@@ -137,10 +137,15 @@
         <img src="../logo-icon.png" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
         <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-300 transition">BOREAL ONE AB</span>
       </a>
-      <div class="w-full sm:w-auto flex flex-wrap items-center justify-center sm:justify-end gap-x-4 gap-y-2 text-[10px] sm:text-xs font-semibold border-t border-white/10 pt-2 sm:pt-0 sm:border-none">
+      <div class="flex space-x-1 bg-black/30 p-1 rounded border border-white/10 text-xs font-bold order-2 sm:order-3" aria-label="Language selector">
+        <button type="button" onclick="setLanguage('en')" id="btn-en" class="px-2 py-1 rounded transition text-white bg-white/15" aria-label="English" aria-pressed="true">EN</button>
+        <button type="button" onclick="setLanguage('sv')" id="btn-sv" class="px-2 py-1 rounded transition text-gray-300 hover:text-white" aria-label="Svenska" aria-pressed="false">SV</button>
+        <button type="button" onclick="setLanguage('pt')" id="btn-pt" class="px-2 py-1 rounded transition text-gray-300 hover:text-white" aria-label="Português" aria-pressed="false">PT</button>
+      </div>
+      <div class="w-full sm:w-auto flex flex-wrap items-center justify-center sm:justify-end gap-x-4 gap-y-2 text-[10px] sm:text-xs font-semibold order-3 sm:order-2 border-t border-white/10 pt-2 sm:pt-0 sm:border-none">
         <a href="https://borealone.com/" class="text-gray-300 hover:text-white transition">Boreal One</a>
-        <a href="https://media.borealone.com/aurora-sessions.html" class="text-aurora hover:text-white transition">Private Aurora Experiences</a>
-        <a href="https://media.borealone.com/" class="text-gray-300 hover:text-white transition">Media &amp; Photography</a>
+        <a href="https://media.borealone.com/aurora-sessions.html" id="nav-aurora" class="text-aurora hover:text-white transition">Private Aurora Experiences</a>
+        <a href="https://media.borealone.com/" id="nav-media" class="text-gray-300 hover:text-white transition">Media &amp; Photography</a>
       </div>
     </div>
   </nav>
@@ -150,55 +155,55 @@
       <img src="../images/airbnb_cover.jpg" alt="The Yellow Aurora House under the Northern Lights in winter" class="absolute inset-0 -z-20 w-full h-full object-cover" fetchpriority="high">
       <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#02050d]/45 via-[#02050d]/70 to-[#070b14]"></div>
       <div class="max-w-6xl mx-auto px-4 pt-24 pb-20 md:pt-36 md:pb-28">
-        <p class="text-aurora text-xs font-bold tracking-[0.22em] uppercase mb-5">Boreal One stay · Gyljen, Överkalix</p>
+        <p id="hero-kicker" class="text-aurora text-xs font-bold tracking-[0.22em] uppercase mb-5">Boreal One stay · Gyljen, Överkalix</p>
         <h1 class="max-w-3xl text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.03] text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.75)]">The Yellow Aurora House</h1>
-        <p class="max-w-2xl mt-6 text-base md:text-xl leading-relaxed text-slate-100 drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)]">A private house in Swedish Lapland, where forest, quiet roads, dark skies, and the Kalix River set the pace.</p>
+        <p id="hero-desc" class="max-w-2xl mt-6 text-base md:text-xl leading-relaxed text-slate-100 drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)]">A private house in Swedish Lapland, where forest, quiet roads, dark skies, and the Kalix River set the pace.</p>
         <div class="mt-9 flex flex-col sm:flex-row items-start gap-3">
-          <a href="https://www.booking.com/hotel/se/yellow-aurora-dream.html" class="inline-flex items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-6 py-3.5 rounded-xl transition shadow-lg">Check availability on Booking.com</a>
-          <a href="#the-house" class="inline-flex items-center justify-center border border-white/35 bg-black/20 hover:bg-white hover:text-gray-950 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition">Explore the house</a>
+          <a href="https://www.booking.com/hotel/se/yellow-aurora-dream.html" id="hero-book-btn" class="inline-flex items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-6 py-3.5 rounded-xl transition shadow-lg">Check availability on Booking.com</a>
+          <a href="#the-house" id="hero-explore-btn" class="inline-flex items-center justify-center border border-white/35 bg-black/20 hover:bg-white hover:text-gray-950 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition">Explore the house</a>
         </div>
       </div>
     </section>
 
     <section id="the-house" class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
       <div>
-        <p class="text-aurora text-xs font-bold tracking-[0.2em] uppercase mb-4">A private base in the North</p>
-        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-white">Made for a slower stay in Swedish Lapland.</h2>
-        <p class="mt-5 text-slate-300 leading-relaxed">The Yellow Aurora House is a private home for up to four guests in Gyljen, around 10 km from central Överkalix. It is operated by Boreal One AB and designed for guests who want the comfort of a home while staying close to the landscape.</p>
-        <p class="mt-4 text-slate-300 leading-relaxed">Inside, there is a king bedroom, a sofa bed in the living room, a well-equipped kitchen, and a private sauna. Outside, the house has its own parking area and covered garage.</p>
+        <p id="house-kicker" class="text-aurora text-xs font-bold tracking-[0.2em] uppercase mb-4">A private base in the North</p>
+        <h2 id="house-title" class="text-3xl md:text-4xl font-semibold tracking-tight text-white">Made for a slower stay in Swedish Lapland.</h2>
+        <p id="house-desc-1" class="mt-5 text-slate-300 leading-relaxed">The Yellow Aurora House is a private home for up to four guests in Gyljen, around 10 km from central Överkalix. It is operated by Boreal One AB and designed for guests who want the comfort of a home while staying close to the landscape.</p>
+        <p id="house-desc-2" class="mt-4 text-slate-300 leading-relaxed">Inside, there is a king bedroom, a sofa bed in the living room, a well-equipped kitchen, and a private sauna. Outside, the house has its own parking area and covered garage.</p>
       </div>
       <figure class="overflow-hidden rounded-2xl border border-white/10 bg-slate-950 shadow-2xl">
         <img src="../images/airbnb_cover.jpg" alt="The Yellow Aurora House under the Northern Lights in winter" class="w-full aspect-[4/3] object-cover">
-        <figcaption class="px-4 py-3 text-xs text-slate-400">The Yellow Aurora House under the Northern Lights in winter.</figcaption>
+        <figcaption id="house-caption" class="px-4 py-3 text-xs text-slate-400">The Yellow Aurora House under the Northern Lights in winter.</figcaption>
       </figure>
     </section>
 
     <section class="border-y border-white/10 bg-slate-950/55">
       <div class="max-w-6xl mx-auto px-4 py-16 md:py-20">
         <div class="max-w-2xl">
-          <p class="text-aurora text-xs font-bold tracking-[0.2em] uppercase mb-4">What is here</p>
-          <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-white">Everything you need, without the crowds.</h2>
+          <p id="features-kicker" class="text-aurora text-xs font-bold tracking-[0.2em] uppercase mb-4">What is here</p>
+          <h2 id="features-title" class="text-3xl md:text-4xl font-semibold tracking-tight text-white">Everything you need, without the crowds.</h2>
         </div>
         <div class="mt-9 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <article class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
             <p class="text-2xl" aria-hidden="true">🏠</p>
-            <h3 class="mt-4 font-semibold text-white">Private stay</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-300">The entire house is yours, with space for up to four guests.</p>
+            <h3 id="feature-stay-title" class="mt-4 font-semibold text-white">Private stay</h3>
+            <p id="feature-stay-desc" class="mt-2 text-sm leading-relaxed text-slate-300">The entire house is yours, with space for up to four guests.</p>
           </article>
           <article class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
             <p class="text-2xl" aria-hidden="true">🔥</p>
-            <h3 class="mt-4 font-semibold text-white">Private sauna</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-300">A simple place to warm up after a day outside.</p>
+            <h3 id="feature-sauna-title" class="mt-4 font-semibold text-white">Private sauna</h3>
+            <p id="feature-sauna-desc" class="mt-2 text-sm leading-relaxed text-slate-300">A simple place to warm up after a day outside.</p>
           </article>
           <article class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
             <p class="text-2xl" aria-hidden="true">🌲</p>
-            <h3 class="mt-4 font-semibold text-white">Nature nearby</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-300">Forest surroundings and a public riverside area about 80 metres away.</p>
+            <h3 id="feature-nature-title" class="mt-4 font-semibold text-white">Nature nearby</h3>
+            <p id="feature-nature-desc" class="mt-2 text-sm leading-relaxed text-slate-300">Forest surroundings and a public riverside area about 80 metres away.</p>
           </article>
           <article class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
             <p class="text-2xl" aria-hidden="true">🚗</p>
-            <h3 class="mt-4 font-semibold text-white">Easy arrival</h3>
-            <p class="mt-2 text-sm leading-relaxed text-slate-300">Private parking by the entrance and a covered garage for guests to use.</p>
+            <h3 id="feature-arrival-title" class="mt-4 font-semibold text-white">Easy arrival</h3>
+            <p id="feature-arrival-desc" class="mt-2 text-sm leading-relaxed text-slate-300">Private parking by the entrance and a covered garage for guests to use.</p>
           </article>
         </div>
       </div>
@@ -206,54 +211,127 @@
 
     <section class="max-w-6xl mx-auto px-4 py-16 md:py-24 grid lg:grid-cols-2 gap-8">
       <article class="rounded-2xl border border-aurora/30 bg-gradient-to-br from-aurora/10 via-[#0c1822] to-[#070b14] p-7 md:p-9">
-        <p class="text-aurora text-xs font-bold tracking-[0.2em] uppercase">Dark skies, honestly described</p>
-        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white">The Aurora is possible, never promised.</h2>
-        <p class="mt-4 text-slate-200 leading-relaxed">Clear winter nights can offer beautiful Aurora viewing from the house or close nearby. The Northern Lights are a natural phenomenon, so weather, cloud cover, and solar activity always decide what the night brings.</p>
-        <a href="https://media.borealone.com/aurora-sessions.html" class="inline-flex mt-6 text-sm font-bold text-aurora hover:text-white transition">Explore private Aurora experiences</a>
+        <p id="aurora-kicker" class="text-aurora text-xs font-bold tracking-[0.2em] uppercase">Dark skies, honestly described</p>
+        <h2 id="aurora-title" class="mt-4 text-3xl font-semibold tracking-tight text-white">The Aurora is possible, never promised.</h2>
+        <p id="aurora-desc" class="mt-4 text-slate-200 leading-relaxed">Clear winter nights can offer beautiful Aurora viewing from the house or close nearby. The Northern Lights are a natural phenomenon, so weather, cloud cover, and solar activity always decide what the night brings.</p>
+        <a href="https://media.borealone.com/aurora-sessions.html" id="aurora-link" class="inline-flex mt-6 text-sm font-bold text-aurora hover:text-white transition">Explore private Aurora experiences</a>
       </article>
       <article class="rounded-2xl border border-white/10 bg-slate-950/70 p-7 md:p-9">
-        <p class="text-aurora text-xs font-bold tracking-[0.2em] uppercase">A local stay</p>
-        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-white">Close to Överkalix, far from the usual rush.</h2>
-        <p class="mt-4 text-slate-300 leading-relaxed">The house is in Gyljen, with Överkalix around 10 km away for groceries, restaurants, cafés, and everyday essentials. In summer, the area invites slower days by the river. In winter, the same landscape becomes quiet, snowy, and dark.</p>
+        <p id="local-kicker" class="text-aurora text-xs font-bold tracking-[0.2em] uppercase">A local stay</p>
+        <h2 id="local-title" class="mt-4 text-3xl font-semibold tracking-tight text-white">Close to Överkalix, far from the usual rush.</h2>
+        <p id="local-desc" class="mt-4 text-slate-300 leading-relaxed">The house is in Gyljen, with Överkalix around 10 km away for groceries, restaurants, cafés, and everyday essentials. In summer, the area invites slower days by the river. In winter, the same landscape becomes quiet, snowy, and dark.</p>
       </article>
     </section>
 
     <section class="border-y border-white/10 bg-slate-950/55">
       <div class="max-w-4xl mx-auto px-4 py-16 md:py-20">
-        <p class="text-aurora text-xs font-bold tracking-[0.2em] uppercase mb-4">Before you book</p>
-        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-white">A few useful details.</h2>
+        <p id="faq-kicker" class="text-aurora text-xs font-bold tracking-[0.2em] uppercase mb-4">Before you book</p>
+        <h2 id="faq-title" class="text-3xl md:text-4xl font-semibold tracking-tight text-white">A few useful details.</h2>
         <div class="mt-8 space-y-3">
           <details class="group rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4">
-            <summary class="cursor-pointer list-none font-semibold text-white flex items-center justify-between gap-4">How many guests can stay?<span class="text-aurora group-open:rotate-45 transition">+</span></summary>
-            <p class="mt-3 text-sm leading-relaxed text-slate-300">The house accommodates up to four guests, with one king bedroom and a sofa bed in the living room.</p>
+            <summary class="cursor-pointer list-none font-semibold text-white flex items-center justify-between gap-4"><span id="faq-guests-question">How many guests can stay?</span><span class="text-aurora group-open:rotate-45 transition">+</span></summary>
+            <p id="faq-guests-answer" class="mt-3 text-sm leading-relaxed text-slate-300">The house accommodates up to four guests, with one king bedroom and a sofa bed in the living room.</p>
           </details>
           <details class="group rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4">
-            <summary class="cursor-pointer list-none font-semibold text-white flex items-center justify-between gap-4">Can I bring a pet?<span class="text-aurora group-open:rotate-45 transition">+</span></summary>
-            <p class="mt-3 text-sm leading-relaxed text-slate-300">Pets are welcome when arranged before arrival. A fee of 250 SEK or €25 applies per pet, per stay.</p>
+            <summary class="cursor-pointer list-none font-semibold text-white flex items-center justify-between gap-4"><span id="faq-pets-question">Can I bring a pet?</span><span class="text-aurora group-open:rotate-45 transition">+</span></summary>
+            <p id="faq-pets-answer" class="mt-3 text-sm leading-relaxed text-slate-300">Pets are welcome when arranged before arrival. A fee of 250 SEK or €25 applies per pet, per stay.</p>
           </details>
           <details class="group rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4">
-            <summary class="cursor-pointer list-none font-semibold text-white flex items-center justify-between gap-4">Where is the house?<span class="text-aurora group-open:rotate-45 transition">+</span></summary>
-            <p class="mt-3 text-sm leading-relaxed text-slate-300">Gyljen Backgränd 2, 956 91 Överkalix, Sweden. The house is around 10 km from central Överkalix.</p>
+            <summary class="cursor-pointer list-none font-semibold text-white flex items-center justify-between gap-4"><span id="faq-location-question">Where is the house?</span><span class="text-aurora group-open:rotate-45 transition">+</span></summary>
+            <p id="faq-location-answer" class="mt-3 text-sm leading-relaxed text-slate-300">Gyljen Backgränd 2, 956 91 Överkalix, Sweden. The house is around 10 km from central Överkalix.</p>
           </details>
           <details class="group rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4">
-            <summary class="cursor-pointer list-none font-semibold text-white flex items-center justify-between gap-4">How do I reserve a stay?<span class="text-aurora group-open:rotate-45 transition">+</span></summary>
-            <p class="mt-3 text-sm leading-relaxed text-slate-300">Availability, pricing, and reservations are managed through our Booking.com listing so the calendar stays accurate.</p>
+            <summary class="cursor-pointer list-none font-semibold text-white flex items-center justify-between gap-4"><span id="faq-booking-question">How do I reserve a stay?</span><span class="text-aurora group-open:rotate-45 transition">+</span></summary>
+            <p id="faq-booking-answer" class="mt-3 text-sm leading-relaxed text-slate-300">Availability, pricing, and reservations are managed through our Booking.com listing so the calendar stays accurate.</p>
           </details>
         </div>
       </div>
     </section>
 
     <section class="max-w-4xl mx-auto px-4 py-20 md:py-28 text-center">
-      <p class="text-aurora text-xs font-bold tracking-[0.2em] uppercase">The official home of the property</p>
-      <h2 class="mt-4 text-3xl md:text-5xl font-semibold tracking-tight text-white">Plan your stay at The Yellow Aurora House.</h2>
-      <p class="max-w-2xl mx-auto mt-5 text-slate-300 leading-relaxed">The Yellow Aurora House is operated by Boreal One AB. Check the live calendar and book through Booking.com.</p>
-      <a href="https://www.booking.com/hotel/se/yellow-aurora-dream.html" class="inline-flex mt-8 items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-7 py-3.5 rounded-xl transition shadow-lg">Check availability on Booking.com</a>
+      <p id="cta-kicker" class="text-aurora text-xs font-bold tracking-[0.2em] uppercase">The official home of the property</p>
+      <h2 id="cta-title" class="mt-4 text-3xl md:text-5xl font-semibold tracking-tight text-white">Plan your stay at The Yellow Aurora House.</h2>
+      <p id="cta-desc" class="max-w-2xl mx-auto mt-5 text-slate-300 leading-relaxed">The Yellow Aurora House is operated by Boreal One AB. Check the live calendar and book through Booking.com.</p>
+      <a href="https://www.booking.com/hotel/se/yellow-aurora-dream.html" id="cta-book-btn" class="inline-flex mt-8 items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-7 py-3.5 rounded-xl transition shadow-lg">Check availability on Booking.com</a>
     </section>
   </main>
 
   <footer class="border-t border-white/10 bg-[#050811] px-4 py-10 text-center">
     <a href="https://borealone.com/" class="text-sm font-semibold text-white hover:text-aurora transition">Boreal One AB</a>
-    <p class="mt-2 text-xs text-slate-500">The Yellow Aurora House, Gyljen, Överkalix, Swedish Lapland</p>
+    <p id="footer-location" class="mt-2 text-xs text-slate-500">The Yellow Aurora House, Gyljen, Överkalix, Swedish Lapland</p>
   </footer>
+  <script>
+    const translations = {
+      en: {
+        navAurora: 'Private Aurora Experiences', navMedia: 'Media & Photography',
+        heroKicker: 'Boreal One stay · Gyljen, Överkalix', heroDesc: 'A private house in Swedish Lapland, where forest, quiet roads, dark skies, and the Kalix River set the pace.', heroBookBtn: 'Check availability on Booking.com', heroExploreBtn: 'Explore the house',
+        houseKicker: 'A private base in the North', houseTitle: 'Made for a slower stay in Swedish Lapland.', houseDesc1: 'The Yellow Aurora House is a private home for up to four guests in Gyljen, around 10 km from central Överkalix. It is operated by Boreal One AB and designed for guests who want the comfort of a home while staying close to the landscape.', houseDesc2: 'Inside, there is a king bedroom, a sofa bed in the living room, a well-equipped kitchen, and a private sauna. Outside, the house has its own parking area and covered garage.', houseCaption: 'The Yellow Aurora House under the Northern Lights in winter.',
+        featuresKicker: 'What is here', featuresTitle: 'Everything you need, without the crowds.', featureStayTitle: 'Private stay', featureStayDesc: 'The entire house is yours, with space for up to four guests.', featureSaunaTitle: 'Private sauna', featureSaunaDesc: 'A simple place to warm up after a day outside.', featureNatureTitle: 'Nature nearby', featureNatureDesc: 'Forest surroundings and a public riverside area about 80 metres away.', featureArrivalTitle: 'Easy arrival', featureArrivalDesc: 'Private parking by the entrance and a covered garage for guests to use.',
+        auroraKicker: 'Dark skies, honestly described', auroraTitle: 'The Aurora is possible, never promised.', auroraDesc: 'Clear winter nights can offer beautiful Aurora viewing from the house or close nearby. The Northern Lights are a natural phenomenon, so weather, cloud cover, and solar activity always decide what the night brings.', auroraLink: 'Explore private Aurora experiences',
+        localKicker: 'A local stay', localTitle: 'Close to Överkalix, far from the usual rush.', localDesc: 'The house is in Gyljen, with Överkalix around 10 km away for groceries, restaurants, cafés, and everyday essentials. In summer, the area invites slower days by the river. In winter, the same landscape becomes quiet, snowy, and dark.',
+        faqKicker: 'Before you book', faqTitle: 'A few useful details.', faqGuestsQuestion: 'How many guests can stay?', faqGuestsAnswer: 'The house accommodates up to four guests, with one king bedroom and a sofa bed in the living room.', faqPetsQuestion: 'Can I bring a pet?', faqPetsAnswer: 'Pets are welcome when arranged before arrival. A fee of 250 SEK or €25 applies per pet, per stay.', faqLocationQuestion: 'Where is the house?', faqLocationAnswer: 'Gyljen Backgränd 2, 956 91 Överkalix, Sweden. The house is around 10 km from central Överkalix.', faqBookingQuestion: 'How do I reserve a stay?', faqBookingAnswer: 'Availability, pricing, and reservations are managed through our Booking.com listing so the calendar stays accurate.',
+        ctaKicker: 'The official home of the property', ctaTitle: 'Plan your stay at The Yellow Aurora House.', ctaDesc: 'The Yellow Aurora House is operated by Boreal One AB. Check the live calendar and book through Booking.com.', ctaBookBtn: 'Check availability on Booking.com', footerLocation: 'The Yellow Aurora House, Gyljen, Överkalix, Swedish Lapland'
+      },
+      sv: {
+        navAurora: 'Privata norrskensupplevelser', navMedia: 'Media & Fotografering',
+        heroKicker: 'Boende från Boreal One · Gyljen, Överkalix', heroDesc: 'Ett privat hus i Svenska Lappland, där skog, lugna vägar, mörka himlar och Kalixälven sätter tempot.', heroBookBtn: 'Kontrollera tillgänglighet på Booking.com', heroExploreBtn: 'Utforska huset',
+        houseKicker: 'En privat bas i norr', houseTitle: 'Skapat för en lugnare vistelse i Svenska Lappland.', houseDesc1: 'The Yellow Aurora House är ett privat hem för upp till fyra gäster i Gyljen, cirka 10 km från centrala Överkalix. Det drivs av Boreal One AB och är för gäster som vill ha bekvämligheten av ett hem, nära landskapet.', houseDesc2: 'Inne finns ett sovrum med king size-säng, en bäddsoffa i vardagsrummet, ett välutrustat kök och en privat bastu. Utomhus finns egen parkering och ett täckt garage.', houseCaption: 'The Yellow Aurora House under norrskenet en vinterkväll.',
+        featuresKicker: 'Detta finns här', featuresTitle: 'Allt du behöver, utan trängseln.', featureStayTitle: 'Privat boende', featureStayDesc: 'Hela huset är ert, med plats för upp till fyra gäster.', featureSaunaTitle: 'Privat bastu', featureSaunaDesc: 'En enkel plats att värma upp sig efter en dag utomhus.', featureNatureTitle: 'Natur nära', featureNatureDesc: 'Skog runt huset och ett offentligt område vid älven cirka 80 meter bort.', featureArrivalTitle: 'Enkel ankomst', featureArrivalDesc: 'Privat parkering vid entrén och ett täckt garage för gäster att använda.',
+        auroraKicker: 'Mörka himlar, ärligt beskrivet', auroraTitle: 'Norrsken är möjligt, aldrig en garanti.', auroraDesc: 'Klara vinterkvällar kan ge vackra norrskensupplevelser från huset eller alldeles i närheten. Norrsken är ett naturfenomen, så väder, molntäcke och solaktivitet avgör alltid vad kvällen bjuder på.', auroraLink: 'Utforska privata norrskensupplevelser',
+        localKicker: 'En lokal vistelse', localTitle: 'Nära Överkalix, långt från den vanliga stressen.', localDesc: 'Huset ligger i Gyljen, med cirka 10 km till Överkalix för matbutiker, restauranger, kaféer och vardagliga ärenden. På sommaren bjuder området in till lugnare dagar vid älven. På vintern blir samma landskap stilla, snötäckt och mörkt.',
+        faqKicker: 'Innan du bokar', faqTitle: 'Några användbara detaljer.', faqGuestsQuestion: 'Hur många gäster kan bo här?', faqGuestsAnswer: 'Huset rymmer upp till fyra gäster, med ett sovrum med king size-säng och en bäddsoffa i vardagsrummet.', faqPetsQuestion: 'Kan jag ta med ett husdjur?', faqPetsAnswer: 'Husdjur är välkomna när det har ordnats före ankomst. En avgift på 250 SEK eller 25 € gäller per husdjur och vistelse.', faqLocationQuestion: 'Var ligger huset?', faqLocationAnswer: 'Gyljen Backgränd 2, 956 91 Överkalix, Sverige. Huset ligger cirka 10 km från centrala Överkalix.', faqBookingQuestion: 'Hur bokar jag en vistelse?', faqBookingAnswer: 'Tillgänglighet, priser och bokningar hanteras via vår Booking.com-sida så att kalendern alltid är korrekt.',
+        ctaKicker: 'Boendets officiella webbplats', ctaTitle: 'Planera din vistelse på The Yellow Aurora House.', ctaDesc: 'The Yellow Aurora House drivs av Boreal One AB. Se den aktuella kalendern och boka via Booking.com.', ctaBookBtn: 'Kontrollera tillgänglighet på Booking.com', footerLocation: 'The Yellow Aurora House, Gyljen, Överkalix, Svenska Lappland'
+      },
+      pt: {
+        navAurora: 'Experiências Privadas de Aurora', navMedia: 'Mídia & Fotografia',
+        heroKicker: 'Hospedagem Boreal One · Gyljen, Överkalix', heroDesc: 'Uma casa privativa na Lapônia Sueca, onde a floresta, estradas tranquilas, céus escuros e o rio Kalix definem o ritmo.', heroBookBtn: 'Ver disponibilidade no Booking.com', heroExploreBtn: 'Conhecer a casa',
+        houseKicker: 'Uma base privativa no Norte', houseTitle: 'Feita para uma estadia mais tranquila na Lapônia Sueca.', houseDesc1: 'A Yellow Aurora House é uma casa privativa para até quatro hóspedes em Gyljen, a cerca de 10 km do centro de Överkalix. Operada pela Boreal One AB, ela foi pensada para quem quer o conforto de uma casa perto da paisagem.', houseDesc2: 'Por dentro, há um quarto com cama king size, um sofá-cama na sala, cozinha bem equipada e sauna privativa. Do lado de fora, a casa tem estacionamento próprio e garagem coberta.', houseCaption: 'A Yellow Aurora House sob a Aurora em uma noite de inverno.',
+        featuresKicker: 'O que você encontra aqui', featuresTitle: 'Tudo o que você precisa, sem multidões.', featureStayTitle: 'Hospedagem privativa', featureStayDesc: 'A casa inteira é sua, com espaço para até quatro hóspedes.', featureSaunaTitle: 'Sauna privativa', featureSaunaDesc: 'Um lugar simples para se aquecer depois de um dia ao ar livre.', featureNatureTitle: 'Natureza por perto', featureNatureDesc: 'Floresta ao redor e uma área pública à beira do rio a cerca de 80 metros.', featureArrivalTitle: 'Chegada fácil', featureArrivalDesc: 'Estacionamento privativo junto à entrada e garagem coberta para uso dos hóspedes.',
+        auroraKicker: 'Céus escuros, descritos com honestidade', auroraTitle: 'A Aurora é possível, nunca prometida.', auroraDesc: 'Noites claras de inverno podem proporcionar belas vistas da Aurora a partir da casa ou bem perto dela. A Aurora Boreal é um fenômeno natural, por isso o clima, a cobertura de nuvens e a atividade solar sempre decidem o que a noite traz.', auroraLink: 'Conheça experiências privadas de Aurora',
+        localKicker: 'Uma estadia local', localTitle: 'Perto de Överkalix, longe da agitação habitual.', localDesc: 'A casa fica em Gyljen, a cerca de 10 km de Överkalix, onde há mercados, restaurantes, cafés e o necessário para o dia a dia. No verão, a região convida a dias mais tranquilos junto ao rio. No inverno, a mesma paisagem fica silenciosa, nevada e escura.',
+        faqKicker: 'Antes de reservar', faqTitle: 'Alguns detalhes úteis.', faqGuestsQuestion: 'Quantos hóspedes podem ficar na casa?', faqGuestsAnswer: 'A casa acomoda até quatro hóspedes, com um quarto de cama king size e um sofá-cama na sala.', faqPetsQuestion: 'Posso levar um animal de estimação?', faqPetsAnswer: 'Animais de estimação são bem-vindos quando combinados antes da chegada. Há uma taxa de 250 SEK ou 25 € por animal e por estadia.', faqLocationQuestion: 'Onde fica a casa?', faqLocationAnswer: 'Gyljen Backgränd 2, 956 91 Överkalix, Suécia. A casa fica a cerca de 10 km do centro de Överkalix.', faqBookingQuestion: 'Como reservo uma estadia?', faqBookingAnswer: 'A disponibilidade, os preços e as reservas são administrados pela nossa página no Booking.com para manter o calendário sempre correto.',
+        ctaKicker: 'A página oficial da propriedade', ctaTitle: 'Planeje sua estadia na Yellow Aurora House.', ctaDesc: 'A Yellow Aurora House é operada pela Boreal One AB. Consulte o calendário em tempo real e reserve pelo Booking.com.', ctaBookBtn: 'Ver disponibilidade no Booking.com', footerLocation: 'The Yellow Aurora House, Gyljen, Överkalix, Lapônia Sueca'
+      }
+    };
+
+    function setLanguage(lang) {
+      const content = translations[lang];
+      if (!content) return;
+      const textMap = {
+        'nav-aurora': content.navAurora, 'nav-media': content.navMedia,
+        'hero-kicker': content.heroKicker, 'hero-desc': content.heroDesc, 'hero-book-btn': content.heroBookBtn, 'hero-explore-btn': content.heroExploreBtn,
+        'house-kicker': content.houseKicker, 'house-title': content.houseTitle, 'house-desc-1': content.houseDesc1, 'house-desc-2': content.houseDesc2, 'house-caption': content.houseCaption,
+        'features-kicker': content.featuresKicker, 'features-title': content.featuresTitle, 'feature-stay-title': content.featureStayTitle, 'feature-stay-desc': content.featureStayDesc, 'feature-sauna-title': content.featureSaunaTitle, 'feature-sauna-desc': content.featureSaunaDesc, 'feature-nature-title': content.featureNatureTitle, 'feature-nature-desc': content.featureNatureDesc, 'feature-arrival-title': content.featureArrivalTitle, 'feature-arrival-desc': content.featureArrivalDesc,
+        'aurora-kicker': content.auroraKicker, 'aurora-title': content.auroraTitle, 'aurora-desc': content.auroraDesc, 'aurora-link': content.auroraLink,
+        'local-kicker': content.localKicker, 'local-title': content.localTitle, 'local-desc': content.localDesc,
+        'faq-kicker': content.faqKicker, 'faq-title': content.faqTitle, 'faq-guests-question': content.faqGuestsQuestion, 'faq-guests-answer': content.faqGuestsAnswer, 'faq-pets-question': content.faqPetsQuestion, 'faq-pets-answer': content.faqPetsAnswer, 'faq-location-question': content.faqLocationQuestion, 'faq-location-answer': content.faqLocationAnswer, 'faq-booking-question': content.faqBookingQuestion, 'faq-booking-answer': content.faqBookingAnswer,
+        'cta-kicker': content.ctaKicker, 'cta-title': content.ctaTitle, 'cta-desc': content.ctaDesc, 'cta-book-btn': content.ctaBookBtn, 'footer-location': content.footerLocation
+      };
+
+      Object.entries(textMap).forEach(([id, value]) => {
+        const element = document.getElementById(id);
+        if (element) element.textContent = value;
+      });
+
+      document.documentElement.lang = lang;
+      ['en', 'sv', 'pt'].forEach((language) => {
+        const button = document.getElementById(`btn-${language}`);
+        if (button) {
+          const isActive = language === lang;
+          button.className = isActive
+            ? 'px-2 py-1 rounded transition text-white bg-white/15'
+            : 'px-2 py-1 rounded transition text-gray-300 hover:text-white';
+          button.setAttribute('aria-pressed', String(isActive));
+        }
+      });
+      localStorage.setItem('preferred-lang', lang);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('preferred-lang');
+      const browserLang = navigator.language.substring(0, 2);
+      setLanguage(savedLang && translations[savedLang] ? savedLang : (translations[browserLang] ? browserLang : 'en'));
+    });
+  </script>
 </body>
 </html>
