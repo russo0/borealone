@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lapland Gallery | Boreal One Media</title>
+    <meta name="description" content="Fine Art photographs of Aurora, Arctic landscapes, wildlife, and the changing seasons of Swedish Lapland.">
+    <link rel="canonical" href="https://borealone.com/media/lapland-gallery/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Boreal One AB">
+    <meta property="og:title" content="Lapland Gallery | Boreal One Media">
+    <meta property="og:description" content="Fine Art photographs from Swedish Lapland.">
+    <meta property="og:url" content="https://borealone.com/media/lapland-gallery/">
+    <meta property="og:image" content="https://borealone.com/media/images/aurora_panorama.jpg">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../favicon.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arcticDark: '#060a13',
+                        aurora: '#00f5d4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#070b14] text-gray-300 font-sans antialiased min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+
+    <!-- NAV BAR CORRIGIDA PARA GALERIA.HTML E IMOBILIARIA.HTML (Acaba com o erro da do voltar espremido) -->
+    <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
+        <!-- O flex-wrap permite que os elementos quebrem de linha no celular em vez de espremer -->
+        <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
+
+            <!-- LADO ESQUERDO: Logo + Nome (Ajustado o tamanho da fonte para não quebrar no mobile) -->
+            <a href="../" class="flex items-center space-x-3 group order-1">
+                <img src="../logo-icon.png" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
+                <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
+            </a>
+
+            <!-- LADO DIREITO: Idiomas (Mantém o alinhamento no topo junto com o logo) -->
+            <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 order-2 sm:order-3" aria-label="Language selector">
+                <button type="button" onclick="setLanguage('en')" id="btn-en" class="p-1 rounded transition flex items-center justify-center border border-gray-700 bg-gray-800" aria-label="English" aria-pressed="true"><img src="https://borealone.com/arrival/flags/uk.svg" alt="" class="w-6 h-6 rounded-full"></button>
+                <button type="button" onclick="setLanguage('sv')" id="btn-sv" class="p-1 rounded transition flex items-center justify-center border border-transparent hover:bg-gray-800/70" aria-label="Svenska" aria-pressed="false"><img src="https://borealone.com/arrival/flags/sweden.svg" alt="" class="w-6 h-6 rounded-full"></button>
+                <button type="button" onclick="setLanguage('pt')" id="btn-pt" class="p-1 rounded transition flex items-center justify-center border border-transparent hover:bg-gray-800/70" aria-label="Português do Brasil" aria-pressed="false"><img src="https://borealone.com/arrival/flags/brazil.svg" alt="" class="w-6 h-6 rounded-full"></button>
+            </div>
+
+            <!-- BAIXO: O botão de voltar (w-full joga ele para uma linha exclusiva abaixo no celular) -->
+            <div class="w-full sm:w-auto flex items-center justify-center sm:justify-start text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
+                <a href="../" id="nav-back-link" class="text-gray-400 hover:text-white py-1 transition tracking-wide uppercase sm:normal-case">
+                    ← Voltar ao Início
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+   <!-- HEADER DA GALERIA ATUALIZADO -->
+    <header class="max-w-4xl mx-auto text-center pt-16 pb-12 px-4">
+        <span id="gallery-badge" class="text-aurora text-xs font-bold tracking-widest uppercase bg-aurora/10 px-3 py-1 rounded-full border border-aurora/20">
+            The Lapland Collection
+        </span>
+        <h1 id="gallery-title" class="text-3xl md:text-5xl font-light text-white tracking-tight mt-6 mb-4">
+            Fotografia & Paisagens da Lapônia
+        </h1>
+        <p id="gallery-desc" class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed">
+            Uma jornada visual pelas quatro estações da região feno-escandinava. Da dança mística da Aurora Boreal no inverno à vida selvagem sob o Sol da Meia-Noite no verão.
+        </p>
+    </header>
+<!-- SEÇÃO DE PANORAMA EM DESTAQUE (Cruza as 3 colunas, fora do grid) -->
+    <div class="max-w-6xl mx-auto px-4 mb-6">
+        <!-- O aspect-[3/1] ou aspect-[21/9] garante o formato de super tela de cinema -->
+        <div class="relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer aspect-[3/1]" onclick="openLightbox(this)">
+            <img src="../images/aurora_panorama.jpg" alt="Epic Panoramic View of the Arctic Horizon" class="w-full h-full object-cover transform group-hover:scale-101 transition duration-500">
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Överkalix, Sweden</span>
+            </div>
+        </div>
+    </div>
+  <!-- GRADE DE FOTOS DO PORTFÓLIO (Equilibrada para eliminar o buraco esquerdo) -->
+    <main class="max-w-6xl mx-auto px-4 pb-24 w-full flex-grow">
+
+        <!-- Contêiner Masonry Fluido -->
+        <div class="columns-1 sm:columns-2 md:columns-3 gap-6 space-y-6 [column-fill:_balance]">
+
+            <!-- FOTO 1 -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="../images/aurora_1.jpg" alt="Aurora Borealis in Överkalix" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Överkalix, Sweden</span>
+                </div>
+            </div>
+
+            <!-- FOTO 2 -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="../images/aurora_2.jpg" alt="Dancing Lights over Kalix River" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Överkalix, Sweden</span>
+                </div>
+            </div>
+
+            <!-- FOTO NOVA 1: SUA AURORA VERTICAL -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="../images/aurora_5.jpg" alt="Blood Red Aurora" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Kalix River</span>
+                </div>
+            </div>
+
+            <!-- FOTO 3 -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="../images/aurora_3.jpg" alt="My Backyard" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Överkalix, Sweden</span>
+                </div>
+            </div>
+
+            <!-- FOTO NOVA 2: RENA NO SUNSET -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="../images/rena_sunset01.jpg" alt="Wild Reindeer during Sunset" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Lapland, Sweden</span>
+                </div>
+            </div>
+
+            <!-- FOTO 4 -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="../images/hero_aurora.jpg" alt="Aurora Reflection" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Swedish Lapland</span>
+                </div>
+            </div>
+
+            <!-- FOTO 5 -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="../images/aurora_4.jpg" alt="Aurora Beach" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Lansjärv, Sweden</span>
+                </div>
+            </div>
+
+            <!-- FOTO 6 -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="../images/aurora_6.jpg" alt="Aurora and Light Pillars" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Kautokeino, Norway</span>
+                </div>
+            </div>
+
+            <!-- ================================================================= -->
+            <!-- 🚀 NOVOS ESPAÇOS: PREENCHEM O BURACO E COMPLETAM O FEED DA LAPÔNIA -->
+            <!-- ================================================================= -->
+
+            <!-- FOTO 7 (Espaço para o Alce / Vida Selvagem) -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="../images/dynjandi_iceland.jpg" alt="Summer in Iceland" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Dynjandi, Iceland</span>
+                </div>
+            </div>
+
+            <!-- FOTO 8 (Espaço para Paisagem de Gelo / Inverno) -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="../images/ice_landscape01.jpg" alt="Winter Wonderland" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Överkalix, Sweden</span>
+                </div>
+            </div>
+
+            <!-- FOTO 9 (Espaço para o Sol da Meia-Noite / Verão) -->
+            <div class="break-inside-avoid block mb-6 relative overflow-hidden rounded-xl border border-gray-900 shadow-xl group bg-gray-950 cursor-pointer" onclick="openLightbox(this)">
+                <img src="../images/summer_lapland.jpg" alt="Midnight Sun over the Lake" class="w-full h-auto transform group-hover:scale-103 transition duration-500">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition duration-300 flex items-end p-4">
+                    <span class="text-xs text-white opacity-0 group-hover:opacity-100 transition duration-300 tracking-wider">Juhonpieti, Sweden</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- LIGHTBOX MODAL (Visualizador de Imagem em Tela Cheia) -->
+    <div id="lightbox" class="hidden fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center p-4 md:p-8 animate-fade-in" onclick="closeLightbox()">
+        <!-- Botão Fechar -->
+        <button class="absolute top-6 right-6 text-white/70 hover:text-white text-3xl font-light transition">&times;</button>
+        <!-- Imagem Expandida -->
+        <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[85vh] object-contain rounded shadow-2xl">
+        <!-- Legenda da foto -->
+        <p id="lightbox-caption" class="text-gray-400 text-sm mt-4 tracking-wide font-light"></p>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="w-full py-12 text-center px-4 border-t border-gray-900 bg-black/10">
+        <div class="max-w-3xl mx-auto">
+            <p id="footer-rights" class="text-xs text-gray-600">© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- INTERATIVIDADE DO LIGHTBOX (SCRIPT) -->
+    <script>
+        function openLightbox(element) {
+            const img = element.querySelector('img');
+            const caption = element.querySelector('span')?.textContent || "";
+
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox-img').alt = img.alt;
+            document.getElementById('lightbox-caption').textContent = img.alt + (caption ? `, ${caption}` : "");
+
+            document.getElementById('lightbox').classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Trava a rolagem da página ao fundo
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+            document.body.style.overflow = ''; // Destrava a rolagem
+        }
+
+        // Fecha o Lightbox apertando a tecla ESC
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+    </script>
+
+    <!-- SCRIPT DE TRADUÇÃO -->
+    <script>
+        const translations = {
+            en: {
+                navBack: "← Back to Home",
+                galleryBadge: "The Lapland Collection",
+                galleryTitle: "Lapland Photography & Landscapes",
+                galleryDesc: "A visual journey through the four seasons of the Fennoscandian region. From the mystical dance of the Northern Lights in winter to wildlife under the Midnight Sun in summer.",
+                footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
+            },
+            sv: {
+                navBack: "← Tillbaka till Hem",
+                galleryBadge: "Lapplandssamlingen",
+                galleryTitle: "Lappland Fotografering & Landskap",
+                galleryDesc: "En visuell resa genom de fyra årstiderna i den fennoskandiska regionen. Från norrskenets mystiska dans på vintern till vilda djur under midnattssolen på sommaren.",
+                footerRights: "© 2026 Boreal One AB. Med ensamrätt."
+            },
+            pt: {
+                navBack: "← Voltar ao Início",
+                galleryBadge: "Coleção Lapônia",
+                galleryTitle: "Fotografia & Paisagens da Lapônia",
+                galleryDesc: "Uma jornada visual pelas quatro estações da região feno-escandinava. Da dança mística da Aurora Boreal no inverno à vida selvagem sob o Sol da Meia-Noite no verão.",
+                footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
+            }
+        };
+
+        function setLanguage(lang) {
+            document.getElementById('nav-back-link').textContent = translations[lang].navBack;
+            document.getElementById('gallery-badge').textContent = translations[lang].galleryBadge;
+            document.getElementById('gallery-title').textContent = translations[lang].galleryTitle;
+            document.getElementById('gallery-desc').textContent = translations[lang].galleryDesc;
+            document.getElementById('footer-rights').textContent = translations[lang].footerRights;
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+
+            ['en', 'sv', 'pt'].forEach(l => {
+                const btn = document.getElementById(`btn-${l}`);
+                if (l === lang) {
+                    btn.className = "p-1 rounded transition flex items-center justify-center border border-gray-700 bg-gray-800";
+                } else {
+                    btn.className = "p-1 rounded transition flex items-center justify-center border border-transparent hover:bg-gray-800/70";
+                }
+                btn.setAttribute('aria-pressed', String(l === lang));
+            });
+            localStorage.setItem('preferred-lang', lang);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred-lang');
+            if (savedLang && translations[savedLang]) {
+                setLanguage(savedLang);
+            } else {
+                const browserLang = navigator.language.substring(0, 2);
+                if (translations[browserLang]) {
+                    setLanguage(browserLang);
+                } else {
+                    setLanguage('en');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

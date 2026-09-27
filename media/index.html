@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boreal One Media | Photography &amp; Visual Stories</title>
+    <meta name="description" content="Boreal One Media creates real estate photography, Fine Art landscapes, and visual stories from Swedish Lapland.">
+    <link rel="canonical" href="https://borealone.com/media/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Boreal One AB">
+    <meta property="og:title" content="Boreal One Media | Photography &amp; Visual Stories">
+    <meta property="og:description" content="Real estate photography, Fine Art landscapes, and visual stories from Swedish Lapland.">
+    <meta property="og:url" content="https://borealone.com/media/">
+    <meta property="og:image" content="https://borealone.com/media/images/hero_aurora.jpg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        arcticDark: '#060a13',
+                        aurora: '#00f5d4',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#070b14] text-gray-300 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- NAV BAR PRINCIPAL DO MEDIA -->
+    <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
+
+            <a href="https://borealone.com" class="flex items-center space-x-3 group order-1">
+                <img src="logo-icon.png" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
+                <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
+            </a>
+
+            <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 order-2 sm:order-3" aria-label="Language selector">
+                <button type="button" onclick="setLanguage('en')" id="btn-en" class="p-1 rounded transition flex items-center justify-center border border-gray-700 bg-gray-800" aria-label="English" aria-pressed="true"><img src="https://borealone.com/arrival/flags/uk.svg" alt="" class="w-6 h-6 rounded-full"></button>
+                <button type="button" onclick="setLanguage('sv')" id="btn-sv" class="p-1 rounded transition flex items-center justify-center border border-transparent hover:bg-gray-800/70" aria-label="Svenska" aria-pressed="false"><img src="https://borealone.com/arrival/flags/sweden.svg" alt="" class="w-6 h-6 rounded-full"></button>
+                <button type="button" onclick="setLanguage('pt')" id="btn-pt" class="p-1 rounded transition flex items-center justify-center border border-transparent hover:bg-gray-800/70" aria-label="Português do Brasil" aria-pressed="false"><img src="https://borealone.com/arrival/flags/brazil.svg" alt="" class="w-6 h-6 rounded-full"></button>
+            </div>
+
+            <div class="w-full sm:w-auto flex items-center justify-between sm:justify-start space-x-4 text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
+                <a href="https://borealone.com" id="nav-main-link" class="text-gray-400 hover:text-white py-1 transition uppercase tracking-wider sm:normal-case">
+                    ← Voltar ao Início
+                </a>
+                <a href="https://borealone.com/aurora-experiences/" id="nav-aurora-link" class="bg-gray-950 hover:bg-gray-900 text-aurora px-3 py-1.5 rounded border border-gray-800/80 transition uppercase tracking-wider sm:normal-case font-bold">
+                    Private Aurora Experiences →
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- HEADER CORRIGIDO: Hierarquia Visual Perfeita (Texto antes das Imagens) -->
+    <header class="w-full bg-[#070b14] pt-12 md:pt-16">
+        <!-- 1. Texto de Abertura no Topo -->
+        <div class="max-w-5xl mx-auto text-center px-4 pb-8">
+            <h1 id="hero-title" class="text-3xl md:text-5xl font-light text-white tracking-tight leading-tight mb-4 drop-shadow">
+                Capturing the light and atmosphere of the North.
+            </h1>
+            <p id="hero-desc" class="text-gray-400 text-sm md:text-xl font-light max-w-2xl mx-auto">
+                From the vastness of the Arctic sky to the comfort of your home.
+            </p>
+        </div>
+
+        <!-- 2. Grade de Imagens Secundária (Ficou logo abaixo do título) -->
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-4 p-4 pb-8">
+            <div class="relative overflow-hidden rounded-xl aspect-[16/9] group shadow-2xl border border-gray-900">
+                <img src="images/hero_aurora.jpg" alt="Arctic Light" class="w-full h-full object-cover object-center transform group-hover:scale-102 transition duration-1000">
+                <div class="absolute inset-0 bg-black/10"></div>
+            </div>
+            <div class="relative overflow-hidden rounded-xl aspect-[16/9] group shadow-2xl border border-gray-900">
+                <img src="images/re_1.jpg" alt="Scandinavian Interior" class="w-full h-full object-cover object-center transform group-hover:scale-102 transition duration-1000">
+                <div class="absolute inset-0 bg-black/10"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL (Cards de Portfólio) -->
+    <main class="max-w-6xl mx-auto px-4 py-8 w-full flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+
+            <!-- CARD ESQUERDO: IMOBILIÁRIA -->
+            <div class="bg-slate-900/30 rounded-2xl overflow-hidden border border-gray-800/60 shadow-2xl flex flex-col justify-between group hover:border-gray-700/60 transition duration-300 backdrop-blur-sm">
+                <div class="grid grid-cols-3 gap-2 p-3 h-36 sm:h-48 bg-black/20">
+                    <div class="rounded-xl overflow-hidden h-full"><img src="images/re_1.jpg" class="w-full h-full object-cover"></div>
+                    <div class="rounded-xl overflow-hidden h-full"><img src="images/re_2.jpg" class="w-full h-full object-cover"></div>
+                    <div class="rounded-xl overflow-hidden h-full"><img src="images/re_3.jpg" class="w-full h-full object-cover"></div>
+                </div>
+                <div class="p-6 md:p-8 flex-grow flex flex-col justify-between items-start">
+                    <div class="w-full">
+                        <h2 id="card1-title" class="text-xl md:text-2xl font-bold text-white mb-3">Fotografia Imobiliária & Comercial</h2>
+                        <p id="card1-desc" class="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
+                            Fotografia profissional para o mercado imobiliário, arquitetura e soluções de mídia para propriedades.
+                        </p>
+                    </div>
+                    <a href="real-estate-photography/" id="card1-btn" class="mt-auto inline-flex items-center justify-center w-full sm:w-auto bg-white hover:bg-gray-200 text-gray-950 font-semibold text-sm px-6 py-3 rounded-xl transition shadow-md">
+                        Ver Portfólio Comercial
+                    </a>
+                </div>
+            </div>
+
+            <!-- CARD DIREITO: LAPÔNIA -->
+            <div class="bg-slate-900/30 rounded-2xl overflow-hidden border border-gray-800/60 shadow-2xl flex flex-col justify-between group hover:border-gray-700/60 transition duration-300 backdrop-blur-sm">
+                <div class="grid grid-cols-3 gap-2 p-3 h-36 sm:h-48 bg-black/20">
+                    <div class="rounded-xl overflow-hidden h-full"><img src="images/aurora_1.jpg" class="w-full h-full object-cover"></div>
+                    <div class="rounded-xl overflow-hidden h-full"><img src="images/aurora_2.jpg" class="w-full h-full object-cover"></div>
+                    <div class="rounded-xl overflow-hidden h-full"><img src="images/aurora_5.jpg" class="w-full h-full object-cover"></div>
+                </div>
+                <div class="p-6 md:p-8 flex-grow flex flex-col justify-between items-start">
+                    <div class="w-full">
+                        <h2 id="card2-title" class="text-xl md:text-2xl font-bold text-white mb-3">Belas Artes & Paisagens da Lapônia</h2>
+                        <p id="card2-desc" class="text-gray-400 text-sm md:text-base leading-relaxed mb-6">
+                            Paisagens Fine Art, fenômenos atmosféricos, fotografia privada e tours guiados de Aurora Boreal na Lapônia Sueca.
+                        </p>
+                    </div>
+                    <div class="mt-auto flex flex-col sm:flex-row gap-3 w-full">
+                        <a href="lapland-gallery/" id="card2-btn" class="inline-flex items-center justify-center w-full sm:w-auto bg-white hover:bg-gray-200 text-gray-950 font-semibold text-sm px-6 py-3 rounded-xl transition shadow-md">
+                            Explorar Galeria da Lapônia
+                        </a>
+                        <a href="https://borealone.com/aurora-experiences/" id="card2-session-btn" class="inline-flex items-center justify-center w-full sm:w-auto border border-aurora/40 text-aurora hover:bg-aurora/10 font-semibold text-sm px-6 py-3 rounded-xl transition">
+                            Experiências Privadas de Aurora
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- SOBRE -->
+    <section class="w-full bg-black/20 border-t border-b border-gray-900 py-16 px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 id="about-title" class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Rigor Técnico & Sensibilidade Visual</h2>
+            <p id="about-desc" class="text-gray-300 text-base md:text-lg font-light leading-relaxed">
+                Com equipamentos de alta resolução e precisão técnica desenvolvida na captura de fenômenos como a Aurora Boreal, aplico o mesmo rigor na entrega de imagens arquitetônicas, valorizando a luz natural e a geometria dos espaços.
+            </p>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="w-full py-12 text-center px-4 bg-[#070b14]">
+        <div class="max-w-3xl mx-auto">
+            <h2 id="footer-title" class="text-xl font-bold text-white mb-1">Vamos colaborar?</h2>
+            <p id="footer-desc" class="text-gray-400 text-sm mb-6 max-w-sm mx-auto drop-shadow">Entre em contato para orçamentos de fotografia imobiliária, comercial, licenciamento de imagens Fine Art ou experiências privadas de Aurora Boreal.</p>
+
+            <a href="mailto:info@borealone.com?subject=Inquiry%20from%20Portfolio" id="footer-btn" class="inline-block bg-white text-gray-950 font-bold text-sm px-6 py-3 rounded-md hover:bg-gray-200 transition shadow-lg">
+                Enviar um E-mail
+            </a>
+
+            <p id="footer-notice" class="text-xs text-amber-400/90 font-medium mt-6 bg-amber-950/20 inline-block px-3 py-1.5 rounded-full border border-amber-900/30 backdrop-blur-sm">
+                🔒 Nota: As galerias de entrega para clientes são privadas e protegidas por criptografia.
+            </p>
+
+            <p id="footer-rights" class="text-xs text-gray-600 mt-12">© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MOTOR DE TRADUÇÃO -->
+    <script>
+        const translations = {
+            en: {
+                navMain: "← Back to Home",
+                navAurora: "Private Aurora Experiences →",
+                heroTitle: "Capturing the light and atmosphere of the North.",
+                heroDesc: "From the vastness of the Arctic sky to the comfort of your home.",
+                card1Title: "Real Estate & Commercial Photography",
+                card1Desc: "Professional photography for the real estate market, architecture, and property media solutions.",
+                card1Btn: "View Commercial Portfolio",
+                card2Title: "Fine Art & Lapland Landscapes",
+                card2Desc: "Fine Art landscapes, atmospheric phenomena, private Northern Lights photography, and guided tours in Swedish Lapland.",
+                card2Btn: "Explore Lapland Gallery",
+                card2SessionBtn: "Private Aurora Experiences",
+                aboutTitle: "Technical Precision & Visual Sensitivity",
+                aboutDesc: "Using high-resolution equipment and technical precision developed while capturing phenomena like the Northern Lights, I apply the same rigor to architectural imagery, emphasizing natural light and spatial geometry.",
+                footerTitle: "Let's work together?",
+                footerDesc: "Get in touch for real estate, commercial photography quotes, Fine Art image licensing, or private Aurora experiences.",
+                footerBtn: "Send an Email",
+                footerNotice: "🔒 Note: Client delivery galleries are private and securely encrypted.",
+                footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
+            },
+            sv: {
+                navMain: "← Tillbaka till Hem",
+                navAurora: "Privata norrskensupplevelser →",
+                heroTitle: "Fånga ljuset och atmosfären i norr.",
+                heroDesc: "Från den arktiska himlens vidd till bekvämligheten i ditt hem.",
+                card1Title: "Fastighets- & Kommersiell Fotografering",
+                card1Desc: "Professionell fotografering för fastighetsmarknaden, arkitektur och fastighetsmedielösningar.",
+                card1Btn: "Visa Kommersiell Portfölj",
+                card2Title: "Fine Art & Lapplandslandskap",
+                card2Desc: "Fine Art-landskap, atmosfäriska fenomen, privata norrskensfotograferingar och guidade turer i svenska Lappland.",
+                card2Btn: "Utforska Lapplandssamlingen",
+                card2SessionBtn: "Privata norrskensupplevelser",
+                aboutTitle: "Teknisk Precision & Visuell Känsla",
+                aboutDesc: "Med högupplöst utrustning och teknisk precision utvecklad under fångsten av fenomen som norrsken, tillämpar jag samma noggrannhet på arkitektoniska bilder, med fokus på naturligt ljus och rymdgeometri.",
+                footerTitle: "Ska vi samarbeta?",
+                footerDesc: "Kontakta oss för offerter gällande fastighets- och kommersiell fotografering, licensiering av Fine Art-bilder eller privata norrskensupplevelser.",
+                footerBtn: "Skicka ett mejl",
+                footerNotice: "🔒 Obs: Gallerier för kundleverans är privata och säkert krypterade.",
+                footerRights: "© 2026 Boreal One AB. Med ensamrätt."
+            },
+            pt: {
+                navMain: "← Voltar ao Início",
+                navAurora: "Experiências Privadas de Aurora →",
+                heroTitle: "Capturando a luz e a atmosfera do Norte.",
+                heroDesc: "Da imensidão do céu ártico ao conforto do seu lar.",
+                card1Title: "Fotografia Imobiliária & Comercial",
+                card1Desc: "Fotografia profissional para o mercado imobiliário, arquitetura e soluções de mídia para propriedades.",
+                card1Btn: "Ver Portfólio Comercial",
+                card2Title: "Belas Artes & Paisagens da Lapônia",
+                card2Desc: "Paisagens Fine Art, fenômenos atmosféricos, fotografia privada e tours guiados de Aurora Boreal na Lapônia Sueca.",
+                card2Btn: "Explorar Galeria da Lapônia",
+                card2SessionBtn: "Experiências Privadas de Aurora",
+                aboutTitle: "Rigor Técnico & Sensibilidade Visual",
+                aboutDesc: "Com equipamentos de alta resolução e precisão técnica desenvolvida na captura de fenômenos como a Aurora Boreal, aplico o mesmo rigor na entrega de imagens arquitetônicas, valorizando a luz natural e a geometria dos espaços.",
+                footerTitle: "Vamos colaborar?",
+                footerDesc: "Entre em contato para orçamentos de fotografia imobiliária, comercial, licenciamento de imagens Fine Art ou experiências privadas de Aurora Boreal.",
+                footerBtn: "Enviar um E-mail",
+                footerNotice: "🔒 Nota: As galerias de entrega para clientes são privadas e protegidas por criptografia.",
+                footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
+            }
+        };
+
+        function setLanguage(lang) {
+            if(document.getElementById('nav-main-link')) document.getElementById('nav-main-link').textContent = translations[lang].navMain;
+            if(document.getElementById('nav-aurora-link')) document.getElementById('nav-aurora-link').textContent = translations[lang].navAurora;
+            if(document.getElementById('hero-title')) document.getElementById('hero-title').textContent = translations[lang].heroTitle;
+            if(document.getElementById('hero-desc')) document.getElementById('hero-desc').textContent = translations[lang].heroDesc;
+            if(document.getElementById('card1-title')) document.getElementById('card1-title').textContent = translations[lang].card1Title;
+            if(document.getElementById('card1-desc')) document.getElementById('card1-desc').textContent = translations[lang].card1Desc;
+            if(document.getElementById('card1-btn')) document.getElementById('card1-btn').textContent = translations[lang].card1Btn;
+            if(document.getElementById('card2-title')) document.getElementById('card2-title').textContent = translations[lang].card2Title;
+            if(document.getElementById('card2-desc')) document.getElementById('card2-desc').textContent = translations[lang].card2Desc;
+            if(document.getElementById('card2-btn')) document.getElementById('card2-btn').textContent = translations[lang].card2Btn;
+            if(document.getElementById('card2-session-btn')) document.getElementById('card2-session-btn').textContent = translations[lang].card2SessionBtn;
+            if(document.getElementById('about-title')) document.getElementById('about-title').textContent = translations[lang].aboutTitle;
+            if(document.getElementById('about-desc')) document.getElementById('about-desc').textContent = translations[lang].aboutDesc;
+            if(document.getElementById('footer-title')) document.getElementById('footer-title').textContent = translations[lang].footerTitle;
+            if(document.getElementById('footer-desc')) document.getElementById('footer-desc').textContent = translations[lang].footerDesc;
+            if(document.getElementById('footer-btn')) document.getElementById('footer-btn').textContent = translations[lang].footerBtn;
+            if(document.getElementById('footer-notice')) document.getElementById('footer-notice').textContent = translations[lang].footerNotice;
+            if(document.getElementById('footer-rights')) document.getElementById('footer-rights').textContent = translations[lang].footerRights;
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+
+            ['en', 'sv', 'pt'].forEach(l => {
+                const btn = document.getElementById(`btn-${l}`);
+                if (btn) {
+                    if (l === lang) {
+                        btn.className = "p-1 rounded transition flex items-center justify-center border border-gray-700 bg-gray-800";
+                    } else {
+                        btn.className = "p-1 rounded transition flex items-center justify-center border border-transparent hover:bg-gray-800/70";
+                    }
+                    btn.setAttribute('aria-pressed', String(l === lang));
+                }
+            });
+            localStorage.setItem('preferred-lang', lang);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred-lang');
+            setLanguage(savedLang && translations[savedLang] ? savedLang : (translations[navigator.language.substring(0, 2)] ? navigator.language.substring(0, 2) : 'en'));
+        });
+    </script>
+</body>
+</html>
