@@ -56,7 +56,7 @@
           <p data-i18n="heroDesc" class="mt-5 max-w-xl text-base leading-relaxed text-slate-300">Photography for property listings, holiday rentals, and hospitality projects, made with a clear sense of space, light, and what makes a place worth choosing.</p>
           <div class="mt-8 flex flex-col gap-3 sm:flex-row">
             <a href="#portfolio" data-i18n="heroPortfolio" class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-200">View selected work</a>
-            <a href="mailto:info@borealone.com" data-mailto data-i18n="heroQuote" class="inline-flex items-center justify-center rounded-xl border border-aurora/40 px-5 py-3 text-sm font-semibold text-aurora transition hover:bg-aurora/10">Request a quote</a>
+            <a href="#quote" data-i18n="heroQuote" class="inline-flex items-center justify-center rounded-xl border border-aurora/40 px-5 py-3 text-sm font-semibold text-aurora transition hover:bg-aurora/10">Request a quote</a>
           </div>
           <div class="mt-10 grid grid-cols-3 gap-3 border-t border-slate-800 pt-6 text-xs">
             <div>
@@ -205,7 +205,7 @@
       </div>
     </section>
 
-    <section class="mx-auto max-w-6xl px-4 pb-16 md:pb-24">
+    <section id="quote" class="mx-auto max-w-6xl scroll-mt-24 px-4 pb-16 md:pb-24">
       <div class="rounded-3xl border border-aurora/20 bg-gradient-to-br from-aurora/10 via-slate-950 to-slate-950 p-7 sm:p-10 md:p-12">
         <p data-i18n="ctaKicker" class="text-xs font-bold uppercase tracking-[0.22em] text-aurora">For agencies, owners, and accommodation hosts</p>
         <div class="mt-5 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
@@ -213,7 +213,66 @@
             <h2 data-i18n="ctaTitle" class="text-3xl font-light tracking-tight text-white sm:text-4xl">Tell me about the property.</h2>
             <p data-i18n="ctaDesc" class="mt-4 leading-relaxed text-slate-300">Send the address, the intended use, and a few preferred dates. I will reply with a practical proposal based on the property and the material that will be most useful.</p>
           </div>
-          <a href="mailto:info@borealone.com" data-mailto data-i18n="ctaButton" class="inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:bg-slate-200">Request a quote</a>
+          <a href="#quote-calculator" data-i18n="ctaButton" class="inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:bg-slate-200">Request a quote</a>
+        </div>
+        <div id="quote-calculator" class="mt-10 scroll-mt-24 rounded-2xl border border-slate-800 bg-[#070b14]/80 p-5 shadow-xl sm:p-7">
+          <div class="grid gap-8 lg:grid-cols-[1fr_0.82fr]">
+            <div>
+              <p data-i18n="quoteStepOne" class="text-xs font-bold uppercase tracking-[0.18em] text-aurora">1. Choose photography package</p>
+              <div class="mt-4 grid gap-3 sm:grid-cols-2">
+                <label class="flex cursor-pointer justify-between gap-3 rounded-xl border border-slate-700 bg-slate-900/50 p-4 transition hover:border-slate-600">
+                  <span class="flex gap-3">
+                    <input type="radio" name="base-package" value="1150" checked onchange="calculateQuote()" class="mt-0.5 h-4 w-4 accent-[#00f5d4]">
+                    <span><span data-i18n="quoteBaseSmallTitle" class="block text-sm font-semibold text-white">Base package</span><span data-i18n="quoteBaseSmallDesc" class="mt-1 block text-xs leading-relaxed text-slate-500">Up to 15 high-resolution images</span></span>
+                  </span>
+                  <span class="whitespace-nowrap text-sm font-bold text-white">1 150 kr</span>
+                </label>
+                <label class="flex cursor-pointer justify-between gap-3 rounded-xl border border-slate-800 bg-black/20 p-4 transition hover:border-slate-600">
+                  <span class="flex gap-3">
+                    <input type="radio" name="base-package" value="1550" onchange="calculateQuote()" class="mt-0.5 h-4 w-4 accent-[#00f5d4]">
+                    <span><span data-i18n="quoteBaseStandardTitle" class="block text-sm font-semibold text-white">Standard package</span><span data-i18n="quoteBaseStandardDesc" class="mt-1 block text-xs leading-relaxed text-slate-500">Up to 25 high-resolution images</span></span>
+                  </span>
+                  <span class="whitespace-nowrap text-sm font-bold text-white">1 550 kr</span>
+                </label>
+              </div>
+
+              <p data-i18n="quoteStepTwo" class="mt-8 text-xs font-bold uppercase tracking-[0.18em] text-aurora">2. Add options if useful</p>
+              <div class="mt-4 space-y-3">
+                <label class="flex cursor-pointer items-start justify-between gap-3 rounded-xl border border-slate-800 bg-black/20 p-4 transition hover:border-slate-600">
+                  <span class="flex gap-3"><input type="checkbox" id="drone-basic" value="450" onchange="toggleQuoteOption('drone', this.id)" class="mt-0.5 h-4 w-4 rounded accent-[#00f5d4]"><span><span data-i18n="quoteDroneBasicTitle" class="block text-sm font-semibold text-white">Drone Basic</span><span data-i18n="quoteDroneBasicDesc" class="mt-1 block text-xs leading-relaxed text-slate-500">5 to 6 overview images of house and grounds</span></span></span>
+                  <span class="whitespace-nowrap text-sm font-bold text-white">+450 kr</span>
+                </label>
+                <label class="flex cursor-pointer items-start justify-between gap-3 rounded-xl border border-slate-800 bg-black/20 p-4 transition hover:border-slate-600">
+                  <span class="flex gap-3"><input type="checkbox" id="drone-premium" value="750" onchange="toggleQuoteOption('drone', this.id)" class="mt-0.5 h-4 w-4 rounded accent-[#00f5d4]"><span><span data-i18n="quoteDronePremiumTitle" class="block text-sm font-semibold text-white">Drone Premium</span><span data-i18n="quoteDronePremiumDesc" class="mt-1 block text-xs leading-relaxed text-slate-500">10 to 12 images for larger grounds or forest properties</span></span></span>
+                  <span class="whitespace-nowrap text-sm font-bold text-white">+750 kr</span>
+                </label>
+                <label class="flex cursor-pointer items-start justify-between gap-3 rounded-xl border border-slate-800 bg-black/20 p-4 transition hover:border-slate-600">
+                  <span class="flex gap-3"><input type="checkbox" id="panorama-basic" value="650" onchange="toggleQuoteOption('panorama', this.id)" class="mt-0.5 h-4 w-4 rounded accent-[#00f5d4]"><span><span data-i18n="quotePanoramaBasicTitle" class="block text-sm font-semibold text-white">360° Panorama Basic</span><span data-i18n="quotePanoramaBasicDesc" class="mt-1 block text-xs leading-relaxed text-slate-500">Five panoramic images or interactive links</span></span></span>
+                  <span class="whitespace-nowrap text-sm font-bold text-white">+650 kr</span>
+                </label>
+                <label class="flex cursor-pointer items-start justify-between gap-3 rounded-xl border border-slate-800 bg-black/20 p-4 transition hover:border-slate-600">
+                  <span class="flex gap-3"><input type="checkbox" id="panorama-premium" value="1150" onchange="toggleQuoteOption('panorama', this.id)" class="mt-0.5 h-4 w-4 rounded accent-[#00f5d4]"><span><span data-i18n="quotePanoramaPremiumTitle" class="block text-sm font-semibold text-white">360° Panorama Premium</span><span data-i18n="quotePanoramaPremiumDesc" class="mt-1 block text-xs leading-relaxed text-slate-500">Ten panoramic images for larger homes</span></span></span>
+                  <span class="whitespace-nowrap text-sm font-bold text-white">+1 150 kr</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="flex flex-col rounded-2xl border border-slate-800 bg-slate-950/90 p-5 sm:p-6">
+              <label for="property-info" data-i18n="quotePropertyLabel" class="text-xs font-bold uppercase tracking-[0.18em] text-aurora">3. Property details</label>
+              <textarea id="property-info" rows="5" data-placeholder="quotePropertyPlaceholder" placeholder="Address, approximate size, intended use, and preferred date" class="mt-4 w-full resize-y rounded-xl border border-slate-800 bg-black/30 px-4 py-3 text-sm leading-relaxed text-white placeholder:text-slate-600 focus:border-slate-600 focus:outline-none"></textarea>
+              <div class="mt-6 border-t border-slate-800 pt-6">
+                <p data-i18n="quoteTotalLabel" class="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">Estimated total</p>
+                <div class="mt-2 flex items-end gap-2"><span id="quote-total" class="text-4xl font-light tracking-tight text-white">1 150 kr</span><span data-i18n="quoteVatLabel" class="pb-1 text-xs text-slate-500">excl. VAT</span></div>
+                <p data-i18n="quoteTotalNote" class="mt-3 text-xs leading-relaxed text-slate-500">Travel, special requests, and final scope are confirmed before booking.</p>
+              </div>
+              <button type="button" onclick="sendQuoteRequest()" data-i18n="quoteSubmit" class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3.5 text-sm font-semibold text-slate-950 transition hover:bg-slate-200">Send quote request</button>
+            </div>
+          </div>
+          <div class="mt-8 grid gap-4 border-t border-slate-800 pt-6 text-xs text-slate-400 md:grid-cols-3">
+            <div><p data-i18n="quoteTermOneTitle" class="font-semibold uppercase tracking-wide text-aurora">Travel</p><p data-i18n="quoteTermOneDesc" class="mt-2 leading-relaxed">Outside the local area, mileage is charged at 5.50 kr per km, round trip.</p></div>
+            <div><p data-i18n="quoteTermTwoTitle" class="font-semibold uppercase tracking-wide text-aurora">Preparation</p><p data-i18n="quoteTermTwoDesc" class="mt-2 leading-relaxed">The property should be cleaned and prepared. Extra staging on site is charged at 450 kr per started half-hour.</p></div>
+            <div><p data-i18n="quoteTermThreeTitle" class="font-semibold uppercase tracking-wide text-aurora">Weather & changes</p><p data-i18n="quoteTermThreeDesc" class="mt-2 leading-relaxed">Drone work is rescheduled when weather does not allow a safe flight. Other terms are agreed before booking.</p></div>
+          </div>
         </div>
       </div>
     </section>
@@ -257,6 +316,11 @@
         processTwoTitle: 'Prepare the shoot', processTwoDesc: 'A tidy, prepared property allows the images to do their job without visual distractions.',
         processThreeTitle: 'Deliver what is useful', processThreeDesc: 'You receive an agreed image set, edited and ready for the listing channels you use.',
         ctaKicker: 'For agencies, owners, and accommodation hosts', ctaTitle: 'Tell me about the property.', ctaDesc: 'Send the address, the intended use, and a few preferred dates. I will reply with a practical proposal based on the property and the material that will be most useful.', ctaButton: 'Request a quote',
+        quoteStepOne: '1. Choose photography package', quoteBaseSmallTitle: 'Base package', quoteBaseSmallDesc: 'Up to 15 high-resolution images', quoteBaseStandardTitle: 'Standard package', quoteBaseStandardDesc: 'Up to 25 high-resolution images',
+        quoteStepTwo: '2. Add options if useful', quoteDroneBasicTitle: 'Drone Basic', quoteDroneBasicDesc: '5 to 6 overview images of house and grounds', quoteDronePremiumTitle: 'Drone Premium', quoteDronePremiumDesc: '10 to 12 images for larger grounds or forest properties', quotePanoramaBasicTitle: '360° Panorama Basic', quotePanoramaBasicDesc: 'Five panoramic images or interactive links', quotePanoramaPremiumTitle: '360° Panorama Premium', quotePanoramaPremiumDesc: 'Ten panoramic images for larger homes',
+        quotePropertyLabel: '3. Property details', quotePropertyPlaceholder: 'Address, approximate size, intended use, and preferred date', quoteTotalLabel: 'Estimated total', quoteVatLabel: 'excl. VAT', quoteTotalNote: 'Travel, special requests, and final scope are confirmed before booking.', quoteSubmit: 'Send quote request',
+        quoteTermOneTitle: 'Travel', quoteTermOneDesc: 'Outside the local area, mileage is charged at 5.50 kr per km, round trip.', quoteTermTwoTitle: 'Preparation', quoteTermTwoDesc: 'The property should be cleaned and prepared. Extra staging on site is charged at 450 kr per started half-hour.', quoteTermThreeTitle: 'Weather & changes', quoteTermThreeDesc: 'Drone work is rescheduled when weather does not allow a safe flight. Other terms are agreed before booking.',
+        quoteEmailGreeting: 'Hello Boreal One,', quoteEmailIntro: 'I would like to request a quote for property photography.', quoteEmailPropertyLabel: 'PROPERTY DETAILS', quoteEmailTotalLabel: 'ESTIMATED TOTAL',
         footerBrand: 'Boreal One Media, a service of Boreal One AB.', footerLocation: 'Överkalix, Swedish Lapland', close: 'Close', emailSubject: 'Real estate photography enquiry', emailBody: 'Hello Boreal One,\n\nI would like to request a quote for property photography.\n\nProperty / address:\nPreferred date:\nIntended use:\n\nThank you!'
       },
       sv: {
@@ -285,6 +349,11 @@
         processTwoTitle: 'Förbered fotograferingen', processTwoDesc: 'En städad och förberedd fastighet låter bilderna göra sitt jobb utan visuella störningar.',
         processThreeTitle: 'Leverera det som behövs', processThreeDesc: 'Du får ett överenskommet bildurval, redigerat och klart för de kanaler där annonsen ska användas.',
         ctaKicker: 'För mäklare, ägare och boendevärdar', ctaTitle: 'Berätta om fastigheten.', ctaDesc: 'Skicka adressen, hur materialet ska användas och några önskade datum. Jag återkommer med ett praktiskt förslag baserat på fastigheten och det material som gör mest nytta.', ctaButton: 'Begär offert',
+        quoteStepOne: '1. Välj fotopaket', quoteBaseSmallTitle: 'Baspaket', quoteBaseSmallDesc: 'Upp till 15 högupplösta bilder', quoteBaseStandardTitle: 'Standardpaket', quoteBaseStandardDesc: 'Upp till 25 högupplösta bilder',
+        quoteStepTwo: '2. Lägg till tillval vid behov', quoteDroneBasicTitle: 'Drönare Basic', quoteDroneBasicDesc: '5 till 6 översiktsbilder av hus och tomt', quoteDronePremiumTitle: 'Drönare Premium', quoteDronePremiumDesc: '10 till 12 bilder för större tomter eller skogsfastigheter', quotePanoramaBasicTitle: '360° Panorama Basic', quotePanoramaBasicDesc: 'Fem panoramabilder eller interaktiva länkar', quotePanoramaPremiumTitle: '360° Panorama Premium', quotePanoramaPremiumDesc: 'Tio panoramabilder för större hus',
+        quotePropertyLabel: '3. Information om fastigheten', quotePropertyPlaceholder: 'Adress, ungefärlig storlek, användning och önskat datum', quoteTotalLabel: 'Beräknat totalpris', quoteVatLabel: 'exkl. moms', quoteTotalNote: 'Resa, särskilda önskemål och slutlig omfattning bekräftas före bokning.', quoteSubmit: 'Skicka offertförfrågan',
+        quoteTermOneTitle: 'Resa', quoteTermOneDesc: 'Utanför närområdet debiteras 5,50 kr per km, tur och retur.', quoteTermTwoTitle: 'Förberedelse', quoteTermTwoDesc: 'Fastigheten ska vara städad och förberedd. Extra styling på plats debiteras med 450 kr per påbörjad halvtimme.', quoteTermThreeTitle: 'Väder & ändringar', quoteTermThreeDesc: 'Drönarflygning bokas om när vädret inte tillåter en säker flygning. Övriga villkor bekräftas före bokning.',
+        quoteEmailGreeting: 'Hej Boreal One,', quoteEmailIntro: 'Jag vill gärna begära offert för fastighetsfotografering.', quoteEmailPropertyLabel: 'FASTIGHETSINFORMATION', quoteEmailTotalLabel: 'BERÄKNAT TOTALPRIS',
         footerBrand: 'Boreal One Media, en tjänst från Boreal One AB.', footerLocation: 'Överkalix, Svenska Lappland', close: 'Stäng', emailSubject: 'Förfrågan om fastighetsfotografering', emailBody: 'Hej Boreal One,\n\nJag vill gärna begära offert för fastighetsfotografering.\n\nFastighet / adress:\nÖnskat datum:\nAvsedd användning:\n\nTack!'
       },
       pt: {
@@ -313,15 +382,28 @@
         processTwoTitle: 'Preparar a sessão', processTwoDesc: 'Um imóvel limpo e preparado permite que as imagens façam o trabalho sem distrações visuais.',
         processThreeTitle: 'Entregar o que é útil', processThreeDesc: 'Você recebe um conjunto de imagens combinado, editado e pronto para os canais onde o anúncio será usado.',
         ctaKicker: 'Para imobiliárias, proprietários e anfitriões', ctaTitle: 'Conte sobre o imóvel.', ctaDesc: 'Envie o endereço, o uso pretendido e algumas datas desejadas. Eu retorno com uma proposta prática, baseada no imóvel e no material que será mais útil.', ctaButton: 'Pedir orçamento',
+        quoteStepOne: '1. Escolha o pacote de fotografia', quoteBaseSmallTitle: 'Pacote base', quoteBaseSmallDesc: 'Até 15 imagens em alta resolução', quoteBaseStandardTitle: 'Pacote padrão', quoteBaseStandardDesc: 'Até 25 imagens em alta resolução',
+        quoteStepTwo: '2. Adicione opcionais se fizer sentido', quoteDroneBasicTitle: 'Drone Basic', quoteDroneBasicDesc: '5 a 6 imagens de visão geral da casa e do terreno', quoteDronePremiumTitle: 'Drone Premium', quoteDronePremiumDesc: '10 a 12 imagens para terrenos maiores ou propriedades rurais', quotePanoramaBasicTitle: 'Panorama 360° Basic', quotePanoramaBasicDesc: 'Cinco panoramas ou links interativos', quotePanoramaPremiumTitle: 'Panorama 360° Premium', quotePanoramaPremiumDesc: 'Dez panoramas para casas maiores',
+        quotePropertyLabel: '3. Informações do imóvel', quotePropertyPlaceholder: 'Endereço, tamanho aproximado, uso pretendido e data desejada', quoteTotalLabel: 'Total estimado', quoteVatLabel: 'sem VAT', quoteTotalNote: 'Deslocamento, pedidos especiais e escopo final são confirmados antes da reserva.', quoteSubmit: 'Enviar pedido de orçamento',
+        quoteTermOneTitle: 'Deslocamento', quoteTermOneDesc: 'Fora da área local, a quilometragem é cobrada a 5,50 kr por km, ida e volta.', quoteTermTwoTitle: 'Preparação', quoteTermTwoDesc: 'O imóvel deve estar limpo e preparado. Arrumação extra no local é cobrada a 450 kr por meia hora iniciada.', quoteTermThreeTitle: 'Clima & alterações', quoteTermThreeDesc: 'O uso de drone é reagendado quando o clima não permite voo seguro. Os demais termos são confirmados antes da reserva.',
+        quoteEmailGreeting: 'Olá, Boreal One,', quoteEmailIntro: 'Gostaria de solicitar um orçamento para fotografia imobiliária.', quoteEmailPropertyLabel: 'INFORMAÇÕES DO IMÓVEL', quoteEmailTotalLabel: 'TOTAL ESTIMADO',
         footerBrand: 'Boreal One Media, um serviço da Boreal One AB.', footerLocation: 'Överkalix, Lapônia Sueca', close: 'Fechar', emailSubject: 'Pedido de orçamento para fotografia imobiliária', emailBody: 'Olá, Boreal One,\n\nGostaria de solicitar um orçamento para fotografia imobiliária.\n\nImóvel / endereço:\nData desejada:\nUso pretendido:\n\nObrigado!'
       }
     };
 
+    let activeLanguage = 'en';
+
     function setLanguage(lang) {
+      activeLanguage = lang;
       const copy = translations[lang];
       document.querySelectorAll('[data-i18n]').forEach((element) => {
         const key = element.dataset.i18n;
         if (copy[key]) element.textContent = copy[key];
+      });
+
+      document.querySelectorAll('[data-placeholder]').forEach((element) => {
+        const key = element.dataset.placeholder;
+        if (copy[key]) element.placeholder = copy[key];
       });
 
       document.querySelectorAll('[data-alt-key]').forEach((button) => {
@@ -343,6 +425,55 @@
         button.setAttribute('aria-pressed', String(code === lang));
       });
       localStorage.setItem('preferred-lang', lang);
+    }
+
+    function formatSek(amount) {
+      return `${amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} kr`;
+    }
+
+    function calculateQuote() {
+      const base = [...document.querySelectorAll('input[name="base-package"]')].find((input) => input.checked);
+      let total = Number(base.value);
+      ['drone-basic', 'drone-premium', 'panorama-basic', 'panorama-premium'].forEach((id) => {
+        const option = document.getElementById(id);
+        if (option.checked) total += Number(option.value);
+      });
+      document.getElementById('quote-total').textContent = formatSek(total);
+      return total;
+    }
+
+    function toggleQuoteOption(group, selectedId) {
+      const groups = {
+        drone: ['drone-basic', 'drone-premium'],
+        panorama: ['panorama-basic', 'panorama-premium']
+      };
+      const selected = document.getElementById(selectedId);
+      if (selected.checked) {
+        groups[group].filter((id) => id !== selectedId).forEach((id) => {
+          document.getElementById(id).checked = false;
+        });
+      }
+      calculateQuote();
+    }
+
+    function sendQuoteRequest() {
+      const copy = translations[activeLanguage];
+      const base = [...document.querySelectorAll('input[name="base-package"]')].find((input) => input.checked);
+      const selections = [base.value === '1150' ? `${copy.quoteBaseSmallTitle} (1 150 kr)` : `${copy.quoteBaseStandardTitle} (1 550 kr)`];
+      const options = [
+        ['drone-basic', copy.quoteDroneBasicTitle],
+        ['drone-premium', copy.quoteDronePremiumTitle],
+        ['panorama-basic', copy.quotePanoramaBasicTitle],
+        ['panorama-premium', copy.quotePanoramaPremiumTitle]
+      ];
+      options.forEach(([id, title]) => {
+        const option = document.getElementById(id);
+        if (option.checked) selections.push(`${title} (+${formatSek(Number(option.value))})`);
+      });
+      const propertyInfo = document.getElementById('property-info').value.trim() || '-';
+      const total = formatSek(calculateQuote());
+      const body = `${copy.quoteEmailGreeting}\n\n${copy.quoteEmailIntro}\n\n${selections.join('\n')}\n\n${copy.quoteEmailPropertyLabel}:\n${propertyInfo}\n\n${copy.quoteEmailTotalLabel}: ${total} (${copy.quoteVatLabel})`;
+      window.location.href = `mailto:info@borealone.com?subject=${encodeURIComponent(copy.emailSubject)}&body=${encodeURIComponent(body)}`;
     }
 
     const lightbox = document.getElementById('lightbox');
@@ -375,6 +506,7 @@
       const saved = localStorage.getItem('preferred-lang');
       const browserLanguage = navigator.language.slice(0, 2);
       setLanguage(saved && translations[saved] ? saved : (translations[browserLanguage] ? browserLanguage : 'en'));
+      calculateQuote();
     });
   </script>
 </body>
