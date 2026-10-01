@@ -1,414 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Photography | Boreal One Media</title>
-    <meta name="description" content="Professional real estate, architecture, and property photography by Boreal One Media in Swedish Lapland.">
-    <link rel="canonical" href="https://borealone.com/media/real-estate-photography/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Boreal One AB">
-    <meta property="og:title" content="Real Estate Photography | Boreal One Media">
-    <meta property="og:description" content="Professional photography for real estate, architecture, and property media.">
-    <meta property="og:url" content="https://borealone.com/media/real-estate-photography/">
-    <meta property="og:image" content="https://borealone.com/media/images/re_1.jpg">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../favicon.png">
-    <link rel="apple-touch-icon" href="../favicon.png">
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        arcticDark: '#060a13',
-                        aurora: '#00f5d4',
-                    }
-                }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate & Hospitality Photography | Boreal One Media</title>
+  <meta name="description" content="Real estate, holiday-rental, and hospitality photography in Överkalix and Swedish Lapland by Boreal One Media.">
+  <link rel="canonical" href="https://borealone.com/media/real-estate-photography/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Boreal One AB">
+  <meta property="og:title" content="Real Estate & Hospitality Photography | Boreal One Media">
+  <meta property="og:description" content="Photography for property listings, holiday rentals, and hospitality projects in Swedish Lapland.">
+  <meta property="og:url" content="https://borealone.com/media/real-estate-photography/">
+  <meta property="og:image" content="https://borealone.com/media/images/re_1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            arcticDark: '#060a13',
+            aurora: '#00f5d4'
+          }
         }
-    </script>
+      }
+    }
+  </script>
 </head>
-<body class="bg-[#070b14] text-gray-300 font-sans antialiased min-h-screen flex flex-col justify-between">
+<body class="min-h-screen bg-[#070b14] font-sans text-slate-300 antialiased">
+  <nav class="sticky top-0 z-50 border-b border-slate-800/80 bg-[#070b14]/90 backdrop-blur">
+    <div class="mx-auto flex min-h-16 max-w-6xl flex-wrap items-center justify-between gap-y-3 px-4 py-3 sm:flex-nowrap sm:py-0">
+      <a href="../" class="group order-1 flex items-center gap-3">
+        <img src="../logo-icon.png" alt="Boreal One AB" class="h-8 w-8 rounded-full border border-white/10 object-cover shadow-sm">
+        <span class="text-xs font-bold tracking-[0.12em] text-white transition group-hover:text-slate-300 sm:text-base">BOREAL ONE MEDIA</span>
+      </a>
 
- <!-- NAV BAR CORRIGIDA PARA GALERIA.HTML E IMOBILIARIA.HTML (Acaba com o botao voltar espremido) -->
-    <nav class="border-b border-gray-900 bg-[#070b14]/80 backdrop-blur sticky top-0 z-50">
-        <!-- O flex-wrap permite que os elementos quebrem de linha no celular em vez de espremer -->
-        <div class="max-w-6xl mx-auto px-4 min-h-16 py-3 sm:py-0 flex flex-wrap items-center justify-between gap-y-3">
+      <a href="../" data-i18n="navBack" class="order-3 w-full border-t border-slate-800/70 pt-2 text-center text-xs font-medium tracking-wide text-slate-400 transition hover:text-white sm:order-2 sm:w-auto sm:border-0 sm:pt-0">← Back to Media</a>
 
-            <!-- LADO ESQUERDO: Logo + Nome (Ajustado o tamanho da fonte para não quebrar no mobile) -->
-            <a href="../" class="flex items-center space-x-3 group order-1">
-                <img src="../logo-icon.png" alt="Boreal One AB" class="w-8 h-8 rounded-full object-cover border border-white/10 shadow-sm">
-                <span class="font-bold text-xs sm:text-lg tracking-wider text-white group-hover:text-gray-400 transition">BOREAL ONE MEDIA</span>
-            </a>
+      <div class="order-2 flex space-x-1 rounded border border-slate-800 bg-slate-950 p-1 sm:order-3" aria-label="Language selector">
+        <button type="button" onclick="setLanguage('en')" id="btn-en" class="flex items-center justify-center rounded border border-slate-700 bg-slate-800 p-1 transition" aria-label="English" aria-pressed="true"><img src="https://borealone.com/arrival/flags/uk.svg" alt="" class="h-6 w-6 rounded-full"></button>
+        <button type="button" onclick="setLanguage('sv')" id="btn-sv" class="flex items-center justify-center rounded border border-transparent p-1 transition hover:bg-slate-800/70" aria-label="Svenska" aria-pressed="false"><img src="https://borealone.com/arrival/flags/sweden.svg" alt="" class="h-6 w-6 rounded-full"></button>
+        <button type="button" onclick="setLanguage('pt')" id="btn-pt" class="flex items-center justify-center rounded border border-transparent p-1 transition hover:bg-slate-800/70" aria-label="Português do Brasil" aria-pressed="false"><img src="https://borealone.com/arrival/flags/brazil.svg" alt="" class="h-6 w-6 rounded-full"></button>
+      </div>
+    </div>
+  </nav>
 
-            <!-- LADO DIREITO: Idiomas (Mantém o alinhamento no topo junto com o logo) -->
-            <div class="flex space-x-1 bg-gray-950 p-1 rounded border border-gray-800 order-2 sm:order-3" aria-label="Language selector">
-                <button type="button" onclick="setLanguage('en')" id="btn-en" class="p-1 rounded transition flex items-center justify-center border border-gray-700 bg-gray-800" aria-label="English" aria-pressed="true"><img src="https://borealone.com/arrival/flags/uk.svg" alt="" class="w-6 h-6 rounded-full"></button>
-                <button type="button" onclick="setLanguage('sv')" id="btn-sv" class="p-1 rounded transition flex items-center justify-center border border-transparent hover:bg-gray-800/70" aria-label="Svenska" aria-pressed="false"><img src="https://borealone.com/arrival/flags/sweden.svg" alt="" class="w-6 h-6 rounded-full"></button>
-                <button type="button" onclick="setLanguage('pt')" id="btn-pt" class="p-1 rounded transition flex items-center justify-center border border-transparent hover:bg-gray-800/70" aria-label="Português do Brasil" aria-pressed="false"><img src="https://borealone.com/arrival/flags/brazil.svg" alt="" class="w-6 h-6 rounded-full"></button>
+  <main>
+    <section class="mx-auto max-w-6xl px-4 pb-10 pt-12 md:pb-16 md:pt-20">
+      <div class="overflow-hidden rounded-3xl border border-slate-800 bg-slate-950 shadow-2xl shadow-black/30 lg:grid lg:grid-cols-[1.02fr_0.98fr]">
+        <div class="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
+          <p data-i18n="heroKicker" class="text-xs font-bold uppercase tracking-[0.22em] text-aurora">Real estate & hospitality</p>
+          <h1 data-i18n="heroTitle" class="mt-5 max-w-xl text-4xl font-light tracking-tight text-white sm:text-5xl">Make the first impression feel like a visit.</h1>
+          <p data-i18n="heroDesc" class="mt-5 max-w-xl text-base leading-relaxed text-slate-300">Photography for property listings, holiday rentals, and hospitality projects, made with a clear sense of space, light, and what makes a place worth choosing.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#portfolio" data-i18n="heroPortfolio" class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-200">View selected work</a>
+            <a href="mailto:info@borealone.com" data-mailto data-i18n="heroQuote" class="inline-flex items-center justify-center rounded-xl border border-aurora/40 px-5 py-3 text-sm font-semibold text-aurora transition hover:bg-aurora/10">Request a quote</a>
+          </div>
+          <div class="mt-10 grid grid-cols-3 gap-3 border-t border-slate-800 pt-6 text-xs">
+            <div>
+              <p data-i18n="heroMetricOne" class="font-semibold text-white">Property listings</p>
+              <p data-i18n="heroMetricOneDesc" class="mt-1 leading-relaxed text-slate-500">Interiors, exteriors, and details</p>
             </div>
-
-            <!-- BAIXO: O botão de voltar (w-full joga ele para uma linha exclusiva abaixo no celular) -->
-            <div class="w-full sm:w-auto flex items-center justify-center sm:justify-start text-[11px] sm:text-xs font-medium order-3 sm:order-2 border-t border-gray-900/60 pt-2 sm:pt-0 sm:border-none">
-                <a href="../" id="nav-back-link" class="text-gray-400 hover:text-white py-1 transition tracking-wide uppercase sm:normal-case">
-                    ← Voltar ao Início
-                </a>
+            <div>
+              <p data-i18n="heroMetricTwo" class="font-semibold text-white">Holiday stays</p>
+              <p data-i18n="heroMetricTwoDesc" class="mt-1 leading-relaxed text-slate-500">Rooms, amenities, and atmosphere</p>
             </div>
-
+            <div>
+              <p data-i18n="heroMetricThree" class="font-semibold text-white">Local focus</p>
+              <p data-i18n="heroMetricThreeDesc" class="mt-1 leading-relaxed text-slate-500">Överkalix and projects by agreement</p>
+            </div>
+          </div>
         </div>
-    </nav>
-    <!-- INTRO/HERO SECTION -->
-    <header class="max-w-4xl mx-auto text-center pt-16 pb-8 px-4">
-        <span id="page-badge" class="text-aurora text-xs font-bold tracking-widest uppercase bg-aurora/10 px-3 py-1 rounded-full border border-aurora/20">Commercial & Architecture</span>
-        <h1 id="page-title" class="text-3xl md:text-5xl font-light text-white tracking-tight mt-6 mb-4">Fotografia Imobiliária Profissional</h1>
-        <p id="page-desc" class="text-gray-400 text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed">Valorizando cada metro quadrado através de iluminação técnica, precisão geométrica e imagens aéreas de alta definição.</p>
-    </header>
-
-   <!-- SEÇÃO DE APRESENTAÇÃO COM VIRTUAL TOUR LIVE (Kuula Iframe) -->
-    <section class="max-w-5xl mx-auto px-4 py-8 w-full">
-        <!-- Grid Inteligente: Janela 360° grande na esquerda, fotos na direita -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-
-            <!-- Lado Esquerdo: O Visualizador 360° Interativo (Ocupa 2 colunas no PC) -->
-            <div class="md:col-span-2 rounded-xl overflow-hidden h-72 md:h-[400px] border border-gray-900 shadow-2xl bg-black relative group">
-                <!-- Substitua o 'YOUR_KUULA_ID' abaixo pelo ID da sua foto do Kuula -->
-                <iframe
-                    width="100%"
-                    height="100%"
-                    style="border:0;"
-                    src="https://kuula.co/share/LF1dy?logo=1&info=1&fs=1&vr=0&sd=1&thumbs=1"
-                    allowfullscreen
-                    allow="xr-spatial-tracking">
-                </iframe>
-            </div>
-
-            <!-- Lado Direito: Duas Fotos Estáticas Empilhadas (Preenche a altura perfeitamente) -->
-            <div class="grid grid-rows-2 gap-4 h-72 md:h-[400px]">
-                <div class="rounded-xl overflow-hidden border border-gray-900 shadow-md bg-gray-950">
-                    <img src="../images/re_2.jpg" alt="Kitchen detail" class="w-full h-full object-cover">
-                </div>
-                <div class="rounded-xl overflow-hidden border border-gray-900 shadow-md bg-gray-950">
-                    <img src="../images/re_3.jpg" alt="Exterior drone view" class="w-full h-full object-cover">
-                </div>
-            </div>
-
+        <div class="min-h-[300px] bg-slate-900 lg:min-h-full">
+          <img src="../images/re_1.jpg" alt="Aerial property photograph in Swedish Lapland" class="h-full w-full object-cover" fetchpriority="high">
         </div>
+      </div>
     </section>
 
-    <!-- SIMULADOR DE ORÇAMENTO INTERATIVO -->
-    <main class="max-w-4xl mx-auto px-4 py-12 w-full flex-grow">
-        <div class="bg-gray-900/20 border border-gray-800/80 rounded-2xl p-6 md:p-8 shadow-2xl backdrop-blur-sm">
-
-            <div class="text-center md:text-left mb-8">
-                <h2 id="calc-title" class="text-xl font-bold text-white mb-2">Simulador de Orçamento Modular</h2>
-                <p id="calc-desc" class="text-xs text-gray-400">Monte o seu pacote personalizado marcando as opções abaixo. O valor é atualizado instantaneamente.</p>
-            </div>
-
-            <!-- PASSO 1: BASE DE FOTOS -->
-            <div class="mb-8">
-                <label id="step1-label" class="block text-xs font-bold uppercase tracking-wider text-aurora mb-3">1. Välj Baspaket (Fotografering)</label>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <label class="flex items-center justify-between p-4 bg-black/30 border border-gray-800 rounded-xl cursor-pointer hover:border-gray-700 transition">
-                        <div class="flex items-center space-x-3">
-                            <input type="radio" name="baspaket" value="1150" checked onchange="calculateTotal()" class="w-4 h-4 text-aurora bg-gray-900 border-gray-700 focus:ring-0">
-                            <div>
-                                <span id="opt-base1-name" class="font-semibold text-white block text-sm">Baspaket (Små)</span>
-                                <span id="opt-base1-desc" class="text-xs text-gray-500 block">Upp till 15 bilder</span>
-                            </div>
-                        </div>
-                        <span class="font-bold text-sm text-white">1 150 kr</span>
-                    </label>
-                    <label class="flex items-center justify-between p-4 bg-black/30 border border-gray-800 rounded-xl cursor-pointer hover:border-gray-700 transition">
-                        <div class="flex items-center space-x-3">
-                            <input type="radio" name="baspaket" value="1550" onchange="calculateTotal()" class="w-4 h-4 text-aurora bg-gray-900 border-gray-700 focus:ring-0">
-                            <div>
-                                <span id="opt-base2-name" class="font-semibold text-white block text-sm">Mellanpaket (Standard)</span>
-                                <span id="opt-base2-desc" class="text-xs text-gray-500 block">Upp till 25 bilder</span>
-                            </div>
-                        </div>
-                        <span class="font-bold text-sm text-white">1 550 kr</span>
-                    </label>
-                </div>
-            </div>
-
-            <!-- PASSO 2: TILLVAL (ADD-ONS) -->
-            <div class="mb-8">
-                <label id="step2-label" class="block text-xs font-bold uppercase tracking-wider text-aurora mb-3">2. Välj Tillval (Add-ons)</label>
-                <div class="space-y-3">
-                    <!-- DRONE BASIC -->
-                    <label class="flex items-center justify-between p-4 bg-black/20 border border-gray-800/60 rounded-xl cursor-pointer hover:border-gray-700 transition">
-                        <div class="flex items-start space-x-3">
-                            <input type="checkbox" id="add-drone-basic" value="450" onchange="toggleDrone('basic')" class="w-4 h-4 mt-0.5 text-aurora bg-gray-900 border-gray-700 rounded focus:ring-0">
-                            <div>
-                                <span id="opt-db-name" class="font-medium text-sm text-gray-200 block">Drone Basic (+5 till 6 bilder)</span>
-                                <span id="opt-db-desc" class="text-xs text-gray-500 block">Fina översiktsbilder av hus och trädgård.</span>
-                            </div>
-                        </div>
-                        <span class="font-bold text-sm text-white">+450 kr</span>
-                    </label>
-                    <!-- DRONE PREMIUM -->
-                    <label class="flex items-center justify-between p-4 bg-black/20 border border-gray-800/60 rounded-xl cursor-pointer hover:border-gray-700 transition">
-                        <div class="flex items-start space-x-3">
-                            <input type="checkbox" id="add-drone-premium" value="750" onchange="toggleDrone('premium')" class="w-4 h-4 mt-0.5 text-aurora bg-gray-900 border-gray-700 rounded focus:ring-0">
-                            <div>
-                                <span id="opt-dp-name" class="font-medium text-sm text-gray-200 block">Drone Premium (+10 till 12 bilder)</span>
-                                <span id="opt-dp-desc" class="text-xs text-gray-500 block">För stora tomter (>1 ha) eller skogsfastigheter.</span>
-                            </div>
-                        </div>
-                        <span class="font-bold text-sm text-white">+750 kr</span>
-                    </label>
-                    <!-- 360° BASIC -->
-                    <label class="flex items-center justify-between p-4 bg-black/20 border border-gray-800/60 rounded-xl cursor-pointer hover:border-gray-700 transition">
-                        <div class="flex items-start space-x-3">
-                            <input type="checkbox" id="add-360-basic" value="650" onchange="toggle360('basic')" class="w-4 h-4 mt-0.5 text-aurora bg-gray-900 border-gray-700 rounded focus:ring-0">
-                            <div>
-                                <span id="opt-360b-name" class="font-medium text-sm text-gray-200 block">360° Panorama Basic (5 bilder)</span>
-                                <span id="opt-360b-desc" class="text-xs text-gray-500 block">Råfiler eller interaktiva Kuula-länkar.</span>
-                            </div>
-                        </div>
-                        <span class="font-bold text-sm text-white">+650 kr</span>
-                    </label>
-                    <!-- 360° PREMIUM -->
-                    <label class="flex items-center justify-between p-4 bg-black/20 border border-gray-800/60 rounded-xl cursor-pointer hover:border-gray-700 transition">
-                        <div class="flex items-start space-x-3">
-                            <input type="checkbox" id="add-360-premium" value="1150" onchange="toggle360('premium')" class="w-4 h-4 mt-0.5 text-aurora bg-gray-900 border-gray-700 rounded focus:ring-0">
-                            <div>
-                                <span id="opt-360p-name" class="font-medium text-sm text-gray-200 block">360° Panorama Premium (10 bilder)</span>
-                                <span id="opt-360p-desc" class="text-xs text-gray-500 block">Komplett sfärisk täckning för större villor.</span>
-                            </div>
-                        </div>
-                        <span class="font-bold text-sm text-white">+1 150 kr</span>
-                    </label>
-                </div>
-            </div>
-
-            <!-- PASSO 3: INFORMAÇÕES EXTRA -->
-            <div class="mb-8">
-                <label id="step3-label" class="block text-xs font-bold uppercase tracking-wider text-aurora mb-2">3. Fastighetsinformation (Valfritt)</label>
-                <input type="text" id="property-info" placeholder="Ex: Gata 12, Överkalix (Storlek: 120 kvm)" class="w-full bg-black/40 border border-gray-800 rounded-xl px-4 py-3 text-sm text-white placeholder-gray-600 focus:outline-none focus:border-gray-700">
-            </div>
-
-            <!-- DISPLAY DO TOTAL -->
-            <div class="bg-black/40 border border-gray-800 rounded-xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-                <div class="text-center sm:text-left">
-                    <span id="total-label" class="text-xs uppercase font-semibold text-gray-500 tracking-wider block">Beräknat Totalpris</span>
-                    <span id="total-price-display" class="text-3xl font-black text-white">1 150 kr</span>
-                    <span class="text-xs text-gray-500 ml-1">exkl. moms</span>
-                </div>
-                <button onclick="sendBookingEmail()" id="submit-btn" class="w-full sm:w-auto bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-8 py-4 rounded-xl transition shadow-lg">Skicka Bokningsförfrågan</button>
-            </div>
-
+    <section id="portfolio" class="mx-auto max-w-6xl scroll-mt-24 px-4 py-10 md:py-16">
+      <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+        <div>
+          <p data-i18n="portfolioKicker" class="text-xs font-bold uppercase tracking-[0.22em] text-aurora">Selected work</p>
+          <h2 data-i18n="portfolioTitle" class="mt-4 text-3xl font-light tracking-tight text-white sm:text-4xl">A listing needs more than wide-angle rooms.</h2>
         </div>
+        <p data-i18n="portfolioDesc" class="max-w-2xl leading-relaxed text-slate-400">The strongest property imagery explains how a place works, then gives people a reason to picture themselves there. The selection below combines room coverage, useful details, surroundings, and a sense of the stay.</p>
+      </div>
 
-        <!-- REGRAS E DIRETRIZES -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 border-t border-gray-900 pt-12 text-xs text-gray-400">
-            <div>
-                <h4 id="cond1-title" class="font-bold text-white mb-2 uppercase text-aurora">Reseersättning</h4>
-                <p id="cond1-desc">Utanför närområdet (&gt;15 km från Överkalix) debiteras <strong>5,50 kr / km</strong> tur och retur.</p>
+      <div class="mt-10 overflow-hidden rounded-3xl border border-slate-800 bg-slate-950/60">
+        <div class="grid gap-0 lg:grid-cols-[0.75fr_1.25fr]">
+          <div class="relative min-h-[300px] overflow-hidden">
+            <img src="../images/Gyljen%20Aurora-1%20Large.jpeg" alt="The Yellow Aurora House under the Northern Lights" class="absolute inset-0 h-full w-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+            <p data-i18n="caseImageLabel" class="absolute bottom-5 left-5 rounded-full border border-white/15 bg-slate-950/70 px-3 py-1.5 text-xs font-semibold text-white backdrop-blur">Gyljen, Överkalix</p>
+          </div>
+          <div class="p-7 sm:p-10">
+            <p data-i18n="caseKicker" class="text-xs font-bold uppercase tracking-[0.22em] text-aurora">Featured listing study</p>
+            <h3 data-i18n="caseTitle" class="mt-4 text-2xl font-light tracking-tight text-white sm:text-3xl">The Yellow Aurora House</h3>
+            <p data-i18n="caseDesc" class="mt-5 max-w-2xl leading-relaxed text-slate-300">A Boreal One accommodation project in Gyljen, photographed for its Booking.com listing and guest-facing website. The brief was to make the rooms clear, show the practical details, and connect the house to the landscape that guests come here for.</p>
+            <div class="mt-7 grid gap-3 sm:grid-cols-3">
+              <div class="rounded-xl border border-slate-800 bg-black/20 p-4">
+                <p data-i18n="casePointOneTitle" class="text-sm font-semibold text-white">Room clarity</p>
+                <p data-i18n="casePointOneDesc" class="mt-1 text-xs leading-relaxed text-slate-500">Living spaces and practical layout</p>
+              </div>
+              <div class="rounded-xl border border-slate-800 bg-black/20 p-4">
+                <p data-i18n="casePointTwoTitle" class="text-sm font-semibold text-white">Stay details</p>
+                <p data-i18n="casePointTwoDesc" class="mt-1 text-xs leading-relaxed text-slate-500">Kitchen, bedroom, and amenities</p>
+              </div>
+              <div class="rounded-xl border border-slate-800 bg-black/20 p-4">
+                <p data-i18n="casePointThreeTitle" class="text-sm font-semibold text-white">Sense of place</p>
+                <p data-i18n="casePointThreeDesc" class="mt-1 text-xs leading-relaxed text-slate-500">River, exterior, and season</p>
+              </div>
             </div>
-            <div>
-                <h4 id="cond2-title" class="font-bold text-white mb-2 uppercase text-aurora">Förberedelse</h4>
-                <p id="cond2-desc">Fastigheten ska vara städad. Extra styling på plats debiteras med <strong>450 kr</strong> per påbörjad halvtimme.</p>
-            </div>
-            <div>
-                <h4 id="cond3-title" class="font-bold text-white mb-2 uppercase text-aurora">Väder & Avbokning</h4>
-                <p id="cond3-desc">Fri avbokning upp till 24h innan. Vid dåligt väder bokas drönarflygningen om helt kostnadsfritt.</p>
-            </div>
+          </div>
         </div>
-    </main>
+      </div>
 
-    <!-- FOOTER -->
-    <footer class="w-full py-12 text-center px-4 border-t border-gray-900 bg-black/10">
-        <p id="footer-rights" class="text-xs text-gray-600">© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados.</p>
-    </footer>
+      <div class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+        <button type="button" class="group relative aspect-[16/10] overflow-hidden rounded-2xl border border-slate-800 text-left" data-lightbox="../images/Gyljen00001%20Large.jpeg" data-alt-key="imageLiving" aria-label="Open living room image">
+          <img src="../images/Gyljen00001%20Large.jpeg" alt="Living room photography" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+          <span data-i18n="imageLiving" class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 to-transparent px-4 pb-3 pt-8 text-xs font-medium text-white">Living room</span>
+        </button>
+        <button type="button" class="group relative aspect-[16/10] overflow-hidden rounded-2xl border border-slate-800 text-left" data-lightbox="../images/Gyljen00005%20Large.jpeg" data-alt-key="imageDining" aria-label="Open dining area image">
+          <img src="../images/Gyljen00005%20Large.jpeg" alt="Dining area photography" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+          <span data-i18n="imageDining" class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 to-transparent px-4 pb-3 pt-8 text-xs font-medium text-white">Dining area</span>
+        </button>
+        <button type="button" class="group relative aspect-[16/10] overflow-hidden rounded-2xl border border-slate-800 text-left" data-lightbox="../images/Gyljen00006%20Large.jpeg" data-alt-key="imageKitchen" aria-label="Open kitchen image">
+          <img src="../images/Gyljen00006%20Large.jpeg" alt="Kitchen photography" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+          <span data-i18n="imageKitchen" class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 to-transparent px-4 pb-3 pt-8 text-xs font-medium text-white">Kitchen</span>
+        </button>
+        <button type="button" class="group relative aspect-[16/10] overflow-hidden rounded-2xl border border-slate-800 text-left" data-lightbox="../images/Gyljen00023%20Large.jpeg" data-alt-key="imageBedroom" aria-label="Open bedroom image">
+          <img src="../images/Gyljen00023%20Large.jpeg" alt="Bedroom photography" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+          <span data-i18n="imageBedroom" class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 to-transparent px-4 pb-3 pt-8 text-xs font-medium text-white">Bedroom</span>
+        </button>
+        <button type="button" class="group relative aspect-[16/10] overflow-hidden rounded-2xl border border-slate-800 text-left" data-lightbox="../images/Gyljen00029%20Large.jpeg" data-alt-key="imageDetail" aria-label="Open room detail image">
+          <img src="../images/Gyljen00029%20Large.jpeg" alt="Bedroom detail photography" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+          <span data-i18n="imageDetail" class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 to-transparent px-4 pb-3 pt-8 text-xs font-medium text-white">Room detail</span>
+        </button>
+        <button type="button" class="group relative aspect-[16/10] overflow-hidden rounded-2xl border border-slate-800 text-left" data-lightbox="../images/Gyljen00035%20Large.jpeg" data-alt-key="imageSurroundings" aria-label="Open surroundings image">
+          <img src="../images/Gyljen00035%20Large.jpeg" alt="River surroundings photography" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+          <span data-i18n="imageSurroundings" class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 to-transparent px-4 pb-3 pt-8 text-xs font-medium text-white">Nearby river</span>
+        </button>
+        <button type="button" class="group relative aspect-[16/10] overflow-hidden rounded-2xl border border-slate-800 text-left" data-lightbox="../images/re_2.jpg" data-alt-key="imageInterior" aria-label="Open interior image">
+          <img src="../images/re_2.jpg" alt="Interior photography" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+          <span data-i18n="imageInterior" class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 to-transparent px-4 pb-3 pt-8 text-xs font-medium text-white">Interior</span>
+        </button>
+        <button type="button" class="group relative aspect-[16/10] overflow-hidden rounded-2xl border border-slate-800 text-left" data-lightbox="../images/re_3.jpg" data-alt-key="imageAerial" aria-label="Open aerial image">
+          <img src="../images/re_3.jpg" alt="Aerial property photography" class="h-full w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy">
+          <span data-i18n="imageAerial" class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 to-transparent px-4 pb-3 pt-8 text-xs font-medium text-white">Aerial view</span>
+        </button>
+      </div>
+    </section>
 
-    <!-- LOGICA DO SIMULADOR (JAVASCRIPT) -->
-    <script>
-        // Impede que o cliente selecione Drone Basic e Premium ao mesmo tempo
-        function toggleDrone(type) {
-            if (type === 'basic' && document.getElementById('add-drone-basic').checked) {
-                document.getElementById('add-drone-premium').checked = false;
-            } else if (type === 'premium' && document.getElementById('add-drone-premium').checked) {
-                document.getElementById('add-drone-basic').checked = false;
-            }
-            calculateTotal();
-        }
+    <section class="border-y border-slate-900 bg-black/15">
+      <div class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+        <div class="max-w-2xl">
+          <p data-i18n="servicesKicker" class="text-xs font-bold uppercase tracking-[0.22em] text-aurora">What the work can cover</p>
+          <h2 data-i18n="servicesTitle" class="mt-4 text-3xl font-light tracking-tight text-white sm:text-4xl">A visual set that fits the way the property will be used.</h2>
+        </div>
+        <div class="mt-10 grid gap-4 md:grid-cols-3">
+          <article class="rounded-2xl border border-slate-800 bg-slate-950/70 p-6">
+            <p class="text-aurora">01</p>
+            <h3 data-i18n="serviceOneTitle" class="mt-5 text-lg font-semibold text-white">Property listings</h3>
+            <p data-i18n="serviceOneDesc" class="mt-3 text-sm leading-relaxed text-slate-400">Clear interior and exterior coverage that supports an agent, owner, or prospective buyer in understanding the property.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-800 bg-slate-950/70 p-6">
+            <p class="text-aurora">02</p>
+            <h3 data-i18n="serviceTwoTitle" class="mt-5 text-lg font-semibold text-white">Holiday rentals & stays</h3>
+            <p data-i18n="serviceTwoDesc" class="mt-3 text-sm leading-relaxed text-slate-400">Images that make an accommodation feel easy to book: rooms, sleeping arrangements, amenities, and the setting around it.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-800 bg-slate-950/70 p-6">
+            <p class="text-aurora">03</p>
+            <h3 data-i18n="serviceThreeTitle" class="mt-5 text-lg font-semibold text-white">Aerial, detail & 360°</h3>
+            <p data-i18n="serviceThreeDesc" class="mt-3 text-sm leading-relaxed text-slate-400">Aerial views, detail images, and interactive material can be planned when they add real value to the listing and conditions allow.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        // Impede que selecione 360° Basic e Premium simultaneamente
-        function toggle360(type) {
-            if (type === 'basic' && document.getElementById('add-360-basic').checked) {
-                document.getElementById('add-360-premium').checked = false;
-            } else if (type === 'premium' && document.getElementById('add-360-premium').checked) {
-                document.getElementById('add-360-basic').checked = false;
-            }
-            calculateTotal();
-        }
+    <section class="mx-auto max-w-6xl px-4 py-14 md:py-20">
+      <div class="grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
+        <div>
+          <p data-i18n="processKicker" class="text-xs font-bold uppercase tracking-[0.22em] text-aurora">Simple process</p>
+          <h2 data-i18n="processTitle" class="mt-4 text-3xl font-light tracking-tight text-white">Planned around the listing, not a generic shot list.</h2>
+        </div>
+        <ol class="grid gap-4 sm:grid-cols-3">
+          <li class="border-t border-slate-800 pt-4">
+            <span class="text-xs font-bold text-aurora">01</span>
+            <h3 data-i18n="processOneTitle" class="mt-3 font-semibold text-white">Brief the property</h3>
+            <p data-i18n="processOneDesc" class="mt-2 text-sm leading-relaxed text-slate-500">We define the purpose, the key spaces, and any practical features worth showing.</p>
+          </li>
+          <li class="border-t border-slate-800 pt-4">
+            <span class="text-xs font-bold text-aurora">02</span>
+            <h3 data-i18n="processTwoTitle" class="mt-3 font-semibold text-white">Prepare the shoot</h3>
+            <p data-i18n="processTwoDesc" class="mt-2 text-sm leading-relaxed text-slate-500">A tidy, prepared property allows the images to do their job without visual distractions.</p>
+          </li>
+          <li class="border-t border-slate-800 pt-4">
+            <span class="text-xs font-bold text-aurora">03</span>
+            <h3 data-i18n="processThreeTitle" class="mt-3 font-semibold text-white">Deliver what is useful</h3>
+            <p data-i18n="processThreeDesc" class="mt-2 text-sm leading-relaxed text-slate-500">You receive an agreed image set, edited and ready for the listing channels you use.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-        function calculateTotal() {
-            let total = 0;
+    <section class="mx-auto max-w-6xl px-4 pb-16 md:pb-24">
+      <div class="rounded-3xl border border-aurora/20 bg-gradient-to-br from-aurora/10 via-slate-950 to-slate-950 p-7 sm:p-10 md:p-12">
+        <p data-i18n="ctaKicker" class="text-xs font-bold uppercase tracking-[0.22em] text-aurora">For agencies, owners, and accommodation hosts</p>
+        <div class="mt-5 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+          <div class="max-w-2xl">
+            <h2 data-i18n="ctaTitle" class="text-3xl font-light tracking-tight text-white sm:text-4xl">Tell me about the property.</h2>
+            <p data-i18n="ctaDesc" class="mt-4 leading-relaxed text-slate-300">Send the address, the intended use, and a few preferred dates. I will reply with a practical proposal based on the property and the material that will be most useful.</p>
+          </div>
+          <a href="mailto:info@borealone.com" data-mailto data-i18n="ctaButton" class="inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-950 transition hover:bg-slate-200">Request a quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-            // Pega o plano base
-            const basePackages = document.getElementsByName('baspaket');
-            for (let radio of basePackages) {
-                if (radio.checked) total += parseInt(radio.value);
-            }
+  <footer class="border-t border-slate-900 bg-black/20 px-4 py-10 text-center">
+    <p data-i18n="footerBrand" class="text-sm font-medium text-slate-300">Boreal One Media, a service of Boreal One AB.</p>
+    <p data-i18n="footerLocation" class="mt-2 text-xs text-slate-600">Överkalix, Swedish Lapland</p>
+  </footer>
 
-            // Soma os opcionais
-            if (document.getElementById('add-drone-basic').checked) total += 450;
-            if (document.getElementById('add-drone-premium').checked) total += 750;
-            if (document.getElementById('add-360-basic').checked) total += 650;
-            if (document.getElementById('add-360-premium').checked) total += 1150;
+  <div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-slate-950/95 p-4" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button type="button" id="lightbox-close" class="absolute right-5 top-5 rounded-full border border-white/20 bg-slate-950/70 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-800">Close</button>
+    <img id="lightbox-image" src="" alt="" class="max-h-[88vh] max-w-[94vw] rounded-xl object-contain shadow-2xl">
+  </div>
 
-            // Formata o número com espaço de milhar estilo sueco (ex: 1 550)
-            document.getElementById('total-price-display').textContent = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " kr";
-            return total;
-        }
+  <script>
+    const translations = {
+      en: {
+        navBack: '← Back to Media',
+        heroKicker: 'Real estate & hospitality',
+        heroTitle: 'Make the first impression feel like a visit.',
+        heroDesc: 'Photography for property listings, holiday rentals, and hospitality projects, made with a clear sense of space, light, and what makes a place worth choosing.',
+        heroPortfolio: 'View selected work', heroQuote: 'Request a quote',
+        heroMetricOne: 'Property listings', heroMetricOneDesc: 'Interiors, exteriors, and details',
+        heroMetricTwo: 'Holiday stays', heroMetricTwoDesc: 'Rooms, amenities, and atmosphere',
+        heroMetricThree: 'Local focus', heroMetricThreeDesc: 'Överkalix and projects by agreement',
+        portfolioKicker: 'Selected work', portfolioTitle: 'A listing needs more than wide-angle rooms.',
+        portfolioDesc: 'The strongest property imagery explains how a place works, then gives people a reason to picture themselves there. The selection below combines room coverage, useful details, surroundings, and a sense of the stay.',
+        caseImageLabel: 'Gyljen, Överkalix', caseKicker: 'Featured listing study', caseTitle: 'The Yellow Aurora House',
+        caseDesc: 'A Boreal One accommodation project in Gyljen, photographed for its Booking.com listing and guest-facing website. The brief was to make the rooms clear, show the practical details, and connect the house to the landscape that guests come here for.',
+        casePointOneTitle: 'Room clarity', casePointOneDesc: 'Living spaces and practical layout',
+        casePointTwoTitle: 'Stay details', casePointTwoDesc: 'Kitchen, bedroom, and amenities',
+        casePointThreeTitle: 'Sense of place', casePointThreeDesc: 'River, exterior, and season',
+        imageLiving: 'Living room', imageDining: 'Dining area', imageKitchen: 'Kitchen', imageBedroom: 'Bedroom', imageDetail: 'Room detail', imageSurroundings: 'Nearby river', imageInterior: 'Interior', imageAerial: 'Aerial view',
+        servicesKicker: 'What the work can cover', servicesTitle: 'A visual set that fits the way the property will be used.',
+        serviceOneTitle: 'Property listings', serviceOneDesc: 'Clear interior and exterior coverage that supports an agent, owner, or prospective buyer in understanding the property.',
+        serviceTwoTitle: 'Holiday rentals & stays', serviceTwoDesc: 'Images that make an accommodation feel easy to book: rooms, sleeping arrangements, amenities, and the setting around it.',
+        serviceThreeTitle: 'Aerial, detail & 360°', serviceThreeDesc: 'Aerial views, detail images, and interactive material can be planned when they add real value to the listing and conditions allow.',
+        processKicker: 'Simple process', processTitle: 'Planned around the listing, not a generic shot list.',
+        processOneTitle: 'Brief the property', processOneDesc: 'We define the purpose, the key spaces, and any practical features worth showing.',
+        processTwoTitle: 'Prepare the shoot', processTwoDesc: 'A tidy, prepared property allows the images to do their job without visual distractions.',
+        processThreeTitle: 'Deliver what is useful', processThreeDesc: 'You receive an agreed image set, edited and ready for the listing channels you use.',
+        ctaKicker: 'For agencies, owners, and accommodation hosts', ctaTitle: 'Tell me about the property.', ctaDesc: 'Send the address, the intended use, and a few preferred dates. I will reply with a practical proposal based on the property and the material that will be most useful.', ctaButton: 'Request a quote',
+        footerBrand: 'Boreal One Media, a service of Boreal One AB.', footerLocation: 'Överkalix, Swedish Lapland', close: 'Close', emailSubject: 'Real estate photography enquiry', emailBody: 'Hello Boreal One,\n\nI would like to request a quote for property photography.\n\nProperty / address:\nPreferred date:\nIntended use:\n\nThank you!'
+      },
+      sv: {
+        navBack: '← Tillbaka till Media',
+        heroKicker: 'Fastigheter & besöksnäring',
+        heroTitle: 'Låt första intrycket kännas som ett besök.',
+        heroDesc: 'Fotografi för bostadsannonser, semesterboenden och besöksnäring, med tydlig känsla för rum, ljus och det som gör en plats värd att välja.',
+        heroPortfolio: 'Se utvalda arbeten', heroQuote: 'Begär offert',
+        heroMetricOne: 'Bostadsannonser', heroMetricOneDesc: 'Interiör, exteriör och detaljer',
+        heroMetricTwo: 'Semesterboenden', heroMetricTwoDesc: 'Rum, bekvämligheter och atmosfär',
+        heroMetricThree: 'Lokal närvaro', heroMetricThreeDesc: 'Överkalix och projekt enligt överenskommelse',
+        portfolioKicker: 'Utvalda arbeten', portfolioTitle: 'En annons behöver mer än vidvinklade rum.',
+        portfolioDesc: 'Starka fastighetsbilder förklarar hur en plats fungerar och ger sedan människor en anledning att föreställa sig själva där. Urvalet nedan kombinerar rum, användbara detaljer, omgivning och känslan av vistelsen.',
+        caseImageLabel: 'Gyljen, Överkalix', caseKicker: 'Utvalt exempel', caseTitle: 'The Yellow Aurora House',
+        caseDesc: 'Ett boendeprojekt från Boreal One i Gyljen, fotograferat för sin Booking.com-annons och webbplats för gäster. Uppdraget var att göra rummen tydliga, visa praktiska detaljer och knyta huset till landskapet som gästerna kommer hit för.',
+        casePointOneTitle: 'Tydliga rum', casePointOneDesc: 'Vardagsytor och praktisk planlösning',
+        casePointTwoTitle: 'Boendedetaljer', casePointTwoDesc: 'Kök, sovrum och bekvämligheter',
+        casePointThreeTitle: 'Känsla för platsen', casePointThreeDesc: 'Älv, exteriör och säsong',
+        imageLiving: 'Vardagsrum', imageDining: 'Matplats', imageKitchen: 'Kök', imageBedroom: 'Sovrum', imageDetail: 'Rumsdetalj', imageSurroundings: 'Älven i närheten', imageInterior: 'Interiör', imageAerial: 'Flygbild',
+        servicesKicker: 'Vad arbetet kan omfatta', servicesTitle: 'Ett bildpaket som passar hur fastigheten ska användas.',
+        serviceOneTitle: 'Bostadsannonser', serviceOneDesc: 'Tydliga bilder av interiör och exteriör som hjälper mäklare, ägare och spekulanter att förstå fastigheten.',
+        serviceTwoTitle: 'Semesterboenden & vistelser', serviceTwoDesc: 'Bilder som gör boendet lätt att boka: rum, sovplatser, bekvämligheter och miljön runt omkring.',
+        serviceThreeTitle: 'Flygbild, detalj & 360°', serviceThreeDesc: 'Flygbilder, detaljbilder och interaktivt material kan planeras när de ger verkligt värde för annonsen och förutsättningarna tillåter.',
+        processKicker: 'Enkel process', processTitle: 'Planerat runt annonsen, inte en generell bildlista.',
+        processOneTitle: 'Gå igenom fastigheten', processOneDesc: 'Vi definierar syftet, de viktigaste ytorna och praktiska egenskaper som är värda att visa.',
+        processTwoTitle: 'Förbered fotograferingen', processTwoDesc: 'En städad och förberedd fastighet låter bilderna göra sitt jobb utan visuella störningar.',
+        processThreeTitle: 'Leverera det som behövs', processThreeDesc: 'Du får ett överenskommet bildurval, redigerat och klart för de kanaler där annonsen ska användas.',
+        ctaKicker: 'För mäklare, ägare och boendevärdar', ctaTitle: 'Berätta om fastigheten.', ctaDesc: 'Skicka adressen, hur materialet ska användas och några önskade datum. Jag återkommer med ett praktiskt förslag baserat på fastigheten och det material som gör mest nytta.', ctaButton: 'Begär offert',
+        footerBrand: 'Boreal One Media, en tjänst från Boreal One AB.', footerLocation: 'Överkalix, Svenska Lappland', close: 'Stäng', emailSubject: 'Förfrågan om fastighetsfotografering', emailBody: 'Hej Boreal One,\n\nJag vill gärna begära offert för fastighetsfotografering.\n\nFastighet / adress:\nÖnskat datum:\nAvsedd användning:\n\nTack!'
+      },
+      pt: {
+        navBack: '← Voltar para Media',
+        heroKicker: 'Imóveis & hospedagem',
+        heroTitle: 'Faça a primeira impressão parecer uma visita.',
+        heroDesc: 'Fotografia para anúncios imobiliários, aluguéis de temporada e hospedagens, feita com atenção ao espaço, à luz e ao que torna um lugar especial.',
+        heroPortfolio: 'Ver trabalhos selecionados', heroQuote: 'Pedir orçamento',
+        heroMetricOne: 'Anúncios imobiliários', heroMetricOneDesc: 'Interiores, exteriores e detalhes',
+        heroMetricTwo: 'Hospedagens', heroMetricTwoDesc: 'Ambientes, comodidades e atmosfera',
+        heroMetricThree: 'Atuação local', heroMetricThreeDesc: 'Överkalix e projetos mediante acordo',
+        portfolioKicker: 'Trabalhos selecionados', portfolioTitle: 'Um anúncio precisa de mais do que ambientes em grande angular.',
+        portfolioDesc: 'As melhores imagens imobiliárias explicam como um lugar funciona e depois fazem as pessoas se imaginarem nele. A seleção abaixo reúne ambientes, detalhes úteis, o entorno e a sensação da estadia.',
+        caseImageLabel: 'Gyljen, Överkalix', caseKicker: 'Estudo de caso', caseTitle: 'The Yellow Aurora House',
+        caseDesc: 'Um projeto de hospedagem da Boreal One em Gyljen, fotografado para o anúncio no Booking.com e o site voltado aos hóspedes. O objetivo foi deixar os ambientes claros, mostrar detalhes práticos e conectar a casa à paisagem que traz os visitantes para cá.',
+        casePointOneTitle: 'Ambientes claros', casePointOneDesc: 'Áreas de convivência e layout prático',
+        casePointTwoTitle: 'Detalhes da estadia', casePointTwoDesc: 'Cozinha, quarto e comodidades',
+        casePointThreeTitle: 'Sentido de lugar', casePointThreeDesc: 'Rio, exterior e estação do ano',
+        imageLiving: 'Sala de estar', imageDining: 'Área de jantar', imageKitchen: 'Cozinha', imageBedroom: 'Quarto', imageDetail: 'Detalhe do ambiente', imageSurroundings: 'Rio próximo', imageInterior: 'Interior', imageAerial: 'Vista aérea',
+        servicesKicker: 'O que o trabalho pode incluir', servicesTitle: 'Um conjunto visual que combina com o uso do imóvel.',
+        serviceOneTitle: 'Anúncios imobiliários', serviceOneDesc: 'Cobertura clara de interiores e exteriores que ajuda corretor, proprietário e possível comprador a entender o imóvel.',
+        serviceTwoTitle: 'Aluguéis de temporada & hospedagens', serviceTwoDesc: 'Imagens que facilitam a reserva: ambientes, camas, comodidades e o cenário ao redor.',
+        serviceThreeTitle: 'Aéreo, detalhe & 360°', serviceThreeDesc: 'Imagens aéreas, detalhes e material interativo podem ser planejados quando realmente agregam ao anúncio e as condições permitem.',
+        processKicker: 'Processo simples', processTitle: 'Planejado para o anúncio, não uma lista genérica de fotos.',
+        processOneTitle: 'Entender o imóvel', processOneDesc: 'Definimos a finalidade, os espaços principais e os recursos práticos que vale mostrar.',
+        processTwoTitle: 'Preparar a sessão', processTwoDesc: 'Um imóvel limpo e preparado permite que as imagens façam o trabalho sem distrações visuais.',
+        processThreeTitle: 'Entregar o que é útil', processThreeDesc: 'Você recebe um conjunto de imagens combinado, editado e pronto para os canais onde o anúncio será usado.',
+        ctaKicker: 'Para imobiliárias, proprietários e anfitriões', ctaTitle: 'Conte sobre o imóvel.', ctaDesc: 'Envie o endereço, o uso pretendido e algumas datas desejadas. Eu retorno com uma proposta prática, baseada no imóvel e no material que será mais útil.', ctaButton: 'Pedir orçamento',
+        footerBrand: 'Boreal One Media, um serviço da Boreal One AB.', footerLocation: 'Överkalix, Lapônia Sueca', close: 'Fechar', emailSubject: 'Pedido de orçamento para fotografia imobiliária', emailBody: 'Olá, Boreal One,\n\nGostaria de solicitar um orçamento para fotografia imobiliária.\n\nImóvel / endereço:\nData desejada:\nUso pretendido:\n\nObrigado!'
+      }
+    };
 
-        function sendBookingEmail() {
-            const basePackages = document.getElementsByName('baspaket');
-            let selectedBase = "";
-            for (let radio of basePackages) {
-                if (radio.checked) {
-                    selectedBase = radio.value == "1150" ? "Baspaket (15 bilder - 1150 kr)" : "Mellanpaket (25 bilder - 1550 kr)";
-                }
-            }
+    function setLanguage(lang) {
+      const copy = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.dataset.i18n;
+        if (copy[key]) element.textContent = copy[key];
+      });
 
-            let addons = [];
-            if (document.getElementById('add-drone-basic').checked) addons.push("- Drone Basic (+450 kr)");
-            if (document.getElementById('add-drone-premium').checked) addons.push("- Drone Premium (+750 kr)");
-            if (document.getElementById('add-360-basic').checked) addons.push("- 360° Panorama Basic (+650 kr)");
-            if (document.getElementById('add-360-premium').checked) addons.push("- 360° Panorama Premium (+1150 kr)");
+      document.querySelectorAll('[data-alt-key]').forEach((button) => {
+        const image = button.querySelector('img');
+        if (image && copy[button.dataset.altKey]) image.alt = copy[button.dataset.altKey];
+      });
 
-            const info = document.getElementById('property-info').value;
-            const total = document.getElementById('total-price-display').textContent;
+      document.querySelectorAll('[data-mailto]').forEach((link) => {
+        link.href = `mailto:info@borealone.com?subject=${encodeURIComponent(copy.emailSubject)}&body=${encodeURIComponent(copy.emailBody)}`;
+      });
 
-            // Constrói o corpo do email formatado
-            let body = `Hej Boreal One Media,\n\nJag vill boka/begära offert för följande fastighetsmedier:\n\n`;
-            body += `VALT BASPAKET:\n${selectedBase}\n\n`;
-            if (addons.length > 0) {
-                body += `TILLVAL (ADD-ONS):\n${addons.join('\n')}\n\n`;
-            }
-            if (info) body += `FASTIGHETSINFO / ADRESS:\n${info}\n\n`;
-            body += `BERÄKNAT TOTALPRIS: ${total} (exkl. moms)\n\n`;
-            body += `Vänligen återkom med bekräftelse och tillgängliga tider.\n`;
+      document.getElementById('lightbox-close').textContent = copy.close;
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+      ['en', 'sv', 'pt'].forEach((code) => {
+        const button = document.getElementById(`btn-${code}`);
+        button.className = code === lang
+          ? 'flex items-center justify-center rounded border border-slate-700 bg-slate-800 p-1 transition'
+          : 'flex items-center justify-center rounded border border-transparent p-1 transition hover:bg-slate-800/70';
+        button.setAttribute('aria-pressed', String(code === lang));
+      });
+      localStorage.setItem('preferred-lang', lang);
+    }
 
-            const mailtoLink = `mailto:info@borealone.com?subject=Bokningsförfrågan: Fastighetsfotografering&body=${encodeURIComponent(body)}`;
-            window.location.href = mailtoLink;
-        }
-    </script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const closeLightbox = () => {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      lightboxImage.src = '';
+    };
 
-    <!-- SCRIPT DE TRADUÇÃO -->
-    <script>
-        const translations = {
-            en: {
-                navBack: "← Back to Home", pageBadge: "Commercial & Architecture",
-                pageTitle: "Professional Real Estate Media",
-                pageDesc: "Emphasizing architectural design, natural light, and spatial geometry through high-impact photography and professional drone imagery.",
-                calcTitle: "Modular Price Calculator", calcDesc: "Build your custom media package by selecting options below. Total rate is updated in real-time.",
-                step1Label: "1. Select Base Package (Photography)", optBase1Name: "Base Package (Small)", optBase1Desc: "Up to 15 high-res photos",
-                optBase2Name: "Medium Package (Standard)", optBase2Desc: "Up to 25 high-res photos",
-                step2Label: "2. Select Add-ons (Tillval)",
-                optDbName: "Drone Basic (+5 to 6 photos)", optDbDesc: "Beautiful birds-eye overview of the house and yard.",
-                optDpName: "Drone Premium (+10 to 12 photos)", optDpDesc: "For large grounds (>1 ha) or forestry properties.",
-                opt360bName: "360° Panorama Basic (5 photos)", opt360bDesc: "Raw files or ready-to-use interactive Kuula links.",
-                opt360pName: "360° Panorama Premium (10 photos)", opt360pDesc: "Full spherical coverage recommended for larger villas.",
-                step3Label: "3. Property Information (Optional)", totalLabel: "Estimated Total Price",
-                submitBtn: "Send Booking Request", cond1Title: "Travel Expenses",
-                cond1Desc: "Mileage outside the local area (>15 km from base) is charged at <strong>5.50 kr / km</strong> round trip.",
-                cond2Title: "Preparation", cond2Desc: "The property must be cleaned. Staging/clutter sorting on-site is debited at <strong>450 kr</strong> per started half-hour.",
-                cond3Title: "Weather & Policy", cond3Desc: "Free cancellation up to 24h prior. In case of bad weather, drone operations are rescheduled completely free of charge.",
-                footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
-            },
-            sv: {
-                navBack: "← Tillbaka till Hem", pageBadge: "Professionella Fastighetsmedier",
-                pageTitle: "Prislista & Fastighetsfotografering",
-                pageDesc: "Skräddarsy ditt mediepaket. Välj ett baspaket för fotografering och lägg till de tillval du behöver för att maximera värdet på din fastighetsannons.",
-                calcTitle: "Simulator de Orçamento Modular", calcDesc: "Monte o seu pacote personalizado marcando as opções abaixo. O valor é atualizado instantaneamente.",
-                step1Label: "1. Välj Baspaket (Fotografering)", optBase1Name: "Baspaket (Små)", optBase1Desc: "Upp till 15 bilder",
-                optBase2Name: "Mellanpaket (Standard)", optBase2Desc: "Upp till 25 bilder",
-                step2Label: "2. Välj Tillval (Add-ons)",
-                optDbName: "Drone Basic (+5 till 6 bilder)", optDbDesc: "Fina översiktsbilder av hus och trädgård.",
-                optDpName: "Drone Premium (+10 till 12 bilder)", optDpDesc: "För stora tomter (>1 ha) eller skogsfastigheter.",
-                opt360bName: "360° Panorama Basic (5 bilder)", opt360bDesc: "Råfiler eller smidiga Kuula-länkar.",
-                opt360pName: "360° Panorama Premium (10 bilder)", opt360pDesc: "Komplett sfärisk täckning för större villor.",
-                step3Label: "3. Fastighetsinformation (Valfritt)", totalLabel: "Beräknat Totalpris",
-                submitBtn: "Skicka Bokningsförfrågan", cond1Title: "Reseersättning",
-                cond1Desc: "Milersättning utanför närområdet (>15 km från utgångspunkt) debiteras med <strong>5,50 kr / km</strong> tur och retur.",
-                cond2Title: "Förberedelse", cond2Desc: "Fastigheten ska vara städad. Extra styling på plats debiteras med <strong>450 kr</strong> per påbörjad halvtimme.",
-                cond3Title: "Väder & Avbokning", cond3Desc: "Fri avbokning upp till 24h innan. Vid dåligt väder bokas drönarflygningen om helt kostnadsfritt.",
-                footerRights: "© 2026 Boreal One AB. Med ensamrätt."
-            },
-            pt: {
-                navBack: "← Voltar ao Início", pageBadge: "Mídia Imobiliária Profissional",
-                pageTitle: "Fotografia Imobiliária & Orçamentos",
-                pageDesc: "Valorizando cada metro quadrado através de iluminação técnica, precisão geométrica e imagens aéreas de alta definição.",
-                calcTitle: "Simulador de Orçamento Modular", calcDesc: "Monte o seu pacote personalizado marcando as opções abaixo. O valor é atualizado instantaneamente.",
-                step1Label: "1. Escolha o Pacote Base (Fotografia)", optBase1Name: "Pacote Base (Pequeno)", optBase1Desc: "Até 15 fotos em alta resolução",
-                optBase2Name: "Pacote Médio (Padrão)", optBase2Desc: "Até 25 fotos em alta resolução",
-                step2Label: "2. Escolha os Opcionais (Adicionais)",
-                optDbName: "Drone Basic (+5 a 6 fotos)", optDbDesc: "Belas fotos panorâmicas da casa e do terreno.",
-                optDpName: "Drone Premium (+10 a 12 fotos)", optDpDesc: "Para terrenos grandes (>1 ha) ou propriedades rurais.",
-                opt360bName: "360° Panorama Basic (5 fotos)", opt360bDesc: "Arquivos brutos ou links interativos do Kuula.",
-                opt360pName: "360° Panorama Premium (10 fotos)", opt360pDesc: "Cobertura esférica ideal para grandes residências.",
-                step3Label: "3. Informações do Imóvel (Opcional)", totalLabel: "Preço Total Estimado",
-                submitBtn: "Enviar Pedido de Reserva", cond1Title: "Custos de Deslocamento",
-                cond1Desc: "Quilometragem fora da área local (>15 km da base) é cobrada a <strong>5,50 kr / km</strong> (ida e volta).",
-                cond2Title: "Preparação", cond2Desc: "O imóvel deve estar limpo. Arrumação extra no local é cobrada a <strong>450 kr</strong> por meia hora iniciada.",
-                cond3Title: "Clima & Cancelamento", cond3Desc: "Cancelamento gratuito até 24h antes. Em caso de clima adverso, as fotos de drone são reagendadas sem custo.",
-                footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
-            }
-        };
+    document.querySelectorAll('[data-lightbox]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const image = button.querySelector('img');
+        lightboxImage.src = button.dataset.lightbox;
+        lightboxImage.alt = image ? image.alt : '';
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+      });
+    });
 
-        function setLanguage(lang) {
-            document.getElementById('nav-back-link').textContent = translations[lang].navBack;
-            document.getElementById('page-badge').textContent = translations[lang].pageBadge;
-            document.getElementById('page-title').textContent = translations[lang].pageTitle;
-            document.getElementById('page-desc').textContent = translations[lang].pageDesc;
-            document.getElementById('calc-title').textContent = translations[lang].calcTitle;
-            document.getElementById('calc-desc').textContent = translations[lang].calcDesc;
-            document.getElementById('step1-label').textContent = translations[lang].step1Label;
-            document.getElementById('opt-base1-name').textContent = translations[lang].optBase1Name;
-            document.getElementById('opt-base1-desc').textContent = translations[lang].optBase1Desc;
-            document.getElementById('opt-base2-name').textContent = translations[lang].optBase2Name;
-            document.getElementById('opt-base2-desc').textContent = translations[lang].optBase2Desc;
-            document.getElementById('step2-label').textContent = translations[lang].step2Label;
-            document.getElementById('opt-db-name').textContent = translations[lang].optDbName;
-            document.getElementById('opt-db-desc').textContent = translations[lang].optDbDesc;
-            document.getElementById('opt-dp-name').textContent = translations[lang].optDpName;
-            document.getElementById('opt-dp-desc').textContent = translations[lang].optDpDesc;
-            document.getElementById('opt-360b-name').textContent = translations[lang].opt360bName;
-            document.getElementById('opt-360b-desc').textContent = translations[lang].opt360bDesc;
-            document.getElementById('opt-360p-name').textContent = translations[lang].opt360pName;
-            document.getElementById('opt-360p-desc').textContent = translations[lang].opt360pDesc;
-            document.getElementById('step3-label').textContent = translations[lang].step3Label;
-            document.getElementById('property-info').placeholder = lang === 'pt' ? 'Ex: Rua 12, Luleå (Tamanho: 120m²)' : (lang === 'en' ? 'e.g., 12 Street, Luleå (Size: 120 sqm)' : 'Ex: Storgatan 12, Luleå (Storlek: 120 kvm)');
-            document.getElementById('total-label').textContent = translations[lang].totalLabel;
-            document.getElementById('submit-btn').textContent = translations[lang].submitBtn;
-            document.getElementById('cond1-title').textContent = translations[lang].cond1Title;
-            document.getElementById('cond1-desc').innerHTML = translations[lang].cond1Desc;
-            document.getElementById('cond2-title').textContent = translations[lang].cond2Title;
-            document.getElementById('cond2-desc').innerHTML = translations[lang].cond2Desc;
-            document.getElementById('cond3-title').textContent = translations[lang].cond3Title;
-            document.getElementById('cond3-desc').innerHTML = translations[lang].cond3Desc;
-            document.getElementById('footer-rights').textContent = translations[lang].footerRights;
-            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !lightbox.classList.contains('hidden')) closeLightbox();
+    });
 
-            ['en', 'sv', 'pt'].forEach(l => {
-                const btn = document.getElementById(`btn-${l}`);
-                if (l === lang) btn.className = "p-1 rounded transition flex items-center justify-center border border-gray-700 bg-gray-800";
-                else btn.className = "p-1 rounded transition flex items-center justify-center border border-transparent hover:bg-gray-800/70";
-                btn.setAttribute('aria-pressed', String(l === lang));
-            });
-            localStorage.setItem('preferred-lang', lang);
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('preferred-lang');
-            setLanguage(savedLang && translations[savedLang] ? savedLang : (translations[navigator.language.substring(0, 2)] ? navigator.language.substring(0, 2) : 'en'));
-            calculateTotal();
-        });
-    </script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('preferred-lang');
+      const browserLanguage = navigator.language.slice(0, 2);
+      setLanguage(saved && translations[saved] ? saved : (translations[browserLanguage] ? browserLanguage : 'en'));
+    });
+  </script>
 </body>
 </html>
