@@ -1,0 +1,14 @@
+name = "borealone-booking-api"
+main = "src/index.js"
+compatibility_date = "2026-10-23"
+workers_dev = false
+
+routes = [
+  { pattern = "borealone.com/api/booking-request", zone_name = "borealone.com" },
+  { pattern = "www.borealone.com/api/booking-request", zone_name = "borealone.com" }
+]
+
+[vars]
+BOOKING_RECIPIENT = "info@borealone.com"
+BOOKING_FROM = "Boreal One Bookings <bookings@borealone.com>"
+
