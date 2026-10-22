@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="../../media/favicon.png">
     <link rel="apple-touch-icon" href="../../media/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <script>
         tailwind.config = {
             theme: {
@@ -146,17 +147,24 @@
                         <textarea id="notes" name="notes" rows="4" class="w-full resize-y rounded-xl border border-gray-700 bg-black/25 px-4 py-3 text-sm text-white placeholder:text-gray-600 outline-none transition focus:border-aurora focus:ring-2 focus:ring-aurora/20" placeholder="Your dates in the area, any flexibility, accessibility needs..."></textarea>
                     </label>
 
+                    <label class="hidden" aria-hidden="true">
+                        <span>Leave this field empty</span>
+                        <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+                    </label>
+
                     <label class="flex gap-3 cursor-pointer items-start rounded-xl border border-white/10 bg-black/10 px-4 py-4">
                         <input id="terms" type="checkbox" required class="mt-0.5 h-4 w-4 accent-[#00f5d4]">
                         <span id="terms-text" class="text-xs leading-relaxed text-gray-400">I understand this is a request only. Aurora visibility and weather cannot be guaranteed, and no payment is requested until the details are confirmed.</span>
                     </label>
 
                     <div class="pt-1">
+                        <div class="cf-turnstile mb-5" data-sitekey="0x4AAAAAAFhnEy_2E_MpT78" data-theme="dark"></div>
                         <button id="submit-button" type="submit" class="w-full inline-flex items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-gray-950 shadow-lg transition hover:bg-gray-200">Send request</button>
-                        <p id="form-note" class="mt-4 text-center text-xs leading-relaxed text-gray-500">For this private test, the request is prepared in your email app. The finished booking system will send it directly and show live availability.</p>
+                        <p id="form-note" class="mt-4 text-center text-xs leading-relaxed text-gray-500">Your request is sent directly and no payment is taken at this stage.</p>
                     </div>
 
                     <p id="form-error" role="alert" class="hidden rounded-xl border border-red-400/30 bg-red-950/30 px-4 py-3 text-sm text-red-200"></p>
+                    <p id="form-success" role="status" class="hidden rounded-xl border border-aurora/30 bg-aurora/10 px-4 py-3 text-sm text-aurora"></p>
                 </form>
             </div>
 
@@ -179,7 +187,7 @@
                 howTitle: 'This is a request, not an instant booking.', howText: 'After you send it, I will confirm whether the night is suitable and available. If it is, I will contact you with the final details and a secure payment link.',
                 experience: 'Choose your private experience', shortName: 'Private Aurora Chase', shortDetail: 'Up to 3 hours, 1,500 SEK per person', longName: 'Private Aurora Chase', longDetail: 'Up to 6 hours, 2,000 SEK per person',
                 date: 'Preferred date', guests: 'Number of guests', guestsPlaceholder: 'Select', location: 'Preferred departure area', overkalix: 'Överkalix', kiruna: 'Kiruna, selected partner date', stay: 'Where are you staying?', stayPlaceholder: 'Yellow Aurora House, hotel, address...', name: 'Your name', email: 'Email', phone: 'Phone or WhatsApp', language: 'Preferred language', notes: 'Anything else I should know?', notesPlaceholder: 'Your dates in the area, any flexibility, accessibility needs...',
-                terms: 'I understand this is a request only. Aurora visibility and weather cannot be guaranteed, and no payment is requested until the details are confirmed.', submit: 'Send request', formNote: 'For this private test, the request is prepared in your email app. The finished booking system will send it directly and show live availability.', error: 'Please complete the required fields and confirm that you understand the request terms.', noticeTitle: 'Before you request a date', notice: 'The start time is confirmed on the day, usually between 16:00 and 20:00. If the forecast does not offer a reasonable and safe opportunity, the tour is cancelled or moved to the next suitable night during your stay, subject to availability.', footer: '© 2026 Boreal One AB. Private Aurora experiences in Swedish Lapland.', subject: 'Private Aurora Chase request'
+                terms: 'I understand this is a request only. Aurora visibility and weather cannot be guaranteed, and no payment is requested until the details are confirmed.', submit: 'Send request', sending: 'Sending request...', formNote: 'Your request is sent directly and no payment is taken at this stage.', error: 'Please complete the required fields and confirm that you understand the request terms.', verificationError: 'Please complete the verification before sending your request.', deliveryError: 'Your request could not be sent right now. Please try again shortly or email info@borealone.com.', success: 'Thank you. Your request was received. I will personally check the conditions and contact you shortly.', noticeTitle: 'Before you request a date', notice: 'The start time is confirmed on the day, usually between 16:00 and 20:00. If the forecast does not offer a reasonable and safe opportunity, the tour is cancelled or moved to the next suitable night during your stay, subject to availability.', footer: '© 2026 Boreal One AB. Private Aurora experiences in Swedish Lapland.'
             },
             sv: {
                 back: '← Privat norrskenstur', eyebrow: 'Privat norrskenstur', title: 'Förfrågan om en privat kväll.',
@@ -187,7 +195,7 @@
                 howTitle: 'Detta är en förfrågan, inte en direktbokning.', howText: 'Efter att du skickat förfrågan bekräftar jag om kvällen är lämplig och tillgänglig. Om den är det kontaktar jag dig med slutliga detaljer och en säker betalningslänk.',
                 experience: 'Välj din privata upplevelse', shortName: 'Privat norrskenstur', shortDetail: 'Upp till 3 timmar, 1 500 SEK per person', longName: 'Privat norrskenstur', longDetail: 'Upp till 6 timmar, 2 000 SEK per person',
                 date: 'Önskat datum', guests: 'Antal gäster', guestsPlaceholder: 'Välj', location: 'Önskat avgångsområde', overkalix: 'Överkalix', kiruna: 'Kiruna, utvalt partnerdatum', stay: 'Var bor du?', stayPlaceholder: 'Yellow Aurora House, hotell, adress...', name: 'Ditt namn', email: 'E-post', phone: 'Telefon eller WhatsApp', language: 'Önskat språk', notes: 'Finns det något annat jag bör veta?', notesPlaceholder: 'Dina datum i området, eventuell flexibilitet, tillgänglighetsbehov...',
-                terms: 'Jag förstår att detta endast är en förfrågan. Norrskenets synlighet och väder kan inte garanteras, och ingen betalning begärs förrän detaljerna har bekräftats.', submit: 'Skicka förfrågan', formNote: 'I detta privata test förbereds förfrågan i din e-postapp. Det färdiga bokningssystemet skickar den direkt och visar tillgänglighet.', error: 'Fyll i de obligatoriska fälten och bekräfta att du förstår villkoren för förfrågan.', noticeTitle: 'Innan du ber om ett datum', notice: 'Starttiden bekräftas samma dag, vanligtvis mellan 16.00 och 20.00. Om prognosen inte ger en rimlig och säker möjlighet ställs turen in eller flyttas till nästa lämpliga kväll under din vistelse, i mån av tillgänglighet.', footer: '© 2026 Boreal One AB. Privata norrskensupplevelser i svenska Lappland.', subject: 'Förfrågan om privat norrskenstur'
+                terms: 'Jag förstår att detta endast är en förfrågan. Norrskenets synlighet och väder kan inte garanteras, och ingen betalning begärs förrän detaljerna har bekräftats.', submit: 'Skicka förfrågan', sending: 'Skickar förfrågan...', formNote: 'Din förfrågan skickas direkt och ingen betalning tas i detta steg.', error: 'Fyll i de obligatoriska fälten och bekräfta att du förstår villkoren för förfrågan.', verificationError: 'Slutför verifieringen innan du skickar förfrågan.', deliveryError: 'Din förfrågan kunde inte skickas just nu. Försök igen om en stund eller mejla info@borealone.com.', success: 'Tack. Din förfrågan har tagits emot. Jag kontrollerar personligen förhållandena och kontaktar dig snart.', noticeTitle: 'Innan du ber om ett datum', notice: 'Starttiden bekräftas samma dag, vanligtvis mellan 16.00 och 20.00. Om prognosen inte ger en rimlig och säker möjlighet ställs turen in eller flyttas till nästa lämpliga kväll under din vistelse, i mån av tillgänglighet.', footer: '© 2026 Boreal One AB. Privata norrskensupplevelser i svenska Lappland.'
             },
             pt: {
                 back: '← Caçadas Privativas de Aurora', eyebrow: 'Caçadas Privativas de Aurora', title: 'Solicite sua noite privativa.',
@@ -195,7 +203,7 @@
                 howTitle: 'Isto é uma solicitação, não uma reserva imediata.', howText: 'Depois que você enviar, confirmarei se a noite é adequada e está disponível. Se estiver, entrarei em contato com os detalhes finais e um link seguro para pagamento.',
                 experience: 'Escolha sua experiência privativa', shortName: 'Caçada Privativa de Aurora', shortDetail: 'Até 3 horas, 1.500 SEK por pessoa', longName: 'Caçada Privativa de Aurora', longDetail: 'Até 6 horas, 2.000 SEK por pessoa',
                 date: 'Data preferida', guests: 'Número de hóspedes', guestsPlaceholder: 'Selecione', location: 'Área de saída preferida', overkalix: 'Överkalix', kiruna: 'Kiruna, data selecionada por parceiro', stay: 'Onde você ficará hospedado?', stayPlaceholder: 'Yellow Aurora House, hotel, endereço...', name: 'Seu nome', email: 'E-mail', phone: 'Telefone ou WhatsApp', language: 'Idioma preferido', notes: 'Algo mais que eu deva saber?', notesPlaceholder: 'Suas datas na região, alguma flexibilidade, necessidades de acessibilidade...',
-                terms: 'Entendo que isto é somente uma solicitação. A visibilidade da Aurora e o clima não podem ser garantidos, e nenhum pagamento é solicitado antes da confirmação dos detalhes.', submit: 'Enviar solicitação', formNote: 'Neste teste privado, a solicitação é preparada no seu aplicativo de e-mail. O sistema de reservas final enviará os dados diretamente e mostrará a disponibilidade.', error: 'Preencha os campos obrigatórios e confirme que entende os termos da solicitação.', noticeTitle: 'Antes de solicitar uma data', notice: 'O horário de saída é confirmado no dia, normalmente entre 16:00 e 20:00. Se a previsão não apresentar uma oportunidade razoável e segura, o tour é cancelado ou transferido para a próxima noite adequada durante sua estadia, sujeito à disponibilidade.', footer: '© 2026 Boreal One AB. Experiências privativas de Aurora na Lapônia Sueca.', subject: 'Solicitação de Caçada Privativa de Aurora'
+                terms: 'Entendo que isto é somente uma solicitação. A visibilidade da Aurora e o clima não podem ser garantidos, e nenhum pagamento é solicitado antes da confirmação dos detalhes.', submit: 'Enviar solicitação', sending: 'Enviando solicitação...', formNote: 'Sua solicitação é enviada diretamente e nenhum pagamento é cobrado nesta etapa.', error: 'Preencha os campos obrigatórios e confirme que entende os termos da solicitação.', verificationError: 'Conclua a verificação antes de enviar sua solicitação.', deliveryError: 'Não foi possível enviar sua solicitação agora. Tente novamente em alguns instantes ou envie um e-mail para info@borealone.com.', success: 'Obrigado. Sua solicitação foi recebida. Vou verificar pessoalmente as condições e entrarei em contato em breve.', noticeTitle: 'Antes de solicitar uma data', notice: 'O horário de saída é confirmado no dia, normalmente entre 16:00 e 20:00. Se a previsão não apresentar uma oportunidade razoável e segura, o tour é cancelado ou transferido para a próxima noite adequada durante sua estadia, sujeito à disponibilidade.', footer: '© 2026 Boreal One AB. Experiências privativas de Aurora na Lapônia Sueca.'
             }
         };
 
@@ -229,30 +237,67 @@
             event.preventDefault();
             const form = event.currentTarget;
             const error = document.getElementById('form-error');
+            const success = document.getElementById('form-success');
+            const submitButton = document.getElementById('submit-button');
+            const content = translations[currentLanguage];
+            error.classList.add('hidden');
+            success.classList.add('hidden');
             if (!form.checkValidity() || !document.getElementById('terms').checked) {
+                error.textContent = content.error;
                 error.classList.remove('hidden');
                 form.reportValidity();
                 return;
             }
-            error.classList.add('hidden');
             const data = new FormData(form);
-            const content = translations[currentLanguage];
-            const body = [
-                `Experience: ${data.get('experience')}`,
-                `Preferred date: ${data.get('date')}`,
-                `Guests: ${data.get('guests')}`,
-                `Departure area: ${data.get('location')}`,
-                `Staying at: ${data.get('stay')}`,
-                '',
-                `Name: ${data.get('name')}`,
-                `Email: ${data.get('email')}`,
-                `Phone / WhatsApp: ${data.get('phone')}`,
-                `Preferred language: ${data.get('language')}`,
-                '',
-                `Notes: ${data.get('notes') || 'None'}`
-            ].join('\n');
-            const subject = `${content.subject} | ${data.get('date')} | ${data.get('name')}`;
-            window.location.href = `mailto:info@borealone.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            const turnstileToken = data.get('cf-turnstile-response');
+            if (!turnstileToken) {
+                error.textContent = content.verificationError;
+                error.classList.remove('hidden');
+                return;
+            }
+
+            submitButton.disabled = true;
+            submitButton.textContent = content.sending;
+            submitButton.classList.add('cursor-wait', 'opacity-70');
+            fetch('/api/booking-request', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    experience: data.get('experience'),
+                    date: data.get('date'),
+                    guests: data.get('guests'),
+                    location: data.get('location'),
+                    stay: data.get('stay'),
+                    name: data.get('name'),
+                    email: data.get('email'),
+                    phone: data.get('phone'),
+                    language: data.get('language'),
+                    notes: data.get('notes'),
+                    website: data.get('website'),
+                    turnstileToken
+                })
+            })
+                .then(async response => {
+                    if (!response.ok) throw new Error('Request failed');
+                    return response.json();
+                })
+                .then(result => {
+                    if (!result.ok) throw new Error('Request failed');
+                    form.reset();
+                    if (window.turnstile) window.turnstile.reset();
+                    success.textContent = content.success;
+                    success.classList.remove('hidden');
+                    success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                })
+                .catch(() => {
+                    error.textContent = content.deliveryError;
+                    error.classList.remove('hidden');
+                })
+                .finally(() => {
+                    submitButton.disabled = false;
+                    submitButton.textContent = content.submit;
+                    submitButton.classList.remove('cursor-wait', 'opacity-70');
+                });
         });
 
         const savedLanguage = localStorage.getItem('borealOneLanguage');
