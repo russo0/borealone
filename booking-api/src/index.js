@@ -149,7 +149,12 @@ async function sendEmail(apiKey, email) {
   });
   if (!response.ok) {
     const details = await response.json().catch(() => null);
-    console.error('Resend email delivery failed', response.status, details?.name || details?.message || 'Unknown error');
+    console.error(
+      'Resend email delivery failed',
+      response.status,
+      details?.name || 'Unknown error',
+      details?.message || ''
+    );
   }
   return response.ok;
 }
