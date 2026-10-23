@@ -85,8 +85,14 @@ async function verifyTurnstile(token, request, secret) {
     method: 'POST',
     body: formData
   });
-  if (!response.ok) return false;
+  if (!response.ok) {
+    console.warn('Turnstile Siteverify returned an HTTP error', response.status);
+    return false;
+  }
   const result = await response.json();
+  if (result.success !== true) {
+    console.warn('Turnstile verification failed', result['error-codes'] || []);
+  }
   return result.success === true;
 }
 
@@ -141,6 +147,10 @@ async function sendEmail(apiKey, email) {
     },
     body: JSON.stringify(email)
   });
+  if (!response.ok) {
+    const details = await response.json().catch(() => null);
+    console.error('Resend email delivery failed', response.status, details?.name || details?.message || 'Unknown error');
+  }
   return response.ok;
 }
 
