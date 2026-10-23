@@ -117,6 +117,28 @@ function bookingEmail(request, requestId) {
 }
 
 function guestEmail(request, requestId) {
+  if (request.language === 'Português') {
+    return [
+      `Olá ${request.name},`,
+      '',
+      'Recebemos sua solicitação para uma Caçada Privativa de Aurora.',
+      '',
+      `Referência: ${requestId}`,
+      `Data preferida: ${request.date}`,
+      `Experiência: ${request.experience}`,
+      `Participantes: ${request.guests}`,
+      `Área de saída: ${request.location}`,
+      '',
+      'Esta ainda não é uma reserva confirmada. Vou verificar pessoalmente a previsão, a rota e a disponibilidade. Se a noite for adequada, entrarei em contato com os detalhes finais e um link seguro para pagamento.',
+      '',
+      'A Aurora é um fenômeno natural. O clima e a visibilidade nunca podem ser garantidos.',
+      '',
+      'Atenciosamente,',
+      'Alex',
+      'Boreal One AB'
+    ].join('\n');
+  }
+
   return [
     `Hello ${request.name},`,
     '',
@@ -136,6 +158,12 @@ function guestEmail(request, requestId) {
     'Alex',
     'Boreal One AB'
   ].join('\n');
+}
+
+function guestEmailSubject(request, requestId) {
+  return request.language === 'Português'
+    ? `Recebemos sua solicitação de Caçada Privativa de Aurora | ${requestId}`
+    : `We received your Aurora Chase request | ${requestId}`;
 }
 
 async function sendEmail(apiKey, email) {
@@ -221,7 +249,7 @@ export default {
       from,
       to: [booking.email],
       reply_to: recipient,
-      subject: `We received your Aurora Chase request | ${requestId}`,
+      subject: guestEmailSubject(booking, requestId),
       text: guestEmail(booking, requestId)
     });
 
