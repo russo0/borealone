@@ -128,7 +128,7 @@ Chasing</h1>
                             <li class="flex gap-3"><span class="text-aurora">•</span><span id="tour-short-item-2">Up to 1 hour of travel in each direction</span></li>
                             <li class="flex gap-3"><span class="text-aurora">•</span><span id="tour-short-item-3">Professional Aurora photos included, delivered in a private gallery within 72 hours</span></li>
                         </ul>
-                        <a href="mailto:info@borealone.com?subject=Private%20Aurora%20Chase%20-%203%20Hours" id="tour-short-cta" class="mt-auto inline-flex justify-center items-center w-full border border-gray-700 hover:border-gray-500 hover:bg-white/5 text-white font-semibold text-sm px-5 py-3 rounded-xl transition">Ask about the 3-hour chase</a>
+                        <a href="#request-date" data-request-experience="Private Aurora Chase, up to 3 hours" id="tour-short-cta" class="mt-auto inline-flex justify-center items-center w-full border border-gray-700 hover:border-gray-500 hover:bg-white/5 text-white font-semibold text-sm px-5 py-3 rounded-xl transition">Choose a date for the 3-hour chase</a>
                     </article>
 
                     <article class="relative rounded-2xl border border-aurora/50 bg-gradient-to-b from-aurora/10 to-[#090e19] p-6 md:p-8 shadow-2xl shadow-aurora/5 flex flex-col">
@@ -143,7 +143,7 @@ Chasing</h1>
                             <li class="flex gap-3"><span class="text-aurora">•</span><span id="tour-long-item-2">Flexible route shaped by the latest forecast</span></li>
                             <li class="flex gap-3"><span class="text-aurora">•</span><span id="tour-long-item-3">Professional Aurora photos included, delivered in a private gallery within 72 hours</span></li>
                         </ul>
-                        <a href="mailto:info@borealone.com?subject=Private%20Aurora%20Chase%20-%206%20Hours" id="tour-long-cta" class="mt-auto inline-flex justify-center items-center w-full bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-5 py-3 rounded-xl transition shadow-md">Ask about the 6-hour chase</a>
+                        <a href="#request-date" data-request-experience="Private Aurora Chase, up to 6 hours" id="tour-long-cta" class="mt-auto inline-flex justify-center items-center w-full bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-5 py-3 rounded-xl transition shadow-md">Choose a date for the 6-hour chase</a>
                     </article>
                 </div>
                 <div class="max-w-5xl mx-auto mt-6 rounded-2xl border border-white/10 bg-black/15 px-6 py-5 text-sm text-gray-400 leading-relaxed">
@@ -241,7 +241,7 @@ Chasing</h1>
                         <li id="guest-item-2" class="border border-white/10 bg-black/15 rounded-lg p-3">Preferred guest rate</li>
                         <li id="guest-item-3" class="border border-white/10 bg-black/15 rounded-lg p-3">Priority scheduling when the night allows</li>
                     </ul>
-                    <a href="mailto:info@borealone.com?subject=Private%20Aurora%20Chase%20for%20Yellow%20Aurora%20House%20Guest" id="guest-cta" class="inline-flex items-center justify-center text-aurora hover:text-white font-semibold text-sm transition">Ask about the Yellow Aurora House guest rate →</a>
+                    <a href="#request-date" data-request-stay="Yellow Aurora House" id="guest-cta" class="inline-flex items-center justify-center text-aurora hover:text-white font-semibold text-sm transition">Choose a date as a Yellow Aurora House guest →</a>
                 </div>
             </div>
         </section>
@@ -255,13 +255,44 @@ Chasing</h1>
             </div>
         </section>
 
-        <section class="border-t border-gray-900 bg-black/25 py-16 md:py-20 text-center px-4">
-            <div class="max-w-2xl mx-auto">
-                <p id="booking-eyebrow" class="text-aurora text-xs font-bold tracking-[0.18em] uppercase mb-4">Ready when the sky is</p>
-                <h2 id="booking-title" class="text-3xl md:text-4xl font-light text-white tracking-tight mb-4">Tell us about your visit.</h2>
-                <p id="booking-desc" class="text-gray-400 text-sm md:text-base leading-relaxed mb-8">Send your dates, group size, preferred departure location, and whether you prefer a photography session, a 3-hour chase, or a 6-hour chase. We will reply with availability and the next practical steps.</p>
-                <a href="mailto:info@borealone.com?subject=Private%20Aurora%20Experience" id="booking-cta" class="inline-flex items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-7 py-3.5 rounded-xl transition shadow-lg">Email info@borealone.com</a>
-                <p id="booking-note" class="mt-4 text-xs text-gray-500">Private Aurora experiences from Överkalix and selected dates in Kiruna.</p>
+        <section id="request-date" class="border-t border-gray-900 bg-black/25 py-16 md:py-20 px-4 scroll-mt-20">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center max-w-2xl mx-auto">
+                    <p id="calendar-eyebrow" class="text-aurora text-xs font-bold tracking-[0.18em] uppercase mb-4">Request a preferred date</p>
+                    <h2 id="calendar-title" class="text-3xl md:text-4xl font-light text-white tracking-tight mb-4">Choose the night that suits your visit.</h2>
+                    <p id="calendar-desc" class="text-gray-400 text-sm md:text-base leading-relaxed">Every future date can be requested. It does not mean the tour is available or confirmed. I will personally check the forecast, route, and availability before anything is booked.</p>
+                </div>
+
+                <div class="mt-9 rounded-2xl border border-white/10 bg-[#090e19]/95 p-5 sm:p-7 md:p-8 shadow-2xl">
+                    <div class="grid grid-cols-1 md:grid-cols-[1.15fr_0.85fr] gap-7 md:gap-10">
+                        <div>
+                            <div class="flex items-center justify-between gap-3 mb-5">
+                                <button id="calendar-previous" type="button" class="h-10 w-10 shrink-0 rounded-lg border border-gray-700 text-lg text-white transition hover:border-aurora hover:text-aurora disabled:cursor-not-allowed disabled:opacity-35" aria-label="Previous month">←</button>
+                                <p id="calendar-month" class="text-center text-base font-semibold text-white capitalize" aria-live="polite"></p>
+                                <button id="calendar-next" type="button" class="h-10 w-10 shrink-0 rounded-lg border border-gray-700 text-lg text-white transition hover:border-aurora hover:text-aurora" aria-label="Next month">→</button>
+                            </div>
+                            <div id="calendar-weekdays" class="grid grid-cols-7 gap-1 mb-2 text-center text-[11px] font-semibold uppercase tracking-wide text-gray-500"></div>
+                            <div id="calendar-grid" class="grid grid-cols-7 gap-1"></div>
+                        </div>
+
+                        <div class="rounded-xl border border-white/10 bg-black/15 p-5 flex flex-col">
+                            <p id="calendar-experience-label" class="text-xs font-bold tracking-[0.15em] uppercase text-gray-500 mb-4">Choose a tour length</p>
+                            <div class="space-y-3">
+                                <button type="button" data-calendar-experience="Private Aurora Chase, up to 3 hours" class="calendar-experience-option w-full rounded-xl border border-gray-700 bg-black/15 p-4 text-left transition hover:border-gray-500">
+                                    <span id="calendar-short-title" class="block text-sm font-semibold text-white">Private Aurora Chase</span>
+                                    <span id="calendar-short-detail" class="block mt-1 text-xs text-gray-400">Up to 3 hours, 1,500 SEK per person</span>
+                                </button>
+                                <button type="button" data-calendar-experience="Private Aurora Chase, up to 6 hours" class="calendar-experience-option w-full rounded-xl border border-gray-700 bg-black/15 p-4 text-left transition hover:border-gray-500">
+                                    <span id="calendar-long-title" class="block text-sm font-semibold text-white">Private Aurora Chase</span>
+                                    <span id="calendar-long-detail" class="block mt-1 text-xs text-gray-400">Up to 6 hours, 2,000 SEK per person</span>
+                                </button>
+                            </div>
+                            <p id="calendar-selection" class="mt-5 min-h-10 text-sm leading-relaxed text-gray-300" aria-live="polite">Choose a date and tour length to continue.</p>
+                            <button id="calendar-continue" type="button" disabled class="mt-auto w-full rounded-xl bg-white px-5 py-3.5 text-sm font-bold text-gray-950 transition hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-40">Continue with request</button>
+                            <p id="calendar-note" class="mt-4 text-center text-xs leading-relaxed text-gray-500">This request does not reserve the night and no payment is taken at this stage.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -331,7 +362,7 @@ Chasing</h1>
                 tourShortItem1: "Pickup included from Yellow Aurora House or accommodations within 10 km of central Överkalix",
                 tourShortItem2: "Up to 1 hour of travel in each direction",
                 tourShortItem3: "Professional Aurora photos included, delivered in a private gallery within 72 hours",
-                tourShortCta: "Ask about the 3-hour chase",
+                tourShortCta: "Choose a date for the 3-hour chase",
                 tourLongBadge: "Best value",
                 tourLongLabel: "More time to adapt",
                 tourLongTitle: "Private Aurora Chase",
@@ -341,7 +372,7 @@ Chasing</h1>
                 tourLongItem1: "Pickup included from Yellow Aurora House or accommodations within 10 km of central Överkalix",
                 tourLongItem2: "Flexible route shaped by the latest forecast",
                 tourLongItem3: "Professional Aurora photos included, delivered in a private gallery within 72 hours",
-                tourLongCta: "Ask about the 6-hour chase",
+                tourLongCta: "Choose a date for the 6-hour chase",
                 tourTimeNote: "Tour start time is confirmed on the day and may fall between 16:00 and 20:00, depending on darkness, weather, and Aurora activity. Please keep your phone or WhatsApp available from the afternoon.",
                 tourVatNote: "All tour prices include VAT. The tour and photography are itemised at the applicable VAT rate on the invoice.",
                 tourLocationNote: "The listed prices apply to departures from Överkalix. Kiruna departures are available on selected dates through partner arrangements; vehicle, meeting point, group size, and price are confirmed separately.",
@@ -365,16 +396,25 @@ Chasing</h1>
                 guestItem1: "Pickup from your door",
                 guestItem2: "Preferred guest rate",
                 guestItem3: "Priority scheduling when the night allows",
-                guestCta: "Ask about the Yellow Aurora House guest rate →",
+                guestCta: "Choose a date as a Yellow Aurora House guest →",
                 noticeEyebrow: "Important to know",
                 noticeTitle: "The Aurora is a natural phenomenon.",
                 noticeText: "Its strength, visibility, and colours can never be guaranteed. Your booking is for a private experience, not a guaranteed Aurora appearance.",
                 noticeReschedule: "We monitor the forecast before departure. If there is no reasonable, safe opportunity, we cancel the session or chase rather than sending you out for a poor night. We will offer the next suitable date during your stay, subject to availability.",
-                bookingEyebrow: "Ready when the sky is",
-                bookingTitle: "Tell us about your visit.",
-                bookingDesc: "Send your dates, group size, preferred departure location, and whether you prefer a photography session, a 3-hour chase, or a 6-hour chase. We will reply with availability and the next practical steps.",
-                bookingCta: "Email info@borealone.com",
-                bookingNote: "Private Aurora experiences from Överkalix and selected dates in Kiruna.",
+                calendarEyebrow: "Request a preferred date",
+                calendarTitle: "Choose the night that suits your visit.",
+                calendarDesc: "Every future date can be requested. It does not mean the tour is available or confirmed. I will personally check the forecast, route, and availability before anything is booked.",
+                calendarPrevious: "Previous month",
+                calendarNext: "Next month",
+                calendarExperienceLabel: "Choose a tour length",
+                calendarShortTitle: "Private Aurora Chase",
+                calendarShortDetail: "Up to 3 hours, 1,500 SEK per person",
+                calendarLongTitle: "Private Aurora Chase",
+                calendarLongDetail: "Up to 6 hours, 2,000 SEK per person",
+                calendarSelectionEmpty: "Choose a date and tour length to continue.",
+                calendarSelection: "Selected: {date} · {experience}",
+                calendarContinue: "Continue with request",
+                calendarNote: "This request does not reserve the night and no payment is taken at this stage.",
                 footerRights: "© 2026 Boreal One AB. Registered in Sweden. All rights reserved."
             },
             sv: {
@@ -436,7 +476,7 @@ Chasing</h1>
                 tourShortItem1: "Hämtning ingår från Yellow Aurora House eller boenden inom 10 km från centrala Överkalix",
                 tourShortItem2: "Upp till 1 timmes resa i vardera riktningen",
                 tourShortItem3: "Professionella norrskensbilder ingår och levereras i ett privat onlinegalleri inom 72 timmar",
-                tourShortCta: "Fråga om 3-timmarsturen",
+                tourShortCta: "Välj ett datum för 3-timmarsturen",
                 tourLongBadge: "Mest för pengarna",
                 tourLongLabel: "Mer tid att anpassa sig",
                 tourLongTitle: "Privat norrskenstur",
@@ -446,7 +486,7 @@ Chasing</h1>
                 tourLongItem1: "Hämtning ingår från Yellow Aurora House eller boenden inom 10 km från centrala Överkalix",
                 tourLongItem2: "Flexibel rutt som utgår från den senaste prognosen",
                 tourLongItem3: "Professionella norrskensbilder ingår och levereras i ett privat onlinegalleri inom 72 timmar",
-                tourLongCta: "Fråga om 6-timmarsturen",
+                tourLongCta: "Välj ett datum för 6-timmarsturen",
                 tourTimeNote: "Starttiden bekräftas samma dag och kan ligga mellan 16.00 och 20.00, beroende på mörker, väder och norrskensaktivitet. Håll telefon eller WhatsApp tillgänglig från eftermiddagen.",
                 tourVatNote: "Alla priser för turer inkluderar moms. Tur och fotografi specificeras med tillämplig momssats på fakturan.",
                 tourLocationNote: "De angivna priserna gäller avgångar från Överkalix. Avgångar från Kiruna erbjuds vissa datum genom utvalda samarbeten. Fordon, mötesplats, gruppstorlek och pris bekräftas separat.",
@@ -470,16 +510,25 @@ Chasing</h1>
                 guestItem1: "Hämtning vid dörren",
                 guestItem2: "Förmånligt gästpris",
                 guestItem3: "Prioriterad planering när kvällen tillåter",
-                guestCta: "Fråga om gästpriset för Yellow Aurora House →",
+                guestCta: "Välj ett datum som gäst på Yellow Aurora House →",
                 noticeEyebrow: "Bra att veta",
                 noticeTitle: "Norrskenet är ett naturfenomen.",
                 noticeText: "Dess styrka, synlighet och färger kan aldrig garanteras. Din bokning gäller en privat upplevelse, inte garanterat norrsken.",
                 noticeReschedule: "Vi följer prognosen före avresa. Om det inte finns en rimlig och säker möjlighet ställer vi in fotograferingen eller turen i stället för att skicka ut er på en dålig kväll. Vi erbjuder nästa lämpliga datum under din vistelse, i mån av tillgänglighet.",
-                bookingEyebrow: "Redo när himlen är det",
-                bookingTitle: "Berätta om ditt besök.",
-                bookingDesc: "Skicka dina datum, gruppstorlek, önskad avgångsplats och om du föredrar fotografering, en 3-timmarstur eller en 6-timmarstur. Vi svarar med tillgänglighet och nästa praktiska steg.",
-                bookingCta: "Mejla info@borealone.com",
-                bookingNote: "Privata norrskensupplevelser från Överkalix och utvalda datum i Kiruna.",
+                calendarEyebrow: "Begär ett önskat datum",
+                calendarTitle: "Välj den kväll som passar ditt besök.",
+                calendarDesc: "Alla kommande datum kan förfrågas. Det betyder inte att turen är tillgänglig eller bekräftad. Jag kontrollerar personligen prognosen, rutten och tillgängligheten innan något bokas.",
+                calendarPrevious: "Föregående månad",
+                calendarNext: "Nästa månad",
+                calendarExperienceLabel: "Välj turens längd",
+                calendarShortTitle: "Privat norrskenstur",
+                calendarShortDetail: "Upp till 3 timmar, 1 500 SEK per person",
+                calendarLongTitle: "Privat norrskenstur",
+                calendarLongDetail: "Upp till 6 timmar, 2 000 SEK per person",
+                calendarSelectionEmpty: "Välj ett datum och en turlängd för att fortsätta.",
+                calendarSelection: "Valt: {date} · {experience}",
+                calendarContinue: "Fortsätt med förfrågan",
+                calendarNote: "Förfrågan reserverar inte kvällen och ingen betalning tas i detta steg.",
                 footerRights: "© 2026 Boreal One AB. Med ensamrätt."
             },
             pt: {
@@ -541,7 +590,7 @@ Chasing</h1>
                 tourShortItem1: "A retirada está incluída na Yellow Aurora House ou em hospedagens a até 10 km do centro de Överkalix",
                 tourShortItem2: "Até 1 hora de deslocamento em cada sentido",
                 tourShortItem3: "Fotos profissionais da Aurora incluídas, entregues em uma galeria privada em até 72 horas",
-                tourShortCta: "Consultar a caçada de 3 horas",
+                tourShortCta: "Escolha uma data para a caçada de 3 horas",
                 tourLongBadge: "Melhor custo-benefício",
                 tourLongLabel: "Mais tempo para se adaptar",
                 tourLongTitle: "Caçada Privada à Aurora",
@@ -551,7 +600,7 @@ Chasing</h1>
                 tourLongItem1: "A retirada está incluída na Yellow Aurora House ou em hospedagens a até 10 km do centro de Överkalix",
                 tourLongItem2: "Rota flexível baseada na previsão mais recente",
                 tourLongItem3: "Fotos profissionais da Aurora incluídas, entregues em uma galeria privada em até 72 horas",
-                tourLongCta: "Consultar a caçada de 6 horas",
+                tourLongCta: "Escolha uma data para a caçada de 6 horas",
                 tourTimeNote: "O horário de início é confirmado no dia do tour e pode ficar entre 16:00 e 20:00, conforme a escuridão, o clima e a atividade da Aurora. Mantenha seu telefone ou WhatsApp disponível a partir da tarde.",
                 tourVatNote: "Todos os preços dos tours incluem IVA. O tour e a fotografia são discriminados na fatura com a alíquota de IVA aplicável.",
                 tourLocationNote: "Os preços informados se aplicam a saídas de Överkalix. Saídas de Kiruna estão disponíveis em datas selecionadas por meio de parceiros. Veículo, ponto de encontro, tamanho do grupo e preço são confirmados separadamente.",
@@ -575,16 +624,25 @@ Chasing</h1>
                 guestItem1: "Retirada na sua porta",
                 guestItem2: "Tarifa especial para hóspedes",
                 guestItem3: "Prioridade de agendamento quando a noite permitir",
-                guestCta: "Consultar a tarifa para hóspedes da Yellow Aurora House →",
+                guestCta: "Escolha uma data como hóspede da Yellow Aurora House →",
                 noticeEyebrow: "Importante saber",
                 noticeTitle: "A Aurora é um fenômeno natural.",
                 noticeText: "Sua intensidade, visibilidade e cores nunca podem ser garantidas. Sua reserva é para uma experiência privada, não para o aparecimento garantido da Aurora.",
                 noticeReschedule: "Acompanhamos a previsão antes da saída. Se não houver uma possibilidade segura e razoável, cancelamos a sessão ou a caçada em vez de levar você para uma noite ruim. Ofereceremos a próxima data adequada durante sua estadia, sujeito à disponibilidade.",
-                bookingEyebrow: "Prontos quando o céu estiver",
-                bookingTitle: "Conte-nos sobre sua visita.",
-                bookingDesc: "Envie suas datas, tamanho do grupo, local de saída preferido e se prefere uma sessão de fotografia, uma caçada de 3 horas ou uma caçada de 6 horas. Responderemos com disponibilidade e os próximos passos práticos.",
-                bookingCta: "Enviar e-mail para info@borealone.com",
-                bookingNote: "Experiências privadas de Aurora saindo de Överkalix e em datas selecionadas em Kiruna.",
+                calendarEyebrow: "Solicite uma data preferida",
+                calendarTitle: "Escolha a noite que combina com a sua visita.",
+                calendarDesc: "Todas as datas futuras podem ser solicitadas. Isso não significa que o tour está disponível ou confirmado. Vou verificar pessoalmente a previsão, a rota e a disponibilidade antes de qualquer reserva.",
+                calendarPrevious: "Mês anterior",
+                calendarNext: "Próximo mês",
+                calendarExperienceLabel: "Escolha a duração do tour",
+                calendarShortTitle: "Caçada Privativa à Aurora",
+                calendarShortDetail: "Até 3 horas, 1.500 SEK por pessoa",
+                calendarLongTitle: "Caçada Privativa à Aurora",
+                calendarLongDetail: "Até 6 horas, 2.000 SEK por pessoa",
+                calendarSelectionEmpty: "Escolha uma data e a duração para continuar.",
+                calendarSelection: "Selecionado: {date} · {experience}",
+                calendarContinue: "Continuar com a solicitação",
+                calendarNote: "A solicitação não reserva a noite e nenhum pagamento é feito nesta etapa.",
                 footerRights: "© 2026 Boreal One AB. Registrada na Suécia. Todos os direitos reservados."
             }
         };
@@ -689,11 +747,16 @@ Chasing</h1>
                 'notice-title': content.noticeTitle,
                 'notice-text': content.noticeText,
                 'notice-reschedule': content.noticeReschedule,
-                'booking-eyebrow': content.bookingEyebrow,
-                'booking-title': content.bookingTitle,
-                'booking-desc': content.bookingDesc,
-                'booking-cta': content.bookingCta,
-                'booking-note': content.bookingNote,
+                'calendar-eyebrow': content.calendarEyebrow,
+                'calendar-title': content.calendarTitle,
+                'calendar-desc': content.calendarDesc,
+                'calendar-experience-label': content.calendarExperienceLabel,
+                'calendar-short-title': content.calendarShortTitle,
+                'calendar-short-detail': content.calendarShortDetail,
+                'calendar-long-title': content.calendarLongTitle,
+                'calendar-long-detail': content.calendarLongDetail,
+                'calendar-continue': content.calendarContinue,
+                'calendar-note': content.calendarNote,
                 'footer-rights': content.footerRights
             };
 
@@ -702,6 +765,8 @@ Chasing</h1>
                 if (element) element.textContent = value;
             });
             document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+            calendarLanguage = lang;
+            renderRequestCalendar();
 
             ['en', 'sv', 'pt'].forEach(l => {
                 const button = document.getElementById(`btn-${l}`);
@@ -715,7 +780,169 @@ Chasing</h1>
             localStorage.setItem('preferred-lang', lang);
         }
 
+        const requestCalendarLocale = { en: 'en-GB', sv: 'sv-SE', pt: 'pt-BR' };
+        const requestCalendarGrid = document.getElementById('calendar-grid');
+        const requestCalendarWeekdays = document.getElementById('calendar-weekdays');
+        const requestCalendarMonthLabel = document.getElementById('calendar-month');
+        const requestCalendarPrevious = document.getElementById('calendar-previous');
+        const requestCalendarNext = document.getElementById('calendar-next');
+        const requestCalendarSelection = document.getElementById('calendar-selection');
+        const requestCalendarContinue = document.getElementById('calendar-continue');
+        let calendarLanguage = 'en';
+        let requestCalendarMonth;
+        let selectedRequestDate = '';
+        let selectedRequestExperience = '';
+        let selectedRequestStay = '';
+
+        function localDateKey(date) {
+            const year = date.getFullYear();
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        }
+
+        function getToday() {
+            const now = new Date();
+            return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        }
+
+        function getExperienceSummary(content) {
+            return selectedRequestExperience.includes('3 hours')
+                ? content.calendarShortDetail
+                : content.calendarLongDetail;
+        }
+
+        function updateExperienceButtons() {
+            document.querySelectorAll('[data-calendar-experience]').forEach(button => {
+                const selected = button.dataset.calendarExperience === selectedRequestExperience;
+                button.className = selected
+                    ? 'calendar-experience-option w-full rounded-xl border border-aurora bg-aurora/10 p-4 text-left transition'
+                    : 'calendar-experience-option w-full rounded-xl border border-gray-700 bg-black/15 p-4 text-left transition hover:border-gray-500';
+                button.setAttribute('aria-pressed', String(selected));
+            });
+        }
+
+        function renderRequestCalendar() {
+            if (!requestCalendarMonth) return;
+
+            const content = translations[calendarLanguage];
+            const locale = requestCalendarLocale[calendarLanguage];
+            const today = getToday();
+            const todayMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+            const monthStart = new Date(requestCalendarMonth.getFullYear(), requestCalendarMonth.getMonth(), 1);
+            const monthFormatter = new Intl.DateTimeFormat(locale, { month: 'long', year: 'numeric' });
+            const weekdayFormatter = new Intl.DateTimeFormat(locale, { weekday: 'short' });
+            const dateFormatter = new Intl.DateTimeFormat(locale, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+
+            requestCalendarMonthLabel.textContent = monthFormatter.format(monthStart);
+            requestCalendarPrevious.setAttribute('aria-label', content.calendarPrevious);
+            requestCalendarNext.setAttribute('aria-label', content.calendarNext);
+            requestCalendarPrevious.disabled = monthStart.getTime() <= todayMonth.getTime();
+
+            requestCalendarWeekdays.innerHTML = '';
+            const weekdayStart = new Date(2024, 0, 1);
+            for (let index = 0; index < 7; index += 1) {
+                const weekday = new Date(weekdayStart);
+                weekday.setDate(weekdayStart.getDate() + index);
+                const label = document.createElement('span');
+                label.textContent = weekdayFormatter.format(weekday);
+                requestCalendarWeekdays.appendChild(label);
+            }
+
+            requestCalendarGrid.innerHTML = '';
+            const firstDayOffset = (monthStart.getDay() + 6) % 7;
+            for (let index = 0; index < firstDayOffset; index += 1) {
+                const spacer = document.createElement('span');
+                spacer.setAttribute('aria-hidden', 'true');
+                requestCalendarGrid.appendChild(spacer);
+            }
+
+            const lastDay = new Date(monthStart.getFullYear(), monthStart.getMonth() + 1, 0).getDate();
+            for (let day = 1; day <= lastDay; day += 1) {
+                const date = new Date(monthStart.getFullYear(), monthStart.getMonth(), day);
+                const key = localDateKey(date);
+                const isPast = date.getTime() < today.getTime();
+                const isSelected = key === selectedRequestDate;
+                const isToday = key === localDateKey(today);
+                const button = document.createElement('button');
+                button.type = 'button';
+                button.textContent = String(day);
+                button.disabled = isPast;
+                button.setAttribute('aria-label', dateFormatter.format(date));
+                button.setAttribute('aria-pressed', String(isSelected));
+                button.className = isPast
+                    ? 'h-10 rounded-lg text-sm text-gray-700 cursor-not-allowed'
+                    : isSelected
+                        ? 'h-10 rounded-lg border border-aurora bg-aurora text-sm font-bold text-gray-950 shadow-sm'
+                        : isToday
+                            ? 'h-10 rounded-lg border border-aurora/60 bg-aurora/10 text-sm font-semibold text-aurora transition hover:bg-aurora/20'
+                            : 'h-10 rounded-lg border border-transparent text-sm text-gray-200 transition hover:border-gray-600 hover:bg-white/5';
+                if (!isPast) {
+                    button.addEventListener('click', () => {
+                        selectedRequestDate = key;
+                        renderRequestCalendar();
+                    });
+                }
+                requestCalendarGrid.appendChild(button);
+            }
+
+            const hasSelection = Boolean(selectedRequestDate && selectedRequestExperience);
+            requestCalendarSelection.textContent = hasSelection
+                ? content.calendarSelection
+                    .replace('{date}', new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${selectedRequestDate}T12:00:00`)))
+                    .replace('{experience}', getExperienceSummary(content))
+                : content.calendarSelectionEmpty;
+            requestCalendarContinue.disabled = !hasSelection;
+            updateExperienceButtons();
+        }
+
+        function setupRequestCalendar() {
+            const today = getToday();
+            requestCalendarMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+
+            requestCalendarPrevious.addEventListener('click', () => {
+                const todayMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+                const previousMonth = new Date(requestCalendarMonth.getFullYear(), requestCalendarMonth.getMonth() - 1, 1);
+                if (previousMonth.getTime() >= todayMonth.getTime()) {
+                    requestCalendarMonth = previousMonth;
+                    renderRequestCalendar();
+                }
+            });
+            requestCalendarNext.addEventListener('click', () => {
+                requestCalendarMonth = new Date(requestCalendarMonth.getFullYear(), requestCalendarMonth.getMonth() + 1, 1);
+                renderRequestCalendar();
+            });
+            document.querySelectorAll('[data-calendar-experience]').forEach(button => {
+                button.addEventListener('click', () => {
+                    selectedRequestExperience = button.dataset.calendarExperience;
+                    renderRequestCalendar();
+                });
+            });
+            document.querySelectorAll('[data-request-experience]').forEach(link => {
+                link.addEventListener('click', () => {
+                    selectedRequestExperience = link.dataset.requestExperience;
+                    renderRequestCalendar();
+                });
+            });
+            document.querySelectorAll('[data-request-stay]').forEach(link => {
+                link.addEventListener('click', () => {
+                    selectedRequestStay = link.dataset.requestStay;
+                });
+            });
+            requestCalendarContinue.addEventListener('click', () => {
+                if (!selectedRequestDate || !selectedRequestExperience) return;
+                const parameters = new URLSearchParams({
+                    date: selectedRequestDate,
+                    experience: selectedRequestExperience,
+                    lang: calendarLanguage === 'pt' ? 'pt' : 'en'
+                });
+                if (selectedRequestStay) parameters.set('stay', selectedRequestStay);
+                window.location.href = `../book/aurora-request/?${parameters.toString()}`;
+            });
+        }
+
         window.addEventListener('DOMContentLoaded', () => {
+            setupRequestCalendar();
             const savedLang = localStorage.getItem('preferred-lang');
             const browserLang = navigator.language.substring(0, 2);
             setLanguage(savedLang && translations[savedLang] ? savedLang : (translations[browserLang] ? browserLang : 'en'));

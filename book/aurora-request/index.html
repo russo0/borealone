@@ -238,7 +238,31 @@
             localStorage.setItem('borealOneLanguage', language);
         }
 
-        document.getElementById('date').min = new Date().toISOString().split('T')[0];
+        const dateInput = document.getElementById('date');
+        const today = new Date();
+        const localToday = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        const minimumDate = [
+            localToday.getFullYear(),
+            String(localToday.getMonth() + 1).padStart(2, '0'),
+            String(localToday.getDate()).padStart(2, '0')
+        ].join('-');
+        dateInput.min = minimumDate;
+
+        const requestParameters = new URLSearchParams(window.location.search);
+        const requestedDate = requestParameters.get('date');
+        if (/^\d{4}-\d{2}-\d{2}$/.test(requestedDate || '') && requestedDate >= minimumDate) {
+            dateInput.value = requestedDate;
+        }
+
+        const requestedExperience = requestParameters.get('experience');
+        const experienceInput = Array.from(document.querySelectorAll('input[name="experience"]'))
+            .find(input => input.value === requestedExperience);
+        if (experienceInput) experienceInput.checked = true;
+
+        const requestedStay = requestParameters.get('stay');
+        if (requestedStay === 'Yellow Aurora House') {
+            document.getElementById('stay').value = requestedStay;
+        }
         document.getElementById('booking-form').addEventListener('submit', event => {
             event.preventDefault();
             const form = event.currentTarget;
@@ -308,9 +332,10 @@
         });
 
         const supportedLanguages = new Set(['en', 'pt']);
+        const requestedLanguage = requestParameters.get('lang');
         const savedLanguage = localStorage.getItem('borealOneLanguage');
         const browserLanguage = navigator.language.split('-')[0];
-        setLanguage(savedLanguage && supportedLanguages.has(savedLanguage) ? savedLanguage : (supportedLanguages.has(browserLanguage) ? browserLanguage : 'en'));
+        setLanguage(supportedLanguages.has(requestedLanguage) ? requestedLanguage : (savedLanguage && supportedLanguages.has(savedLanguage) ? savedLanguage : (supportedLanguages.has(browserLanguage) ? browserLanguage : 'en')));
     </script>
 </body>
 </html>
