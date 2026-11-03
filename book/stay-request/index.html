@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Request a Stay | The Yellow Aurora House</title>
+  <link rel="icon" type="image/png" href="../../favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { colors: { aurora: '#00f5d4' } } } };</script>
+  <script>
+    window.borealStayToken = '';
+    window.onStayVerification = token => { window.borealStayToken = token; };
+    window.onStayVerificationExpired = () => { window.borealStayToken = ''; };
+  </script>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <style>input[type="date"]::-webkit-calendar-picker-indicator { filter: invert(1); cursor: pointer; }</style>
+</head>
+<body class="min-h-screen bg-[#070b14] text-slate-100 font-sans antialiased">
+  <nav class="border-b border-white/10 bg-[#070b14]/95 sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+      <a href="../../" class="flex items-center gap-3"><img src="../../logo-icon.png" alt="Boreal One AB" class="h-8 w-8 rounded-full"><span class="text-sm font-bold tracking-wider">BOREAL ONE AB</span></a>
+      <div class="flex gap-1 rounded border border-white/10 bg-black/30 p-1" aria-label="Language selector">
+        <button type="button" data-language="en" aria-label="English" aria-pressed="true" class="p-1 rounded border border-white/30 bg-white/15"><img src="../../arrival/flags/uk.svg" alt="" class="h-6 w-6 rounded-full"></button>
+        <button type="button" data-language="sv" aria-label="Svenska" aria-pressed="false" class="p-1 rounded border border-transparent"><img src="../../arrival/flags/sweden.svg" alt="" class="h-6 w-6 rounded-full"></button>
+        <button type="button" data-language="pt" aria-label="Português do Brasil" aria-pressed="false" class="p-1 rounded border border-transparent"><img src="../../arrival/flags/brazil.svg" alt="" class="h-6 w-6 rounded-full"></button>
+        <button type="button" data-language="de" aria-label="Deutsch" aria-pressed="false" class="p-1 rounded border border-transparent"><img src="../../arrival/flags/germany.svg" alt="" class="h-6 w-6 rounded-full"></button>
+      </div>
+    </div>
+  </nav>
+  <main class="max-w-3xl mx-auto px-4 pt-8 pb-16 md:pb-24">
+    <a href="../../yellow-aurora-house/#stay-request" data-text="back" class="text-sm text-slate-400 hover:text-white">← The Yellow Aurora House</a>
+    <header class="py-10 md:py-14 text-center">
+      <p class="text-aurora text-xs font-bold uppercase tracking-[0.18em]">The Yellow Aurora House</p>
+      <h1 data-text="formTitle" class="mt-4 text-4xl md:text-5xl font-light tracking-tight">Request your stay.</h1>
+      <p data-text="intro" class="mt-5 text-sm md:text-base leading-relaxed text-slate-300">Choose your arrival and departure dates. I will check availability and send you a quote before confirming your stay.</p>
+    </header>
+    <div class="overflow-hidden rounded-2xl border border-white/10 bg-[#090e19] shadow-2xl">
+      <div class="border-b border-white/10 bg-gradient-to-r from-aurora/10 to-transparent p-6 md:p-8">
+        <h2 data-text="howTitle" class="text-lg font-semibold text-white">Your dates are sent for confirmation.</h2>
+        <p data-text="howText" class="mt-2 text-sm leading-relaxed text-slate-300">I will check the house calendar and contact you with availability, the price and a secure payment link. Sending this form does not reserve the house.</p>
+      </div>
+      <form id="stay-form" class="p-6 md:p-8 space-y-6" novalidate>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <label class="block"><span data-text="arrival" class="block mb-2 text-sm font-semibold">Arrival</span><input id="check-in" name="checkIn" type="date" required class="w-full min-w-0 rounded-xl border border-slate-700 bg-black/25 px-4 py-3 text-sm text-white outline-none focus:border-aurora"></label>
+          <label class="block"><span data-text="departure" class="block mb-2 text-sm font-semibold">Departure</span><input id="check-out" name="checkOut" type="date" required class="w-full min-w-0 rounded-xl border border-slate-700 bg-black/25 px-4 py-3 text-sm text-white outline-none focus:border-aurora"></label>
+        </div>
+        <p id="stay-date-summary" role="status" class="text-sm text-aurora"></p>
+        <p data-text="times" class="text-xs text-slate-400">Check-in from 16:00 · Check-out by 11:00</p>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <label class="block"><span data-text="guests" class="block mb-2 text-sm font-semibold">Guests, including children</span><select id="guests" name="guests" required class="w-full rounded-xl border border-slate-700 bg-[#0b1522] px-4 py-3 text-sm text-white"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option></select></label>
+          <label class="block"><span data-text="pets" class="block mb-2 text-sm font-semibold">Number of pets</span><input id="pets" name="pets" type="number" min="0" max="99" step="1" value="0" required class="w-full rounded-xl border border-slate-700 bg-black/25 px-4 py-3 text-sm text-white outline-none focus:border-aurora"></label>
+        </div>
+        <p data-text="petNote" class="rounded-xl border border-aurora/25 bg-aurora/5 p-4 text-xs leading-relaxed text-slate-300">Pets are welcome by prior arrangement. The fee is 250 SEK or €25 per pet, per stay.</p>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <label class="block"><span data-text="name" class="block mb-2 text-sm font-semibold">Your name</span><input id="name" name="name" type="text" autocomplete="name" minlength="2" maxlength="120" required class="w-full rounded-xl border border-slate-700 bg-black/25 px-4 py-3 text-sm text-white outline-none focus:border-aurora"></label>
+          <label class="block"><span data-text="email" class="block mb-2 text-sm font-semibold">Email</span><input id="email" name="email" type="email" autocomplete="email" maxlength="254" required class="w-full rounded-xl border border-slate-700 bg-black/25 px-4 py-3 text-sm text-white outline-none focus:border-aurora"></label>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-5">
+          <label class="block"><span data-text="phone" class="block mb-2 text-sm font-semibold">Phone or WhatsApp</span><input id="phone" name="phone" type="tel" autocomplete="tel" minlength="5" maxlength="60" required class="w-full rounded-xl border border-slate-700 bg-black/25 px-4 py-3 text-sm text-white outline-none focus:border-aurora"></label>
+          <label class="block"><span data-text="contactLanguage" class="block mb-2 text-sm font-semibold">Language for personal contact</span><select id="contact-language" name="language" class="w-full rounded-xl border border-slate-700 bg-[#0b1522] px-4 py-3 text-sm text-white"><option value="English">English</option><option value="Português">Português</option></select></label>
+        </div>
+        <p data-text="contactNote" class="text-xs leading-relaxed text-slate-400">Alex speaks English and Portuguese. This receipt follows the language selected at the top.</p>
+        <label class="block"><span data-text="notes" class="block mb-2 text-sm font-semibold">Anything else I should know?</span><textarea id="notes" name="notes" rows="4" maxlength="2000" class="w-full rounded-xl border border-slate-700 bg-black/25 px-4 py-3 text-sm text-white placeholder:text-slate-600 outline-none focus:border-aurora"></textarea></label>
+        <label class="hidden" aria-hidden="true"><span>Leave empty</span><input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+        <label class="flex items-start gap-3 rounded-xl border border-white/10 bg-black/15 p-4"><input id="terms" name="terms" type="checkbox" required class="mt-1 h-4 w-4 shrink-0 accent-[#00f5d4]"><span data-text="terms" class="text-xs leading-relaxed text-slate-300">I understand that this is a stay request. The house, price and payment details must be confirmed before the booking is complete.</span></label>
+        <div class="cf-turnstile" data-sitekey="0x4AAAAAAFhnEy_2E_MPpT78" data-size="compact" data-theme="dark" data-callback="onStayVerification" data-expired-callback="onStayVerificationExpired" data-error-callback="onStayVerificationExpired"></div>
+        <button id="submit-button" type="submit" disabled data-text="submit" class="w-full rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-gray-950 transition hover:bg-gray-200 disabled:opacity-50">Send stay request</button>
+        <p data-text="sentNote" class="text-center text-xs leading-relaxed text-slate-400">Your request is sent directly to Boreal One. No payment is taken at this stage.</p>
+        <p id="form-error" role="alert" class="hidden rounded-xl border border-red-400/30 bg-red-950/30 p-4 text-sm text-red-200"></p>
+        <p id="form-success" role="status" class="hidden rounded-xl border border-aurora/30 bg-aurora/10 p-4 text-sm text-aurora"></p>
+      </form>
+    </div>
+    <noscript><p class="mt-6 text-center">Please enable JavaScript or email <a href="mailto:info@borealone.com" class="text-aurora underline">info@borealone.com</a> to request a stay.</p></noscript>
+  </main>
+  <footer data-text="footer" class="border-t border-white/10 px-4 py-10 text-center text-xs text-slate-500">The Yellow Aurora House · Operated by Boreal One AB</footer>
+  <script type="module" src="./form.mjs"></script>
+</body>
+</html>

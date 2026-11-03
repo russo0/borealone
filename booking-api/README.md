@@ -1,6 +1,26 @@
 # Boreal One booking request API
 
-This Cloudflare Worker receives a private Aurora Chase request from `borealone.com`, verifies Turnstile, and sends a detailed email to `info@borealone.com`. It also sends the guest a receipt that makes clear the request is not a confirmed booking.
+This Cloudflare Worker receives private Aurora Chase requests and Yellow Aurora House stay requests from `borealone.com`, verifies Turnstile, and sends a detailed email to `info@borealone.com`. It also sends the guest a receipt that makes clear the request is not a confirmed booking.
+
+## Yellow Aurora House requests
+
+The house calendar at `/yellow-aurora-house/#stay-request` selects arrival, departure, guests (1–4, including children) and pets. It opens `/book/stay-request/` with those fields prefilled. That form uses the same endpoint and existing Resend and Turnstile credentials, with `service: "stay"`. The original Aurora form is unchanged and works without a service field.
+
+Stay dates are validated on both client and server against the current date in Sweden. Departure must follow arrival; nights are calendar days, independent of daylight saving time. The pet policy is 250 SEK or EUR 25 per pet, per stay. No nightly rates are invented or charged by this form.
+
+The house form and guest receipt support English, Brazilian Portuguese, Swedish and German. The page's selected language controls the receipt (`locale`), while personal contact remains in English or Portuguese (`language`). Owner emails clearly identify a stay request and remind the host to check all calendars before confirming.
+
+This phase does not import Booking.com availability, block dates, create confirmed reservations, or take payments. Requests can overlap and must be checked manually. Booking.com remains linked as an alternative on the house page. Future iCalendar import/export can add occupancy separately without mixing house dates with tours.
+
+Deploy this Worker update **before** pushing the new website files:
+
+```sh
+cd booking-api
+npm test
+npx wrangler deploy
+```
+
+Then push the website as usual. Existing Worker routes, sending domain, recipient and secrets do not need to change. `/book/stay-request/` remains `noindex,nofollow` and is not added to the sitemap.
 
 ## One-time setup
 

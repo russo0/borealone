@@ -160,7 +160,8 @@
         <h1 class="max-w-3xl text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-[1.03] text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.75)]">The Yellow Aurora House</h1>
         <p id="hero-desc" class="max-w-2xl mt-6 text-base md:text-xl leading-relaxed text-slate-100 drop-shadow-[0_2px_8px_rgba(0,0,0,0.75)]">A private house in Swedish Lapland, where forest, quiet roads, dark skies, and the Kalix River set the pace.</p>
         <div class="mt-9 flex flex-col sm:flex-row items-start gap-3">
-          <a href="https://www.booking.com/hotel/se/yellow-aurora-dream.html" id="hero-book-btn" class="inline-flex items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-6 py-3.5 rounded-xl transition shadow-lg">Check availability on Booking.com</a>
+          <a href="#stay-request" data-stay-text="requestStay" class="inline-flex items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-6 py-3.5 rounded-xl transition shadow-lg">Request a stay</a>
+          <a href="https://www.booking.com/hotel/se/yellow-aurora-dream.html" id="hero-book-btn" class="inline-flex items-center justify-center border border-white/35 bg-black/20 hover:bg-white hover:text-gray-950 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition">Check availability on Booking.com</a>
           <a href="#the-house" id="hero-explore-btn" class="inline-flex items-center justify-center border border-white/35 bg-black/20 hover:bg-white hover:text-gray-950 text-white font-bold text-sm px-6 py-3.5 rounded-xl transition">Explore the house</a>
         </div>
       </div>
@@ -270,17 +271,60 @@
           </details>
           <details class="group rounded-xl border border-white/10 bg-white/[0.03] px-5 py-4">
             <summary class="cursor-pointer list-none font-semibold text-white flex items-center justify-between gap-4"><span id="faq-booking-question">How do I reserve a stay?</span><span class="text-aurora group-open:rotate-45 transition">+</span></summary>
-            <p id="faq-booking-answer" class="mt-3 text-sm leading-relaxed text-slate-300">Availability, pricing, and reservations are managed through our Booking.com listing so the calendar stays accurate.</p>
+            <p id="faq-booking-answer" data-stay-text="faq" class="mt-3 text-sm leading-relaxed text-slate-300">Send a stay request here and I will confirm availability, the price and payment details personally. You can also book through our Booking.com listing.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <section class="max-w-4xl mx-auto px-4 py-20 md:py-28 text-center">
+    <section id="stay-request" class="max-w-4xl mx-auto px-4 py-20 md:py-28 text-center scroll-mt-24">
       <p id="cta-kicker" class="text-aurora text-xs font-bold tracking-[0.2em] uppercase">The official home of the property</p>
       <h2 id="cta-title" class="mt-4 text-3xl md:text-5xl font-semibold tracking-tight text-white">Plan your stay at The Yellow Aurora House.</h2>
-      <p id="cta-desc" class="max-w-2xl mx-auto mt-5 text-slate-300 leading-relaxed">The Yellow Aurora House is operated by Boreal One AB. Check the live calendar and book through Booking.com.</p>
-      <a href="https://www.booking.com/hotel/se/yellow-aurora-dream.html" id="cta-book-btn" class="inline-flex mt-8 items-center justify-center bg-white hover:bg-gray-200 text-gray-950 font-bold text-sm px-7 py-3.5 rounded-xl transition shadow-lg">Check availability on Booking.com</a>
+      <p id="cta-desc" data-stay-text="intro" class="max-w-2xl mx-auto mt-5 text-slate-300 leading-relaxed">Choose your arrival and departure dates. I will check availability and send you a quote before confirming your stay.</p>
+      <div class="mt-9 rounded-2xl border border-white/10 bg-[#090e19] p-5 sm:p-7 md:p-8 text-left shadow-2xl">
+        <div class="grid grid-cols-1 md:grid-cols-[1.15fr_0.85fr] gap-7 md:gap-9">
+          <div>
+            <div class="grid grid-cols-2 gap-2 mb-5">
+              <button id="stay-arrival" type="button" class="rounded-xl border border-aurora/60 bg-aurora/10 p-3 text-left">
+                <span data-stay-text="arrival" class="block text-xs text-slate-400">Arrival</span>
+                <span id="stay-arrival-value" class="block mt-1 text-sm font-semibold text-white">Choose a date</span>
+              </button>
+              <button id="stay-departure" type="button" class="rounded-xl border border-white/15 bg-black/15 p-3 text-left">
+                <span data-stay-text="departure" class="block text-xs text-slate-400">Departure</span>
+                <span id="stay-departure-value" class="block mt-1 text-sm font-semibold text-white">Choose a date</span>
+              </button>
+            </div>
+            <div class="flex items-center justify-between gap-3 mb-5">
+              <button id="stay-previous" type="button" aria-label="Previous month" class="h-10 w-10 shrink-0 rounded-lg border border-slate-700 text-lg text-white transition hover:border-aurora disabled:opacity-35 disabled:cursor-not-allowed">←</button>
+              <p id="stay-month" class="text-center text-base font-semibold text-white capitalize" aria-live="polite"></p>
+              <button id="stay-next" type="button" aria-label="Next month" class="h-10 w-10 shrink-0 rounded-lg border border-slate-700 text-lg text-white transition hover:border-aurora">→</button>
+            </div>
+            <div id="stay-weekdays" class="grid grid-cols-7 gap-1 mb-2 text-center text-[11px] font-semibold uppercase text-slate-500"></div>
+            <div id="stay-days" class="grid grid-cols-7 gap-1"></div>
+            <p id="stay-instruction" class="mt-4 text-sm text-aurora" role="status">Choose your arrival date.</p>
+          </div>
+          <div class="rounded-xl border border-white/10 bg-black/15 p-5 flex flex-col gap-4">
+            <label>
+              <span data-stay-text="guests" class="block text-sm font-semibold text-white mb-2">Guests, including children</span>
+              <select id="stay-guests" class="w-full rounded-xl border border-slate-700 bg-[#0b1522] px-3 py-3 text-sm text-white">
+                <option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option>
+              </select>
+            </label>
+            <label>
+              <span data-stay-text="pets" class="block text-sm font-semibold text-white mb-2">Number of pets</span>
+              <input id="stay-pets" type="number" min="0" max="99" step="1" value="0" class="w-full rounded-xl border border-slate-700 bg-[#0b1522] px-3 py-3 text-sm text-white">
+            </label>
+            <p data-stay-text="petNote" class="text-xs leading-relaxed text-slate-400">Pets are welcome by prior arrangement. The fee is 250 SEK or €25 per pet, per stay.</p>
+            <p id="stay-summary" class="text-sm leading-relaxed text-slate-200" aria-live="polite"></p>
+            <button id="stay-continue" type="button" disabled data-stay-text="continue" class="mt-auto w-full rounded-xl bg-white px-5 py-3.5 text-sm font-bold text-gray-950 transition hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-40">Continue with request</button>
+            <p data-stay-text="note" class="text-xs leading-relaxed text-slate-400">Dates shown are for requests. Availability and the price are confirmed personally. No payment is taken here.</p>
+          </div>
+        </div>
+        <p data-stay-text="times" class="mt-6 pt-5 border-t border-white/10 text-xs text-slate-400 text-center">Check-in from 16:00 · Check-out by 11:00</p>
+      </div>
+      <p data-stay-text="bookingAlternative" class="mt-7 text-sm text-slate-400">You can also check availability and book on Booking.com.</p>
+      <a href="https://www.booking.com/hotel/se/yellow-aurora-dream.html" id="cta-book-btn" class="inline-flex mt-4 items-center justify-center border border-white/25 hover:border-aurora text-white font-semibold text-sm px-5 py-3 rounded-xl transition">Check availability on Booking.com</a>
+      <noscript><p class="mt-5 text-sm text-slate-300">To send a direct request, enable JavaScript or email <a href="mailto:info@borealone.com" class="text-aurora underline">info@borealone.com</a>. Booking.com is also available above.</p></noscript>
     </section>
   </main>
 
@@ -451,8 +495,8 @@
         'aurora-kicker': content.auroraKicker, 'aurora-title': content.auroraTitle, 'aurora-desc': content.auroraDesc, 'aurora-link': content.auroraLink,
         'local-kicker': content.localKicker, 'local-title': content.localTitle, 'local-desc': content.localDesc,
         'planner-kicker': content.plannerKicker, 'planner-title': content.plannerTitle, 'planner-intro': content.plannerIntro, 'planner-note': content.plannerNote, 'planner-mosquito-note': content.plannerMosquitoNote,
-        'faq-kicker': content.faqKicker, 'faq-title': content.faqTitle, 'faq-guests-question': content.faqGuestsQuestion, 'faq-guests-answer': content.faqGuestsAnswer, 'faq-pets-question': content.faqPetsQuestion, 'faq-pets-answer': content.faqPetsAnswer, 'faq-location-question': content.faqLocationQuestion, 'faq-location-answer': content.faqLocationAnswer, 'faq-booking-question': content.faqBookingQuestion, 'faq-booking-answer': content.faqBookingAnswer,
-        'cta-kicker': content.ctaKicker, 'cta-title': content.ctaTitle, 'cta-desc': content.ctaDesc, 'cta-book-btn': content.ctaBookBtn, 'footer-location': content.footerLocation
+        'faq-kicker': content.faqKicker, 'faq-title': content.faqTitle, 'faq-guests-question': content.faqGuestsQuestion, 'faq-guests-answer': content.faqGuestsAnswer, 'faq-pets-question': content.faqPetsQuestion, 'faq-pets-answer': content.faqPetsAnswer, 'faq-location-question': content.faqLocationQuestion, 'faq-location-answer': content.faqLocationAnswer, 'faq-booking-question': content.faqBookingQuestion,
+        'cta-kicker': content.ctaKicker, 'cta-title': content.ctaTitle, 'cta-book-btn': content.ctaBookBtn, 'footer-location': content.footerLocation
       };
 
       Object.entries(textMap).forEach(([id, value]) => {
@@ -473,7 +517,8 @@
           button.setAttribute('aria-pressed', String(isActive));
         }
       });
-      localStorage.setItem('preferred-lang', lang);
+      document.dispatchEvent(new CustomEvent('boreal:language', { detail: lang }));
+      try { localStorage.setItem('preferred-lang', lang); } catch { /* Language selection also works without storage. */ }
     }
 
     window.addEventListener('DOMContentLoaded', () => {
@@ -482,5 +527,6 @@
       setLanguage(savedLang && translations[savedLang] ? savedLang : (translations[browserLang] ? browserLang : 'en'));
     });
   </script>
+  <script type="module" src="./stay-calendar.mjs"></script>
 </body>
 </html>

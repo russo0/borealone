@@ -1,3 +1,5 @@
+import { validateStayRequest, stayOwnerEmail, stayGuestEmail, stayGuestSubject } from './stay-request.js';
+
 const ALLOWED_ORIGINS = new Set([
   'https://borealone.com',
   'https://www.borealone.com'
@@ -211,11 +213,20 @@ export default {
       return json({ ok: false, error: 'Invalid request' }, 400, origin);
     }
 
+    if (!payload || typeof payload !== 'object' || Array.isArray(payload)) {
+      return json({ ok: false, error: 'Invalid request' }, 400, origin);
+    }
+
     if (payload.website) {
       return json({ ok: true }, 200, origin);
     }
 
-    const booking = validateRequest(payload);
+    const service = payload.service || 'aurora';
+    if (!['aurora', 'stay'].includes(service)) {
+      return json({ ok: false, error: 'Invalid service' }, 400, origin);
+    }
+    const isStay = service === 'stay';
+    const booking = isStay ? validateStayRequest(payload) : validateRequest(payload);
     if (!booking) {
       return json({ ok: false, error: 'Invalid booking details' }, 400, origin);
     }
@@ -229,7 +240,7 @@ export default {
       return json({ ok: false, error: 'Email delivery is not configured' }, 503, origin);
     }
 
-    const requestId = crypto.randomUUID().split('-')[0].toUpperCase();
+    const requestId = `${isStay ? 'YAH-' : ''}${crypto.randomUUID().split('-')[0].toUpperCase()}`;
     const from = env.BOOKING_FROM || 'Boreal One Bookings <bookings@borealone.com>';
     const recipient = env.BOOKING_RECIPIENT || 'info@borealone.com';
 
@@ -237,8 +248,10 @@ export default {
       from,
       to: [recipient],
       reply_to: booking.email,
-      subject: `Aurora Chase request | ${booking.date} | ${booking.name}`,
-      text: bookingEmail(booking, requestId)
+      subject: isStay
+        ? `Yellow Aurora House request | ${booking.checkIn} to ${booking.checkOut} | ${booking.name}`
+        : `Aurora Chase request | ${booking.date} | ${booking.name}`,
+      text: isStay ? stayOwnerEmail(booking, requestId) : bookingEmail(booking, requestId)
     });
 
     if (!delivered) {
@@ -249,8 +262,8 @@ export default {
       from,
       to: [booking.email],
       reply_to: recipient,
-      subject: guestEmailSubject(booking, requestId),
-      text: guestEmail(booking, requestId)
+      subject: isStay ? stayGuestSubject(booking, requestId) : guestEmailSubject(booking, requestId),
+      text: isStay ? stayGuestEmail(booking, requestId) : guestEmail(booking, requestId)
     });
 
     return json({ ok: true, requestId }, 200, origin);
