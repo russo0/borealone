@@ -1,103 +1,557 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <title>Arrival Guide | The Yellow Aurora House</title>
-  <link rel="icon" type="image/png" href="../favicon.png">
-  <link rel="stylesheet" href="arrival.css">
+  <meta charset="UTF-8" />
+  <title>Arrival: The Yellow Aurora House</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,follow" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="../" aria-label="Boreal One home">
-      <img src="../logo-icon.png" alt="Boreal One">
-      <span>BOREAL ONE</span>
-    </a>
-    <nav class="languages" aria-label="Language">
-      <button data-lang="en" aria-pressed="true">EN</button>
-      <button data-lang="sv" aria-pressed="false">SV</button>
-      <button data-lang="pt" aria-pressed="false">PT</button>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <p class="eyebrow" data-i18n="eyebrow">THE YELLOW AURORA HOUSE</p>
-      <h1 data-i18n="title">Arrival &amp; door guide</h1>
-      <p class="intro" data-i18n="intro">Everything you need for a smooth, self check-in.</p>
-    </section>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex items-center justify-center">
+  <div class="max-w-3xl w-full mx-4 my-10">
 
-    <section class="notice" aria-label="Door code notice">
-      <span class="notice-icon" aria-hidden="true">⌁</span>
-      <div>
-        <strong data-i18n="codeTitle">Your door code</strong>
-        <p data-i18n="codeText">Your personal six-digit code will be sent separately through Booking.com before check-in. Please keep it private.</p>
-      </div>
-    </section>
-
-    <section class="guide" aria-labelledby="unlock-title">
-      <div class="section-heading">
-        <p data-i18n="sectionLabel">SELF CHECK-IN</p>
-        <h2 id="unlock-title" data-i18n="unlockTitle">How to unlock the front door</h2>
-      </div>
-
-      <article class="step step-image-left">
-        <div class="photo-frame"><img src="images/keypad-outside.jpeg" alt="The keypad is beside the front entrance door" data-alt="keypadOutsideAlt"></div>
-        <div class="step-text">
-          <span class="step-number">01</span>
-          <h3 data-i18n="findTitle">Find the keypad</h3>
-          <p data-i18n="findText">It is mounted on the wall to the right of the main entrance door.</p>
+    <!-- HEADER -->
+    <header class="bg-slate-900/70 backdrop-blur-xl border border-slate-700/60 rounded-2xl px-5 sm:px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xl">
+      <div class="flex items-center min-w-0">
+        <img src="../departure/logo.png" alt="The Yellow Aurora House Logo"
+             class="w-12 h-12 shrink-0 rounded-full border border-slate-700 shadow-md mr-4">
+        <div class="min-w-0">
+          <h1 id="title" class="text-lg sm:text-xl font-semibold tracking-tight">Arrival: The Yellow Aurora House</h1>
+          <p id="subtitle" class="text-xs text-slate-400 mt-1">
+            Everything you need for a smooth and easy arrival.
+          </p>
         </div>
-      </article>
-
-      <article class="step step-image-right">
-        <div class="step-text">
-          <span class="step-number">02</span>
-          <h3 data-i18n="codeStepTitle">Enter your six-digit code</h3>
-          <p data-i18n="codeStepText">Type the six digits on the keypad. The lock will unlock automatically after the correct code is entered.</p>
-          <p class="tip" data-i18n="deleteTip">Made a mistake? Use the arrow button to delete and start again.</p>
-        </div>
-        <div class="photo-frame keypad-close"><img src="images/keypad-close.jpeg" alt="Close-up of the keypad and its back arrow" data-alt="keypadCloseAlt"></div>
-      </article>
-
-      <article class="step open-door">
-        <div class="step-text">
-          <span class="step-number">03</span>
-          <h3 data-i18n="openTitle">Open the door</h3>
-          <p data-i18n="openText">Wait a moment for the lock to turn, then press the door handle down and open the door.</p>
-        </div>
-      </article>
-    </section>
-
-    <section class="leaving" aria-labelledby="leaving-title">
-      <div>
-        <p class="eyebrow" data-i18n="leavingLabel">WHEN YOU GO OUT</p>
-        <h2 id="leaving-title" data-i18n="leavingTitle">Locking the door</h2>
-        <p data-i18n="leavingText">Close the door fully. Then press the back arrow ◀ on the keypad and wait until you hear the lock turn.</p>
-        <p class="strong" data-i18n="leavingReminder">Please make sure the door is properly closed and locked before you leave.</p>
       </div>
-    </section>
 
-    <section class="inside" aria-labelledby="inside-title">
-      <div class="section-heading">
-        <p data-i18n="insideLabel">INSIDE THE HOUSE</p>
-        <h2 id="inside-title" data-i18n="insideTitle">Locking or unlocking from inside</h2>
-        <p data-i18n="insideText">Press the centre of the large round lock knob above the door handle. The lock turns automatically for both locking and unlocking.</p>
+      <div class="flex items-center gap-2 self-end sm:self-auto">
+
+        <button onclick="applyLanguage('en')" id="btn-en"
+          class="p-1 rounded transition flex items-center justify-center border border-slate-700 bg-slate-900/40">
+          <img src="flags/uk.svg" class="w-7 h-7 rounded-full">
+        </button>
+
+        <button onclick="applyLanguage('de')" id="btn-de"
+          class="p-1 rounded transition flex items-center justify-center border border-slate-700 bg-slate-900/40">
+          <img src="flags/germany.svg" class="w-7 h-7 rounded-full">
+        </button>
+      
+        <button onclick="applyLanguage('pt')" id="btn-pt"
+          class="p-1 rounded transition flex items-center justify-center border border-slate-700 bg-slate-900/40">
+          <img src="flags/brazil.svg" class="w-7 h-7 rounded-full">
+        </button>
+      
+        <button onclick="applyLanguage('sv')" id="btn-sv"
+          class="p-1 rounded transition flex items-center justify-center border border-slate-700 bg-slate-900/40">
+          <img src="flags/sweden.svg" class="w-7 h-7 rounded-full">
+        </button>
+      
+        <button onclick="applyLanguage('es')" id="btn-es"
+          class="p-1 rounded transition flex items-center justify-center border border-slate-700 bg-slate-900/40">
+          <img src="flags/spain.svg" class="w-7 h-7 rounded-full">
+        </button>
+      
       </div>
-      <figure>
-        <img src="images/inside-lock.jpeg" alt="Inside door lock with the press point highlighted" data-alt="insideAlt">
-        <figcaption data-i18n="insideCaption">Press the centre of the round knob — not the handle.</figcaption>
-      </figure>
-    </section>
 
-    <section class="help">
-      <h2 data-i18n="helpTitle">Need help?</h2>
-      <p data-i18n="helpText">If the keypad does not work, please message us through Booking.com. We will help as soon as possible.</p>
-    </section>
-  </main>
+    </header>
 
-  <footer>© 2026 Boreal One AB</footer>
-  <script src="arrival.js"></script>
+    <!-- MAIN -->
+    <main class="mt-6 bg-slate-900/70 backdrop-blur-xl border border-slate-800 rounded-2xl shadow-2xl overflow-hidden">
+
+      <!-- INTRO -->
+      <div class="px-6 pt-6 pb-4 border-b border-slate-800/70">
+        <p id="intro" class="text-sm text-slate-200">
+          Welcome! Here is everything you need to arrive comfortably at The Yellow Aurora House.
+        </p>
+      </div>
+
+      <!-- CHECK-IN TOP -->
+      <section class="px-6 py-4 bg-slate-900/80 border-b border-slate-800">
+        <h2 id="checkinTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+          🕒 Check-in time
+        </h2>
+        <div id="checkinText" class="text-xs text-slate-300 mt-1"></div>
+      </section>
+
+      <div class="px-6 py-4 grid gap-4">
+
+        <!-- CARD 1: FINDING THE HOUSE -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
+          <img src="foto1.jpg" class="w-full h-56 object-cover">
+          <div class="px-4 py-3">
+            <h2 id="photo1Title" class="text-sm font-semibold text-slate-100">Finding the house</h2>
+            <div id="photo1Text" class="text-xs text-slate-300 mt-1 space-y-2"></div>
+          </div>
+        </section>
+
+        <!-- CARD 2: PARKING & GARAGE -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
+          <img src="foto2.jpg" class="w-full h-56 object-cover">
+          <div class="px-4 py-3">
+            <h2 id="photo2Title" class="text-sm font-semibold text-slate-100">Parking & Garage</h2>
+            <div id="photo2Text" class="text-xs text-slate-300 mt-1 space-y-2"></div>
+          </div>
+        </section>
+
+        <!-- PETS -->
+        <section class="bg-amber-100 border border-amber-300 rounded-xl px-4 py-3 shadow-lg shadow-amber-950/20">
+          <h2 class="text-sm font-semibold text-amber-950 flex items-center gap-2">
+            <span aria-hidden="true">🐾</span><span id="petTitle">Pets</span>
+          </h2>
+          <div id="petText" class="text-xs text-slate-700 mt-1"></div>
+        </section>
+
+        <!-- CARD 3: KEYPAD -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
+          <img src="keypad.jpg" class="w-full h-56 object-cover">
+          <div class="px-4 py-3">
+            <h2 id="photo3Title" class="text-sm font-semibold text-slate-100">Entrance keypad</h2>
+            <div id="photo3Text" class="text-xs text-slate-300 mt-1 space-y-2"></div>
+          </div>
+        </section>
+
+        <!-- WI-FI -->
+        <section class="bg-cyan-950/35 border border-cyan-300/25 rounded-xl px-4 py-3">
+          <h2 id="wifiTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            <span>📶</span><span>Wi-Fi</span>
+          </h2>
+          <div id="wifiText" class="text-xs text-slate-200 mt-1"></div>
+        </section>
+
+        <!-- SAUNA -->
+        <section class="bg-orange-100 border border-orange-300 rounded-xl px-4 py-3 shadow-lg shadow-orange-950/20">
+          <h2 class="text-sm font-semibold text-orange-950 flex items-center gap-2">
+            <span aria-hidden="true">🔥</span><span id="saunaTitle">Sauna</span>
+          </h2>
+          <div id="saunaText" class="text-xs text-slate-700 mt-1"></div>
+        </section>
+
+        <!-- CARD 4: LOCK KNOB -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl shadow-xl overflow-hidden">
+          <img src="lock-knob.jpg" class="w-full h-56 object-cover">
+          <div class="px-4 py-3">
+            <h2 id="unlockTitle" class="text-sm font-semibold text-slate-100">Locking or unlocking from inside</h2>
+            <div id="unlockText" class="text-xs text-slate-300 mt-1 space-y-2"></div>
+          </div>
+        </section>
+
+        <!-- LOCKING WHEN LEAVING -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="lockLeavingTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            🔒 How to lock the door when leaving
+          </h2>
+          <div id="lockLeavingText" class="text-xs text-slate-300 mt-1 space-y-2"></div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="bg-slate-900/80 border border-slate-800 rounded-xl px-4 py-3">
+          <h2 id="contactTitle" class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+            💬 Need help?
+          </h2>
+          <div id="contactText" class="text-xs text-slate-300 mt-1"></div>
+        </section>
+
+      </div>
+
+      <footer class="px-6 py-4 border-t border-slate-800/70 text-xs text-slate-500 flex justify-between items-center">
+        <span id="footerText"></span>
+        <span class="text-[10px] text-slate-600">Boreal One AB</span>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    const translationsArrival = {
+      en: {
+        title: "Arrival: The Yellow Aurora House",
+        subtitle: "Everything you need for a smooth and easy arrival.",
+        intro: "Welcome! Here is everything you need to arrive comfortably at The Yellow Aurora House.",
+        checkinTitle: "Check-in time",
+        checkinText: "Check-in is available from <strong>16:00</strong>. If you need an earlier arrival, please contact us.",
+        photo1Title: "Finding the house",
+        photo1Text: `
+          <p>Drive on the main road <strong>E10</strong>.</p>
+          <p>Keep following your GPS until you reach a yellow house with a black roof. If you are coming from Luleå, the house will be on your left side.</p>
+          <p>In winter, everything looks white, so the yellow color helps you spot the house easily.</p>
+        `,
+        photo2Title: "Parking & Garage",
+        photo2Text: `
+          <p>You may park in the designated space directly in front of the entrance door.</p>
+          <p>The covered garage can be used during your stay.</p>
+          <p>The garage remote is hanging inside the house, between the entrance door and the window. </p>
+          <p><strong>Please park only in the designated space directly in front of the entrance door or inside the garage. Do not park on the lawn.</strong></p>
+          <p><span style="background-color: #fff3cd; color: #856404; padding: 2px 5px; border-radius: 3px; font-weight: bold;">Lost or unreturned remotes will incur a replacement fee of 1.000,00 SEK </span></p>
+        `,
+        petTitle: "Pets",
+        petText: "Pets are welcome. Please let us know before arrival if you are bringing a pet. A fee of 250 SEK or €25 applies per pet, per stay.",
+        photo3Title: "Entrance keypad",
+        photo3Text: `
+          <p><strong>1. Find the keypad</strong><br>
+          The keypad is mounted on the wall to the right of the entrance door.</p>
+        
+          <p><strong>2. Use your personal 6-digit code</strong><br>
+          Use only the code sent in your check-in message. Type the numbers slowly, one by one.</p>
+        
+          <p><strong>⚠️ IMPORTANT: Do NOT press the ◀ arrow after entering your code.</strong><br>
+          There is <strong>NO Enter button.</strong></p>
+        
+          <p><strong>3. Wait</strong><br>
+          The lock will unlock automatically. Wait until you hear the motor stop.</p>
+        
+          <p><strong>4. Open the door</strong><br>
+          Press the door handle down and open the door.</p>
+        
+          <p><strong>❌ Made a mistake?</strong><br>
+          Press the <strong>◀ arrow once</strong> to delete the last digit, then enter the correct number.</p>
+        `,
+        wifiTitle: "Wi-Fi",
+        wifiText: "Scan the Wi-Fi QR code with your phone camera. It is on the door of the coat cabinet directly opposite the entrance door, the first thing you see when you enter.",
+        saunaTitle: "Sauna",
+        saunaText: "Please keep the sauna/laundry room door closed while using the sauna and shower. Steam entering the rest of the house may trigger the smoke alarm.",
+        unlockTitle: "Locking or unlocking from inside",
+        unlockText: `
+          <p>When you are inside, press the center of the round knob above the door handle.</p>
+          <p>The lock will turn automatically.</p>
+          <p>The button works like a light switch: press once to lock, press again to unlock.</p>
+        `,
+        lockLeavingTitle: "How to lock the door when leaving",
+        lockLeavingText: `
+          <p><strong>1.</strong> Close the door completely. Push the door until it is fully closed.</p>
+          <p><strong>2.</strong> Press the arrow ◀ on the keypad to lock the door.</p>
+          <p><strong>3.</strong> You will hear the lock turn and click into place.</p>
+          <p><strong>4.</strong> Gently pull the door handle. If the handle does not open the door, the door is locked.</p>
+        `,
+        contactTitle: "Need help?",
+        contactText: "If anything is unclear or you need assistance, feel free to contact us through your reservation platform or your preferred messaging channel.",
+        footerText: "Welcome to Yellow Aurora House. We hope you enjoy your stay."
+      },
+
+      de: {
+        title: "Ankunft: The Yellow Aurora House",
+        subtitle: "Alles, was Sie für eine entspannte und einfache Ankunft benötigen.",
+        intro: "Willkommen! Hier finden Sie alles, was Sie für eine angenehme Ankunft in der Yellow Aurora House benötigen.",
+        checkinTitle: "Check-in-Zeit",
+        checkinText: "Der Check-in ist ab <strong>16:00 Uhr</strong> möglich. Wenn Sie früher anreisen möchten, kontaktieren Sie uns bitte.",
+        photo1Title: "Das Haus finden",
+        photo1Text: `
+          <p>Fahren Sie auf der Hauptstraße <strong>E10</strong>.</p>
+          <p>Folgen Sie Ihrem GPS bis zum Ziel. Wenn Sie sich nähern, achten Sie auf ein gelbes Haus mit schwarzem Dach. Wenn Sie aus Richtung Luleå kommen, liegt das Haus auf der linken Straßenseite.</p>
+          <p>Im Winter ist alles weiß, deshalb ist das gelbe Haus leicht zu erkennen.</p>
+        `,
+        photo2Title: "Parken & Garage",
+        photo2Text: `
+          <p>Sie können auf dem ausgewiesenen Stellplatz direkt vor der Eingangstür parken.</p>
+          <p>Die überdachte Garage kann während Ihres Aufenthalts genutzt werden.</p>
+          <p>Die Garagenfernbedienung hängt im Haus zwischen Eingangstür und Fenster.</p>
+          <p><strong>Parken Sie nur auf dem ausgewiesenen Stellplatz direkt vor der Eingangstür oder in der Garage. Bitte parken Sie nicht auf dem Rasen.</strong></p>
+          <p><span style="background-color: #fff3cd; color: #856404; padding: 2px 5px; border-radius: 3px; font-weight: bold;">Bei Verlust oder nicht erfolgter Rückgabe der Fernbedienung fällt eine Ersatzgebühr von 1.000,00 SEK an.</span></p>
+        `,
+        petTitle: "Haustiere",
+        petText: "Haustiere sind willkommen. Bitte teilen Sie uns vor Ihrer Anreise mit, wenn Sie ein Haustier mitbringen. Pro Haustier und Aufenthalt fällt eine Gebühr von 250 SEK oder 25 € an.",
+        photo3Title: "Türtastatur",
+        photo3Text: `
+          <p><strong>1. Finden Sie die Tastatur</strong><br>
+          Die Tastatur befindet sich an der Wand rechts neben der Eingangstür.</p>
+
+          <p><strong>2. Verwenden Sie Ihren persönlichen 6-stelligen Code</strong><br>
+          Verwenden Sie nur den Code aus Ihrer Check-in-Nachricht. Geben Sie die Ziffern langsam, eine nach der anderen, ein.</p>
+
+          <p><strong>⚠️ WICHTIG: Drücken Sie nach der Eingabe nicht den Pfeil ◀.</strong><br>
+          Es gibt <strong>keine Enter-Taste.</strong></p>
+
+          <p><strong>3. Warten Sie</strong><br>
+          Das Schloss wird automatisch entriegelt. Warten Sie, bis Sie hören, dass der Motor stoppt.</p>
+
+          <p><strong>4. Öffnen Sie die Tür</strong><br>
+          Drücken Sie den Türgriff nach unten und öffnen Sie die Tür.</p>
+
+          <p><strong>❌ Falsch eingegeben?</strong><br>
+          Drücken Sie den <strong>Pfeil ◀ einmal</strong>, um die letzte Ziffer zu löschen. Geben Sie danach die richtige Ziffer ein.</p>
+        `,
+        wifiTitle: "WLAN",
+        wifiText: "Scannen Sie den WLAN-QR-Code mit der Kamera Ihres Telefons. Er befindet sich auf der Tür des Garderobenschranks direkt gegenüber der Eingangstür, das Erste, was Sie beim Betreten sehen.",
+        saunaTitle: "Sauna",
+        saunaText: "Bitte halten Sie die Tür zum Sauna-/Waschraum geschlossen, während Sie die Sauna oder Dusche benutzen. Dampf, der in den Rest des Hauses gelangt, kann den Rauchmelder auslösen.",
+        unlockTitle: "Von innen ver- oder entriegeln",
+        unlockText: `
+          <p>Drücken Sie im Haus auf die Mitte des runden Knaufs über dem Türgriff.</p>
+          <p>Das Schloss dreht sich automatisch.</p>
+          <p>Der Knopf funktioniert wie ein Lichtschalter: einmal drücken zum Verriegeln, erneut drücken zum Entriegeln.</p>
+        `,
+        lockLeavingTitle: "So verriegeln Sie die Tür, wenn Sie das Haus verlassen",
+        lockLeavingText: `
+          <p><strong>1.</strong> Schließen Sie die Tür vollständig. Drücken Sie die Tür zu, bis sie ganz geschlossen ist.</p>
+          <p><strong>2.</strong> Drücken Sie den Pfeil ◀ auf der Tastatur, um die Tür zu verriegeln.</p>
+          <p><strong>3.</strong> Sie hören, wie sich das Schloss dreht und einrastet.</p>
+          <p><strong>4.</strong> Ziehen Sie vorsichtig am Türgriff. Wenn sich die Tür nicht öffnet, ist sie verriegelt.</p>
+        `,
+        contactTitle: "Brauchen Sie Hilfe?",
+        contactText: "Wenn etwas unklar ist oder Sie Hilfe benötigen, kontaktieren Sie uns bitte über Ihre Buchungsplattform oder Ihren bevorzugten Nachrichtenkanal.",
+        footerText: "Willkommen in der Yellow Aurora House. Wir wünschen Ihnen einen schönen Aufenthalt."
+      },
+
+      pt: {
+        title: "Chegada: The Yellow Aurora House",
+        subtitle: "Tudo o que você precisa para uma chegada tranquila.",
+        intro: "Bem-vindo! Aqui está tudo o que você precisa para chegar confortavelmente à The Yellow Aurora House.",
+        checkinTitle: "Horário de check-in",
+        checkinText: "O check-in está disponível a partir das <strong>16:00</strong>. Se precisar chegar mais cedo, entre em contato.",
+        photo1Title: "Encontrando a casa",
+        photo1Text: `
+          <p>Dirija pela estrada principal <strong>E10</strong>.</p>
+          <p>Siga o GPS até o destino. Quando estiver perto, procure uma casa amarela com telhado preto. Se você vier de Luleå, ela estará do lado esquerdo da estrada.</p>
+          <p>No inverno, tudo fica branco, e a cor amarela ajuda a identificar a casa.</p>
+        `,
+        photo2Title: "Estacionamento & Garagem",
+        photo2Text: `
+          <p>Você pode estacionar na área destinada diretamente em frente à porta de entrada.</p>
+          <p>A garagem coberta pode ser usada durante sua estadia.</p>
+          <p>O controle da garagem está pendurado dentro da casa, entre a porta de entrada e a janela.</p>
+          <p><strong>Estacione apenas na área destinada diretamente em frente à porta de entrada ou dentro da garagem. Não estacione no gramado.</strong></p>
+          <p><span style="background-color: #fff3cd; color: #856404; padding: 2px 5px; border-radius: 3px; font-weight: bold;">A perda ou não devolução do controle gerará uma taxa de reposição de 1.000,00 SEK para cobrir os custos de compra e configuração de um novo dispositivo.</span></p>
+        `,
+        petTitle: "Animais de estimação",
+        petText: "Animais de estimação são bem-vindos. Avise-nos antes da chegada caso venha com um animal. Será aplicada uma taxa de 250 SEK ou €25 por animal, por estadia.",
+        photo3Title: "Teclado da porta de entrada",
+        photo3Text: `
+          <p><strong>1. Encontre o teclado</strong><br>
+          O teclado está instalado na parede, à direita da porta de entrada.</p>
+        
+          <p><strong>2. Use seu código pessoal de 6 dígitos</strong><br>
+          Use apenas o código enviado na sua mensagem de check-in. Digite os números devagar, um por um.</p>
+        
+          <p><strong>⚠️ IMPORTANTE: NÃO pressione a seta ◀ depois de digitar o código.</strong><br>
+          <strong>Não existe botão Enter.</strong></p>
+        
+          <p><strong>3. Aguarde</strong><br>
+          A fechadura destravará automaticamente. Aguarde até ouvir o motor parar.</p>
+        
+          <p><strong>4. Abra a porta</strong><br>
+          Pressione a maçaneta para baixo e abra a porta.</p>
+        
+          <p><strong>❌ Digitou um número errado?</strong><br>
+          Pressione a <strong>seta ◀ uma vez</strong> para apagar o último número e, em seguida, digite o número correto.</p>
+        `,
+        wifiTitle: "Wi-Fi",
+        wifiText: "Escaneie o QR code do Wi-Fi com a câmera do celular. Ele fica na porta do armário de casacos, exatamente em frente à porta de entrada, sendo a primeira coisa que você vê ao entrar.",
+        saunaTitle: "Sauna",
+        saunaText: "Mantenha a porta da sauna/lavanderia fechada enquanto usar a sauna ou o chuveiro. O vapor que entrar no restante da casa pode acionar o alarme de fumaça.",
+        unlockTitle: "Trancar ou destrancar por dentro",
+        unlockText: `
+          <p>Pressione o centro do botão redondo acima da maçaneta.</p>
+          <p>A fechadura gira automaticamente.</p>
+          <p>Funciona tanto para trancar quanto destrancar.</p>
+        `,
+        lockLeavingTitle: "Como trancar a porta ao sair",
+        lockLeavingText: `
+          <p><strong>1.</strong> Feche a porta completamente.</p>
+          <p><strong>2.</strong> Pressione a seta ◀ no teclado para trancar a porta.</p>
+          <p><strong>3.</strong> Aguarde a fechadura girar.</p>
+          <p><strong>4.</strong> Puxe a maçaneta, se não abrir, está trancada.</p>
+        `,
+        contactTitle: "Precisa de ajuda?",
+        contactText: "Se algo não estiver claro ou você precisar de ajuda, entre em contato pelo sistema de reserva ou pelo seu canal de mensagem preferido.",
+        footerText: "Bem-vindo à Yellow Aurora House. Esperamos que você aproveite sua estadia."
+      },
+
+      sv: {
+        title: "Ankomst: The Yellow Aurora House",
+        subtitle: "Allt du behöver för en smidig ankomst.",
+        intro: "Välkommen! Här är allt du behöver för att anlända bekvämt till The Yellow Aurora House.",
+        checkinTitle: "Incheckningstid",
+        checkinText: "Incheckning är tillgänglig från <strong>16:00</strong>. Kontakta oss om du behöver komma tidigare.",
+        photo1Title: "Hitta huset",
+        photo1Text: `
+          <p>Kör på huvudvägen <strong>E10</strong>.</p>
+          <p>Följ GPS:en hela vägen. När du närmar dig, leta efter ett gult hus med svart tak. Om du kommer från Luleå ligger huset på vänster sida.</p>
+          <p>På vintern är allt vitt, så den gula färgen gör huset lätt att hitta.</p>
+        `,
+        photo2Title: "Parkering & Garage",
+        photo2Text: `
+          <p>Du kan parkera på den avsedda platsen direkt framför entrédörren.</p>
+          <p>Det täckta garaget kan användas under din vistelse.</p>
+          <p>Garagekontrollen hänger inne i huset, mellan ytterdörren och fönstret.</p>
+          <p><strong>Parkera endast på den avsedda platsen direkt framför entrédörren eller i garaget. Parkera inte på gräsmattan.</strong></p>
+          <p><span style="background-color: #fff3cd; color: #856404; padding: 2px 5px; border-radius: 3px; font-weight: bold;">Om den försvinner eller inte återlämnas tillkommer en ersättningsavgift på 1.000,00 SEK </span></p>
+
+        `,
+        petTitle: "Husdjur",
+        petText: "Husdjur är välkomna. Meddela oss före ankomst om du tar med ett husdjur. En avgift på 250 SEK eller 25 € tillkommer per husdjur och vistelse.",
+        photo3Title: "Kodlås vid entrédörren",
+        photo3Text: `
+          <p><strong>1. Hitta kodlåset</strong><br>
+          Kodlåset sitter på väggen till höger om entrédörren.</p>
+        
+          <p><strong>2. Använd din personliga 6-siffriga kod</strong><br>
+          Använd endast koden i ditt incheckningsmeddelande. Ange siffrorna långsamt, en i taget.</p>
+        
+          <p><strong>⚠️ VIKTIGT: Tryck INTE på ◀-pilen efter att du har angett koden.</strong><br>
+          Det finns <strong>ingen Enter-knapp.</strong></p>
+        
+          <p><strong>3. Vänta</strong><br>
+          Låset låses upp automatiskt. Vänta tills du hör att motorn stannar.</p>
+        
+          <p><strong>4. Öppna dörren</strong><br>
+          Tryck ner dörrhandtaget och öppna dörren.</p>
+        
+          <p><strong>❌ Blev det fel?</strong><br>
+          Tryck på <strong>◀-pilen en gång</strong> för att ta bort den sista siffran och ange sedan rätt nummer.</p>
+        `,
+        wifiTitle: "Wi-Fi",
+        wifiText: "Skanna Wi-Fi-koden med kameran på din telefon. Den sitter på dörren till garderobsskåpet direkt mitt emot entrédörren, det första du ser när du kommer in.",
+        saunaTitle: "Bastu",
+        saunaText: "Håll dörren till bastu/tvättstuga stängd när du använder bastun eller duschen. Ånga som sprids till resten av huset kan utlösa brandvarnaren.",
+        unlockTitle: "Låsa eller låsa upp inifrån",
+        unlockText: `
+          <p>Tryck på mitten av den runda knoppen ovanför handtaget.</p>
+          <p>Låset vrider sig automatiskt.</p>
+          <p>Det fungerar både för att låsa och låsa upp.</p>
+        `,
+        lockLeavingTitle: "Så låser du dörren när du lämnar huset",
+        lockLeavingText: `
+          <p><strong>1.</strong> Stäng dörren helt.</p>
+          <p><strong>2.</strong> Tryck på ◀-pilen på kodlåset för att låsa dörren.</p>
+          <p><strong>3.</strong> Vänta tills låset har vridit sig.</p>
+          <p><strong>4.</strong> Dra försiktigt i dörrhandtaget. Om dörren inte öppnas är den låst.</p>
+        `,
+        contactTitle: "Behöver du hjälp?",
+        contactText: "Om något är oklart eller om du behöver hjälp, kontakta oss via ditt bokningssystem eller din föredragna meddelandekanal.",
+        footerText: "Välkommen till Yellow Aurora House. Vi hoppas att du trivs."
+      },
+
+      es: {
+        title: "Llegada: The Yellow Aurora House",
+        subtitle: "Todo lo que necesitas para una llegada tranquila.",
+        intro: "¡Bienvenido! Aquí tienes todo lo necesario para llegar cómodamente a The Yellow Aurora House.",
+        checkinTitle: "Hora de check-in",
+        checkinText: "El check-in está disponible desde las <strong>16:00</strong>. Si necesitas llegar antes, contáctanos.",
+        photo1Title: "Encontrando la casa",
+        photo1Text: `
+          <p>Conduce por la carretera principal <strong>E10</strong>.</p>
+          <p>Sigue el GPS hasta el destino. Al acercarte, busca una casa amarilla con techo negro. Si vienes desde Luleå, estará en el lado izquierdo de la carretera.</p>
+          <p>En invierno todo es blanco, y el color amarillo ayuda a identificar la casa.</p>
+        `,
+        photo2Title: "Estacionamiento & Garaje",
+        photo2Text: `
+          <p>Puedes estacionar en la zona destinada justo frente a la puerta de entrada.</p>
+          <p>El garaje cubierto puede usarse durante tu estancia.</p>
+          <p>El control del garaje está colgado dentro de la casa, entre la puerta de entrada y la ventana.</p>
+          <p><strong>Estaciona únicamente en la zona destinada justo frente a la puerta de entrada o dentro del garaje. No estaciones sobre el césped.</strong></p>
+          <p><span style="background-color: #fff3cd; color: #856404; padding: 2px 5px; border-radius: 3px; font-weight: bold;">En caso de pérdida o no devolución, se cobrará una tarifa de reemplazo de 1.000,00 SEK </span></p>
+        `,
+        petTitle: "Mascotas",
+        petText: "Las mascotas son bienvenidas. Avísanos antes de tu llegada si traerás una mascota. Se aplica una tarifa de 250 SEK o €25 por mascota y estancia.",
+        photo3Title: "Teclado de la puerta de entrada",
+        photo3Text: `
+          <p><strong>1. Encuentra el teclado</strong><br>
+          El teclado está instalado en la pared, a la derecha de la puerta de entrada.</p>
+        
+          <p><strong>2. Usa tu código personal de 6 dígitos</strong><br>
+          Usa únicamente el código enviado en tu mensaje de check-in. Introduce los números despacio, uno por uno.</p>
+        
+          <p><strong>⚠️ IMPORTANTE: NO pulses la flecha ◀ después de introducir el código.</strong><br>
+          <strong>NO hay ningún botón Enter.</strong></p>
+        
+          <p><strong>3. Espera</strong><br>
+          La cerradura se desbloqueará automáticamente. Espera hasta que escuches que el motor se detiene.</p>
+        
+          <p><strong>4. Abre la puerta</strong><br>
+          Baja la manija de la puerta y ábrela.</p>
+        
+          <p><strong>❌ ¿Has introducido un número incorrecto?</strong><br>
+          Pulsa la <strong>flecha ◀ una vez</strong> para borrar el último número y, después, introduce el número correcto.</p>
+        `,
+        wifiTitle: "Wi-Fi",
+        wifiText: "Escanea el código QR del Wi-Fi con la cámara de tu teléfono. Está en la puerta del armario para abrigos, justo frente a la puerta de entrada, lo primero que verás al entrar.",
+        saunaTitle: "Sauna",
+        saunaText: "Mantén cerrada la puerta de la sauna/lavandería mientras uses la sauna o la ducha. El vapor que llegue al resto de la casa puede activar la alarma de humo.",
+        unlockTitle: "Cerrar o abrir desde dentro",
+        unlockText: `
+          <p>Presiona el centro del botón redondo sobre la manija.</p>
+          <p>La cerradura girará automáticamente.</p>
+          <p>Funciona tanto para cerrar como para abrir.</p>
+        `,
+        lockLeavingTitle: "Cómo cerrar la puerta con llave al salir",
+        lockLeavingText: `
+          <p><strong>1.</strong> Cierra la puerta completamente.</p>
+          <p><strong>2.</strong> Pulsa la flecha ◀ del teclado para cerrar la puerta con llave.</p>
+          <p><strong>3.</strong> Espera a que la cerradura gire.</p>
+          <p><strong>4.</strong> Tira de la manija. Si no se abre, está cerrada con llave.</p>
+        `,
+        contactTitle: "¿Necesitas ayuda?",
+        contactText: "Si algo no está claro o necesitas ayuda, contáctanos a través de tu plataforma de reserva o tu canal de mensajería preferido.",
+        footerText: "Bienvenido a Yellow Aurora House. Esperamos que disfrutes tu estancia."
+      }
+    };
+
+    function applyLanguage(lang) {
+      const t = translationsArrival[lang] || translationsArrival.en;
+
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("subtitle").textContent = t.subtitle;
+      document.getElementById("intro").textContent = t.intro;
+
+      document.getElementById("checkinTitle").textContent = t.checkinTitle;
+      document.getElementById("checkinText").innerHTML = t.checkinText;
+
+      document.getElementById("photo1Title").textContent = t.photo1Title;
+      document.getElementById("photo1Text").innerHTML = t.photo1Text;
+
+      document.getElementById("photo2Title").textContent = t.photo2Title;
+      document.getElementById("photo2Text").innerHTML = t.photo2Text;
+
+      document.getElementById("petTitle").textContent = t.petTitle;
+      document.getElementById("petText").textContent = t.petText;
+
+      document.getElementById("photo3Title").textContent = t.photo3Title;
+      document.getElementById("photo3Text").innerHTML = t.photo3Text;
+
+      document.getElementById("wifiTitle").textContent = t.wifiTitle;
+      document.getElementById("wifiText").textContent = t.wifiText;
+
+      document.getElementById("saunaTitle").textContent = t.saunaTitle;
+      document.getElementById("saunaText").textContent = t.saunaText;
+
+      document.getElementById("unlockTitle").textContent = t.unlockTitle;
+      document.getElementById("unlockText").innerHTML = t.unlockText;
+
+      document.getElementById("lockLeavingTitle").textContent = t.lockLeavingTitle;
+      document.getElementById("lockLeavingText").innerHTML = t.lockLeavingText;
+
+      document.getElementById("contactTitle").textContent = t.contactTitle;
+      document.getElementById("contactText").innerHTML = t.contactText;
+
+      document.getElementById("footerText").textContent = t.footerText;
+
+      document.documentElement.lang = lang;
+      highlightButton(lang);
+      localStorage.setItem("arrivalLang", lang);
+    }
+
+   function highlightButton(lang) {
+  const buttons = ["en", "de", "pt", "sv", "es"];
+  buttons.forEach(code => {
+    const btn = document.getElementById(`btn-${code}`);
+    if (!btn) return;
+
+    if (code === lang) {
+      btn.classList.add("bg-slate-800", "border-slate-500");
+      btn.classList.remove("bg-slate-900/40");
+    } else {
+      btn.classList.remove("bg-slate-800", "border-slate-500");
+      btn.classList.add("bg-slate-900/40");
+    }
+  });
+}
+
+    document.getElementById("btn-en").addEventListener("click", () => applyLanguage("en"));
+    document.getElementById("btn-de").addEventListener("click", () => applyLanguage("de"));
+    document.getElementById("btn-pt").addEventListener("click", () => applyLanguage("pt"));
+    document.getElementById("btn-sv").addEventListener("click", () => applyLanguage("sv"));
+    document.getElementById("btn-es").addEventListener("click", () => applyLanguage("es"));
+
+    const savedLang = localStorage.getItem("arrivalLang") || "en";
+    applyLanguage(savedLang);
+  </script>
 </body>
 </html>
